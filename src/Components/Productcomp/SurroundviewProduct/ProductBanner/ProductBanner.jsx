@@ -1,5 +1,5 @@
 import React from 'react';
-import productbanner from "../../../../assets/Productpage/product-banner.jpg";
+import productbanner from "../../../../assets/Productpage/surroundview/surroundview-banner.jpg";
 // import AnimationButton from "../../ButtonComp/AnimationButton";
 import "./Productbanner.css"
 const ProductBanner = () => {

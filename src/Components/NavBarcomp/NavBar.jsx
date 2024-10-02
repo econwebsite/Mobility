@@ -28,6 +28,19 @@ const NavBar = () => {
       </Menu.Item>
     </Menu>
   );
+  const MobileMenu = (
+    <Menu  style={{width:"auto",border:"1px solid #00aeef"}}>
+      <Menu.Item key="1">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/forwardfacing" onClick={handleNavLinkClick}>Forward Facing Cameras</Link>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>Driver Monitoring Cameras</Link>
+      </Menu.Item>
+    </Menu>
+  );
 
   // const productMenu = (
   //   <Menu>
@@ -116,12 +129,12 @@ const NavBar = () => {
                 {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
                 </Dropdown> */}
-                <Link className="nav-link" to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
-                <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
-                  <a className="nav-link">Resources</a>
+                <Dropdown overlay={MobileMenu} placement="bottomLeft" className="nav-link">
+                  <a className="nav-link">Solutions</a>
                 </Dropdown>
-                <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
-                <Link className="nav-link" to="/AboutUs" onClick={handleNavLinkClick}>About Us</Link>
+                <Link className="nav-link" to="/Casestudy" onClick={handleNavLinkClick}>Casestudies</Link>
+                <Link className="nav-link" to="/Blog" onClick={handleNavLinkClick}>Blog</Link>
+                <Link className="nav-link" to="/Partner" onClick={handleNavLinkClick}>Partners</Link>
               </Nav>
               {/* <Form className="d-flex mt-3">
                 <Form.Control
