@@ -14,8 +14,18 @@ const NavBar = () => {
       offcanvasRef.current.hide(); // Hide Offcanvas when a nav link is clicked
     }
   };
-
   const resourceMenu = (
+    <Menu  style={{border:"1px solid #00aeef"}}>
+      <Menu.Item key="1">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/CasestudyHubPage" onClick={handleNavLinkClick}>Case Studies</Link>
+      </Menu.Item>
+    </Menu>
+  );
+  
+  const SolutionMenu = (
     <Menu  style={{width:"300px",border:"1px solid #00aeef"}}>
       <Menu.Item key="1">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
@@ -70,20 +80,20 @@ const NavBar = () => {
             <div className="navbarpage-navItems">
             <Link to="/" className="navbarpage-navLink">Home</Link>
             <div className="navbarpage-divider"></div>
-              <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
+              <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Solutions</Link>
               </Dropdown>
               <div className="navbarpage-divider"></div>
               {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
               </Dropdown> */}
-              <Link to="/Casestudy" className="navbarpage-navLink">Casestudies</Link>
-              <div className="navbarpage-divider"></div>
-              {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}> */}
-              <Link to="/Blog" className="navbarpage-navLink">Blog</Link>
-              {/* </Dropdown> */}
+            <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
+                <Link className="navbarpage-navLink">Resources</Link>
+              </Dropdown>
               <div className="navbarpage-divider"></div>
               <Link to="/Partner" className="navbarpage-navLink">Partners</Link>
+              <div className="navbarpage-divider"></div>
+              <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
             </div>
             <div className="navbarpage-rightColumn">
               {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
@@ -132,8 +142,11 @@ const NavBar = () => {
                 <Dropdown overlay={MobileMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Solutions</a>
                 </Dropdown>
-                <Link className="nav-link" to="/Casestudy" onClick={handleNavLinkClick}>Casestudies</Link>
-                <Link className="nav-link" to="/Blog" onClick={handleNavLinkClick}>Blog</Link>
+                <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
+                  <a className="nav-link">Resources</a>
+                </Dropdown>
+                <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
+                
                 <Link className="nav-link" to="/Partner" onClick={handleNavLinkClick}>Partners</Link>
               </Nav>
               {/* <Form className="d-flex mt-3">

@@ -6,7 +6,7 @@ import Manufacturing from "./Manufacturingcapablities/Manufacturing";
 import Watchvedios from "./Watchvedioscomp/Vediosection";
 import Casestudy from "./Casestudycomp/Casestudy";
 import Blog from "./Blogcomp/Blog";
-import Getintouch from "./Getintouchcomp/Getintouch";
+import ContactUs from "./Homecontactus/ContactUs";
 import Paragraph from "./Paragraphcomp/Paragraph";
 
 const TotalHomePage = () => {
@@ -20,7 +20,7 @@ const TotalHomePage = () => {
             <Watchvedios/>
             <Casestudy/>
             <Blog/>
-            <Getintouch/>
+            <ContactUs/>
         </div>
     );
 }

@@ -13,7 +13,9 @@ import Blog from './Components/HomePagecomp/Blogcomp/Blog';
 import ScrollToTop from "./Components/ScrollToTop"
 import Casestudy from './Components/HomePagecomp/Casestudycomp/Casestudy';
 import Cameramobility from "./Components/HomePagecomp/CameraMobility/Cameramobility"
-
+import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
+import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
+import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
 const App = () => {
   return (
 
@@ -27,12 +29,12 @@ const App = () => {
         <Route path="/surroundview" element={<TotalSurroundview/>} />
         <Route path="/forwardfacing" element={<Totalforwardfacing/>} />
         <Route path="/drivermonitoring" element={<Totalmonitoring/>} />
-        <Route path="/Casestudy" element={<Casestudy/>} />
-        <Route path="/Blog" element={<Blog/>} />
         <Route path="/Partner" element={<Partner/>} />
         <Route path="/Cameramobility" element={<Cameramobility/>} />
+        <Route path="/ContactUs" element={<ContactUs/>} />
+        <Route path="/BlogHubpage" element={<BlogHubpage/>} />
+        <Route path="/CasestudyHubpage" element={<Casehubpage/>} />
 
-        
 
         </Routes>
         <Footerpage/>

@@ -4,7 +4,7 @@ import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import Producttab from "./ProductTabscomp/Producttab"
 import ProductApplications from "./ProductApplication/ProductApplications";
 import Blog from "../../HomePagecomp/Blogcomp/Blog";
-import GetInTouch from "../../HomePagecomp/Getintouchcomp/Getintouch";
+import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 
 const TotalSurroundview = () => {
     return (
@@ -14,7 +14,7 @@ const TotalSurroundview = () => {
             <Producttab/>
             <ProductApplications/>
             <Blog/>
-            <GetInTouch/>
+            <ContactUs/>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import DriverTab from "./ProductTabscomp/DriverTab"
 import Blog from "../../HomePagecomp/Blogcomp/Blog";
-import GetInTouch from "../../HomePagecomp/Getintouchcomp/Getintouch";
+import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import DriverApplications from './ProductApplication/DriverApplications';
 
 const Totalmonitoring = () => {
@@ -14,7 +14,7 @@ const Totalmonitoring = () => {
             <DriverTab/>
             <DriverApplications/>
             <Blog/>
-            <GetInTouch/>
+            <ContactUs/>
         </div>
     );
 }

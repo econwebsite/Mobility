@@ -3,7 +3,7 @@ import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import Forwardtab from "./ProductTabscomp/Forwardtab"
 import Blog from "../../HomePagecomp/Blogcomp/Blog";
-import GetInTouch from "../../HomePagecomp/Getintouchcomp/Getintouch";
+import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import ForwardApplications from './ProductApplication/ForwardApplications';
 
 const Totalforwardfacing = () => {
@@ -14,7 +14,7 @@ const Totalforwardfacing = () => {
             <Forwardtab/>
             <ForwardApplications/>
             <Blog/>
-            <GetInTouch/>
+            <ContactUs/>
         </div>
     );
 }
