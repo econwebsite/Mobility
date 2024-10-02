@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './ProductTab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
-import STURDeCAM31 from "../../../../assets/Productpage/surroundview/studycam31.jpg";
-import STURDeCAM34 from "../../../../assets/Productpage/surroundview/studycam34.jpg";
-import STURDeCAM84 from "../../../../assets/Productpage/surroundview/studycam84.jpg";
-import STURDeCAM88 from "../../../../assets/Productpage/surroundview/studycam88.jpg";
-import routecam from "../../../../assets/Productpage/surroundview/routeecamcu22.jpg"
+// 
+import STURDeCAM31 from "../../../../assets/Productpage/surroundview/studycam31.jpg"
+import STURDeCAM34 from "../../../../assets/Productpage/surroundview/studycam34.jpg"
+import STURDeCAM84 from "../../../../assets/Productpage/surroundview/studycam84.jpg"
+import STURDeCAM88 from "../../../../assets/Productpage/surroundview/studycam88.png"
+import routecam22 from "../../../../assets/Productpage/surroundview/routeecamcu22.jpg"
+
+// 
 import AnimationButton from "../../../ButtonComp/AnimationButton";
 import platform from "../../../../assets/Productpage/surroundview/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/surroundview/nividia.jpg";
@@ -55,7 +58,7 @@ const Producttab = () => {
       },
       bgColor: '#00f9ff',
       color: '#344ea1',
-      images: [STURDeCAM31, STURDeCAM84],
+      images: [STURDeCAM31, STURDeCAM34],
     },
     '4K GMSL2': {
       tabs: ['STURDeCAM84', 'STURDeCAM88'],
@@ -101,7 +104,7 @@ const Producttab = () => {
       },
       bgColor: '#003873',
       color: 'white',
-      images: [routecam],
+      images: [routecam22],
     }
   };
 

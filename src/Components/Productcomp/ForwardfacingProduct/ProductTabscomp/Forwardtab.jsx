@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Forwardtab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
-import STURDeCAM88 from "../../../../assets/Productpage/forwardfacing/studycam88.jpg";
+import STURDeCAM88 from "../../../../assets/Productpage/forwardfacing/studycam88.png";
 import STURDeCAM84 from "../../../../assets/Productpage/forwardfacing/studycam84.jpg";
 import AnimationButton from "../../../ButtonComp/AnimationButton";
 import platform from "../../../../assets/Productpage/forwardfacing/Platformsupport.jpg";
@@ -43,7 +43,7 @@ const Forwardtab = () => {
       },
       bgColor: '#00f9ff',
       color: '#344ea1',
-      images: [STURDeCAM88],
+      images: [STURDeCAM84],
     },
     'STURDeCAM88': {
       tabs: ['STURDeCAM88'],
@@ -62,7 +62,7 @@ const Forwardtab = () => {
       },
       bgColor: '#344ea1',
       color: 'white',
-      images: [STURDeCAM84],
+      images: [STURDeCAM88],
     },
    
   };
