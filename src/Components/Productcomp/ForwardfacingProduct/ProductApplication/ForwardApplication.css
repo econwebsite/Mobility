@@ -1,0 +1,69 @@
+/* Container for the entire component */
+.ForwardApplication-container {
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Main title */
+.ForwardApplication-title {
+  text-align: center;
+  font-size: 2.5em;
+  padding: 1.1em;
+  color: #344ea1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ForwardApplication-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, max-content); 
+  justify-content: center; 
+  column-gap: 50px;
+  row-gap: 50px; 
+  align-items: center;
+}
+
+/* Each box styling */
+.ForwardApplication-box {
+  background-color: #cff5ff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  max-width: 450px; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.ForwardApplication-image {
+  width: 100%; 
+  height: auto;
+  margin: 0; 
+  padding: 0; 
+}
+
+.ForwardApplication-boxTitle {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 1em; 
+  color: #344ea1;
+}
+
+@media (max-width: 768px) {
+  .ForwardApplication-boxes {
+    grid-template-columns: 1fr; /* Stack boxes in one column on smaller screens */
+    row-gap: 20px;
+  }
+  
+  .ForwardApplication-title {
+    font-size: 1.5em;
+  }
+  
+  .ForwardApplication-boxTitle {
+    font-size: 1.2em;
+    padding: 0.5em;
+  }
+}

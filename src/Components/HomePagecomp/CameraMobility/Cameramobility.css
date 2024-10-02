@@ -1,0 +1,382 @@
+/* Main Container */
+.Cameramobility-container {
+    background-color: #f1f2f2;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.Cameramobility-title {
+    font-size: 2.5em;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.Cameramobility-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 2em;
+}
+
+/* Left Column - Image */
+.Cameramobility-left-column {
+    flex: 1 1 55%;
+    position: relative;
+    display: flex;
+justify-content: center;
+}
+
+.Cameramobility-camera-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.Cameramobility-image-container img{
+width: 100%;
+}
+.Cameramobility-image-container {
+    position: relative;
+    max-width:633px;
+    width: 100%;
+}
+
+.Cameramobility-buttons-div{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+.Cameramobility-buttons-div:hover{
+    background-color: #00f9ff;
+}
+.Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: 1em;
+    background-color: #344ea1;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    box-shadow: 0 0 10px #344ea1, 0 0 20px #344ea1, 0 0 30px #344ea1;
+    transition: all 0.2s ease-in-out;
+    animation: neon-blink 1.5s infinite alternate;
+}
+
+.Cameramobility-product1 {
+    bottom: 265px;
+    right: 520px;
+}
+
+.Cameramobility-product2 {
+    bottom: 180px;
+    right: 40px;
+}
+
+.Cameramobility-product3 {
+    bottom:1px;
+    right: 400px;
+}
+
+
+.Cameramobility-product1:hover,
+.Cameramobility-product2:hover,
+.Cameramobility-product3:hover {
+    background-color: #00aeef; 
+    box-shadow: 0 0 20px #00aeef, 0 0 40px #00aeef, 0 0 60px #00aeef; 
+    transform: scale(1.3) rotate(-3deg); 
+    transition: all 0.3s ease-in-out; 
+}
+
+@keyframes neon-blink {
+    0% {
+        box-shadow: 0 0 10px #00ffae, 0 0 20px #00ffae, 0 0 30px #00ffae;
+        opacity: 1.1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        box-shadow: 0 0 20px #00ffae, 0 0 40px #00ffae, 0 0 60px #00ffae;
+        opacity: 1;
+    }
+}
+
+.Cameramobility-right-column {
+    flex: 1 1 45%;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
+}
+
+.Cameramobility-right-column.animated-box {
+    transform: scale(1.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.Cameramobility-info-box {
+    background-color: white;
+    border: 2px solid #003873;
+    padding: 1.5em;
+    border-radius: 8px;
+    position: relative;
+    max-width: 450px;
+}
+
+.Cameramobility-box-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Cameramobility-full-underline {
+    width: calc(100% + 3em);
+    height: 2px;
+    background-color: #003873;
+    margin: 0.5em -1.5em;
+}
+
+.Cameramobility-description {
+    font-size: 1em;
+    line-height: auto;
+    text-align: justify;
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+.Cameramobi-divbut {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Cameramobility-know-more-btn {
+    padding: 2px;
+    border: none;
+    border-radius: 7px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Cameramobility-content-container {
+        flex-direction: column;
+    }
+
+    .Cameramobility-title {
+        font-size: 1.5em;
+    }
+
+    .Cameramobility-left-column,
+    .Cameramobility-right-column {
+        flex: 1 1 100%;
+    }
+
+    .Cameramobility-camera-image {
+        margin-bottom: 1.5em;
+    }
+
+    .Cameramobility-description {
+        font-size: 1em;
+        padding: 0.2em;
+    }
+}
+
+
+/* Responsive for button comp */
+
+@media screen and (min-device-width: 1025px) and (max-device-width: 1210px) {
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        width: 35px;
+        height: 35px;
+    }
+    .Cameramobility-image-container {
+        position: relative;
+        max-width:516px;
+        width: 100%;
+    }
+    .Cameramobility-product1 {
+        bottom: 215px;
+        right: 425px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 145px;
+        right: 30px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:-5px;
+        right: 330px;
+    }
+    
+
+}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 1024px) {
+    .Cameramobility-image-container {
+        position: relative;
+        max-width:420px;
+        width: 100%;
+    }
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 170px;
+        right: 340px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 110px;
+        right: 20px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:-15px;
+        right: 270px;
+    }
+    
+
+}
+@media screen and (max-device-width: 700px) {
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        font-size: 0.9em ;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 300px;
+        right: 525px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 210px;
+        right: 30px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:25px;
+        right: 400px;
+    }
+    
+
+}
+@media screen and (min-device-width: 426px) and (max-device-width: 600px) {
+    .Cameramobility-image-container {
+        position: relative;
+        max-width:420px;
+        width: 100%;
+    }
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        font-size: 0.9em ;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 180px;
+        right: 335px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 130px;
+        right: 10px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:10px;
+        right: 250px;
+    }
+    
+
+}
+
+@media screen and (min-device-width: 376px) and (max-device-width: 425px) {
+    .Cameramobility-image-container {
+        position: relative;
+        max-width:336px;
+        width: 100%;
+    }
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 155px;
+        right: 280px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 107px;
+        right: 7px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:12px;
+        right: 220px;
+    }
+    
+
+}
+@media screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    .Cameramobility-image-container {
+        position: relative;
+        max-width:256px;
+        width: 100%;
+    }
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 114px;
+        right: 204px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 82px;
+        right: 1px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:7px;
+        right: 160px;
+    }
+    
+
+}
+
+
+@media (max-width: 320px) {
+    .Cameramobility-product1, .Cameramobility-product2, .Cameramobility-product3 {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .Cameramobility-product1 {
+        bottom: 120px;
+        right: 210px;
+    }
+    
+    .Cameramobility-product2 {
+        bottom: 85px;
+        right: 5px;
+    }
+    
+    .Cameramobility-product3 {
+        bottom:10px;
+        right: 160px;
+    }
+    
+
+}

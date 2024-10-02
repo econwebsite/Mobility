@@ -1,0 +1,173 @@
+.Casestudy-title {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+
+.Casestudy-container {
+    padding: 20px;
+}
+
+.Casestudy-desktopView {
+    display: block;
+}
+
+.Casestudy-mobileView {
+    display: none;
+}
+
+.Casestudy-carouselSlide {
+    background: white;
+    padding: 30px;
+}
+
+.Casestudy-carouselCards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Casestudy-card {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin: 10px;
+    width: 100%;
+}
+.Casestudy-card:hover
+ {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1) rotate(0); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.Casestudy-cardImage {
+    width: 50%;
+    height: 100%;
+    margin-right: 15px;
+}
+.Casestudy-cardImage img{
+    width: 100%;
+    height: 100%;
+}
+.Casestudy-cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    padding: 15px;
+}
+
+.slick-dots li button:before{
+    font-family: none;
+    font-size: 0px;
+    color: white;
+}  
+
+.Casestudy-cardTitle {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: justify;
+    color: #344ea1;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Casestudy-cardDescription {
+    font-size: 1.1em;
+    margin: 0;
+    text-align: justify;
+    margin-bottom: 2px;
+}
+
+.Casestudy-Buttondiv {
+    align-self: flex-end;
+}
+.Casestudy-ReadMoreButton{
+    padding: 2px;
+    border-radius: 7px;
+
+}
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    .Casestudy-desktopView {
+        display: none;
+    }
+    .Casestudy-mobileView {
+        display: block;
+    }
+
+    .Casestudy-mobileCard {
+        display: flex !important;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        justify-content: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: white;
+        padding: 15px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .Casestudy-mobileCardImage {
+        width: 100%; /* Ensure image takes full width of card */
+        max-width: 300px; /* Limit maximum width of the image */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure image covers the space without distortion */
+        margin-bottom: 15px;
+    }
+
+    .Casestudy-mobileCardContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items */
+        width: 100%;
+        text-align: center; /* Center text alignment */
+    }
+
+    .Casestudy-mobileCardTitle {
+        font-size: 1.5rem; /* Increase font size */
+        margin-bottom: 10px;
+    }
+
+    .Casestudy-mobileCardDescription {
+        font-size: 1rem; /* Increase font size */
+        margin-bottom: 15px; /* Increase margin below description */
+        text-align: justify; /* Justify text alignment */
+    }
+
+    .Casestudy-mobileReadMoreButton {
+       padding: 3px;
+        border-radius: 4px;
+        margin-top: auto; 
+        text-align: center; 
+    }
+
+}
+
+
+/* Reduce title size for mobile */
+@media (max-width: 480px) {
+    .Casestudy-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width: 1500px) {
+  
+    .Casestudy-cardContent {
+        padding: 40px;
+    }
+
+    }

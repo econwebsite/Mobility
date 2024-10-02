@@ -1,0 +1,162 @@
+/* Title styles */
+.VedioSection-title {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+.VedioSection-container {
+  padding: 20px;
+}
+
+/* Carousel styles for desktop */
+.VedioSection-desktopView {
+  display: block;
+}
+
+.VedioSection-mobileView {
+  display: none;
+}
+
+.VedioSection-carouselSlide {
+  background: white;
+  padding: 30px;
+}
+
+.ant-carousel .slick-dots li button {
+  width: 45px;
+  height: 3px;
+  background-color: #003873;
+  transition: background-color 0.3s ease;
+}
+
+.VedioSection-carouselCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.VedioSection-card {
+  flex: 1;
+  max-width: calc(30% - 16px);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #cff5ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  cursor: pointer;
+
+}
+
+.VedioSection-card:hover
+ {
+    background-color: #cff5ff; 
+    transform: scale(1.1) rotate(0); 
+    transition: all 0.3s ease-in-out; 
+}
+.VedioSection-cardImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.VedioSection-cardTitle {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.ant-carousel .slick-dots {
+  padding: 1em;
+  bottom: -32px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ant-carousel .slick-dots li {
+  margin: 0 15px;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background-color: #344ea1;
+}
+
+.ant-carousel .slick-dots li button:hover {
+  background-color: #344ea1;
+}
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .VedioSection-desktopView {
+    display: none;
+  }
+
+  .VedioSection-mobileView {
+    display: block;
+  }
+
+  .VedioSection-mobileCardGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .VedioSection-mobileCard {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #cff5ff;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .VedioSection-cardImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .VedioSection-cardTitle {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .ant-carousel .slick-prev, .ant-carousel .slick-next {
+    font-size: 1.5em;
+    color: #003873 !important;
+    font-weight: bolder !important;
+    z-index: 1;
+    opacity: 1 !important; /* Set opacity to 1 to remove transparency */
+    background-color: transparent !important; /* Use transparent instead of none for the background */
+    /* padding: 2px !important; */
+    /* border-radius: 50% !important; */
+}
+
+.ant-carousel .slick-prev:before, .ant-carousel .slick-next:before {
+    color: #200a82 !important;
+    opacity: 1 !important; /* Set opacity to 1 to remove transparency */
+    background-color: transparent !important; /* Use transparent instead of none */
+}
+
+
+}
+
+@media (max-width: 480px) {
+  .VedioSection-title {
+    font-size: 1.5rem; 
+  }
+  .VedioSection-carouselSlide {
+    padding: 15px; 
+  }
+}
