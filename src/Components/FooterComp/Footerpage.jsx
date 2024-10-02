@@ -77,8 +77,8 @@ const Footerpage = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/Cameramobility">Solution</Link>
+              <Link to="/Casestudy">Casestudies</Link>
               <Link to="/Blog">Blog</Link>
-              <Link to="/About">About</Link>
               <Link to="/Partner">Partners</Link>
             </div>
           </div>

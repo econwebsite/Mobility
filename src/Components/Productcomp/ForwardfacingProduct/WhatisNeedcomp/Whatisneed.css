@@ -110,8 +110,9 @@
       font-size: 2rem;
   }
   .whatis-standparagraphtext {
-      padding: 1.5em;
-      text-align: justify;
+    padding: 1em;
+    text-align: justify !important;
+    hyphens: auto;
   }
   .whatis-box {
       width: 30%; 
