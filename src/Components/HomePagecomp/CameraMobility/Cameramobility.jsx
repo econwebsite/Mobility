@@ -9,21 +9,21 @@ const Cameramobility = () => {
 
     const contentData = {
         1: {
-            title: "Surround View Camera",
+            title: "1. Surround View Camera",
             description: "360-degree perception for enhanced safety and parking assistance.",
             buttonText: "Know more",
             to: "/surroundview",
             backgroundColor: "#344ea1"
         },
         2: {
-            title: "Forward Facing Cameras",
+            title: "2. Forward Facing Cameras",
             description: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance",
             buttonText: "Know more",
             to: "/forwardfacing",
             backgroundColor: "#00aeef"
         },
         3: {
-            title: "Driver Monitoring Cameras",
+            title: "3. Driver Monitoring Cameras",
             description: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",
             buttonText: "Know more",
             to: "/drivermonitoring",

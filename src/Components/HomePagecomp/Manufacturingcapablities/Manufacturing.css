@@ -39,6 +39,23 @@
   max-width: 100%;
   height: auto;
 }
+.manufacturing-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.manufacturing-list li {
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.manufacturing-list .icon {
+  color: #00aeef !important; /* Custom color for the tick icon */
+  margin-right: 10px;
+  font-size: 20px;
+}
 
 /* Mobile view styles */
 @media (max-width: 768px) {
@@ -55,6 +72,11 @@
 
   .manufacturing-right-column {
     margin-top: 20px; 
+  }
+  .manufacturing-list li {
+    margin-bottom: 15px;
+    margin-left: 0px;
+    text-align: left;
   }
 }
 

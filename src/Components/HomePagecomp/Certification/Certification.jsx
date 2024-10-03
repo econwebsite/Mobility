@@ -8,7 +8,7 @@ import './Certification.css';
 const Certification = () => {
     return (
         <div className="certification-container">
-            <h1 className="certification-title">CERTIFICATION</h1>
+            <h1 className="certification-title">CERTIFICATIONS</h1>
             <div className='mainContainer'>
 
             <div className="certification-grid">

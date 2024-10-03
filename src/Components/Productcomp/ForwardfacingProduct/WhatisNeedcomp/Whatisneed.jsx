@@ -1,12 +1,12 @@
 import React from 'react';
 import Slider from "react-slick";
 import "./Whatisneed.css";
-import highdynamic from "../../../../assets/Productpage/hd-icon.png";
-import hightresolution from "../../../../assets/Productpage/hd-icon.png";
-import ip67 from "../../../../assets/Productpage/ip67-icon.png";
-import gmsl from "../../../../assets/Productpage/gmsl-icon.png";
-import lowlight from "../../../../assets/Productpage/lowlight-icon.png";
-import nirsensitivity from "../../../../assets/Productpage/nir-icon.png";
+import hdr from "../../../../assets/Productpage/forwardfacing/hdr.png"
+import Lfm from "../../../../assets/Productpage/forwardfacing/hdr.png"
+import highreso from "../../../../assets/Productpage/forwardfacing/high-resolution.png"
+import customarrow from "../../../../assets/Productpage/forwardfacing/high-resolution.png"
+
+
 
 // Custom Right Arrow Component
 const NextArrow = (props) => {
@@ -75,38 +75,26 @@ const Whatisneed = () => {
           <Slider {...settings}>
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
-                <img src={highdynamic} alt="High Dynamic Range" className="whatis-image" />
-                <p>High Dynamic Range</p>
+                <img src={hdr} alt="High Dynamic Range" className="whatis-image" />
+                <p>HDR</p>
               </div>
             </div>
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
-                <img src={hightresolution} alt="High Resolution" className="whatis-image" />
-                <p>High Resolution</p>
+                <img src={Lfm} alt="High Resolution" className="whatis-image" />
+                <p>LFM</p>
               </div>
             </div>
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
-                <img src={ip67} alt="IP67 / IP69K Rating" className="whatis-image" />
-                <p>IP67 / IP69K Rating</p>
+                <img src={highreso} alt="IP67 / IP69K Rating" className="whatis-image" />
+                <p>High resolution</p>
               </div>
             </div>
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
-                <img src={gmsl} alt="GMSL2 / GigEInterface" className="whatis-image" />
-                <p>GMSL2 / GigEInterface</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={lowlight} alt="Low light Sensitivity" className="whatis-image" />
-                <p>Low light Sensitivity</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={nirsensitivity} alt="NIR Sensitivity" className="whatis-image" />
-                <p>NIR Sensitivity</p>
+                <img src={customarrow} alt="GMSL2 / GigEInterface" className="whatis-image" />
+                <p>Customizable narrow-angle</p>
               </div>
             </div>
           </Slider>

@@ -7,7 +7,7 @@ import Hubcasecard from './Hubcasecard';
 const Casehubpage = () => {
   return (
     <div className='casehubpage-hubtot-blog'>
-      <h1>Case Study</h1>
+      <h1>CASE STUDIES</h1>
       <div className='mainContainer'>
       <div className="casehubpage-hubpageblog">
         {/* Left big card */}

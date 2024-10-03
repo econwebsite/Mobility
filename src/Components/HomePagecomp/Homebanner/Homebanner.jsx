@@ -9,7 +9,7 @@ const Homebanner = () => {
                 <div className='homeBanner'>
                     <img src={banner} alt="Slide 1" className="homecarousel-image" />
                     <div className='homeButton'>
-                        <AnimationButton text="Know more" backgroundColor="black" hoverColor="#00aeef" to="/product" animationColor="#69ba2f"/>
+                        <AnimationButton text="Know more" backgroundColor="#00aeef" to="/product" animationColor="#69ba2f"/>
                     </div>
                 </div>
             </div>
