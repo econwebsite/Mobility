@@ -106,7 +106,7 @@ const NavBar = () => {
                     <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
                   </a>
                 </div>
-                <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" />
+                {/* <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" /> */}
               </div>
             </div>
           </div>

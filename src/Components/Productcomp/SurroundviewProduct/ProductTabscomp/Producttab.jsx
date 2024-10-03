@@ -9,7 +9,7 @@ import STURDeCAM88 from "../../../../assets/Productpage/surroundview/studycam88.
 import routecam22 from "../../../../assets/Productpage/surroundview/routeecamcu22.jpg"
 
 // 
-import AnimationButton from "../../../ButtonComp/AnimationButton";
+import Modelbutton from "../../../ButtonComp/Modelbutton";
 import platform from "../../../../assets/Productpage/surroundview/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/surroundview/nividia.jpg";
 import qualcum from "../../../../assets/Productpage/surroundview/qualcom.jpg";
@@ -187,13 +187,9 @@ const Producttab = () => {
                       {/* Divider and Button at the end of the row */}
                       <div className="Productinsidetab-divider"></div>
                       <div style={{ padding: '10px' }}>
-                        <AnimationButton
-                          text="Know more"
-                          backgroundColor="#00aeef"
-                          hoverColor="white"
-                          animationColor="#69ba2f"
-                          className="Productinsidetab-action-button"
-                        />
+                      
+         <Modelbutton className="Productinsidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
+
                       </div>
                     </div>
                   </div>

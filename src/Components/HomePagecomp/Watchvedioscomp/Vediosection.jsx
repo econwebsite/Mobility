@@ -12,24 +12,24 @@ const VedioSection = () => {
 
   const allCardData = [
     [
-      { image: Cardthumb1, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb2, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" }
+      { image: Cardthumb2, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/JDiIqmI9GRU?autoplay=1" },
+      { image: Cardthumb1, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/iAdlvfHqxPg&t?autoplay=1" },
+      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/86WNBakriYg?autoplay=1" }
     ],
     [
-      { image: Cardthumb2, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb1, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" }
+      { image: Cardthumb1, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/amoin1rADKY&t?autoplay=1" },
+      { image: Cardthumb2, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/JDiIqmI9GRU?autoplay=1" },
+      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/86WNBakriYg?autoplay=1" }
     ],
     [
-      { image: Cardthumb1, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb2, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" }
+      { image: Cardthumb2, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/amoin1rADKY&t?autoplay=1" },
+      { image: Cardthumb1, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/iAdlvfHqxPg&t?autoplay=1" },
+      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/86WNBakriYg?autoplay=1" }
     ],
     [
-      { image: Cardthumb2, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb1, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" },
-      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/humwg-AKU4s?autoplay=1" }
+      { image: Cardthumb3, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/86WNBakriYg?autoplay=1" },
+      { image: Cardthumb2, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/amoin1rADKY&t?autoplay=1" },
+      { image: Cardthumb1, title: "Cameras for Cabin Monitoring", videoUrl: "https://www.youtube.com/embed/86WNBakriYg?autoplay=1" }
     ],
   ];
 

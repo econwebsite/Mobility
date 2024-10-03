@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const BlogHubpage = () => {
   return (
     <div className="BlogHubPage-Total mt-2">
-      <h1 className="BlogHubPage-title">BLOGS</h1>
+      <h1 className="BlogHubPage-title">BLOG</h1>
       <div className='BlogHubPage-cards'>
 
         {/* Card 1 */}

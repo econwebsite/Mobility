@@ -9,7 +9,7 @@ import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.
 import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
 import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
 import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
-
+import Modelbutton from "../../../ButtonComp/Modelbutton"
 const DriverTab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('NileCAM27');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
@@ -160,13 +160,8 @@ const DriverTab = () => {
                       ))}
                       <div className="DriverTab-insidetab-divider"></div>
                       <div style={{ padding: '10px' }}>
-                        <AnimationButton
-                          text="Know more"
-                          backgroundColor="#00aeef"
-                          hoverColor="white"
-                          animationColor="#69ba2f"
-                          className="DriverTab-insidetab-action-button"
-                        />
+                    <Modelbutton className="DriverTab-insidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
+
                       </div>
                     </div>
                   </div>    

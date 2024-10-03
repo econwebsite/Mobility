@@ -3,7 +3,7 @@ import './Forwardtab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
 import STURDeCAM88 from "../../../../assets/Productpage/forwardfacing/studycam88.png";
 import STURDeCAM84 from "../../../../assets/Productpage/forwardfacing/studycam84.jpg";
-import AnimationButton from "../../../ButtonComp/AnimationButton";
+import Modelbutton from "../../../ButtonComp/Modelbutton";
 import platform from "../../../../assets/Productpage/forwardfacing/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/forwardfacing/nividia.jpg";
 import qualcum from "../../../../assets/Productpage/forwardfacing/qualcom.jpg";
@@ -142,13 +142,9 @@ const Forwardtab = () => {
                       ))}
                       <div className="Forwardinsidetab-divider"></div>
                       <div style={{ padding: '10px' }}>
-                        <AnimationButton
-                          text="Know more"
-                          backgroundColor="#00aeef"
-                          hoverColor="white"
-                          animationColor="#69ba2f"
-                          className="Forwardinsidetab-action-button"
-                        />
+                      
+           <Modelbutton className="Forwardinsidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
+
                       </div>
                     </div>
                   </div>    
