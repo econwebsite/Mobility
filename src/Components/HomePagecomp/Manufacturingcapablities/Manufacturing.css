@@ -8,7 +8,7 @@
 
 .manufacturing-title {
   font-size: 2.5rem;
-  padding: 0;
+  padding: 0.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -40,7 +40,7 @@
   height: auto;
 }
 .manufacturing-list {
-  list-style: none; /* Remove default bullets */
+  list-style: none; 
   padding: 0;
 }
 
@@ -52,11 +52,20 @@
 }
 
 .manufacturing-list .icon {
-  color: #00aeef !important; /* Custom color for the tick icon */
+  color: #00aeef !important;
   margin-right: 10px;
   font-size: 20px;
 }
-
+.manuf-knowbtn{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+}
+.manuf-knowbtn button{
+  padding: 2px;
+  border-radius: 7px;
+  margin-left: 10px;
+}
 /* Mobile view styles */
 @media (max-width: 768px) {
   .manufacturing-content {
@@ -78,6 +87,12 @@
     margin-left: 0px;
     text-align: left;
   }
+  .manuf-knowbtn{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    }
 }
 
 @media (max-width: 480px) {
@@ -93,4 +108,11 @@
   .manufacturing-right-column img {
     max-width: 100%; 
   }
+}
+
+@media (min-width: 1700px) {
+
+.manufacturing-title {
+  padding: 0em;
+}
 }

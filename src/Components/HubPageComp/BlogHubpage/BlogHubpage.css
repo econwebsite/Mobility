@@ -64,7 +64,7 @@
 
 .BlogHubPage-card-title {
   line-height: 1.5em;
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #093e77; 
   font-weight: 500;
   margin: 5px 0;
@@ -82,8 +82,8 @@
 
 .BlogHubPage-card-button {
   margin-top: 10px;
-  border-radius: 3px;
-  padding: 3px; 
+  border-radius: 7px;
+  padding: 2px; 
   text-align: left;
 }
 

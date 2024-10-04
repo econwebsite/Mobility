@@ -58,19 +58,31 @@ table td{
   border-bottom: none !important;
 }
 
-
 @media (max-width: 768px) {
   .ProductTableData-ContainerBox {
+    flex-direction: column; /* Image first, then the table */
     border: none;
   }
-  table td{
+
+  table td {
     border-right: 1px solid #344ea1;
     border-top: 1px solid #344ea1;
   }
+
+  .ProductTableData-ImageColumn {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
   .ProductTableData-ImageColumn img {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
+    width: 90% !important;
     margin-bottom: 10px;
-}
+  }
+
+  .ProductTableData-LeftColumn {
+    flex-basis: 100%;
+  }
+  .ProductTableData-ContainerBox {
+    background-color: #f1f2f2;
+  }
 }

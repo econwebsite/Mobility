@@ -9,13 +9,17 @@ import TotalSurroundview from "./Components/Productcomp/SurroundviewProduct/Tota
 import Totalforwardfacing from "./Components/Productcomp/ForwardfacingProduct/Totalforwardfacing";
 import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/Totalmonitoring";
 import Partner from "./Components/PartnersComp/Partner"
-import Blog from './Components/HomePagecomp/Blogcomp/Blog';
+import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
-import Casestudy from './Components/HomePagecomp/Casestudycomp/Casestudy';
 import Cameramobility from "./Components/HomePagecomp/CameraMobility/Cameramobility"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
 import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
 import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
+import HdrLedBlog from "./Components/FutureBlog/HdrLedBlog"
+import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
+import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
+import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
+
 const App = () => {
   return (
 
@@ -34,8 +38,12 @@ const App = () => {
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/BlogHubpage" element={<BlogHubpage/>} />
         <Route path="/CasestudyHubpage" element={<Casehubpage/>} />
-
-
+        <Route path="/HubManufacturing" element={<HubManufacturing/>} />
+        <Route path="/HdrLedBlog" element={<HdrLedBlog/>} />
+        <Route path="/DrivermonBlog" element={<DrivermonBlog/>} />
+        <Route path="/ForwardBlog" element={<ForwardBlog/>} />
+        <Route path="/SurroundBlog" element={<SurroundBlog/>} />
+        
         </Routes>
         <Footerpage/>
 

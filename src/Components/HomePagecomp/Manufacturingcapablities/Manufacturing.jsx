@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './Manufacturing.css'; // For the styling
 import manufact from "../../../assets/homepage/manufacturing-img.png";
-
+import AnimationButton from "../../ButtonComp/AnimationButton"
 const Manufacturing = () => {
   return (
     <div className="manufacturing-container">
@@ -21,6 +21,10 @@ const Manufacturing = () => {
             <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Robust Design for Reliability</li>
             <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Rugged Testing for Harsh Environment</li>
             </ul>
+            <br></br>
+            <div  className='manuf-knowbtn'>
+            <AnimationButton text="Know more"  backgroundColor="#3443a1" to="/HubManufacturing" animationColor="#69ba2f"/>
+            </div>
           </div>
           <div className="manufacturing-right-column" data-aos="fade-left" data-aos-duration="1800">
             <img
