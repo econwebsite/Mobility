@@ -93,7 +93,8 @@ const Whatisneed = () => {
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
                 <img src={hdr} alt="GMSL2 / GigEInterface" className="whatis-image" />
-                <p>Compatibility with embedded platforms</p>
+                <p>
+                Compatible platforms</p>
               </div>
             </div>
             <div className="whatis-box">

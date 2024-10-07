@@ -94,7 +94,7 @@ const Whatisneed = () => {
             <div className="whatis-box">
               <div className='alignment-whatisbox'>
                 <img src={customarrow} alt="GMSL2 / GigEInterface" className="whatis-image" />
-                <p>Customizable narrow-angle</p>
+                <p>Customizable Lens</p>
               </div>
             </div>
           </Slider>

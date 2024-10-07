@@ -8,7 +8,7 @@
 
 .partner-banner-img {
     width: 100%;
-    height: 300px;
+    height: auto;
 }
 
 .partner-title {
@@ -90,12 +90,12 @@
     }
 
     .partner-title {
-        font-size: 1.3em;
+        font-size: 1.2em;
         margin-top: 15px;
     }
     .partner-subtitle {
-        font-size: 1.2em;
-        margin-bottom: 20px;
+        font-size: 1em;
+        margin-bottom: 12px;
     }
     
     .partner-ecosystem {
