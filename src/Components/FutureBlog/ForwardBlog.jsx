@@ -70,7 +70,7 @@ const ForwardBlog = () => {
                                     <li>ArniCAM31</li>
                                 </ul>
                                 <p>Our autonomous mobility vision expertise includes ISP tuning, optics integration, AI/ML development, mechanical design support, functional safety compliance with ISO standards, and more. We also have deep experience in NVIDIA, NXP, TI, Qualcomm, and FPGA platforms.</p>
-                                <p>Browse our <a href=""> Camera Selector Page </a> to view e-con Systems’ portfolio.</p>
+                                <p>Browse our <a href="https://www.e-consystems.com/camera-selector.asp"> Camera Selector Page </a> to view e-con Systems’ portfolio.</p>
 
                             </div>
                         </div>

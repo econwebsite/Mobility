@@ -7,14 +7,14 @@ import AnimationButton from "../../ButtonComp/AnimationButton"
 import { Link } from 'react-router-dom';
 const Casestudy = () => {
   const cardData = [
-    { image: birdeye1, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye2, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye1, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
-    { image: birdeye2, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." },
+    { image: birdeye1, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
+    { image: birdeye2, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
+    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    { image: birdeye1, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
+    { image: birdeye2, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." ,to:""},
   ];
 
   return (
@@ -39,18 +39,18 @@ const Casestudy = () => {
                 {chunk.map((card, idx) => (
                   <div key={idx} className="Casestudy-card">
                     <div className="Casestudy-cardImage">
-                      <Link to="/123" className='LinkIMG' style={{textDecoration:"none"}}>
+                      <Link to="" className='LinkIMG' style={{textDecoration:"none"}}>
                     <img src={card.image} alt={card.title}  />
                     </Link>
                     </div>
                     <div className="Casestudy-cardContent">
-                      <Link to="/123" className='LinkTITLE' style={{textDecoration:"none"}}>
+                      <Link to="" className='LinkTITLE' style={{textDecoration:"none"}}>
                       <h3 className="Casestudy-cardTitle">{card.title}</h3>
                       </Link>
                       <p className="Casestudy-cardDescription">{card.description}</p>
                       <br></br>
                       <div className="Casestudy-Buttondiv">
-                      <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" className="Casestudy-ReadMoreButton" to="/123" />
+                      <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" className="Casestudy-ReadMoreButton" to={card.to}  />
 </div>
                     </div>
                   </div>
@@ -79,7 +79,7 @@ const Casestudy = () => {
             <div className="Casestudy-mobileCardContent">
               <h3 className="Casestudy-mobileCardTitle">{card.title}</h3>
               <p className="Casestudy-mobileCardDescription">{card.description}</p>
-              <AnimationButton text="Read more" backgroundColor="#003873" hoverColor="white" animationColor="#69ba2f" className="Casestudy-mobileReadMoreButton" to="/123" />
+              <AnimationButton text="Read more" backgroundColor="#003873" hoverColor="white" animationColor="#69ba2f" className="Casestudy-mobileReadMoreButton" to={card.to} />
 
             </div>
           </div>

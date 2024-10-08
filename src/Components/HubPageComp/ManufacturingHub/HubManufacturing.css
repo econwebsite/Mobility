@@ -1,25 +1,16 @@
-/* Main Container */
 .hubmanuf-total {
-    padding: 2em;
     background-color: #f1f2f2; 
+    width: 100%;
   }
   
   .hub-manufacturing-box {
-    max-width: 1100px;
     margin: 0 auto;
-    padding: 2.5em;
-    border: 2px solid #003873; 
+    padding: 2em;
     border-radius: 15px;
-    background-color:white; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
     text-align: center;
     transition: transform 0.3s ease; 
   }
-  
-  .hub-manufacturing-box:hover {
-    transform: scale(1.02);
-  }
-  
+   
   .hub-title {
     color: #344ea1; 
     font-size: 2.5em;
@@ -28,7 +19,7 @@
     font-weight: 300;
   }
   
-  .hub-image-content {
+  /* .hub-image-content {
     margin-bottom: 2em;
   }
   
@@ -38,7 +29,7 @@
     display: block; 
     margin: 0 auto; 
   }
-  
+   */
   
   .hub-text-content {
     text-align: justify;
@@ -99,7 +90,7 @@
         background-color: #f9f9f9; 
       }
     .hub-manufacturing-box {
-      padding: 1.5em;
+      padding: 1em;
     }
   
     .hub-title {
@@ -130,11 +121,11 @@
   
     .hub-text-content p,
     .hub-text-content ul li {
-      font-size: 1rem;
+      font-size: 1em;
     }
   
     .hub-manufacturing-box {
-      padding: 1.2em;
+      padding: 0.5em;
     }
     .hub-text-content ul li img {
       max-width: 100%; 

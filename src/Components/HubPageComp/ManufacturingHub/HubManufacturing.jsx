@@ -5,11 +5,12 @@ const HubManufacturing = () => {
   return (
     <div className="hubmanuf-total">
       <div className="hub-manufacturing-box">
+      <div className='mainContainer'>
         <h1 className="hub-title">Manufacturing Capability</h1>
 
-        <div className="hub-image-content">
+        {/* <div className="hub-image-content">
           <img src="https://via.placeholder.com/300x120" alt="Manufacturing Capability" className="hub-image" />
-        </div>
+        </div> */}
 
         <div className="hub-text-content">
           <p>
@@ -28,6 +29,7 @@ const HubManufacturing = () => {
             Our cameras undergo rigorous vibration and shock testing to ensure durability in tough off-road and industrial conditions. Designed to meet IP69K standards, they are resistant to dust, water, extreme temperatures, and more.</li>
           </ul>
         </div>
+      </div>
       </div>
     </div>
   );
