@@ -114,6 +114,7 @@
 .Articalknow-button {
   padding: 2px;
   border-radius: 7px;
+  text-align: left;
 }
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -146,15 +147,12 @@
 
   .Artical-inputemail {
     width: 50%;
-    max-width: 300px; /* Increase max-width to use more screen space */
+    max-width: 300px;
     padding: 10px;
     border-radius: 5px;
   }
 
   .Articalknow-button {
-    width: 50%;
-    max-width: 300px; /* Increase max-width to use more screen space */
-    padding: 10px 20px;
-    font-size: 1em; /* Adjust font size for better readability */
+    font-size: 1em; 
   }
 }

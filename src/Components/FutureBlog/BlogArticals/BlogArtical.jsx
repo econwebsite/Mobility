@@ -93,7 +93,7 @@ const BlogArtical = () => {
             e.preventDefault()
             return false;
           }} placeholder="Your email address" className="Artical-inputemail" value={email} onChange={handleChange} />
-          <AnimatedButton className="Articalknow-button" text="Know more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" onClick={handelSubscribtion}></AnimatedButton>
+          <AnimatedButton className="Articalknow-button" text="Know more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" onClick={handelSubscribtion}/>
           {!isValid && <p style={{ color: 'red', margin: '0px',textAlign:"center",width:"100%" }}>Invalid email address</p>}
         </div>
       </div>

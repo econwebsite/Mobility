@@ -19,6 +19,7 @@ import HdrLedBlog from "./Components/FutureBlog/HdrLedBlog"
 import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
 import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
+import NotFoundPage from "./Components/Notfoundpage"
 
 const App = () => {
   return (
@@ -43,7 +44,7 @@ const App = () => {
         <Route path="/DrivermonBlog" element={<DrivermonBlog/>} />
         <Route path="/ForwardBlog" element={<ForwardBlog/>} />
         <Route path="/SurroundBlog" element={<SurroundBlog/>} />
-        
+        <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footerpage/>
 
