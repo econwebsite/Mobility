@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
 import './Navbar.css';
-import dentallogo from "../../assets/homepage/NewDentallogo.svg";
+import shelflogo from "../../assets/homepage/shelfmonitor-logo.svg";
 import AnimationButton from '../ButtonComp/AnimationButton';
 
 const NavBar = () => {
@@ -28,13 +28,13 @@ const NavBar = () => {
   const SolutionMenu = (
     <Menu  style={{width:"300px",border:"1px solid #00aeef"}}>
       <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 1</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/forwardfacing" onClick={handleNavLinkClick}>Forward Facing Cameras</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 2</Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>Driver Monitoring Cameras</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 3</Link>
       </Menu.Item>
     </Menu>
   );
@@ -74,15 +74,16 @@ const NavBar = () => {
           <div className="navbarpage-header">
             <div className="navbarpage-logoContainer">
               <Link to="/">
-                <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{ cursor: "pointer" }} />
+                <img src={shelflogo} alt=" Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{ cursor: "pointer" }} />
               </Link>
             </div>
             <div className="navbarpage-navItems">
             <Link to="/" className="navbarpage-navLink">Home</Link>
             <div className="navbarpage-divider"></div>
-              <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">Solutions</Link>
-              </Dropdown>
+              {/* <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
+                <Link className="navbarpage-navLink">ShelfTrack</Link>
+              </Dropdown> */}            <Link to="/shelfTrack" className="navbarpage-navLink">ShelfTrack</Link>
+
               <div className="navbarpage-divider"></div>
               {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
@@ -91,7 +92,7 @@ const NavBar = () => {
                 <Link className="navbarpage-navLink">Resources</Link>
               </Dropdown>
               <div className="navbarpage-divider"></div>
-              <Link to="/Partner" className="navbarpage-navLink">Partners</Link>
+              <Link to="/Partner" className="navbarpage-navLink">About Us</Link>
               <div className="navbarpage-divider"></div>
               <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
             </div>
@@ -106,7 +107,7 @@ const NavBar = () => {
                     <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
                   </a>
                 </div>
-                {/* <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" /> */}
+                <AnimationButton text="Get a Quote" backgroundColor="#ffc107" textColor="#131b2d" hoverBackgroundColor="red" hoverTextColor="#344ea1" className='Navbargetquote' />
               </div>
             </div>
           </div>
@@ -118,7 +119,7 @@ const NavBar = () => {
         <Container fluid>
           <Navbar.Brand href="#">
             <Link to="/">
-              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo-mobile" />
+              <img src={shelflogo} alt="Logo" className="navbarpage-logo-mobile" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
