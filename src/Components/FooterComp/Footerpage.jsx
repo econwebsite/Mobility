@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Footerpage.css';
 import { message } from 'antd';
-import econlog from "../../assets/homepage/footerlogo-1.svg"
-// import shelflogo from "../../assets/homepage/shelfmonitor-logo.svg"
+import dentallogo from "../../assets/homepage/NewDentallogo.svg";
+import econlogo from "../../assets/homepage/footerlogo-1.svg"
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-// import AnimatedButton from "../ButtonComp/AnimationButton";
+import AnimatedButton from "../ButtonComp/AnimationButton";
 const Footerpage = () => {
   const [email, setEmail] = useState(null);
   const [isValid, setIsValid] = useState(true);
@@ -72,24 +72,24 @@ const Footerpage = () => {
         <div className="footer-inner">
           <div className="footer-column footer-column-logo">
             <div className="footer-logo">
-              {/* <img src={shelflogo} alt="Company Logo" /> */}
+              {/* <img src={dentallogo} alt="Company Logo" /> */}
             </div>
             <div className="footer-links">
               <Link to="/">Home</Link>
-              <Link to="/shelfTrack">ShelfTrack</Link>
-              <Link to="/">Casestudies</Link>
-              <Link to="/">Blog</Link>
-              <Link to="/">AboutUs</Link>
-              <Link to="/">ContactUs</Link>
+              <Link to="/Cameramobility">Solution</Link>
+              <Link to="/CasestudyHubpage">Casestudies</Link>
+              <Link to="/BlogHubpage">Blog</Link>
+              <Link to="/Partner">Partners</Link>
+              <Link to="/ContactUS">Contact Us</Link>
             </div>
           </div>
           <div className="footer-divider" />
           <div className="footer-column footer-column-contact">
             <div className="footer-contact-item">
-              <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#344ea1" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
+              <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#003873" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
             </div>
             <div className="footer-contact-item">
-              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#344ea1" }} href="mailto:camerasolutions@e-consystems.com">
+              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#003873" }} href="mailto:camerasolutions@e-consystems.com">
                 camerasolutions@e-consystems.com
               </a></p>
             </div>
@@ -107,10 +107,10 @@ const Footerpage = () => {
             </div>
             <div className="footer-social-icons">
               <a href='https://www.e-consystems.com/'>
-                <img src={econlog} alt="e-con Logo" style={{ width: "300px",backgroundColor:"white" }} /></a>
+                <img src={econlogo} alt="e-con Logo" style={{ width: "300px" }} /></a>
             </div>
             <div className="footer-bottom-text">
-              <p><span style={{ color: "#344ea1" }}>e-con Systems</span> 2024, all rights reserved.</p>
+              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2024, all rights reserved.</p>
             </div>
           </div>
         </div>

@@ -96,6 +96,9 @@
     border-radius: 7px;
 
 }
+.slick-dots li button:before{
+    color: white !important;
+}
 /* Mobile specific styles */
 @media (max-width: 768px) {
     .Casestudy-desktopView {

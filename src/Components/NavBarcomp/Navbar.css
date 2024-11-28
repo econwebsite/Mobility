@@ -1,6 +1,6 @@
 .navbarpage-navbar {
   width: 100%;
-  background-color: #4190fc;
+  background-color: #f1f2f2;
   display: flex;
   box-shadow: 0 4px 30px rgba(121, 116, 116, 0.1);
   flex-direction: column;
@@ -37,8 +37,9 @@ width: 95% !important;
     justify-content: space-between;
     width: 100%;
   }
-  .Navbargetquote{ 
+  .Navbargetquote{
     margin-left: 10px;
+    padding: 1px !important;
   }
   .mobile-view {
     display: none;
@@ -77,19 +78,19 @@ width: 95% !important;
   .navbarpage-navLink {
     margin: 0 9px;
     text-decoration: none !important;
-    color: white;
+    color: #003873;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1em;
     white-space: nowrap;
   }
   .navbarpage-navLink:hover {
-    color: #ffc107;
+    color: #00aeef;
   }
 
   .navbarpage-divider {
     height: 20px;
-    border-left: 2px solid white;
+    border-left: 2px solid #00aeef;
     margin: 0 4px;
   }
 
@@ -129,14 +130,13 @@ width: 95% !important;
   .navbarpage-tellUs {
     font-size: 1em;
     margin: 0;
-    color: white;
+    color: #00aeef;
   }
 
   .navbarpage-phoneNumber {
     font-size: 14px;
     margin: 0;
-    font-weight: 400;
-    color: #131b2d;
+    color: #003873;
     white-space: nowrap;
   }
 
@@ -200,7 +200,7 @@ width: 95% !important;
 }
 
 .ant-dropdown-menu {
-  background-color: #ffc107;
+  background-color: #00aeef;
   border: 1px solid #00aeef; 
   width: 200px;
   height: auto;
@@ -213,7 +213,7 @@ width: 95% !important;
 }
 
 .ant-dropdown-menu-item:hover {
-  background-color: #ffc107 !important; 
+  background-color: #00aeef !important; 
   color: white !important;
 }
 
