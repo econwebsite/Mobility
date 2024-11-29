@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 23.7px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #131b2d;
+        font-family: Poppins-Regular, Poppins;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #131b2d;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+
+      .cls-2 {
+        font-size: 22.5px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <g>
+          <text class="cls-1" transform="translate(32.9 43.5)"><tspan x="0" y="0">20</tspan></text>
+          <text class="cls-1" transform="translate(61.5 35.6) scale(.6)"><tspan x="0" y="0">+</tspan></text>
+        </g>
+        <text class="cls-2" transform="translate(19.1 82.2)"><tspan x="0" y="0">years</tspan></text>
+        <circle class="cls-3" cx="50" cy="34" r="29"/>
+      </g>
+    </g>
+  </g>
+</svg>

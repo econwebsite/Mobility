@@ -1,0 +1,165 @@
+/* Container and General Styling */
+.NewBanner-bannerContainer {
+  display: flex;
+  background-color: #1050c1;
+  width: 100%;
+  height: 430px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.NewBanner-bannerLeft {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.NewBanner-imageRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.NewBanner-mobileImg {
+  width: 100%; 
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+  display: block;
+  animation: slideInFromBottom 1s ease-out forwards;
+
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.NewBanner-mobileRack {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  position: relative;
+  left: -350px;
+  display: block; /* Visible by default */
+}
+
+/* Placeholder Image */
+.NewBanner-placeholderImg {
+  display: none; /* Hidden by default */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Side Styling */
+.NewBanner-bannerRight {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 3em;
+  color: #ffffff;
+}
+
+.NewBanner-bannerRight h2 {
+  color: white;
+  font-weight: 200;
+  text-align: right;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.NewBanner-bannerRight h3 {
+  color: white;
+  font-weight: 400;
+  line-height: 1.3em;
+  text-align: right;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+.NewBanner-spacer {
+  margin-top: 10px;
+}
+
+.NewBanner-spacerLarge {
+  margin-top: 20px;
+}
+
+.NewBanner-bannerButton {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1015px) {
+  .NewBanner-bannerContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    height: auto;
+  }
+
+  .NewBanner-bannerLeft {
+    width: 100%;
+  }
+
+  .NewBanner-mobileImg,
+  .NewBanner-mobileRack {
+    display: none; /* Hide desktop images on mobile */
+  }
+
+  .NewBanner-placeholderImg {
+    display: block; /* Show placeholder on mobile */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .NewBanner-bannerRight {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 0em;
+    align-items: center;
+  }
+
+  .NewBanner-bannerRight h2,
+  .NewBanner-bannerRight h3 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .NewBanner-bannerButton {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1016px) {
+  .NewBanner-placeholderImg {
+    display: none; /* Hide placeholder on desktop */
+  }
+
+  .NewBanner-mobileImg,
+  .NewBanner-mobileRack {
+    display: block; /* Show desktop images */
+  }
+}

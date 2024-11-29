@@ -1,0 +1,136 @@
+.casehubpage-hubtot-blog {
+    background-color: #1050c1;
+    overflow-x: hidden;
+    padding: 30px;
+  }
+  
+  .casehubpage-hubtot-blog h1 {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    padding: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .casehubpage-hubpageblog {
+    display: flex;
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+  
+  .casehubpage-hubblog-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .casehubpage-hubblog-border-box,
+  .casehubpage-hubblog-card {
+    border: 1px solid #f1f2f2;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .casehubpage-hubblog-border-box {
+    height: 100%;
+  }
+  
+  .casehubpage-hubblog-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .casehubpage-hubblog-card {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .casehubpage-hubblog-border-box img,
+  .casehubpage-hubblog-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .casehubpage-hubblog-border-box h2,
+  .casehubpage-hubblog-card h6 {
+    font-size: 1.3em;
+    color: #003873;
+    margin: 10px 0;
+  }
+  
+  .casehubpage-hubblog-border-box p,
+  .casehubpage-hubblog-card p {
+    font-size: 1em;
+    color: #344ea1;
+    text-align: justify;
+  }
+  
+  .casehubpage-read-more {
+    margin-top: 4px;
+    border-radius: 7px;
+  }
+  .casehubpage-read-more1{
+    border-radius: 7px;
+  }
+  
+  @media (max-width: 768px) {
+    .casehubpage-hubpageblog {
+      flex-direction: column;
+    }
+    .casehubpage-hubtot-blog {
+      padding: 15px;
+    }
+  
+    .casehubpage-hubtot-blog h1 {
+      text-align: center;
+      font-size: 2em;
+      padding: 0.5em;
+    }
+  
+    .casehubpage-hubblog-card-row {
+      flex-direction: column;
+    }
+  
+    .casehubpage-read-more,
+    .casehubpage-read-more1 {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      width: 150px; 
+      padding: 8px 10px; 
+      text-align: center;
+    }
+  
+    .casehubpage-hubblog-border-box img,
+    .casehubpage-hubblog-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 1660px) {
+    .casehubpage-hubblog-card img {
+      width: 100%;
+      height: 247px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  }

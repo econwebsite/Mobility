@@ -1,0 +1,50 @@
+.shelfPara-outerContainer {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; 
+    overflow-x: hidden;
+  }
+  
+  .shelfPara-innerBox {
+    background-color: #4190fc;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  
+  .shelfPara-contentBox {
+    text-align: center;
+  }
+  
+  .shelfPara-paragraph {
+    color: white;
+    padding: 3.5em;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
+  
+  @media (max-width: 768px) {
+    .shelfPara-innerBox {
+      width: 90%;
+      padding: 15px;
+    }
+
+    .shelfPara-paragraph {
+        color: white;
+        padding: 0.5em;
+        text-align: justify;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: auto;
+      }
+  }
+  @media (max-width: 350px) {
+    .shelfPara-outerContainer {
+      height: 400px; 
+    }
+  }

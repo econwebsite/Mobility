@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './Modelbutton.css';
+import AnimationButton from './AnimationButton'; 
+import "./Modelbutton.css";
 import Modelform from './Modelform';
 
 const Modelbutton = ({
   text = 'Contact Us',
-  backgroundColor = '#344ea1',
-  hoverColor = '#262626',
+  backgroundColor = '#f9cd47',        
+  textColor = '#131b2d',             
+  hoverBackgroundColor = '#def9fc',    
+  hoverTextColor = '#344ea1',        
   className = '',
   productName = null,
   docName = null,
@@ -23,20 +26,20 @@ const Modelbutton = ({
 
   return (
     <div>
-      <button
-        className={`ModelButton-custom-button ${className}`}
-        style={{ backgroundColor }}
+      <AnimationButton
+        text={text}
+        backgroundColor={backgroundColor}        
+        textColor={textColor}                
+        hoverBackgroundColor={hoverBackgroundColor} 
+        hoverTextColor={hoverTextColor}          
+        className={`newanimation ${className}`}
         onClick={showModal}
-      >
-        <span className="ModelButton-box" style={{ backgroundColor }}>
-          {text}
-        </span>
-      </button>
+      />
 
       <Modelform
         visible={isModalVisible}
         onClose={handleCancel}
-        type={text === 'Contact Us' ? 'contact' : 'download'}
+        type={text === 'Contact Us' ? `contact` : `download`}
         productName={productName || null}
         docName={docName || null}
         title={title || null}

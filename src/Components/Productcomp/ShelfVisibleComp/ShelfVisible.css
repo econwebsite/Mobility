@@ -1,0 +1,153 @@
+.shelfVisible-container {
+  width: 100%;
+  background-color: #1b66da;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.shelfVisible-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; 
+  height: 300px; 
+}
+.shelf-visbuton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9cd47;
+}
+.shelfVisible-image-wrapper img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.visiblebottle {
+  z-index: 1; 
+  width: 1100px; 
+  bottom: 0; 
+  top: 35px;
+  position: absolute; 
+  animation: visibleleftani 1.5s ease-out forwards; 
+}
+
+.visiblecamera {
+  z-index: 2;
+  width: 100px; 
+  top: 125px;
+  position: absolute;
+  animation: visiblerightani 1.5s ease-out forwards; 
+}
+
+.mobile-placeholder {
+  display: none; /* Hide by default */
+  width: 100%;
+  height: auto;
+}
+
+@keyframes visibleleftani {
+  0% {
+    transform: translateX(-100%) scale(0.5); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1); 
+    opacity: 1;
+  }
+}
+
+@keyframes visiblerightani {
+  0% {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1); 
+    opacity: 1;
+  }
+}
+
+.shelfVisible-title {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-top: 5px; 
+  padding: 0 220px;
+}
+
+.shelfVisible-paragraph {
+  color: white;
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 0 260px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .shelfVisible-image-wrapper {
+    max-width: 400px; 
+    height: 250px; 
+  }
+
+  .visiblebottle {
+    width: 150px; 
+    animation: visibleleftani 1.5s ease-out forwards; 
+  }
+
+  .visiblecamera {
+    width: 120px; 
+    top: -20px;
+    animation: visiblerightani 1.5s ease-out forwards; 
+  }
+
+  .shelfVisible-title {
+    font-size: 1.7em;
+    padding: 0.5em;
+  }
+
+  .shelfVisible-paragraph {
+    font-size: 1.2em;
+    padding: 0 2px;
+    text-align: justify;
+
+  }
+
+  .mobile-placeholder {
+    display: block; /* Show on mobile */
+  }
+
+  .visiblebottle,
+  .visiblecamera {
+    display: none; /* Hide real images on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shelfVisible-image-wrapper {
+    max-width: 300px; 
+    height: 200px;
+  }
+
+  .visiblebottle {
+    width: 120px; 
+    animation: visibleleftani 1.5s ease-out forwards; 
+  }
+
+  .visiblecamera {
+    width: 100px;
+    top: -15px;
+    animation: visiblerightani 1.5s ease-out forwards; 
+  }
+
+  .shelfVisible-title {
+    font-size: 1.7em;
+    padding: 0.3em;
+  }
+
+  .shelfVisible-paragraph {
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 4.9px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #131b2d;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 3.7px;
+      }
+
+      .cls-4 {
+        stroke-width: 1.8px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <g>
+          <path class="cls-4" d="M12.5,37.4v-16.9c0-4.5,3.7-8.2,8.2-8.2h18.1"/>
+          <path class="cls-4" d="M62.4,11.7h16.9c4.5,0,8.2,3.7,8.2,8.2v18.1"/>
+          <path class="cls-4" d="M87.5,62.6v16.9c0,4.5-3.7,8.2-8.2,8.2h-18.1"/>
+          <path class="cls-4" d="M37.6,88.3h-16.9c-4.5,0-8.2-3.7-8.2-8.2v-18.1"/>
+        </g>
+        <circle class="cls-1" cx="49.9" cy="50" r="5.7"/>
+        <circle class="cls-3" cx="49.9" cy="50" r="12.1"/>
+        <circle class="cls-2" cx="49.9" cy="50" r="20"/>
+        <line class="cls-4" x1="49.9" y1="76.4" x2="49.9" y2="82.1"/>
+        <line class="cls-4" x1="49.9" y1="18" x2="49.9" y2="23.8"/>
+        <line class="cls-4" x1="23.5" y1="50.1" x2="17.8" y2="50.1"/>
+        <line class="cls-4" x1="81.9" y1="50.1" x2="76.1" y2="50.1"/>
+      </g>
+    </g>
+  </g>
+</svg>

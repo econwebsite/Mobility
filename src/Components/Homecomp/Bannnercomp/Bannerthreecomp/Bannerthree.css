@@ -1,0 +1,214 @@
+.Bannerthree-container {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  overflow-x: hidden;
+}
+
+.Bannerthree-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-left: 4em;
+  color: #ffffff;
+}
+
+.Bannerthree-spacer {
+  margin-top: 10px;
+}
+
+.Bannerthree-spacer-large {
+  margin-top: 20px;
+}
+
+.Bannerthree-button {
+  align-self: flex-start;
+}
+
+.Bannerthree-left h2 {
+  color: #6978ba;
+  font-weight: 200;
+  font-size: 2.6em;
+}
+
+.Bannerthree-left h3 {
+  color: #6978ba;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+.Bannerthree-right {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.Bannerthree-image-row {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 410px;
+}
+
+
+.Bannerthree-planlight-animation {
+  width: auto;
+  height: 500px;
+  position: absolute;
+  left: 0px;
+  top: -60px;
+  z-index: 2;
+  opacity: 0; 
+}
+.Bannerthree-missplacesmall-animation {
+  width: auto;
+  height: 250px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  z-index: 2;
+  opacity: 0; 
+}.Bannerthree-misplacelarge-animation{
+  width: auto;
+  height: 350px;
+  position: absolute;
+  left: 280px;
+  top: 0px;
+  z-index: 2;
+  opacity: 0; 
+}
+.Bannerthree-planlight-animation,
+.Bannerthree-missplacesmall-animation,
+.Bannerthree-misplacelarge-animation {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+}
+
+.Bannerthree-planlight-animation.animate {
+  animation: slideInLeft 3s ease-out forwards; 
+  opacity: 1; 
+}
+
+.Bannerthree-missplacesmall-animation.animate,
+.Bannerthree-misplacelarge-animation.animate {
+  animation: bottomToTop 3s ease-out forwards;
+  opacity: 1; 
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+.Bannerthree-missplacesmall {
+  z-index: 2;
+}
+
+.Bannerthree-misplacelarge {
+  z-index: 3;
+}
+
+@media (min-width: 1450px) {
+
+  .Bannerthree-left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    color: #344ea1;
+  }
+  .Bannerthree-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+}
+
+
+/* Mobile */
+@media (max-width: 1015px) {
+  .Bannerthree-container {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; 
+  }
+
+  .Bannerthree-left,
+  .Bannerthree-right {
+    width: 100%; 
+    padding: 20px; 
+    text-align: center;
+  }
+
+  .Bannerthree-left h2 {
+    color: #6978ba;
+    font-weight: 200;
+    font-size: 2em;
+  }
+  .Bannerthree-image-row {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; 
+    justify-content: center; 
+    height: auto; /* Let the content wrap naturally */
+  }
+
+  .placeholder3 {
+    display: block;
+    width: 100%;
+    height: auto; 
+    margin-top: 0;
+    order: -1; 
+  }
+
+  .Bannerthree-planlight-animation,
+  .Bannerthree-missplacesmall-animation,
+  .Bannerthree-misplacelarge-animation {
+    display: none; 
+  }
+
+  .Bannerthree-left {
+    order: 1; 
+  }
+
+  .Bannerthree-button {
+    margin-top: 20px; 
+  }
+}
+
+@media (min-width: 1016px) {
+  .placeholder3 {
+    display: none; 
+  }
+}
+
+@media (max-width: 400px) {
+  .Bannerthree-image-row {
+    height: 200px;
+  }
+}

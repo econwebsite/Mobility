@@ -1,6 +1,6 @@
 .footer-container {
     width: 100%;
-    background-color: #d3d3d3;
+    background-color: #f1f2f2;
     overflow-x: hidden;
     padding: 10px;
   }
@@ -53,7 +53,7 @@
   .footer-links a {
     margin-bottom: 10px;
     text-decoration: none;
-    color: #003873;
+    color: #344ea1;
     font-family: "Poppins", sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -61,7 +61,7 @@
   
   .footer-divider {
     width: 1px;
-    background-color: #ffffff; 
+    background-color: #344ea1; 
     height: 150px;
     margin: 0px; 
   }
@@ -70,16 +70,16 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    color: #003873;
+    color: white !important;
   }
   .footer-con-icon{
-    color: #003873;
+    color: #def9fc;
   }
   
   .footer-contact-item p {
     margin: 5px;
     line-height: 1.5; 
-    color: #003873;
+    color: white !important;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -89,8 +89,8 @@
   
   .footer-subscribe-title {
     margin-bottom: 10px;
-    text-align: center;
-    color: #003873;
+    text-align:left;
+    color: #344ea1;
     font-size: 1em;
     font-family: "Poppins", sans-serif;
     font-weight: normal;
@@ -107,13 +107,13 @@
   
   .footer-subscribe-input input {
     padding: 12px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-top: 10px;
     width: 180px;
   }
   
   .footerproceed-btn {
-    padding: 12px;
+    padding: 13px 16px;
     border: none;
     color:white;
     background-color: #003873;
@@ -129,20 +129,28 @@
     background: none;
     border: none;
     font-size: 24px; 
-    color: #003873; 
+    color: white; 
     margin-right: 10px; 
     cursor: pointer; 
   }
   
   .footer-bottom-text {
     text-align: center;
-    color: #344ea1;
+    color: white !important;
     margin-top: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
   }
-  
+  .footer-bottom-text p {
+    color: #344ea1 !important;
+  }
+  .footeralink{
+    color: #003873;
+    text-decoration: underline;
+  }
+ 
+
   /* Media Queries for Mobile Devices */
   @media (max-width: 768px) {
     .footer-container {

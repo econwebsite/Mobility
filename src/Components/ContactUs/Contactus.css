@@ -1,0 +1,113 @@
+.total-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fafa;
+    padding: 20px; 
+    font-family: Arial, sans-serif;
+}
+
+.Contact-us {
+    font-size: 2.5em;
+    color: #003873;
+    font-weight: 400;
+    padding: 0.1em;
+    font-style: normal;
+    text-align: center;
+}
+
+.Spam-questions {
+    font-size: 1rem; /* Adjusted font size */
+    color: #344ea1;
+    margin-bottom: 20px; /* Reduced bottom margin */
+    text-align: center; /* Center aligned */
+    display: block;
+    width: 100%;
+}
+
+.Contact-ted {
+    width: 100%;
+    max-width: 700px; 
+    background-color: #ffffff;
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto;
+    margin-top: 5px; 
+}
+
+.Contacts-btn {
+    padding: 10px 30px; 
+    font-size: medium;
+}
+
+.ant-form-item-label > label {
+    display: none; 
+}
+
+.ant-form-item-control-input {
+    background-color: #ffffff;
+}
+
+.ant-btn-primary {
+    background-color: #003873;
+    border-color: #003873;
+}
+
+.ant-btn-primary:hover {
+    background-color: #003873;
+    border-color: #003873;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #003873;
+    opacity: 1; 
+}
+
+.ant-input::placeholder,
+.ant-input-textarea::placeholder {
+    color: #003873 !important;
+    font-weight: 400;
+    opacity: 1; 
+}
+.ant-select .ant-select-selector .ant-select-selection-placeholder {
+    color: #003873; 
+}
+
+.ant-select-item-option-content {
+    color: #003873; 
+}
+
+.ant-select-selector .ant-select-selection-item {
+    color: #003873; 
+}
+
+@media (max-width: 768px) {
+    .total-contact {
+        padding: 10px; 
+    }
+
+    .Contact-us {
+        font-size: 2rem; 
+    }
+
+    .Contact-ted {
+        padding: 15px; 
+        max-width: none; 
+    }
+
+    .Contacts-btn {
+        padding: 6px 15px;
+        font-size: 1em; 
+    }
+}
+
+
+
+@media (min-width: 1600px) {
+    .Contact-ted {
+        width: 100%;
+        max-width: 1000px; 
+    }  
+}
