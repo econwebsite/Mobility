@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Footerpage.css';
 import { message } from 'antd';
-import econlog from "../../assets/homepage/footerlogo-1.svg"
+import dentallogo from "../../assets/homepage/NewDentallogo.svg";
+import econlogo from "../../assets/homepage/footerlogo-1.svg"
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-// import AnimatedButton from "../ButtonComp/AnimationButton";
+import AnimatedButton from "../ButtonComp/AnimationButton";
 const Footerpage = () => {
   const [email, setEmail] = useState(null);
   const [isValid, setIsValid] = useState(true);
@@ -71,44 +72,45 @@ const Footerpage = () => {
         <div className="footer-inner">
           <div className="footer-column footer-column-logo">
             <div className="footer-logo">
-              {/* <img src={shelflogo} alt="Company Logo" /> */}
+              {/* <img src={dentallogo} alt="Company Logo" /> */}
             </div>
             <div className="footer-links">
               <Link to="/">Home</Link>
-              <Link to="/SHELFVista">SHELFVista</Link>
-              <Link to="/BlogHubPage">Blog</Link>
-              <Link to="/">About Us</Link>
-              <Link to="/ContactUs">Contact Us</Link>
+              <Link to="/Cameramobility">Solution</Link>
+              <Link to="/CasestudyHubpage">Casestudies</Link>
+              <Link to="/BlogHubpage">Blog</Link>
+              <Link to="/Partner">Partners</Link>
+              <Link to="/ContactUS">Contact Us</Link>
             </div>
           </div>
           <div className="footer-divider" />
           <div className="footer-column footer-column-contact">
             <div className="footer-contact-item">
-              <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#344ea1" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
+              <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#003873" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
             </div>
             <div className="footer-contact-item">
-              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#344ea1" }} href="mailto:camerasolutions@e-consystems.com">
+              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#003873" }} href="mailto:camerasolutions@e-consystems.com">
                 camerasolutions@e-consystems.com
               </a></p>
             </div>
           </div>
           <div className="footer-divider" />
           <div className="footer-column footer-column-subscribe">
-            {/* <h4 className="footer-subscribe-title">Contact for latest updates</h4> */}
+            <h4 className="footer-subscribe-title">Subscribe for latest updates</h4>
             <div className="footer-subscribe-input">
               <input type="email" autoComplete='off' onPaste={(e) => {
                 e.preventDefault()
                 return false;
               }} placeholder="Email id" value={email} onChange={handleChange} />
-              <button className="footerproceed-btn" onClick={handelSubscribtion}>Contact Us</button>
+              <button className="footerproceed-btn" onClick={handelSubscribtion}>Proceed</button>
               {!isValid && <p style={{ color: 'red', margin: '0px',textAlign:"center",width:"100%" }}>Invalid email address</p>}
             </div>
             <div className="footer-social-icons">
               <a href='https://www.e-consystems.com/'>
-                <img src={econlog} alt="e-con Logo" style={{ width: "300px" }} /></a>
+                <img src={econlogo} alt="e-con Logo" style={{ width: "300px" }} /></a>
             </div>
             <div className="footer-bottom-text">
-              <p><a href='https://www.e-consystems.com/' className="footeralink"> e-con Systems </a> <span> 2024, all rights reserved.</span></p>
+              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2024, all rights reserved.</p>
             </div>
           </div>
         </div>

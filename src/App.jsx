@@ -1,24 +1,26 @@
 import React from 'react';
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import NavBar from "./Components/NavBarcomp/NavBar";
-import Totalhome from "./Components/Homecomp/Totalhome";
+import TotalHomePage from "./Components/HomePagecomp/TotalHomePage";
 import Footerpage from "./Components/FooterComp/Footerpage";
+import TotalSurroundview from "./Components/Productcomp/SurroundviewProduct/TotalSurroundview";
+import Totalforwardfacing from "./Components/Productcomp/ForwardfacingProduct/Totalforwardfacing";
+import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/Totalmonitoring";
+import Partner from "./Components/PartnersComp/Partner"
+import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
-import NotFoundPage from "./Components/Notfoundpage"
-import Totalproducts from './Components/ProductComp/Totalproducts';
-import BlogHub from "./Components/HubPageComp/BlogHubcomp/BlogHub"
-import PricingLabeling from "./Components/FutureBlogcomp/PricingLabeling"
-import ShelfDigitalization from "./Components/FutureBlogcomp/ShelfDigitalization"
-import PlanogramCompliance from "./Components/FutureBlogcomp/PlanogramCompliance"
-import RetailExperience from "./Components/FutureBlogcomp/RetailExperience"
-import ContactUs from './Components/ContactUs/ContactUs';
-import AboutUs from './Components/AboutUsComp/AboutUs';
-import OutofStocks from './Components/FutureBlogcomp/OutofStocks';
-
+import Cameramobility from "./Components/HomePagecomp/CameraMobility/Cameramobility"
+import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
+import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
+import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
+import HdrLedBlog from "./Components/FutureBlog/HdrLedBlog"
+import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
+import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
+import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
+import NotFoundPage from "./Components/Notfoundpage";
+import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
 
 const App = () => {
   return (
@@ -27,27 +29,28 @@ const App = () => {
               <ScrollToTop /> 
 
     <div className='fixed-container'>
-      <NavBar/>
+      {/* <NavBar/> */}
       <Routes>
-        <Route path="/" element={<Totalhome />} />
-        <Route path="/SHELFVista" element={<Totalproducts />} />
-        <Route path="/BlogHubPage" element={<BlogHub />} />
-        <Route path="/PricingLabeling" element={<PricingLabeling />} />
-        <Route path="/ShelfDigitalization" element={<ShelfDigitalization />} />
-        <Route path="/PlanogramCompliance" element={<PlanogramCompliance />} />
-        <Route path="/RetailExperience" element={<RetailExperience />} />
-        <Route path="/Outofstocks" element={<OutofStocks/>} />
-        <Route path="/Contactus" element={< ContactUs/>} />
-        <Route path="/Aboutus" element={< AboutUs/>} />
+        <Route path="/" element={<TotalHomePage />} />
+        <Route path="/surroundview" element={<TotalSurroundview/>} />
+        <Route path="/forwardfacing" element={<Totalforwardfacing/>} />
+        <Route path="/drivermonitoring" element={<Totalmonitoring/>} />
+        <Route path="/Partner" element={<Partner/>} />
+        <Route path="/Cameramobility" element={<Cameramobility/>} />
+        <Route path="/ContactUs" element={<ContactUs/>} />
+        <Route path="/BlogHubpage" element={<BlogHubpage/>} />
+        <Route path="/CasestudyHubpage" element={<Casehubpage/>} />
+        <Route path="/HubManufacturing" element={<HubManufacturing/>} />
+        <Route path="/HdrLedBlog" element={<HdrLedBlog/>} />
+        <Route path="/DrivermonBlog" element={<DrivermonBlog/>} />
+        <Route path="/ForwardBlog" element={<ForwardBlog/>} />
+        <Route path="/SurroundBlog" element={<SurroundBlog/>} />
+        <Route path="/ProductPage" element={<ProductPage/>} />
 
-
-        
-          
         
         <Route path="*" element={<NotFoundPage />} />
-        
         </Routes>
-        <Footerpage/>
+        {/* <Footerpage/> */}
 
         </div>
         </BrowserRouter>

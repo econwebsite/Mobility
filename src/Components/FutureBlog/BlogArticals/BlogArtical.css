@@ -1,0 +1,158 @@
+/* General Styles */
+.blogArtical-Total {
+  text-align: center;
+  background-color: white;
+  margin-top: 30px;
+}
+
+.Artical-paragraphs p {
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #003873;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.mail-color {
+  color: #00aeef;
+  text-decoration: none;
+}
+
+.Artical-person {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  background-color: #f1f2f2;
+  margin: 20px auto;
+  max-width: 80%;
+  padding: 30px;
+}
+
+.Articalleft-side {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text horizontally */
+}
+
+.Articalleft-side p {
+  margin: 1px 0; 
+  color: #003873;
+  text-align: justify; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+.Articalperson-photo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0; 
+}
+
+.Articalright-side {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+}
+
+.Articalright-side p {
+  text-align: justify;
+  color: #033873;
+  line-height: 1.8em;
+  color: #003873;
+  text-align: justify; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.9em;
+  
+}
+
+.Articalnotification-box {
+  background-color: #f1f2f2;
+  padding: 20px;
+  height: 250px;
+  margin: 0%;
+}
+
+.Articalnotification-box h3 {
+  color: #00aeef;
+  font-size: 2em;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.Articalnotification-box p {
+  color: #033873;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Articalsubscribe-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.Artical-inputemail {
+  width: 300px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #00aeef;
+}
+
+.Articalknow-button {
+  padding: 2px;
+  border-radius: 7px;
+  text-align: left;
+}
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .Artical-person {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+    gap: 20px; /* Add space between left and right sections */
+  }
+
+  .Articalleft-side, .Articalright-side {
+    width: 90%;
+    text-align: center; /* Center text in both sides */
+  }
+
+  .Articalleft-side {
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .Articalnotification-box {
+    /* padding: 15px; */
+    height: auto; /* Adjust height based on content */
+  }
+
+  .Articalsubscribe-row {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center;
+    gap: 15px; /* Increase gap between input and button */
+  }
+
+  .Artical-inputemail {
+    width: 50%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .Articalknow-button {
+    font-size: 1em; 
+  }
+}

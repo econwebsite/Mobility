@@ -1,0 +1,139 @@
+.home-card-section {
+  width: 100%;
+  text-align: center;
+  background-color: #f1f2f2;
+  overflow-x: hidden;
+  padding-bottom: 2em;
+}
+
+.blog-title {
+  font-size: 2em;
+  color: #003873;
+  font-weight: 300;
+  padding: 0.5em;
+  margin-bottom: 20px;
+}
+
+.card-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.UniqueProductBlogs-card {
+  max-width: 340px;
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #f1f2f2;
+  border: 1px solid #d3d3d3;
+  height: 450px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.UniqueProductBlogs-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.UniqueProductBlogs-card-title {
+  font-size: 1.2rem;
+  color: #003873;
+  text-align: justify;
+  margin: 15px 0;
+  line-height: 1.3em;
+}
+
+.UniqueProductBlogs-card-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 10px 0;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.home-readmore-btn {
+  background-color: #344ea1;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  align-self: center;
+}
+
+.home-card-slider .slick-prev,
+.home-card-slider .slick-next {
+  display: block !important;
+  font-size: 30px;
+  width: 40px;
+  height: 20px;
+  z-index: 2;
+}
+
+.home-card-slider .slick-prev:before,
+.home-card-slider .slick-next:before {
+  font-size: 30px;
+  color: #333;
+}
+
+.slick-center .UniqueProductBlogs-card {
+  transform: scale(1);
+}
+
+.slick-slide:not(.slick-center) .UniqueProductBlogs-card {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+@media (max-width: 678px) {
+  .home-card-section {
+    padding: 15px 5px;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .UniqueProductBlogs-card {
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .UniqueProductBlogs-card img {
+    height: 150px;
+  }
+
+  .UniqueProductBlogs-card-title {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .UniqueProductBlogs-card-text {
+    font-size: 0.8rem;
+    margin: 8px 0;
+  }
+
+  .home-readmore-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .home-card-slider .slick-prev, .home-card-slider .slick-next {
+    font-size: 18px;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

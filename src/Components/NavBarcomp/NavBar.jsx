@@ -1,27 +1,18 @@
-import React, { useRef,useState } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
-import { FaCamera } from "react-icons/fa";
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
 import './Navbar.css';
-import shelflogo from "../../assets/homepage/shelfmonitor-logo.svg";
-import Modelbutton from '../ButtonComp/Modelbutton';
+import dentallogo from "../../assets/homepage/NewDentallogo.svg";
+import AnimationButton from '../ButtonComp/AnimationButton';
 
 const NavBar = () => {
   const offcanvasRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
+
   const handleNavLinkClick = () => {
     if (offcanvasRef.current) {
-      offcanvasRef.current.hide(); 
+      offcanvasRef.current.hide(); // Hide Offcanvas when a nav link is clicked
     }
-  };
-
-
-  const linkStyle = {
-    color: isHovered ? "white" : "#ffc107",
-    fontWeight: "600",
-    textDecoration: "none",
-    transition: "color 0.3s ease",
   };
   const resourceMenu = (
     <Menu  style={{border:"1px solid #00aeef"}}>
@@ -37,13 +28,13 @@ const NavBar = () => {
   const SolutionMenu = (
     <Menu  style={{width:"300px",border:"1px solid #00aeef"}}>
       <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 1</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 2</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/forwardfacing" onClick={handleNavLinkClick}>Forward Facing Cameras</Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="" onClick={handleNavLinkClick}>Product 3</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>Driver Monitoring Cameras</Link>
       </Menu.Item>
     </Menu>
   );
@@ -83,26 +74,26 @@ const NavBar = () => {
           <div className="navbarpage-header">
             <div className="navbarpage-logoContainer">
               <Link to="/">
-                <img src={shelflogo} alt=" Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{ cursor: "pointer" }} />
+                <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{ cursor: "pointer" }} />
               </Link>
             </div>
             <div className="navbarpage-navItems">
             <Link to="/" className="navbarpage-navLink">Home</Link>
             <div className="navbarpage-divider"></div>
-              {/* <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">SHELFVista</Link>
-              </Dropdown> */} 
-                
-              <Link to="/SHELFVista" style={linkStyle}  onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} className="navbarpage-navLink"> <FaCamera  style={{color:"#f1f2f2",margin:"1px",alignItems:"center",fontSize:"24px"}}/>  SHELFVista</Link>
-
+              <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
+                <Link className="navbarpage-navLink">Products</Link>
+              </Dropdown>
               <div className="navbarpage-divider"></div>
               {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
               </Dropdown> */}
-            <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>
+            <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
+                <Link className="navbarpage-navLink">Resources</Link>
+              </Dropdown>
               <div className="navbarpage-divider"></div>
-              <Link to="/Aboutus" className="navbarpage-navLink">About Us</Link>
+              <Link to="/Partner" className="navbarpage-navLink">Partners</Link>
+              <div className="navbarpage-divider"></div>
+              <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
             </div>
             <div className="navbarpage-rightColumn">
               {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
@@ -115,7 +106,7 @@ const NavBar = () => {
                     <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
                   </a>
                 </div>
-                <Modelbutton text="Contact Us" backgroundColor="#f9cd47" textColor="black" hoverTextColor="#344ea1" className='Navbargetquote' />
+                {/* <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" /> */}
               </div>
             </div>
           </div>
@@ -127,7 +118,7 @@ const NavBar = () => {
         <Container fluid>
           <Navbar.Brand href="#">
             <Link to="/">
-              <img src={shelflogo} alt="Logo" className="navbarpage-logo-mobile" />
+              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo-mobile" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
@@ -148,13 +139,15 @@ const NavBar = () => {
                 {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
                 </Dropdown> */}
-               <Link className="nav-link" to="/SHELFVista" style={{color:"#ffc107"}} onClick={handleNavLinkClick}>SHELFVista</Link>
-
-               <Link className="nav-link" to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
-
-                <Link className="nav-link" to="/Aboutus" onClick={handleNavLinkClick}>About Us</Link>
+                <Dropdown overlay={MobileMenu} placement="bottomLeft" className="nav-link">
+                  <a className="nav-link">Products</a>
+                </Dropdown>
+                <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
+                  <a className="nav-link">Resources</a>
+                </Dropdown>
+                <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
                 
-                <Link className="nav-link" to="/Contactus" onClick={handleNavLinkClick}>Contact Us</Link>
+                <Link className="nav-link" to="/Partner" onClick={handleNavLinkClick}>Partners</Link>
               </Nav>
               {/* <Form className="d-flex mt-3">
                 <Form.Control

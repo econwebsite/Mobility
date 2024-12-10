@@ -3,32 +3,27 @@ import './AnimationButton.css';
 import { Link } from 'react-router-dom';
 
 const AnimationButton = ({
-  text = 'know more', 
-  className = '', 
-  backgroundColor = '#344ea1', 
-  textColor = '#def9fc', 
-  hoverBackgroundColor = '#def9fc',
-  hoverTextColor = '#344ea1', 
-  onClick, 
-  to, 
+  text = 'Hover!',
+  className = '',
+  backgroundColor = '#344ea1',  
+  hoverColor = '#262626',       
+  onClick,
+  to,
   ...props
 }) => {
   return (
-    <div className="btn-container">
-      <Link
-        to={to}
-        className={`btn ${className}`}
-        style={{
-          '--btn-bg-color': backgroundColor,
-          '--btn-text-color': textColor,
-          '--btn-hover-bg-color': hoverBackgroundColor,
-          '--btn-hover-text-color': hoverTextColor,
-        }}
-        onClick={onClick}
-        {...props}
-      >
+    <div>
+    <Link to={to} className='buttonLink' style={{textDecoration:"none"}}>
+    <button
+      className={`AnimationButton-custom-button ${className}`}
+      style={{ backgroundColor }} 
+      {...props}
+    >
+      <span className="AnimationButton-box" style={{ backgroundColor }}>
         {text}
-      </Link>
+      </span>
+    </button>
+    </Link>
     </div>
   );
 };
