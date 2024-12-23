@@ -29,7 +29,7 @@ const App = () => {
               <ScrollToTop /> 
 
     <div className='fixed-container'>
-      {/* <NavBar/> */}
+      <NavBar/>
       <Routes>
         <Route path="/" element={<TotalHomePage />} />
         <Route path="/surroundview" element={<TotalSurroundview/>} />
@@ -50,7 +50,7 @@ const App = () => {
         
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        {/* <Footerpage/> */}
+        <Footerpage/>
 
         </div>
         </BrowserRouter>
