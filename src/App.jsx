@@ -51,7 +51,7 @@ const App = () => {
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footerpage/>
-
+<></>
         </div>
         </BrowserRouter>
 
