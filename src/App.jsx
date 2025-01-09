@@ -21,6 +21,7 @@ import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
 import NotFoundPage from "./Components/Notfoundpage";
 import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
+import Testingcomp from './Components/Testingcomp';
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const App = () => {
               <ScrollToTop /> 
 
     <div className='fixed-container'>
-      <NavBar/>
+      {/* <NavBar/> */}
       <Routes>
         <Route path="/" element={<TotalHomePage />} />
         <Route path="/surroundview" element={<TotalSurroundview/>} />
@@ -46,13 +47,16 @@ const App = () => {
         <Route path="/ForwardBlog" element={<ForwardBlog/>} />
         <Route path="/SurroundBlog" element={<SurroundBlog/>} />
         <Route path="/ProductPage" element={<ProductPage/>} />
+        <Route path="/New" element={<Testingcomp/>} />
+
 
         
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        <Footerpage/>
+        {/* <Footerpage/> */}
 <></>
         </div>
+        
         </BrowserRouter>
 
 
