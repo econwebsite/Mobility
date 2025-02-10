@@ -1,4 +1,3 @@
-
 .manufacturing-container {
   background-color: #f1f2f2;
   padding: 3em;
@@ -25,9 +24,6 @@
   flex: 0 0 60%;
   padding-right: 20px;
   font-size: 16px;
-}
-
-.manufacturing-left-column p {
   text-align: justify;
 }
 
@@ -39,80 +35,75 @@
   max-width: 100%;
   height: auto;
 }
-.manufacturing-list {
-  list-style: none; 
-  padding: 0;
+
+.manufacturing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.manufacturing-list li {
-  margin-bottom: 10px;
-  display: flex;
-  margin-left: 20px;
-  align-items: center;
+.manufacturing-box {
+  background-color: #fff;
+  border: 1px solid #00aeef;
+  padding: 15px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #003873;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.manufacturing-list .icon {
-  color: #00aeef !important;
-  margin-right: 10px;
-  font-size: 20px;
-}
-.manuf-knowbtn{
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-}
-.manuf-knowbtn button{
-  padding: 2px;
-  border-radius: 7px;
-  margin-left: 10px;
-}
-/* Mobile view styles */
 @media (max-width: 768px) {
   .manufacturing-content {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .manufacturing-left-column,
   .manufacturing-right-column {
-    flex: 0 0 100%; 
-    padding: 0; 
+    flex: 0 0 100%;
+    padding: 0;
   }
 
   .manufacturing-right-column {
-    margin-top: 20px; 
+    margin-top: 20px;
   }
-  .manufacturing-list li {
-    margin-bottom: 15px;
-    margin-left: 0px;
-    text-align: left;
-  }
-  .manuf-knowbtn{
-    display: flex;
-    justify-content: center;
-    align-items:center;
 
-    }
+  .manufacturing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .manufacturing-box {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
+/* Single column for very small screens */
 @media (max-width: 480px) {
   .manufacturing-title {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     padding: 0.5em;
   }
 
   .manufacturing-left-column {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
-  .manufacturing-right-column img {
-    max-width: 100%; 
+  .manufacturing-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .manufacturing-box {
+    font-size: 14px;
+    padding: 12px;
   }
 }
 
 @media (min-width: 1700px) {
-
-.manufacturing-title {
-  padding: 0em;
-}
+  .manufacturing-title {
+    padding: 0em;
+  }
 }

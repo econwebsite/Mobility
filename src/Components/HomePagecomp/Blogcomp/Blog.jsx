@@ -12,7 +12,7 @@ const Blog = () => {
     <div className="ProductBlogs-Total">
       <h1 className="ProductBlogs-title">BLOGS</h1>
       <div className='mainContainer'>
-        <div className="ProductBlogs-cards" data-aos="zoom-in-right" data-aos-duration="1000">
+        <div className="ProductBlogs-cards">
           <div className="ProductBlogs-card">
             <Link className="cardImgLink" to="/ForwardBlog" style={{ textDecoration: "none" }}>
               <img src={blogimg1} alt="AI-enabled point of care device" className="ProductBlogs-card-image" />

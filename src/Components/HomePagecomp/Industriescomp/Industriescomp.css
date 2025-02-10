@@ -1,0 +1,256 @@
+.industriescomp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+.industries-title{
+   text-align: center;
+    font-size: 2.5rem;
+    padding: 1em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.industriescomp-slider {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.industriescomp-slide {
+  padding: 20px; 
+}
+
+.industriescomp-card {
+  position: relative;
+  width: 340px;
+  height: 240px;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industriescomp-card.active {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.industriescomp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industri-back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #def9fc;
+  color: #003873;
+  text-align: center;
+  padding: 8px;
+  font-weight: 300;
+}
+
+.industriescomp-card p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.industriescomp-card:hover p {
+  opacity: 1;
+}
+
+.industriescomp-title-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 25px;
+}
+
+.industriescomp-title-slide {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.industriescomp-title {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease, transform 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+.industriescomp-title.active {
+  color: blue;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+@media (max-width: 1100px) {
+  .industriescomp-container {
+    padding: 25px 15px;
+  }
+
+  .industriescomp-slider {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .industriescomp-slide {
+    padding: 15px;
+  }
+
+  .industriescomp-card {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .industriescomp-card p {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .industriescomp-title-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 15px;
+  }
+
+  .industriescomp-title {
+    font-size: 16px;
+    min-width: auto;
+    padding: 0 8px;
+  }
+  
+  .industriescomp-title.active {
+    transform: scale(1.1);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .industriescomp-container {
+    padding: 20px;
+  }
+
+  .industriescomp-slider {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .industriescomp-slide {
+    padding: 10px;
+  }
+
+  .industriescomp-card {
+    width: 200px;
+    height: 200px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .industriescomp-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .industriescomp-title-slider {
+    width: 90%;
+    max-width: 95%;
+    margin-top: 20px;
+  }
+
+  .industriescomp-title-slide {
+    padding: 10px;
+    margin: 5px; 
+  }
+
+  .industriescomp-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    transition: color 0.3s ease, transform 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .industriescomp-title.active {
+    color: blue;
+    font-weight: bold;
+    transform: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .industriescomp-card {
+    width: 200px; 
+    height: 180px;
+  }
+.industries-title{
+font-size: 2em;
+}
+  .industriescomp-title {
+    font-size: 12px; 
+  }
+
+  .industriescomp-title-slide {
+    padding: 2px;
+  }
+  .industriescomp-title-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+}
+
+
+
+@media (max-width: 430px) {
+  .industriescomp-card {
+    width: 290px; 
+    height: 200px;
+  }
+
+  .industriescomp-title {
+    font-size: 1em; 
+  }
+
+}
+
+
+@media (max-width: 330px) {
+  .industriescomp-card {
+    width: 205px; 
+    height: 190px;
+  }
+
+  .industriescomp-title {
+    font-size: 1em; 
+  }
+
+}

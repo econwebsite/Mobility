@@ -1,9 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './Manufacturing.css'; // For the styling
 import manufact from "../../../assets/homepage/manufacturing-img.png";
-import AnimationButton from "../../ButtonComp/AnimationButton"
+
 const Manufacturing = () => {
   return (
     <div className="manufacturing-container">
@@ -12,19 +10,18 @@ const Manufacturing = () => {
         <div className="manufacturing-content">
           <div className="manufacturing-left-column" data-aos="fade-right" data-aos-duration="1800">
             <p>
-              At e-con Systems, we maintain industry-leading manufacturing processes to ensure our ADAS cameras meet the highest quality and reliability standards required for mobility applications. Our production facilities are equipped with advanced tools for lens alignment, lens gluing, perfect ISP tuning and more.
+              At e-con Systems, we maintain industry-leading manufacturing processes to ensure our ADAS cameras meet the highest quality and reliability standards required for mobility applications. Our production facilities are equipped with advanced tools for lens alignment, lens gluing, perfect ISP tuning, and more.
             </p>
-            <ul className="manufacturing-list">
-            <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>ISP Tuning and Testing</li>
-            <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Lens Focusing and Gluing</li>
-            <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Active Alignment Machines</li>
-            <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Robust Design for Reliability</li>
-            <li><i className="fas fa-check" style={{ color: '#00aeef', marginRight: '10px', fontSize: '20px' }}></i>Rugged Testing for Harsh Environment</li>
-            </ul>
-            <br></br>
-            <div  className='manuf-knowbtn'>
-            <AnimationButton text="Know more"  backgroundColor="#3443a1" to="/HubManufacturing" animationColor="#69ba2f"/>
+            
+            {/* New Grid Box Layout */}
+            <div className="manufacturing-grid">
+              <div className="manufacturing-box">ISP Tuning and Testing</div>
+              <div className="manufacturing-box">Lens Focusing and Gluing</div>
+              <div className="manufacturing-box">Active Alignment Machines</div>
+              <div className="manufacturing-box">Robust Design for Reliability</div>
+              <div className="manufacturing-box">Rugged Testing for Harsh Environment</div>
             </div>
+
           </div>
           <div className="manufacturing-right-column" data-aos="fade-left" data-aos-duration="1800">
             <img

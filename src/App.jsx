@@ -11,7 +11,6 @@ import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/To
 import Partner from "./Components/PartnersComp/Partner"
 import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
-import Cameramobility from "./Components/HomePagecomp/CameraMobility/Cameramobility"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
 import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
 import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
@@ -21,7 +20,6 @@ import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
 import NotFoundPage from "./Components/Notfoundpage";
 import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
-import Testingcomp from './Components/Testingcomp';
 
 const App = () => {
   return (
@@ -30,14 +28,13 @@ const App = () => {
               <ScrollToTop /> 
 
     <div className='fixed-container'>
-      {/* <NavBar/> */}
+      <NavBar/>
       <Routes>
         <Route path="/" element={<TotalHomePage />} />
         <Route path="/surroundview" element={<TotalSurroundview/>} />
         <Route path="/forwardfacing" element={<Totalforwardfacing/>} />
         <Route path="/drivermonitoring" element={<Totalmonitoring/>} />
         <Route path="/Partner" element={<Partner/>} />
-        <Route path="/Cameramobility" element={<Cameramobility/>} />
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/BlogHubpage" element={<BlogHubpage/>} />
         <Route path="/CasestudyHubpage" element={<Casehubpage/>} />
@@ -47,16 +44,13 @@ const App = () => {
         <Route path="/ForwardBlog" element={<ForwardBlog/>} />
         <Route path="/SurroundBlog" element={<SurroundBlog/>} />
         <Route path="/ProductPage" element={<ProductPage/>} />
-        <Route path="/New" element={<Testingcomp/>} />
-
 
         
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        {/* <Footerpage/> */}
-<></>
+        <Footerpage/>
+
         </div>
-        
         </BrowserRouter>
 
 
