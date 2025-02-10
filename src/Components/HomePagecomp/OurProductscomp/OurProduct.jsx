@@ -5,7 +5,6 @@ import surroundview from "../../../assets/homepage/surroundview.jpg"
 import forwardfacing from "../../../assets/homepage/forwardfacing.jpg"
 import rearview from "../../../assets/homepage/rearview.jpg"
 import drivermonitoring from "../../../assets/homepage/drivermonitoring.jpg"
-import { link } from "framer-motion/client";
 
 const OurProduct = () => {
   const cardsData = [
