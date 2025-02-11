@@ -10,7 +10,6 @@ const Certification = () => {
   return (
     <div className="certification">
       <div className="mainContainer">
-
         <h1>CERTIFICATION</h1>
         <div className="certification-container">
           <div className="certification-left">

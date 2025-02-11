@@ -12,7 +12,7 @@ import Partner from "./Components/PartnersComp/Partner"
 import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
-import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
+// import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
 import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
 import HdrLedBlog from "./Components/FutureBlog/HdrLedBlog"
 import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/Partner" element={<Partner/>} />
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/BlogHubpage" element={<BlogHubpage/>} />
-        <Route path="/CasestudyHubpage" element={<Casehubpage/>} />
+        {/* <Route path="/CasestudyHubpage" element={<Casehubpage/>} /> */}
         <Route path="/HubManufacturing" element={<HubManufacturing/>} />
         <Route path="/HdrLedBlog" element={<HdrLedBlog/>} />
         <Route path="/DrivermonBlog" element={<DrivermonBlog/>} />

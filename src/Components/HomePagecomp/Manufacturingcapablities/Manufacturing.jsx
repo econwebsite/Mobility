@@ -1,5 +1,5 @@
 import React from 'react';
-import './Manufacturing.css'; // For the styling
+import './Manufacturing.css'; 
 import manufact from "../../../assets/homepage/manufacturing-img.png";
 
 const Manufacturing = () => {
@@ -13,7 +13,6 @@ const Manufacturing = () => {
               At e-con Systems, we maintain industry-leading manufacturing processes to ensure our ADAS cameras meet the highest quality and reliability standards required for mobility applications. Our production facilities are equipped with advanced tools for lens alignment, lens gluing, perfect ISP tuning, and more.
             </p>
             
-            {/* New Grid Box Layout */}
             <div className="manufacturing-grid">
               <div className="manufacturing-box">ISP Tuning and Testing</div>
               <div className="manufacturing-box">Lens Focusing and Gluing</div>

@@ -35,7 +35,7 @@ const Footerpage = () => {
         return false;
       }
     }
-    return false; // Return false if isValid is not true
+    return false; 
   };
   const validateEmailId = (email) => {
     const regex = /^\S+@\S+\.\S+$/;
@@ -77,7 +77,6 @@ const Footerpage = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/Cameramobility">Solution</Link>
-              <Link to="/CasestudyHubpage">Casestudies</Link>
               <Link to="/BlogHubpage">Blog</Link>
               <Link to="/Partner">Partners</Link>
               <Link to="/ContactUS">Contact Us</Link>
@@ -110,7 +109,7 @@ const Footerpage = () => {
                 <img src={econlogo} alt="e-con Logo" style={{ width: "300px" }} /></a>
             </div>
             <div className="footer-bottom-text">
-              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2024, all rights reserved.</p>
+              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2025, all rights reserved.</p>
             </div>
           </div>
         </div>

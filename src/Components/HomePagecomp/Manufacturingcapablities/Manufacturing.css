@@ -44,14 +44,13 @@
 }
 
 .manufacturing-box {
-  background-color: #fff;
-  border: 1px solid #1D4F9F;
+  background-color: #1D4F9F;
   padding: 10px;
   text-align: center;
   font-weight: 300;
   font-size: 16px;
-  color: #003873;
-  border-radius: 10px;
+  color: white;
+  border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 

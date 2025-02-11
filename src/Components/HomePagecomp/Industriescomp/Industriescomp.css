@@ -102,8 +102,8 @@
 }
 
 .industriescomp-title.active {
-  color: #0A1832;
-  font-weight: bold;
+  color: #00aeef;
+  text-decoration: underline;
   transform: scale(1.2);
 }
 

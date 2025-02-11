@@ -11,7 +11,7 @@ const NavBar = () => {
 
   const handleNavLinkClick = () => {
     if (offcanvasRef.current) {
-      offcanvasRef.current.hide(); // Hide Offcanvas when a nav link is clicked
+      offcanvasRef.current.hide(); 
     }
   };
   const resourceMenu = (
@@ -87,9 +87,11 @@ const NavBar = () => {
               {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
               </Dropdown> */}
-            <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
+            {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
-              </Dropdown>
+              </Dropdown> */}
+              <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>
+
               <div className="navbarpage-divider"></div>
               <Link to="/Partner" className="navbarpage-navLink">Partners</Link>
               <div className="navbarpage-divider"></div>
@@ -142,9 +144,12 @@ const NavBar = () => {
                 <Dropdown overlay={MobileMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
                 </Dropdown>
-                <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
+                {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Resources</a>
-                </Dropdown>
+                </Dropdown> */}
+                <Link className="nav-link" to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
+
+                
                 <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
                 
                 <Link className="nav-link" to="/Partner" onClick={handleNavLinkClick}>Partners</Link>
