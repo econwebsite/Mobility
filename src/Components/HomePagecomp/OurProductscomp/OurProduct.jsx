@@ -25,8 +25,8 @@ const OurProduct = () => {
             <div className="OurProduct-overlay">
               <h3 className="OurProduct-title">{card.title}</h3>
               <p className="OurProduct-text">{card.text}</p>
-              <button className="OurProduct-button"><Link  to={card.link} style={{ textDecoration: "none",color:"white" }}>
-              Learn More  </Link>
+              <button className="OurProduct-button"><Link className="OurProduct-button"  to={card.link} style={{ textDecoration: "none",color:"white",border:"1px solid white" }}>
+              Know More  </Link>
               </button>
             </div>
           </div>

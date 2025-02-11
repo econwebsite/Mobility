@@ -51,7 +51,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #344ea1;
+  background-color: #1D4F9F;
   color: white;
   text-align: center;
   padding: 8px;
@@ -93,16 +93,16 @@
 
 .industriescomp-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
-  color: gray;
+  color: #1D4F9F;
   transition: color 0.3s ease, transform 0.3s ease;
   min-width: 100px;
   text-align: center;
 }
 
 .industriescomp-title.active {
-  color: blue;
+  color: #0A1832;
   font-weight: bold;
   transform: scale(1.2);
 }
@@ -200,7 +200,6 @@
   }
 
   .industriescomp-title.active {
-    color: blue;
     font-weight: bold;
     transform: none;
   }
