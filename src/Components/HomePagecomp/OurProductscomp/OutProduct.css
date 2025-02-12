@@ -16,7 +16,7 @@
 .OurProduct-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 20px; */
+    gap: 0px;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -108,8 +108,11 @@
 @media (max-width: 576px) {
     .OurProduct-container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-    
+    .OurProduct-wrapper {
+        padding: 5px 20px;
+    }
     .OurProduct {
         aspect-ratio: 2/3;
     }

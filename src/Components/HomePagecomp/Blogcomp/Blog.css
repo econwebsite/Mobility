@@ -31,7 +31,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border: 1px solid #003873;
   }
   
@@ -42,6 +41,10 @@
     border-radius: 4px;
     margin-bottom: 20px;
   }
+.ProductBlogs-card:hover .ProductBlogs-card-image{
+  transform: scale(1.1);
+  
+}
   
   .ProductBlogs-card-title {
     font-family: "Poppins", sans-serif;
