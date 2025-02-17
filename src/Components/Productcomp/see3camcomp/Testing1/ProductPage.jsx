@@ -58,7 +58,7 @@ function ProductPage() {
         </div>
         <br></br>
         <h1 className="ProductPage-title">
-          See3CAM_CU31 - 3MP Sony® ISX031 HDR Low Light USB Camera
+        STURDeCAM31_CUOAGX - 3MP Sony® ISX031 HDR Low Light USB Camera
         </h1>
       </div>
 
