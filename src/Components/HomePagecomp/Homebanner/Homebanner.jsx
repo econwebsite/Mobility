@@ -5,7 +5,7 @@ import AnimationButton from "../../ButtonComp/AnimationButton"
 const Homebanner = () => {
     return (
         <div className='carouselContainer'>
-            <div className="mainContainer">
+            {/* <div className="mainContainer"> */}
                 <div className='homeBanner'>
                     <img src={banner} alt="Slide 1" className="homecarousel-image" />
                     {/* <div className='homeButton'>
@@ -13,7 +13,7 @@ const Homebanner = () => {
                     </div> */}
                 </div>
             </div>
-        </div>
+        // </div>
     );
 };
 

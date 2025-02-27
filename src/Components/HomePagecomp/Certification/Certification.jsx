@@ -1,8 +1,6 @@
 import React from "react";
 import "./Certification.css";
-import certificate1 from "../../../assets/homepage/certificate1.png";
-import certificate2 from "../../../assets/homepage/certificate2.png";
-import certificate3 from "../../../assets/homepage/certificate3.png";
+import certificated from "../../../assets/homepage/certificationstd.png";
 import iso from "../../../assets/homepage/iso.png";
 import iatf from "../../../assets/homepage/iatf.png";
 
@@ -18,13 +16,7 @@ const Certification = () => {
             </div>
             <div className="certification-left-images">
               <div>
-                <img src={certificate1} alt="cc" />
-              </div>
-              <div>
-                <img src={certificate2} alt="img2" />
-              </div>
-              <div>
-                <img src={certificate3} alt="img3" />
+                <img src={certificated} alt="img3" />
               </div>
             </div>
           </div>
