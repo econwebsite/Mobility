@@ -36,11 +36,11 @@ const Certification = () => {
             <div className="certification-right-images">
               <div className="image-container">
                 <img src={iso} alt="ISO Certification" />
-                <p className="image-title">IATF 16949:2016</p>
+                <p className="image-title">ISO 9001:2015</p>
               </div>
               <div className="image-container">
                 <img src={iatf} alt="IATF Certification" />
-                <p className="image-title">ISO 9001:2015</p>
+                <p className="image-title">IATF 16949:2016</p>
               </div>
             </div>
           </div>

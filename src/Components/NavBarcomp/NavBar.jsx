@@ -36,6 +36,9 @@ const NavBar = () => {
       <Menu.Item key="3">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>Driver Monitoring Cameras</Link>
       </Menu.Item>
+      <Menu.Item key="4">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/rearview" onClick={handleNavLinkClick}>Rear view Cameras</Link>
+      </Menu.Item>
     </Menu>
   );
   const MobileMenu = (
