@@ -42,8 +42,8 @@ const DriverTab = () => {
           ]
         },
       },
-      bgColor: '#00f9ff',
-      color: '#344ea1',
+      bgColor: '#344ea1',
+      color: 'white',
       images: [nilecam27],
     },
     'NileCAM29': {
@@ -78,7 +78,7 @@ const DriverTab = () => {
           ]
         },
       },
-      bgColor: '#003873',
+      bgColor: '#344ea1',
       color: 'white',
       images: [routecam25],
     }

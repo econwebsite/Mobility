@@ -41,8 +41,8 @@ const Forwardtab = () => {
 },
 
       },
-      bgColor: '#00f9ff',
-      color: '#344ea1',
+      bgColor: '#344ea1',
+      color: 'white',
       images: [STURDeCAM84],
     },
     'STURDeCAM88': {

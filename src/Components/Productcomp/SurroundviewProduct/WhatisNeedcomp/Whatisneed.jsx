@@ -7,30 +7,28 @@ import highsensitivity from "../../../../assets/Productpage/surroundview/nir-sen
 // import Compatibility from "../../../../assets/Productpage/surroundview"
 import synchronization from "../../../../assets/Productpage/surroundview/synchronization.png"
 // import highIsp from "../../../../assets/Productpage/surroundview"
-// Custom Right Arrow Component
+
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow-right" onClick={onClick}>
-      &gt; {/* This is the right arrow symbol */}
+      &gt; 
     </div>
   );
 };
 
-// Custom Left Arrow Component
 const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow-left" onClick={onClick}>
-      &lt; {/* This is the left arrow symbol */}
+      &lt; 
     </div>
   );
 };
 
 const Whatisneed = () => {
-  // Updated slider settings with custom left and right arrows, and no dots
   const settings = {
-    dots: false, // Remove dots
+    dots: false, 
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -38,8 +36,8 @@ const Whatisneed = () => {
     speed: 1000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    nextArrow: <NextArrow />, // Custom next arrow
-    prevArrow: <PrevArrow />, // Custom left arrow
+    nextArrow: <NextArrow />, 
+    prevArrow: <PrevArrow />, 
     responsive: [
       {
         breakpoint: 768,
@@ -69,7 +67,6 @@ const Whatisneed = () => {
         <h1 className='whatis-title'>What is needed?</h1>
         <br />
         
-        {/* Slider Component with custom left and right arrows */}
         <div style={{ width: "90%", margin: "0 auto" }}>
           <Slider {...settings}>
             <div className="whatis-box">

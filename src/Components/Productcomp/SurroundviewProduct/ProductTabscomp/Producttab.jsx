@@ -18,7 +18,6 @@ import ambrella from "../../../../assets/Productpage/surroundview/ambarella.jpg"
 const Producttab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
-  // /////////////////
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
     { id: 2, src: [nvidia], alt: 'nvidia' },
@@ -56,8 +55,8 @@ const Producttab = () => {
           ]
         }
       },
-      bgColor: '#00f9ff',
-      color: '#344ea1',
+      bgColor: '#344ea1',
+      color: 'white',
       images: [STURDeCAM31, STURDeCAM34],
     },
     '4K GMSL2': {
@@ -102,7 +101,7 @@ const Producttab = () => {
           ]
         },
       },
-      bgColor: '#003873',
+      bgColor: '#344ea1',
       color: 'white',
       images: [routecam22],
     }

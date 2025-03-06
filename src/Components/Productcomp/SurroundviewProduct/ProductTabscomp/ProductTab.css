@@ -3,12 +3,16 @@
   background-color: #f1f2f2;
   overflow-x: hidden;
 }
-
+/* .ProductTabs-newcontainpro{
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+} */
 .ProductTabs-Container {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 2em;
+  padding: 2em 2em 3em;
 }
 .MobileProductTab-Total{
   display: none;
@@ -17,39 +21,50 @@
   display: flex;
   flex-direction: column;
   width: 20%;
+  gap: 15px;
 }
 
 .ProductTabs-RightSide {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 70%;
 }
 
 .ProductTabs-RightTabBox {
   display: flex;
   flex-direction: row;
-  gap: 30px;
-  width: 65%;
-  border-radius: 5px;
+  gap: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -1px;
 }
 
 .ProductTabs-LeftHeading {
   padding: 20px;
-  margin-bottom: 30px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  /* border: 2px solid transparent; */
+  position: relative;
+  overflow: hidden;
 }
 
-.ProductTabs-LeftHeading:not(.camera):hover {
+/* .ProductTabs-LeftHeading:not(.camera):hover {
   background-color:#b8f2ff !important; 
   color: #344ea1 !important; 
+} */
+.ProductTabs-RightTab:not(.active):hover {
+  background: #e0e0e0;
 }
-
 .ProductTabs-LeftHeading.active {
-  background-color: #00aeef;
-  color: white;
-  border-color: #003873;
+  background-color: white !important;
+  color: #003873 !important;
+  border-color: #003873 !important;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .ProductTabs-LeftHeading.camera {
@@ -59,25 +74,38 @@
 }
 
 .ProductTabs-RightTab {
-  border: 1px solid #344ea1;
-  padding: 20px;
+  padding: 12px 30px;
   cursor: pointer;
   text-align: center;
-  border-radius: 5px;
-  flex: 1;
-  transition: background-color 0.3s ease;
+  /* border: 1px solid #344ea1; */
+  border-bottom: none;
+  background: #f1f1f1;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  margin-right: 10px;
+  font-weight: 500;
+  color: #666;
 }
 
 .ProductTabs-RightTab.active {
-  background-color: white;
-  color: #344ea1;
+  background: white;
+  color: #003873;
+  border-color: #344ea1;
+  border-bottom: 1px solid white;
+  z-index: 2;
+  transform: translateY(1px);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 }
 
 .ProductTabs-ContentBox {
-  margin-top: 20px;
-  padding: 0px;
-  border-radius: 5px;
-  width: 100%;
+  /* border: 1px solid #344ea1; */
+  border-radius: 0 8px 8px 8px;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  background: white;
+  margin-top: -1px;
 }
 
 
@@ -142,7 +170,7 @@
 @media (max-width: 768px) {
   .ProductTabs-Container {
     flex-direction: column;
-    padding: 1em;
+    padding: 0.5em;
   }
 
   .ProductTabs-LeftSide,
@@ -154,7 +182,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
   }
 
   .ProductTabs-LeftHeading {
@@ -185,7 +213,7 @@
   }
 
   .Productinsidetab-container {
-    padding: 10px;
+    padding: 1px;
   }
 
   .Productinsidetab-image-row {
