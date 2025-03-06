@@ -94,9 +94,6 @@ const NavBar = () => {
                 <Link className="navbarpage-navLink">Resources</Link>
               </Dropdown> */}
               <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>
-
-              <div className="navbarpage-divider"></div>
-              <Link to="/Partner" className="navbarpage-navLink">Partners</Link>
               <div className="navbarpage-divider"></div>
               <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
             </div>
@@ -111,6 +108,7 @@ const NavBar = () => {
                     <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
                   </a>
                 </div>
+                <div style={{marginRight:"30px"}}></div>
                 {/* <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" /> */}
               </div>
             </div>

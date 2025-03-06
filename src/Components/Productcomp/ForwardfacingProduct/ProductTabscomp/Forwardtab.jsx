@@ -13,10 +13,10 @@ const Forwardtab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM84');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
   const images = [
-    { id: 1, src: [platform], alt: 'platform support' },
-    { id: 2, src: [nvidia], alt: 'nvidia' },
-    { id: 3, src: [qualcum], alt: "qualcum" },
-    { id: 4, src: [ambrella], alt: 'ambrella' }
+    { id: 1, src: [nvidia], alt: 'platform support' },
+    { id: 2, src: [platform], alt: 'nvidia' },
+    { id: 3, src: [ambrella], alt: "qualcum" },
+    { id: 4, src: [qualcum], alt: 'ambrella' }
   ];
   const rightTabs = {
    'Camera': {
@@ -141,11 +141,6 @@ const Forwardtab = () => {
                         </React.Fragment>
                       ))}
                       <div className="Forwardinsidetab-divider"></div>
-                      <div style={{ padding: '10px' }}>
-                      
-           <Modelbutton className="Forwardinsidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
-
-                      </div>
                     </div>
                   </div>    
                 </div>

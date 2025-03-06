@@ -7,7 +7,7 @@ import Casestudy from "./Casestudycomp/Casestudy";
 import Blog from "./Blogcomp/Blog";
 import ContactUs from "./Homecontactus/ContactUs";
 import Paragraph from "./Paragraphcomp/Paragraph";
-import IndustriesComp from './Industriescomp/Industriescomp';
+// import IndustriesComp from './Industriescomp/Industriescomp';
 import OurProducts from './OurProductscomp/OurProduct';
 
 const TotalHomePage = () => {
@@ -16,7 +16,7 @@ const TotalHomePage = () => {
             <Homebanner />
             <Paragraph />
             <OurProducts />
-            <IndustriesComp />
+            {/* <IndustriesComp /> */}
             <Certification />
             <Manufacturing />
             <Watchvedios />

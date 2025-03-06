@@ -5,14 +5,14 @@
 }
 
 .ModelButton-box {
-  width: 130px;
+  width: auto;
   height: auto;
   transition: 0.5s linear;
   position: relative;
   display: block;
   overflow: hidden;
   text-align: center;
-  padding: 12px 20px; 
+  padding: auto;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   border-radius: 5px;
@@ -21,8 +21,12 @@
   color: white;
   background: transparent;
 }
+.ModelButton-box:hover{
+  color: aliceblue;
+  background-color: #69ba2f;
+}
 
-.ModelButton-box:before {
+/* .ModelButton-box:before {
   position: absolute;
   content: '';
   left: 0;
@@ -34,8 +38,8 @@
   box-sizing: border-box;
   transform: translateX(100%);
 
-}
-
+} */
+/* 
 .ModelButton-box:after {
   position: absolute;
   content: '';
@@ -66,7 +70,7 @@
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.5s;
-}
+} */
 
 
 

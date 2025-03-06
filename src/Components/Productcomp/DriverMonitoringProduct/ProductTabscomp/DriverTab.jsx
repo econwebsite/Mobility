@@ -159,10 +159,10 @@ const DriverTab = () => {
                         </React.Fragment>
                       ))}
                       <div className="DriverTab-insidetab-divider"></div>
-                      <div style={{ padding: '10px' }}>
+                      {/* <div style={{ padding: '10px' }}>
                     <Modelbutton className="DriverTab-insidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
 
-                      </div>
+                      </div> */}
                     </div>
                   </div>    
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import "./ProductTableData.css"; 
+import Modelbutton from "../../../ButtonComp/Modelbutton"
 
 function ProductTableData({ tableData, imageSrc }) {
   return (
@@ -8,7 +9,10 @@ function ProductTableData({ tableData, imageSrc }) {
             <div className='mainContainer'>
   <div className="ProductTableData-ContainerBox">
     <div className="ProductTableData-ImageColumn">
+    <div className="ProductTableData-ImageWrapper">
       {imageSrc && <img src={imageSrc} alt="tab" />}
+      <Modelbutton className="ProducTable-button" text="Download Tech Document" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
+</div>
     </div>
     <div className="ProductTableData-LeftColumn">
     <Table responsive bordered style={{ borderColor: "#344ea1" }}>

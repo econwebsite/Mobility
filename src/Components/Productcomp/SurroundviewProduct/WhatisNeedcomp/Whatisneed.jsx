@@ -1,118 +1,68 @@
 import React from 'react';
-import Slider from "react-slick";
 import "./Whatisneed.css";
 import hdr from "../../../../assets/Productpage/surroundview/hdr.png";
 import highsensitivity from "../../../../assets/Productpage/surroundview/nir-sensitivity.png"
-// import longrange from "../../../../assets/Productpage/surroundview"
-// import Compatibility from "../../../../assets/Productpage/surroundview"
 import synchronization from "../../../../assets/Productpage/surroundview/synchronization.png"
-// import highIsp from "../../../../assets/Productpage/surroundview"
-
-const NextArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div className="custom-arrow-right" onClick={onClick}>
-      &gt; 
-    </div>
-  );
-};
-
-const PrevArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div className="custom-arrow-left" onClick={onClick}>
-      &lt; 
-    </div>
-  );
-};
 
 const Whatisneed = () => {
-  const settings = {
-    dots: false, 
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    nextArrow: <NextArrow />, 
-    prevArrow: <PrevArrow />, 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  };
-
   return (
     <div className="whatis-container">
-      <div className='mainContainer'>
+      <div className="mainContainer">
         <div className="whatis-containerparagraph">
           <p className="whatis-standparagraphtext">
           Our surround view systems utilize multi-camera setups to provide a comprehensive 360-degree view of the vehicle’s surroundings. By synchronizing multiple cameras, these systems get a stitched, composite image that eliminates blind spots, thereby enhancing driver awareness and safety. This real-time bird's-eye view is crucial for parking assistance, obstacle detection, lane detection, traffic sign recognition, and maneuvering in tight spaces, all of which support the advanced functionalities of ADAS.          </p>
-        </div>
         
-        <h1 className='whatis-title'>What is needed?</h1>
-        <br />
-        
-        <div style={{ width: "90%", margin: "0 auto" }}>
-          <Slider {...settings}>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={hdr} alt="High Dynamic Range" className="whatis-image" />
-                <p>High Dynamic Range</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={highsensitivity} alt="High Resolution" className="whatis-image" />
-                <p>High Sensitivity</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={synchronization} alt="IP67 / IP69K Rating" className="whatis-image" />
-                <p>Long range interface</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={hdr} alt="GMSL2 / GigEInterface" className="whatis-image" />
-                <p>
-                Compatible platforms</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={synchronization} alt="Low light Sensitivity" className="whatis-image" />
-                <p>Camera synchronization</p>
-              </div>
-            </div>
-            <div className="whatis-box">
-              <div className='alignment-whatisbox'>
-                <img src={hdr} alt="NIR Sensitivity" className="whatis-image" />
-                <p>High-performance ISP</p>
-              </div>
-            </div>
-          </Slider>
         </div>
+
+        <h1 className="whatis-title">What is needed?</h1>
         <br />
-        <h1 className='whatis-econ'>e-con Camera for ADAS</h1>
+
+        <div className="whatis-grid">
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={hdr} alt="Resolution" className="whatis-image" />
+              <p>High dynamic range</p>
+            </div>
+          </div>
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={highsensitivity} alt="High Frame Rate" className="whatis-image" />
+              <p>High sensitivity</p>
+            </div>
+          </div>
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={hdr} alt="Global Shutter" className="whatis-image" />
+              <p>Long range interface</p>
+            </div>
+          </div>
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={synchronization} alt="Global Shutter" className="whatis-image" />
+              <p>Compataible platform</p>
+            </div>
+          </div>
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={synchronization} alt="Global Shutter" className="whatis-image" />
+              <p>Camera synchronization</p>
+            </div>
+          </div>
+          <div className="whatis-box">
+            <div className="alignment-whatisbox">
+              <img src={hdr} alt="Global Shutter" className="whatis-image" />
+              <p>High performance ISP</p>
+            </div>
+          </div>
+         
+          
+        </div>
+
+        <br />
+        <h1 className="whatis-econ">e-con Camera for ADAS</h1>
       </div>
     </div>
   );
-}
+};
 
 export default Whatisneed;

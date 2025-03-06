@@ -76,12 +76,12 @@ width: 95% !important;
   }
 
   .navbarpage-navLink {
-    margin: 0 9px;
+    margin: 0 10px;
     text-decoration: none !important;
     color: #003873;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.1em;
     white-space: nowrap;
   }
   .navbarpage-navLink:hover {

@@ -9,7 +9,6 @@ import TotalSurroundview from "./Components/Productcomp/SurroundviewProduct/Tota
 import Totalforwardfacing from "./Components/Productcomp/ForwardfacingProduct/Totalforwardfacing";
 import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/Totalmonitoring";
 import Totalrearview from "./Components/Productcomp/Rearviewproduct/Totalrearview"
-import Partner from "./Components/PartnersComp/Partner"
 import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
@@ -36,7 +35,6 @@ const App = () => {
         <Route path="/forwardfacing" element={<Totalforwardfacing/>} />
         <Route path="/drivermonitoring" element={<Totalmonitoring/>} />
         <Route path="/rearview" element={<Totalrearview/>} />
-        <Route path="/Partner" element={<Partner/>} />
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/BlogHubpage" element={<BlogHubpage/>} />
         {/* <Route path="/CasestudyHubpage" element={<Casehubpage/>} /> */}
