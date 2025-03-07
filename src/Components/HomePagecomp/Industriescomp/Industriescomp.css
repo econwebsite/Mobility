@@ -2,254 +2,109 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 30px;
-  width: 100%;
-  overflow-x: hidden;
-  
-}
-.industries-title{
-   text-align: center;
-    font-size: 2.5rem;
-    padding: 1em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-.industriescomp-slider {
-  width: 100%;
-  max-width: 1200px;
+  padding: 50px 20px;
+  background-color: #f1f2f2;
+  overflow: hidden;
 }
 
-.industriescomp-slide {
-  padding: 20px; 
+.industries-title {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #1D4F9F;
+}
+
+.industriescomp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
 }
 
 .industriescomp-card {
   position: relative;
-  width: 340px;
-  height: 240px;
-  border-radius: 15px;
-  cursor: pointer;
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
 }
 
-.industriescomp-card.active {
-  transform: scale(1.1);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+.industriescomp-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
+
 .industriescomp-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 
-.industri-back {
+.industriescomp-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1D4F9F;
-  color: white;
-  text-align: center;
-  padding: 8px;
-  font-weight: 300;
-}
-
-.industriescomp-card p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.industriescomp-card:hover p {
-  opacity: 1;
-}
-
-.industriescomp-title-slider {
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 25px;
-}
-
-.industriescomp-title-slide {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+  padding: 5px;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  padding: 10px;
   text-align: center;
+  height: 100%;
+  transition: background 0.3s ease;
+}
+
+.industriescomp-card:hover .industriescomp-overlay {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .industriescomp-title {
-  font-size: 18px;
-  font-weight: 300;
-  cursor: pointer;
-  color: #1D4F9F;
-  transition: color 0.3s ease, transform 0.3s ease;
-  min-width: 100px;
-  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  transition: transform 0.3s ease;
 }
 
-.industriescomp-title.active {
-  color: #00aeef;
-  text-decoration: underline;
-  transform: scale(1.2);
+.industriescomp-card:hover .industriescomp-title {
+  transform: translateY(-10px);
 }
 
-@media (max-width: 1100px) {
-  .industriescomp-container {
-    padding: 25px 15px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-title {
+    font-size: 2rem;
   }
 
-  .industriescomp-slider {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .industriescomp-slide {
-    padding: 15px;
+  .industriescomp-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .industriescomp-card {
-    width: 300px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .industriescomp-card p {
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  .industriescomp-title-slider {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 15px;
-  }
-
-  .industriescomp-title {
-    font-size: 16px;
-    min-width: auto;
-    padding: 0 8px;
-  }
-  
-  .industriescomp-title.active {
-    transform: scale(1.1);
-  }
-}
-
-
-@media (max-width: 900px) {
-  .industriescomp-container {
-    padding: 20px;
-  }
-
-  .industriescomp-slider {
-    width: 100%;
-    max-width: 95%;
-  }
-
-  .industriescomp-slide {
-    padding: 10px;
-  }
-
-  .industriescomp-card {
-    width: 200px;
-    height: 200px; 
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .industriescomp-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  .industriescomp-title-slider {
-    width: 90%;
-    max-width: 95%;
-    margin-top: 20px;
-  }
-
-  .industriescomp-title-slide {
-    padding: 10px;
-    margin: 5px; 
-  }
-
-  .industriescomp-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: gray;
-    transition: color 0.3s ease, transform 0.3s ease;
-    min-width: 120px;
-    text-align: center;
-  }
-
-  .industriescomp-title.active {
-    font-weight: bold;
-    transform: none;
-  }
-}
-
-@media (max-width: 780px) {
-  .industriescomp-card {
-    width: 200px; 
-    height: 180px;
-  }
-.industries-title{
-font-size: 2em;
-}
-  .industriescomp-title {
-    font-size: 12px; 
-  }
-
-  .industriescomp-title-slide {
-    padding: 2px;
-  }
-  .industriescomp-title-slider {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-  }
-}
-
-
-
-@media (max-width: 430px) {
-  .industriescomp-card {
-    width: 290px; 
     height: 200px;
   }
 
   .industriescomp-title {
-    font-size: 1em; 
+    font-size: 1.3rem;
   }
-
-}
-
-
-@media (max-width: 330px) {
-  .industriescomp-card {
-    width: 205px; 
-    height: 190px;
-  }
-
-  .industriescomp-title {
-    font-size: 1em; 
-  }
-
 }

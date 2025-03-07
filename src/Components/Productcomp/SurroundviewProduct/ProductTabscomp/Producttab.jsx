@@ -19,13 +19,13 @@ const Producttab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
   const images = [
-    { id: 1, src: [nvidia], alt: 'platform support' },
-    { id: 2, src: [platform], alt: 'nvidia' },
+    { id: 1, src: [platform], alt: 'platform support' },
+    { id: 2, src: [nvidia], alt: 'nvidia' },
     { id: 3, src: [ambrella], alt: "qualcum" },
     { id: 4, src: [qualcum], alt: 'ambrella' }
   ];
   const rightTabs = {
-    'Camera': {
+    'Suppotted Cameras': {
       tabs: ['CAMERA_MODEL_1', 'CAMERA_MODEL_2'],
       images: [],
       bgColor: '#f1f2f2',
@@ -108,7 +108,7 @@ const Producttab = () => {
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Camera') {
+    if (tab !== 'Suppotted Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -142,7 +142,7 @@ const Producttab = () => {
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#003873' : '#344ea1',
-                    cursor: heading === 'Camera' ? 'default' : 'pointer',
+                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}

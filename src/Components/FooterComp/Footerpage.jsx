@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Footerpage.css';
 import { message } from 'antd';
-import dentallogo from "../../assets/homepage/NewDentallogo.svg";
 import econlogo from "../../assets/homepage/footerlogo-1.svg"
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';

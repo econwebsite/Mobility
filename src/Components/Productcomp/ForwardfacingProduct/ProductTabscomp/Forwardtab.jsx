@@ -13,13 +13,13 @@ const Forwardtab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM84');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
   const images = [
-    { id: 1, src: [nvidia], alt: 'platform support' },
-    { id: 2, src: [platform], alt: 'nvidia' },
+    { id: 1, src: [platform], alt: 'platform support' },
+    { id: 2, src: [nvidia], alt: 'nvidia' },
     { id: 3, src: [ambrella], alt: "qualcum" },
     { id: 4, src: [qualcum], alt: 'ambrella' }
   ];
   const rightTabs = {
-   'Camera': {
+   'Suppotted Cameras': {
       tabs: ['STURDeCAM84', 'STURDeCAM88'],
       bgColor: 'transparent',
       color: '#344ea1',
@@ -68,7 +68,7 @@ const Forwardtab = () => {
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Camera') {
+    if (tab !== 'Suppotted Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -96,13 +96,13 @@ const Forwardtab = () => {
               {Object.keys(rightTabs).map((heading, index) => (
                 <div
                   key={index}
-                  className={`ForwardTabs-LeftHeading ${heading === 'Camera' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
+                  className={`ForwardTabs-LeftHeading ${heading === 'Suppotted Cameras' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
                   onClick={() => handleLeftTabClick(heading)}
                   style={{
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#f1f2f2' : '#344ea1',
-                    cursor: heading === 'Camera' ? 'default' : 'pointer',
+                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}

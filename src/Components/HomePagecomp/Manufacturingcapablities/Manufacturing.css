@@ -2,7 +2,8 @@
   background-color: #f1f2f2;
   padding: 2em;
   text-align: center;
-  height: auto;
+  height: 550px;
+  width: 100%;
 }
 
 .manufacturing h2 {
@@ -12,11 +13,11 @@
 }
 
 .manufacturing p {
-  font-size: 1.02em;
+  font-size: 1em;
   color: #344ea1;
-  margin-bottom: 10px;
-  line-height: 2em;
-  max-width: 1100px;
+  margin-bottom: 20px;
+  line-height: 1.8em;
+  max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -24,58 +25,84 @@
 .manufacturing .image-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4em;
+  padding: 1.2em;
   flex-wrap: nowrap; 
 }
 
 .manufacturing .image-box {
   position: relative;
-  width: 180px; 
-  height: 180px;
+  width: 250px;   
+  height: 250px;
+  background-color: #344ea1;
 }
 
 .manufacturing .image-box img {
   width: 100%;
   height: 100%;
+  background-color: #344ea1;
   object-fit: cover;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .manufacturing .image-box p {
   margin-top: 8px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 500;
+  color: #f1f2f2;
+}
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-@media (max-width: 1024px) {
-  .manufacturing .image-box {
-    width: 150px;
-    height: 150px;
-  }
+[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media (max-width: 768px) {
   .manufacturing .image-container {
-    overflow-x: auto; /* Allows horizontal scroll on smaller screens */
-    justify-content: flex-start;
-    padding-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    gap: 20px; 
+  }
+  .manufacturing {
+    height: auto;
   }
 
   .manufacturing .image-box {
-    min-width: 140px;
-    height: 140px;
-    margin-right: 10px;
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    text-align: center;
+  }
+
+  .manufacturing .image-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .manufacturing .image-box p {
+    margin-top: 15px; 
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 480px) {
   .manufacturing .image-box {
-    min-width: 120px;
-    height: 120px;
+    max-width: 320px; 
+  }
+
+  .manufacturing .image-box p {
+    font-size: 0.95rem;
+    color: #f1f2f2;
   }
 }

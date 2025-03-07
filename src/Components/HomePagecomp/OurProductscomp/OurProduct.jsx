@@ -5,13 +5,14 @@ import surroundview from "../../../assets/homepage/surroundview.jpg"
 import forwardfacing from "../../../assets/homepage/forwardfacing.jpg"
 import rearview from "../../../assets/homepage/rearview.jpg"
 import drivermonitoring from "../../../assets/homepage/drivermonitoring.jpg"
+import { link } from "framer-motion/client";
 
 const OurProduct = () => {
   const cardsData = [
     { id: 1,img:surroundview, title: "Surround View Camera", text: "Our Surround view camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/surroundview" },
     { id: 2,img:forwardfacing, title: "Forward-Facing Camera", text: "Our forward-facing camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/forwardfacing" },
     { id: 3,img:rearview, title: "Rear View Cameras", text: "Our Rear View Camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"rearview" },
-    { id: 4,img:drivermonitoring, title: "Driver Monitoring Cameras", text: "Driver Monitoring Camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/drivermonitoring" },
+    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Driver Monitoring Camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/drivermonitoring" },
   ];
 
   return (

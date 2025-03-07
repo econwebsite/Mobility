@@ -10,7 +10,7 @@ const Whatisneed = () => {
       <div className="mainContainer">
         <div className="whatis-containerparagraph">
           <p className="whatis-standparagraphtext">
-            Our driver monitoring cameras are designed to enhance road safety by tracking driver behavior and alertness. With high frame rate and global shutter performance, along with excellent near-infrared (NIR) capabilities, these cameras are highly effective in detecting signs of drowsiness or distraction. This capability is critical for accident prevention and plays a key role in the functionality of advanced driver-assistance systems (ADAS). The integration of RGB-IR technology enables the cameras to capture clear images in both visible and infrared light without the need for mechanical filters. This feature ensures reliable performance both day and night and contributes to the camera’s extended lifespan.
+          In-cabin monitoring system cameras are designed to enhance road safety by tracking driver behavior and alertness. With high frame rate and global shutter performance, along with excellent near-infrared (NIR) capabilities, these industrial-grade cameras are highly effective in detecting signs of drowsiness or distraction. This capability is critical for accident prevention and plays a key role in the functionality of advanced driver-assistance systems (ADAS). The integration of RGB-IR technology enables the cameras to capture clear images in both visible and infrared light without the need for mechanical filters. This feature ensures reliable performance both day and night and contributes to the camera’s extended lifespan.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const Whatisneed = () => {
         </div>
 
         <br />
-        <h1 className="whatis-econ">e-con Camera for ADAS</h1>
+        <h1 className="whatis-econ">e-con Camera for In-cabin monitoring system</h1>
       </div>
     </div>
   );

@@ -4,12 +4,11 @@ import ProductTableData from "../Driversupports/ProductTableData";
 import nilecam27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.jpg";
 import nilecam29 from "../../../../assets/Productpage/drivermonitoring/nilecam29.jpg";
 import routecam25 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
-import AnimationButton from "../../../ButtonComp/AnimationButton";
 import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
 import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
 import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
-import Modelbutton from "../../../ButtonComp/Modelbutton"
+
 const DriverTab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('NileCAM27');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
@@ -22,7 +21,7 @@ const DriverTab = () => {
   ];
  
   const rightTabs = {
-    'Camera': {
+    'Suppotted Cameras': {
       tabs: ['NileCAM27', 'NileCAM29', 'RouteCAM_CU25'],
       bgColor: 'transparent',
       color: '#344ea1',
@@ -85,7 +84,7 @@ const DriverTab = () => {
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Camera') {
+    if (tab !== 'Suppotted Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -113,13 +112,13 @@ const DriverTab = () => {
               {Object.keys(rightTabs).map((heading, index) => (
                 <div
                   key={index}
-                  className={`DriverTab-LeftHeading ${heading === 'Camera' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
+                  className={`DriverTab-LeftHeading ${heading === 'Suppotted Cameras' ? 'Suppotted Cameras' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
                   onClick={() => handleLeftTabClick(heading)}
                   style={{
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#f1f2f2' : '#344ea1',
-                    cursor: heading === 'Camera' ? 'default' : 'pointer',
+                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}

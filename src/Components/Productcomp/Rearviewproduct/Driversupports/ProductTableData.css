@@ -62,9 +62,8 @@ table {
   margin-top: 10px; 
   text-align: center;
   font-size: 0.9em;
-  padding: 14px 10px; 
-  border-radius: 8px;
-  display: inline-block;
+  padding: 15px 5px; 
+  border-radius: 6px;
 }
 
 
@@ -104,8 +103,7 @@ border: 1px solid #344ea1;
     margin-top: 10px; 
     text-align: center;
     font-size: 0.8em;
-    padding: 3px 30px ; 
+    padding: 15px 9px !important ; 
     border-radius: 8px;
-    display: inline-block;
   }
 }

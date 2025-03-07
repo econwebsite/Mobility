@@ -10,7 +10,7 @@ const Whatisneed = () => {
       <div className="mainContainer">
         <div className="whatis-containerparagraph">
           <p className="whatis-standparagraphtext">
-            Our driver monitoring cameras are designed to enhance road safety by tracking driver behavior and alertness. With high frame rate and global shutter performance, along with excellent near-infrared (NIR) capabilities, these cameras are highly effective in detecting signs of drowsiness or distraction. This capability is critical for accident prevention and plays a key role in the functionality of advanced driver-assistance systems (ADAS). The integration of RGB-IR technology enables the cameras to capture clear images in both visible and infrared light without the need for mechanical filters. This feature ensures reliable performance both day and night and contributes to the camera’s extended lifespan.
+          Our rear view cameras provide wide-angle visibility for precise reversing in challenging environments. These industrial-grade cameras process video feeds from the vehicle's rear to offer real-time driver assistance, ensuring safer driving/parking by eliminating blind spots. With high-resolution imaging at various ranges and in challenging lighting conditions, these cameras are also required in the surround view system. 
           </p>
         </div>
 
@@ -21,32 +21,26 @@ const Whatisneed = () => {
           <div className="whatis-box">
             <div className="alignment-whatisbox">
               <img src={hightframe} alt="Resolution" className="whatis-image" />
-              <p>Resolution</p>
+              <p>HDR</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
               <img src={hightframe} alt="High Frame Rate" className="whatis-image" />
-              <p>High frame rate</p>
+              <p>Diverse lens options </p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
               <img src={globalshutt} alt="Global Shutter" className="whatis-image" />
-              <p>Global Shutter</p>
-            </div>
-          </div>
-          <div className="whatis-box">
-            <div className="alignment-whatisbox">
-              <img src={nir} alt="NIR Sensitivity" className="whatis-image" />
-              <p>NIR sensitivity</p>
+              <p>IP69K-rated Enclosure</p>
             </div>
           </div>
           
         </div>
 
         <br />
-        <h1 className="whatis-econ">e-con Camera for ADAS</h1>
+        <h1 className="whatis-econ">e-con Camera for Rear View</h1>
       </div>
     </div>
   );
