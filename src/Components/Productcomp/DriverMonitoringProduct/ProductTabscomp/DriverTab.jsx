@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
-import nilecam27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.jpg";
+import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.jpg";
 import nilecam29 from "../../../../assets/Productpage/drivermonitoring/nilecam29.jpg";
 import routecam25 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
 import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
@@ -10,7 +10,7 @@ import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg
 import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
 
 const DriverTab = () => {
-  const [selectedLeftTab, setSelectedLeftTab] = useState('NileCAM27');
+  const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM27');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 
   const images = [
@@ -21,16 +21,16 @@ const DriverTab = () => {
   ];
  
   const rightTabs = {
-    'Suppotted Cameras': {
-      tabs: ['NileCAM27', 'NileCAM29', 'RouteCAM_CU25'],
+    'Supported Cameras': {
+      tabs: ['STURDeCAM27', 'NileCAM29', 'RouteCAM_CU25'],
       bgColor: 'transparent',
       color: '#344ea1',
       images: [],
     },
-    'NileCAM27': {
-      tabs: ['NileCAM27'],
+    'STURDeCAM27': {
+      tabs: ['STURDeCAM27'],
       content: {
-        'NileCAM27': {
+        'STURDeCAM27': {
           tableData: [
             ['OMNIVISION™ OV2312', '2MP @ 60 fps'],
             ['In-Built ISP', 'Chroma: RGB-IR'],
@@ -41,9 +41,9 @@ const DriverTab = () => {
           ]
         },
       },
-      bgColor: '#3443a1',
-      color: 'white',
-      images: [nilecam27],
+      bgColor: 'white',
+      color: '#344ea1',
+      images: [STURDeCAM27],
     },
     'NileCAM29': {
       tabs: ['NileCAM29'],
@@ -59,32 +59,32 @@ const DriverTab = () => {
           ]
         },
       },
-      bgColor: '#344ea1',
-      color: 'white',
+      bgColor: 'white',
+      color: '#344ea1',
       images: [nilecam29],
     },
-    'RouteCAM_CU25': {
-      tabs: ['RouteCAM_CU25'],
-      content: {
-        'RouteCAM_CU25': {
-          tableData: [
-            ['OMNIVISION™ AR0234', '2MP @ 60 fps'],
-            ['In-Built ISP', 'Color'],
-            ['NIR Sensitivity: 940 nm / 850 nm', 'Global Shutter'],
-            ['GigE Interface', 'Output Format: MJPEG, H.265 & H.264 '],
-            ['Form factor: 46mm x 46mm', 'FOV: 120°(H), 67°(V), 140°(D)'],
-            ['IP67', 'Compliance & Standards:<br>ISO 14982'],
-          ]
-        },
-      },
-      bgColor: '#344ea1',
-      color: 'white',
-      images: [routecam25],
-    }
+    // 'RouteCAM_CU25': {
+    //   tabs: ['RouteCAM_CU25'],
+    //   content: {
+    //     'RouteCAM_CU25': {
+    //       tableData: [
+    //         ['OMNIVISION™ AR0234', '2MP @ 60 fps'],
+    //         ['In-Built ISP', 'Color'],
+    //         ['NIR Sensitivity: 940 nm / 850 nm', 'Global Shutter'],
+    //         ['GigE Interface', 'Output Format: MJPEG, H.265 & H.264 '],
+    //         ['Form factor: 46mm x 46mm', 'FOV: 120°(H), 67°(V), 140°(D)'],
+    //         ['IP67', 'Compliance & Standards:<br>ISO 14982'],
+    //       ]
+    //     },
+    //   },
+    //   bgColor: 'white',
+    //   color: '#344ea1',
+    //   images: [routecam25],
+    // }
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Suppotted Cameras') {
+    if (tab !== 'Supported Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -112,13 +112,13 @@ const DriverTab = () => {
               {Object.keys(rightTabs).map((heading, index) => (
                 <div
                   key={index}
-                  className={`DriverTab-LeftHeading ${heading === 'Suppotted Cameras' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
+                  className={`DriverTab-LeftHeading ${heading === 'Supported Cameras' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
                   onClick={() => handleLeftTabClick(heading)}
                   style={{
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#f1f2f2' : '#344ea1',
-                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
+                    cursor: heading === 'Supported Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}
@@ -143,7 +143,7 @@ const DriverTab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="DriverTab-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} />
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} />
 
                   <div className="DriverTab-insidetab-container">
                     <div className="DriverTab-insidetab-image-row">

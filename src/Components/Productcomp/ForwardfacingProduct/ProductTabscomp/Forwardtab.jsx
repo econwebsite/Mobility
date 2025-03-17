@@ -4,50 +4,71 @@ import ProductTableData from "../Platformsupport/ProductTableData";
 import STURDeCAM88 from "../../../../assets/Productpage/forwardfacing/studycam88.png";
 import STURDeCAM84 from "../../../../assets/Productpage/forwardfacing/studycam84.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton";
+import STURDeCAM31 from "../../../../assets/Productpage/forwardfacing/studycam31.jpg"
+import STURDeCAM34 from "../../../../assets/Productpage/forwardfacing/studycam34.jpg"
 import platform from "../../../../assets/Productpage/forwardfacing/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/forwardfacing/nividia.jpg";
 import qualcum from "../../../../assets/Productpage/forwardfacing/qualcom.jpg";
 import ambrella from "../../../../assets/Productpage/forwardfacing/ambarella.jpg";
 
 const Forwardtab = () => {
-  const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM84');
+  const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
+
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
     { id: 2, src: [nvidia], alt: 'nvidia' },
     { id: 3, src: [ambrella], alt: "qualcum" },
     { id: 4, src: [qualcum], alt: 'ambrella' }
   ];
-  const rightTabs = {
-   'Suppotted Cameras': {
-      tabs: ['STURDeCAM84', 'STURDeCAM88'],
-      bgColor: 'transparent',
-      color: '#344ea1',
+  const rightTabs = {   
+ 'Supported Cameras': {
+      tabs: ['CAMERA_MODEL_1', 'CAMERA_MODEL_2'],
       images: [],
+      bgColor: '#f1f2f2',
+      color: '#344ea1',
     },
-    'STURDeCAM84': {
-      tabs: ['STURDeCAM84'],
+    '3MP GMSL2': {
+      tabs: ['STURDeCAM31', 'STRUDeCAM34'],
       content: {
-        
- 'STURDeCAM84': {
-  tableData: [
-    [' onsemi&reg AR0823AT', '8MP @ 30 fps'],
-    ['Without ISP', '150dB HDR'],
-    ['GMSL2 Interface', 'RAW-12 Output format'],
-    ['Form factor: 20.8 x 20.8 mm ', 'Lens (HFOV): 60°/120°'],
-    ['IP69K', 'Operating Temperature :-40°C to 85°C'],
-    ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 16750'],
-  ]
-},
-
+        'STURDeCAM31': {
+          tableData: [
+            ['Sony&reg ISX031', '3MP @ 60 fps'],
+            ['In-Built ISP', '120dB HDR'],
+            ['GMSL2 Interface', 'Output format: UYVY'],
+            ['Form factor: 25 x 25 mm ', 'Lens (HFOV): 54°/128°'],
+            ['IP69K', 'Operating Temperature : -40°C to 85°C'],
+            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 11452'],
+          ]
+        },
+        'STRUDeCAM34': {
+          tableData: [
+            [' onsemi&reg AR0341AT', '3MP @ 30 fps'],
+            ['In-Built ISP', '150dB HDR'],
+            ['GMSL2 Interface', 'Output format :UYVY'],
+            ['Form factor:25 x 25 mm', 'Lens (HFOV): 60°/120°'],
+            ['IP69K', 'Operating Temperature: -40°C to 85°C'],
+            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards :<br>ISO 11450'],
+          ]
+        }
       },
-      bgColor: '#344ea1',
-      color: 'white',
-      images: [STURDeCAM84],
+      bgColor: 'white',
+      color: '#344ea1',
+      images: [STURDeCAM31, STURDeCAM34],
     },
-    'STURDeCAM88': {
-      tabs: ['STURDeCAM88'],
+    '8MP GMSL2': {
+      tabs: ['STURDeCAM84', 'STURDeCAM88'],
       content: {
+        'STURDeCAM84': {
+          tableData: [
+            [' onsemi&reg AR0823AT', '8MP @ 30 fps'],
+            ['Without ISP', '150dB HDR'],
+            ['GMSL2 Interface', 'RAW-12 Output format'],
+            ['Form factor: 20.8 x 20.8 mm ', 'Lens (HFOV): 60°/120°'],
+            ['IP69K', 'Operating Temperature :-40°C to 85°C'],
+            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 16750'],
+          ]
+        },
         'STURDeCAM88': {
           tableData: [
             ['OMNIVISION&trade; OX08B40', '8MP @ 30 fps'],
@@ -57,18 +78,19 @@ const Forwardtab = () => {
             ['IP67', 'Operating Temperature: -40°C to 85°C'],
             ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 13766'],
           ]
-        },
-
+        }
       },
-      bgColor: '#344ea1',
-      color: 'white',
-      images: [STURDeCAM88],
+      bgColor: 'white',
+      color: '#344ea1',
+      images: [STURDeCAM84, STURDeCAM88],
     },
-   
+    
+
+
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Suppotted Cameras') {
+    if (tab !== 'Supported Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -96,13 +118,13 @@ const Forwardtab = () => {
               {Object.keys(rightTabs).map((heading, index) => (
                 <div
                   key={index}
-                  className={`ForwardTabs-LeftHeading ${heading === 'Suppotted Cameras' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
+                  className={`ForwardTabs-LeftHeading ${heading === 'Supported Cameras' ? 'camera' : ''} ${selectedLeftTab === heading ? 'active' : ''}`}
                   onClick={() => handleLeftTabClick(heading)}
                   style={{
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#f1f2f2' : '#344ea1',
-                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
+                    cursor: heading === 'Supported Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}
@@ -127,7 +149,7 @@ const Forwardtab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="ForwardTabs-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} />
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} />
                   <div className="Forwardinsidetab-container">
                     <div className="Forwardinsidetab-image-row">
                       {images.map((image, index) => (

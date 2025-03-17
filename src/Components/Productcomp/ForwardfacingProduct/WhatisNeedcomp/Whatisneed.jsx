@@ -47,7 +47,7 @@ const Whatisneed = () => {
         </div>
 
         <br />
-        <h1 className="whatis-econ">e-con Camera for Forward Facing</h1>
+        <h1 className="whatis-econ">e-con Cameras for Forward Facing</h1>
       </div>
     </div>
   );

@@ -26,48 +26,54 @@ const NavBar = () => {
   );
   
   const SolutionMenu = (
-    <Menu  style={{width:"300px",border:"1px solid #00aeef"}}>
+    <Menu style={{ width: "300px", border: "1px solid #00aeef" }}>
       <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
+        <Link to="/surroundview" onClick={handleNavLinkClick}>
+          Surround View Cameras
+        </Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/forwardfacing" onClick={handleNavLinkClick}>Forward Facing Cameras</Link>
+        <Link to="/forwardfacing" onClick={handleNavLinkClick}>
+          Forward Facing Cameras
+        </Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>In-cabin monitoring system</Link>
+        <Link to="/rearview" onClick={handleNavLinkClick}>
+          Rear View Cameras
+        </Link>
       </Menu.Item>
       <Menu.Item key="4">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/rearview" onClick={handleNavLinkClick}>Rear view Cameras</Link>
+        <Link to="/drivermonitoring" onClick={handleNavLinkClick}>
+          In-Cabin Monitoring System
+        </Link>
       </Menu.Item>
     </Menu>
   );
+  
   const MobileMenu = (
-    <Menu  style={{width:"auto",border:"1px solid #00aeef"}}>
+    <Menu style={{ width: "300px", border: "1px solid #00aeef" }}>
       <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/surroundview" onClick={handleNavLinkClick}>Surround View Cameras</Link>
+        <Link to="/surroundview" onClick={handleNavLinkClick}>
+          Surround View Cameras
+        </Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/forwardfacing" onClick={handleNavLinkClick}>Forward Facing Cameras</Link>
+        <Link to="/forwardfacing" onClick={handleNavLinkClick}>
+          Forward Facing Cameras
+        </Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/drivermonitoring" onClick={handleNavLinkClick}>In-cabin monitoring system</Link>
+        <Link to="/rearview" onClick={handleNavLinkClick}>
+          Rear View Cameras
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="4">
+        <Link to="/drivermonitoring" onClick={handleNavLinkClick}>
+          In-Cabin Monitoring System
+        </Link>
       </Menu.Item>
     </Menu>
   );
-
-  // const productMenu = (
-  //   <Menu>
-  //     <Menu.Item key="1">
-  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
-  //     </Menu.Item>
-  //     <Menu.Item key="2">
-  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Extraoral" onClick={handleNavLinkClick}>ExtraOral camera</Link>
-  //     </Menu.Item>
-  //     <Menu.Item key="3">
-  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/product" onClick={handleNavLinkClick}>Loupe camera</Link>
-  //     </Menu.Item>
-  //   </Menu>
-  // );
 
   return (
     <>
@@ -93,8 +99,12 @@ const NavBar = () => {
             {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
               </Dropdown> */}
+            <Link to="" className="navbarpage-navLink">Industries</Link>
+            <div className="navbarpage-divider"></div>
+
               <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>
               <div className="navbarpage-divider"></div>
+              
               <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
             </div>
             <div className="navbarpage-rightColumn">

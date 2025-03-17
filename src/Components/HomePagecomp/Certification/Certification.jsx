@@ -8,11 +8,11 @@ const Certification = () => {
   return (
     <div className="certification">
       <div className="mainContainer">
-        <h1>CERTIFICATION</h1>
+        <h1>CERTIFICATIONS</h1>
         <div className="certification-container">
           <div className="certification-left">
             <div className="certification-title">
-              <h2>STANDARDS & COMPLIANCE</h2>
+              <h2>PRODUCT & COMPLIANCE</h2>
             </div>
             <div className="certification-left-images">
               <div className="certification-image-container">

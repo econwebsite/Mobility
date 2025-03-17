@@ -9,6 +9,7 @@ const Modelbutton = ({
   className = '',
   productName = null,
   docName = null,
+  type = 'contact',
   title = null,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -36,10 +37,10 @@ const Modelbutton = ({
       <Modelform
         visible={isModalVisible}
         onClose={handleCancel}
-        type={text === 'Contact Us' ? 'contact' : 'download'}
-        productName={productName || null}
+        productName={productName}
         docName={docName || null}
         title={title || null}
+        type={type}
       />
     </div>
   );

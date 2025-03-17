@@ -25,7 +25,7 @@ const Producttab = () => {
     { id: 4, src: [qualcum], alt: 'ambrella' }
   ];
   const rightTabs = {
-    'Suppotted Cameras': {
+    'Supported Cameras': {
       tabs: ['CAMERA_MODEL_1', 'CAMERA_MODEL_2'],
       images: [],
       bgColor: '#f1f2f2',
@@ -55,8 +55,8 @@ const Producttab = () => {
           ]
         }
       },
-      bgColor: '#344ea1',
-      color: 'white',
+      bgColor: 'white',
+      color: '#344ea1',
       images: [STURDeCAM31, STURDeCAM34],
     },
     '4K GMSL2': {
@@ -83,8 +83,8 @@ const Producttab = () => {
           ]
         }
       },
-      bgColor: '#344ea1',
-      color: 'white',
+      bgColor: 'white',
+      color: '#344ea1',
       images: [STURDeCAM84, STURDeCAM88],
     },
     'POE': {
@@ -101,14 +101,14 @@ const Producttab = () => {
           ]
         },
       },
-      bgColor: '#344ea1',
-      color: 'white',
+      bgColor: 'white',
+      color: '#344ea1',
       images: [routecam22],
     }
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Suppotted Cameras') {
+    if (tab !== 'Supported Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
     }
@@ -142,7 +142,7 @@ const Producttab = () => {
                     backgroundColor: rightTabs[heading].bgColor,
                     color: rightTabs[heading].color,
                     borderColor: selectedLeftTab === heading ? '#003873' : '#344ea1',
-                    cursor: heading === 'Suppotted Cameras' ? 'default' : 'pointer',
+                    cursor: heading === 'Supported Cameras' ? 'default' : 'pointer',
                   }}
                 >
                   {heading}
@@ -168,7 +168,7 @@ const Producttab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="ProductTabs-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} />
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab}/>
                   {/*            //////////////// */}
 
                   <div className="Productinsidetab-container">

@@ -12,7 +12,6 @@
   overflow: hidden;
   padding: 12px 5px;
   text-align: center;
-  padding: auto;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   border-radius: 5px;
@@ -89,4 +88,40 @@
     padding: 12px;
     font-size: 0.9em;
   }
+}
+
+
+@media (max-width: 1120px) {
+  
+.ModelButton-box {
+  padding: 5px 5px;
+ 
+}
+.ModelButton-box:hover{
+  color: aliceblue;
+  background-color: #69ba2f;
+}
+
+.ModelButton-box:before {
+  display: none;
+
+}
+
+.ModelButton-box:after {
+ display: none;
+}
+
+.ModelButton-box:hover {
+  box-shadow: none;
+  background-color: none;
+}
+
+.ModelButton-box:hover:before {
+  display: none;
+}
+
+.ModelButton-box:hover:after {
+  display: none;
+}
+
 }

@@ -175,7 +175,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
   };
   return (
     <Modal
-      title={type === 'download' ? `Download - ${title}` : "Contact Form"}
+    title={type === 'download' ? `Download - ${productName || ''}` : `Contact Us - ${productName || ''}`} 
       visible={visible}
       onCancel={onClose}
       footer={null}

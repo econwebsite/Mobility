@@ -25,7 +25,7 @@ const Manufacturing = () => {
   return (
     <div className="manufacturing">
       <div className="mainContainer">
-      <h2 className="manufacturing-title">MANUFACTURING CAPABILITY</h2>
+      <h2 className="manufacturing-title">MANUFACTURING & TESTING FACILITIES </h2>
       <p className="manufacturing-description">
         At e-con Systems, we maintain industry-leading manufacturing processes
         to ensure our ADAS cameras meet the highest quality and reliability
