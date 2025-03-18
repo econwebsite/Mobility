@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.jpg";
-import nilecam29 from "../../../../assets/Productpage/drivermonitoring/nilecam29.jpg";
-import routecam25 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
+import studycam29 from "../../../../assets/Productpage/drivermonitoring/studycam29.png";
 import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
 import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
@@ -45,10 +44,10 @@ const DriverTab = () => {
       color: '#344ea1',
       images: [STURDeCAM27],
     },
-    'NileCAM29': {
-      tabs: ['NileCAM29'],
+    'STURDeCAM29': {
+      tabs: ['STURDeCAM29'],
       content: {
-        'NileCAM29': {
+        'STURDeCAM29': {
           tableData: [
             ['OMNIVISION™ OV2311', '2MP @ 60 fps'],
             ['Without ISP', 'Monochrome'],
@@ -61,26 +60,9 @@ const DriverTab = () => {
       },
       bgColor: 'white',
       color: '#344ea1',
-      images: [nilecam29],
+      images: [studycam29],
     },
-    // 'RouteCAM_CU25': {
-    //   tabs: ['RouteCAM_CU25'],
-    //   content: {
-    //     'RouteCAM_CU25': {
-    //       tableData: [
-    //         ['OMNIVISION™ AR0234', '2MP @ 60 fps'],
-    //         ['In-Built ISP', 'Color'],
-    //         ['NIR Sensitivity: 940 nm / 850 nm', 'Global Shutter'],
-    //         ['GigE Interface', 'Output Format: MJPEG, H.265 & H.264 '],
-    //         ['Form factor: 46mm x 46mm', 'FOV: 120°(H), 67°(V), 140°(D)'],
-    //         ['IP67', 'Compliance & Standards:<br>ISO 14982'],
-    //       ]
-    //     },
-    //   },
-    //   bgColor: 'white',
-    //   color: '#344ea1',
-    //   images: [routecam25],
-    // }
+    
   };
 
   const handleLeftTabClick = (tab) => {

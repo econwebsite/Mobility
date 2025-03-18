@@ -97,7 +97,7 @@ const Producttab = () => {
             ['GigE Interface', ' MJPEG, H.265 &  H.264 <br> Output format'],
             ['Form factor:46 x 46 mm', 'Lens (HFOV): 120°'],
             ['IP67', 'Operating Temperature: -30°C to 70°C'],
-            ['Compliance & Standards:<br> ISO 13766'],
+            ['Compliance & Standards: ISO 13766'],
           ]
         },
       },

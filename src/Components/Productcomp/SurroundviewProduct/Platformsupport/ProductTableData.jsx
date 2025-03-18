@@ -19,13 +19,18 @@ function ProductTableData({ tableData, imageSrc,productName }) {
   <tbody>
     {tableData.map((row, index) => (
       <tr key={index}>
-        {row.map((cell, cellIndex) => (
-          <td key={cellIndex} className="table-cell" dangerouslySetInnerHTML={{ __html: cell }} />
-        ))}
+        {row.length === 1 ? (
+          <td colSpan="2" className="table-cell" dangerouslySetInnerHTML={{ __html: row[0] }} />
+        ) : (
+          row.map((cell, cellIndex) => (
+            <td key={cellIndex} className="table-cell" dangerouslySetInnerHTML={{ __html: cell }} />
+          ))
+        )}
       </tr>
     ))}
   </tbody>
 </Table>
+
 
     </div>
   </div>  

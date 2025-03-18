@@ -1,108 +1,139 @@
-.manufacturing {
-  background-color: #f1f2f2;
-  padding: 2em;
-  text-align: center;
-  height: 550px;
+/* General Container Styles */
+.manufacturing-container {
   width: 100%;
+  background-color: #ffffff; /* White Background */
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.manufacturing h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 1em;
-}
-
-.manufacturing p {
-  font-size: 1em;
+.manufacturing-heading {
+  font-size: 2em;
+  font-weight: 200;
+  padding: 1em;
   color: #344ea1;
-  margin-bottom: 20px;
-  line-height: 1.8em;
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.manufacturing .image-container {
+.manufacturing-paragraph {
+  font-size: 16px;
+  color: #003873;
+  max-width: 1100px;
+  margin-bottom: 30px;
+}
+
+/* Main Content Layout */
+.manufacturing-content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
+  width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.2em;
-  flex-wrap: nowrap; 
+  gap: 30px;
+  align-items: flex-start;
 }
 
-.manufacturing .image-box {
-  position: relative;
-  width: 250px;   
-  height: 250px;
-  background-color: #344ea1;
+/* Modern Vertical Tabs */
+.manufacturing-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin-top: 10px;
 }
 
-.manufacturing .image-box img {
-  width: 100%;
-  height: 100%;
-  background-color: #344ea1;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.manufacturing .image-box p {
-  margin-top: 8px;
-  font-size: 1em;
+.manufacturing-tab-button {
+  background: none;
+  border: none;
+  font-size: 18px;
   font-weight: 500;
-  color: #f1f2f2;
-}
-[data-aos="fade-right"] {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: left;
+  color: #344ea1;
+  width: 100%;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-[data-aos="fade-right"].aos-animate {
-    opacity: 1;
-    transform: translateX(0);
+.manufacturing-tab-button:hover {
+  background-color: #f4f4f4;
+}
+
+.manufacturing-tab-button.active {
+  border-left: 4px solid #344ea1;
+  color: #003873;
+  font-weight: bold;
+  background-color: #e6ecf8;
+}
+
+.manufacturing-tab-content {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.manufacturing-card {
+  flex: 1 1 calc(50% - 10px); 
+  max-width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  background: #fff;
+}
+
+.manufacturing-card:nth-child(3) {
+  flex-basis: 100%; 
+}
+
+.manufacturing-card-image {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.manufacturing-card-title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #003873;
 }
 
 @media (max-width: 768px) {
-  .manufacturing .image-container {
-    flex-wrap: wrap;
+  .manufacturing-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .manufacturing-tabs {
+    width: 80%;
+    flex-direction: row;
     justify-content: center;
-    padding: 1em;
-    gap: 20px; 
-  }
-  .manufacturing {
-    height: auto;
+    gap: 2px;
   }
 
-  .manufacturing .image-box {
-    width: 100%; 
-    max-width: 400px; 
-    height: auto;
+  .manufacturing-tab-button {
     text-align: center;
+    border-left: none;
+    padding: 5px 6px;
+font-weight: 400;
+font-size: small;
+    border-bottom: 2px solid transparent;
   }
 
-  .manufacturing .image-box img {
-    width: 100%;
-    height: auto;
+  .manufacturing-tab-button.active {
+    border-left: none;
   }
 
-  .manufacturing .image-box p {
-    margin-top: 15px; 
-    font-size: 1rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 480px) {
-  .manufacturing .image-box {
-    max-width: 320px; 
+  .manufacturing-tab-content {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .manufacturing .image-box p {
-    font-size: 0.95rem;
-    color: #f1f2f2;
+  .manufacturing-card {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }

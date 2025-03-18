@@ -12,7 +12,7 @@ const Certification = () => {
         <div className="certification-container">
           <div className="certification-left">
             <div className="certification-title">
-              <h2>PRODUCT & COMPLIANCE</h2>
+              <h2>ORGANIZATIONAL COMPLIANCE</h2>
             </div>
             <div className="certification-left-images">
               <div className="certification-image-container">
@@ -28,7 +28,7 @@ const Certification = () => {
 
           <div className="certification-right">
             <div className="certification-title2">
-              <h2>ORGANIZATIONAL COMPLIANCE</h2>
+              <h2>PRODUCT COMPLIANCE</h2>
             </div>
             <div className="certification-right-images">
               <img src={certificated} alt="IATF Certification" />
