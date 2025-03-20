@@ -1,7 +1,7 @@
 .Casestudy-title {
     text-align: center;
     font-size: 2.5rem;
-    padding: 1em;
+    padding: 0.3em;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -11,6 +11,7 @@
 
 .Casestudy-container {
     padding: 20px;
+    background-color: #f1f2f2;
 }
 
 .Casestudy-desktopView {
@@ -22,7 +23,7 @@
 }
 
 .Casestudy-carouselSlide {
-    background: white;
+    background: #f1f2f2;
     padding: 30px;
 }
 
@@ -37,15 +38,15 @@
     align-items: flex-start;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #ffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 0px;
-    margin: 10px;
     width: 100%;
 }
 .Casestudy-card:hover
  {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.1) rotate(0); 
+    transform: scale(1.05) rotate(0); 
     transition: all 0.3s ease-in-out; 
 }
 

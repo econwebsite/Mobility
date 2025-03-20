@@ -99,7 +99,7 @@ const NavBar = () => {
             {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
               </Dropdown> */}
-            <Link to="" className="navbarpage-navLink">Industries</Link>
+            <Link to="/Industries" className="navbarpage-navLink">Industries</Link>
             <div className="navbarpage-divider"></div>
 
               <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>

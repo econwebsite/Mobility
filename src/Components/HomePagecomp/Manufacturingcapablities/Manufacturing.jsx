@@ -9,18 +9,19 @@ import ispturning from "../../../assets/homepage/ispturning.jpg";
 
 const tabData = {
   Design: [
-    { src: ispturning, title: "ISP Turning & Testing" },
+    { src: ispturning, title: "ISP Tuning" },
     { src: robustimg, title: "Robust Design for Reliability" },
     { src: activealignment, title: "Active Alignment Machines" },
+    { src: activealignment, title: "Active Alignment Machines" },
+
   ],
   Manufacturing: [
     { src: lensfocusing, title: "Lens Focusing & Gluing" },
     { src: ruggedtesting, title: "Rugged Testing" },
   ],
-  Layout: [
+  Testing: [
     { src: ispturning, title: "Optimal Layout Planning" },
     { src: activealignment, title: "Advanced Layout Designs" },
-    { src: lensfocusing, title: "Ergonomic Workflows" },
   ],
 };
 
@@ -34,9 +35,7 @@ const Manufacturing = () => {
         At e-con Systems, we maintain industry-leading manufacturing processes to ensure our ADAS cameras meet the highest quality and reliability standards required for mobility applications.
       </p>
 
-      {/* Tabs Section */}
       <div className="manufacturing-content">
-        {/* Vertical Tabs */}
         <div className="manufacturing-tabs">
           {Object.keys(tabData).map((tab) => (
             <button
@@ -49,7 +48,6 @@ const Manufacturing = () => {
           ))}
         </div>
 
-        {/* Content Display */}
         <div className="manufacturing-tab-content">
           {tabData[selectedTab].map((item, index) => (
             <div key={index} className="manufacturing-card">

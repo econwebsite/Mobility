@@ -20,6 +20,8 @@ import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
 import NotFoundPage from "./Components/Notfoundpage";
 import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
+import Testing from "./Testing"
+import TotalIndustries from './Components/Industriescomp/TotalIndustries';
 
 const App = () => {
   return (
@@ -44,6 +46,8 @@ const App = () => {
         <Route path="/ForwardBlog" element={<ForwardBlog/>} />
         <Route path="/SurroundBlog" element={<SurroundBlog/>} />
         <Route path="/ProductPage" element={<ProductPage/>} />
+        <Route path="/testing" element={<Testing/>} />
+        <Route path="/Industries" element={<TotalIndustries/>} />
 
         
         <Route path="*" element={<NotFoundPage />} />

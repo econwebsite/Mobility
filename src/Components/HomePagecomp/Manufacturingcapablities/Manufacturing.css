@@ -1,7 +1,6 @@
-/* General Container Styles */
 .manufacturing-container {
   width: 100%;
-  background-color: #ffffff; /* White Background */
+  background-color: #f1f2f2;
   padding: 40px 20px;
   text-align: center;
   display: flex;
@@ -25,7 +24,6 @@
   margin-bottom: 30px;
 }
 
-/* Main Content Layout */
 .manufacturing-content {
   display: flex;
   flex-direction: row;
@@ -35,7 +33,6 @@
   align-items: flex-start;
 }
 
-/* Modern Vertical Tabs */
 .manufacturing-tabs {
   display: flex;
   flex-direction: column;
@@ -68,26 +65,28 @@
   background-color: #e6ecf8;
 }
 
+/* Updated Cards Layout */
 .manufacturing-tab-content {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 }
 
 .manufacturing-card {
-  flex: 1 1 calc(50% - 10px); 
-  max-width: 250px;
+  width: calc(33.33% - 20px); /* Ensures 3 cards per row */
+  max-width: 300px;
   padding: 15px;
+  height: 240px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
 
-.manufacturing-card:nth-child(3) {
-  flex-basis: 100%; 
-}
+
 
 .manufacturing-card-image {
   width: 100%;
@@ -99,6 +98,13 @@
   margin-top: 10px;
   font-size: 16px;
   color: #003873;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .manufacturing-card {
+    width: calc(50% - 20px); /* 2 cards per row on tablets */
+  }
 }
 
 @media (max-width: 768px) {
@@ -118,8 +124,8 @@
     text-align: center;
     border-left: none;
     padding: 5px 6px;
-font-weight: 400;
-font-size: small;
+    font-weight: 400;
+    font-size: small;
     border-bottom: 2px solid transparent;
   }
 
@@ -133,7 +139,7 @@ font-size: small;
   }
 
   .manufacturing-card {
-    flex-basis: 100%;
+    width: 100%; /* 1 card per row on mobile */
     max-width: 100%;
   }
 }

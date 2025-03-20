@@ -18,7 +18,7 @@ const OurProduct = () => {
   return (
     <div className="OurProduct-wrapper">
       <h2 className="OurProduct-heading">Products</h2>
-      <h2 className="OurProduct-subheading">Enhance vehicle vision. Process vision data in real-time!</h2>
+      {/* <h2 className="OurProduct-subheading">Enhance vehicle vision. Process vision data in real-time!</h2> */}
       <div className="OurProduct-container">
         {cardsData.map((card) => (
           <div className="OurProduct" key={card.id}>

@@ -2,7 +2,7 @@
 .VedioSection-title {
   text-align: center;
   font-size: 2.5rem;
-  padding: 1em;
+  padding: 0.1em;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -10,10 +10,10 @@
 
 
 .VedioSection-container {
-  padding: 20px;
+  padding: 2em;
+  background-color: white;
 }
 
-/* Carousel styles for desktop */
 .VedioSection-desktopView {
   display: block;
 }
@@ -24,7 +24,7 @@
 
 .VedioSection-carouselSlide {
   background: white;
-  padding: 30px;
+  padding: 10px;
 }
 
 .ant-carousel .slick-dots li button {

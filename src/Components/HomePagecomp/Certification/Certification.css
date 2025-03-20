@@ -3,12 +3,13 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .certification h1 {
   text-align: center;
   font-size: 2.5rem;
-  padding: 0.9em;
+  padding: 0.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;

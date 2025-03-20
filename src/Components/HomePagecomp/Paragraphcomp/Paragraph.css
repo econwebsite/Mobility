@@ -2,18 +2,17 @@
     width: 100%;
     background-color:white ;
     margin: 0 auto;
-    padding: 10px;
   }
   
   .paragraphtext {
     text-align: center;
-    padding: 2em;
+    padding:1.5em;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: #003873;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 2.2em;
   }
   
   @media (max-width: 600px) {

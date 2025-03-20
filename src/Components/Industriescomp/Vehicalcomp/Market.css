@@ -1,0 +1,172 @@
+/* Main Container */
+.marketwe-container {
+    width: 100%;
+    background: #f8f9fc;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .marketwe-title {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: #003873;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .marketwe-layout {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  .marketwe-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .marketwe-tab {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 12px 20px;
+    text-align: left;
+    color: #344ea1;
+    width: 100%;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .marketwe-tab:hover {
+    background-color: #e9f2ff;
+  }
+  
+  .marketwe-tab.active {
+    border-left: 4px solid #003873;
+    color: #003873;
+    font-weight: 500;
+    background-color: #e9f2ff;
+  }
+  
+  .marketwe-content {
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .marketwe-heading {
+    font-size: 1.8em;
+    color: #344ea1;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .marketwe-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    padding-top: 10px;
+    text-align: justify;
+  }
+  .marketwe-text {
+    padding: 20px;
+    text-align: left;
+  }
+  .marketwe-image-wrapper {
+    text-align: center;
+    padding:  10px;
+  }
+  
+  .marketwe-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .marketwe-image:hover {
+    transform: scale(1.1);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+
+  }
+
+  @media (max-width: 768px) {
+  .marketwe-layout {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .marketwe-title {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: #003873;
+    margin-bottom: 20px;
+  }
+  .marketwe-tabs {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: none; 
+  }
+
+  .marketwe-tab {
+    width: 48%; 
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+  }
+
+  .marketwe-tab.active {
+    border-left: none;
+    border-bottom: 3px solid #003873; 
+  }
+
+  .marketwe-content {
+    padding: 2px;
+    text-align: center;
+  }
+
+  .marketwe-heading {
+    font-size: 22px;
+  }
+
+  .marketwe-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .marketwe-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .marketwe-image {
+    width: 100%;
+    max-width: 400px; /* Ensure the image resizes properly */
+    height: auto;
+  }
+}
+
+  
