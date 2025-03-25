@@ -5,7 +5,7 @@ import "./Productbanner.css"
 const ProductBanner = () => {
     return (
         <div className='ProductContainer'>
-        <div className="mainContainer">
+        {/* <div className="mainContainer"> */}
             <div className='ProductBanner'>
                 <img src={productbanner} alt="Slide 1" className="product-image" />
                 {/* <div className='ProductBannerbtn'>
@@ -13,7 +13,7 @@ const ProductBanner = () => {
                 </div> */}
             </div>
         </div>
-    </div>
+    // </div>
     );
 }
 
