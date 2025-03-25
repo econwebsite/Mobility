@@ -9,12 +9,11 @@ const Casestudy = () => {
   const cardData = [
     { image: birdeye1, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
     { image: birdeye2, title: "Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
-    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
-    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
-    { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
-    { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
-    { image: birdeye1, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
-    { image: birdeye2, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." ,to:""},
+    // { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
+    // { image: birdeye1, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    // { image: birdeye2, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:""},
+    // { image: birdeye1, title:"Cameras for Bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids.",to:"" },
+    // { image: birdeye2, title:"Cameras for bird Eye View", description: "The Ingress Protection (IP) rating system is a recognized standard for determining the level of protection an electronic device has against external elements like liquids and solids." ,to:""},
   ];
 
   return (
@@ -22,7 +21,7 @@ const Casestudy = () => {
       <h2 className="Casestudy-title">CASE STUDIES</h2>
       <div className='mainContainer'>
       <div className="Casestudy-desktopView">
-        <Carousel  >
+        <div className='Casestudy-carouselSlide'>
           {cardData.reduce((resultArray, item, index) => {
             const chunkIndex = Math.floor(index / 2);
             
@@ -59,7 +58,7 @@ const Casestudy = () => {
               
             </div>
           ))}
-        </Carousel>
+        </div>
         </div>
         <br></br>
       </div>

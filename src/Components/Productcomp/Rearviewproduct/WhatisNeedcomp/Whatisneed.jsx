@@ -10,8 +10,7 @@ const Whatisneed = () => {
       <div className="mainContainer">
         <div className="whatis-containerparagraph">
           <p className="whatis-standparagraphtext">
-          Our rear view cameras provide wide-angle visibility for precise reversing in challenging environments. These industrial-grade cameras process video feeds from the vehicle's rear to offer real-time driver assistance, ensuring safer driving/parking by eliminating blind spots. With high-resolution imaging at various ranges and in challenging lighting conditions, these cameras are also required in the surround view system. 
-          </p>
+          Our rear view cameras provide wide-angle visibility for precise reversing in challenging environments. These industrial-grade cameras process video feeds from the vehicle's rear to offer real-time driver assistance, ensuring safer driving/parking by eliminating blind spots. With high-resolution imaging at various ranges and in challenging lighting conditions, these cameras are also required in the surround view system.          </p>
         </div>
 
         <h1 className="whatis-title">What is needed?</h1>

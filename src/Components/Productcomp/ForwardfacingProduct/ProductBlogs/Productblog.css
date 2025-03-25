@@ -1,0 +1,233 @@
+.blogproduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #344ea1;
+    overflow-x: hidden;
+  }
+  
+  .blogproduct h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    color: white;
+    margin-top: 40px;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .blogproduct-blog {
+    display: flex;
+    margin-top: 40px;
+    height: auto;
+  }
+  
+  .blogproduct-column {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .blogproduct-left {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .blogproduct-border-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+    height: 100%; 
+    justify-content: space-between; 
+  }
+  
+  .blogproduct-border-box img {
+    width: 100%;
+    height: 410px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .blogproduct-border-box h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 1.3em; 
+    color: #003873; 
+    line-height: 1.5em;
+    text-align: justify;
+  }
+  
+  .blogproduct-border-box p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em; 
+    color: #344ea1; 
+    text-align: justify;
+  }
+  
+  .blogproduct-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .blogproduct-card-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .blogproduct-card {
+    border: 1px solid #ddd;
+    padding: 15px; 
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch;
+    width: 100%; 
+    box-sizing: border-box;
+    min-height: 200px !important; 
+    margin-bottom: 2px; 
+  }
+  
+  .blogproduct-card-left {
+    flex: 0.9;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .blogproduct-card-right {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+  }
+  
+  .blogproduct-card-left img {
+    width: 100%; 
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  .blogproduct-card-right h6 {
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    color: #003873;
+    font-weight: 300;
+    text-align:left;
+  }
+  
+  .blogproduct-blog a{
+    width: 100%;
+  }
+  .blogproduct-card-right p {
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: #344ea1;
+    text-align: justify;
+  }
+  
+  .blogproduct-btn {
+    padding: 2px;
+    background-color: #344ea1;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .BlogReadMore:hover {
+    background-color: #69ba2f;
+  }
+  
+  @media (max-width: 768px) {
+    .blogproduct h1 {
+      font-size: 2em;
+    }
+    .blogproduct-blog {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .blogproduct-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .blogproduct-border-box img {
+      height: auto;
+      max-height: 300px; 
+      margin-bottom: 15px;
+      border-radius: 15px;
+    }
+    .blogproduct h1 {
+      margin-top: 30px;
+    }
+  
+    .blogproduct-border-box h2 {
+      font-size: 1.2em;
+      text-align: left;
+    }
+  
+    .blogproduct-border-box p {
+      font-size: 1em;
+      text-align: justify;
+    }
+  
+    .blogproduct-card {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .blogproduct-card-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+  
+    .blogproduct-card-right {
+      align-items: center;
+      text-align: justify;
+    }
+  
+    .blogproduct-card-right h6,
+    .blogproduct-card-right p {
+      text-align: justify;
+    }
+  
+    .BlogReadMore {
+      padding: 8px 20px;
+    }
+  
+    .blogproduct-border-box {
+      align-items: center;
+    }
+    .blogproduct-card-right p {
+      font-size: 1em;
+    }
+  }

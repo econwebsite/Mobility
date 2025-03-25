@@ -6,7 +6,7 @@ const TotalIndustries = () => {
     return (
         <div>
             <Marketcomp/>
-            <Releatedcomp/>
+            {/* <Releatedcomp/> */}
         </div>
     );
 }

@@ -5,14 +5,13 @@ import surroundview from "../../../assets/homepage/surroundview.jpg"
 import forwardfacing from "../../../assets/homepage/forwardfacing.jpg"
 import rearview from "../../../assets/homepage/rearview.jpg"
 import drivermonitoring from "../../../assets/homepage/drivermonitoring.jpg"
-import { link } from "framer-motion/client";
 
 const OurProduct = () => {
   const cardsData = [
-    { id: 1,img:surroundview, title: "Surround View Cameras", text: "Our Surround view camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/surroundview" },
-    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Our forward-facing camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/forwardfacing" },
-    { id: 3,img:rearview, title: "Rear View Cameras", text: "Our Rear View Camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"rearview" },
-    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Driver Monitoring Camera captures crisp clear images and videos essential for long-distance monitoring and precise traffic signs and signals recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying light conditions.",link:"/drivermonitoring" },
+    { id: 1,img:surroundview, title: "Surround View Cameras", text: "360-degree perception for enhanced safety and parking assistance.",link:"/surroundview" },
+    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance.",link:"/forwardfacing" },
+    { id: 3,img:rearview, title: "Rear View Cameras", text: "Real-time driver assistance eliminates blind spots, ensuring safer reversing and parking.",link:"rearview" },
+    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",link:"/drivermonitoring" },
   ];
 
   return (

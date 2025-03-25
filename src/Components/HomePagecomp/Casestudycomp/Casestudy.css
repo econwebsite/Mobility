@@ -1,7 +1,7 @@
 .Casestudy-title {
     text-align: center;
     font-size: 2.5rem;
-    padding: 0.3em;
+    padding: 0.2em;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -24,7 +24,7 @@
 
 .Casestudy-carouselSlide {
     background: #f1f2f2;
-    padding: 30px;
+    padding: 20px;
 }
 
 .Casestudy-carouselCards {
@@ -35,18 +35,19 @@
 
 .Casestudy-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #ffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 0px;
-    width: 100%;
+    width: 600px;
+    height: 400px;
 }
 .Casestudy-card:hover
  {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05) rotate(0); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transform: scale(1.03) rotate(0); 
     transition: all 0.3s ease-in-out; 
 }
 
@@ -64,7 +65,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 50%;
-    padding: 15px;
+    padding: 20px;
 }
 
 .slick-dots li button:before{

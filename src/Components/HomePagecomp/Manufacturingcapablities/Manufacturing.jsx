@@ -12,16 +12,19 @@ const tabData = {
     { src: ispturning, title: "ISP Tuning" },
     { src: robustimg, title: "Robust Design for Reliability" },
     { src: activealignment, title: "Active Alignment Machines" },
-    { src: activealignment, title: "Active Alignment Machines" },
 
   ],
   Manufacturing: [
-    { src: lensfocusing, title: "Lens Focusing & Gluing" },
-    { src: ruggedtesting, title: "Rugged Testing" },
+    { src: lensfocusing, title: "Gluing machine" },
+    { src: ruggedtesting, title: "Ezee focus" },
+    { src: ruggedtesting, title: "Deep Freezer" },
+
   ],
   Testing: [
-    { src: ispturning, title: "Optimal Layout Planning" },
-    { src: activealignment, title: "Advanced Layout Designs" },
+    { src: ispturning, title: "Random vibration Test" },
+    { src: activealignment, title: "Thermal shock Test" },
+    { src: activealignment, title: "Transit test (Inhouse lab) " },
+    { src: activealignment, title: "Endurance test" },
   ],
 };
 

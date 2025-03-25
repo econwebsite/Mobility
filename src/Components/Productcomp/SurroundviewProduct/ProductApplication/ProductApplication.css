@@ -1,11 +1,9 @@
-/* Container for the entire component */
 .ProductApplications-container {
     padding: 20px;
     text-align: center;
     overflow-x: hidden;
   }
   
-  /* Main title */
   .ProductApplications-title {
     text-align: center;
     font-size: 2.5em;
@@ -16,7 +14,6 @@
     font-style: normal;
   }
   
-  /* Flex container for boxes */
   .ProductApplications-boxes {
     display: flex;
     justify-content: center;
@@ -24,7 +21,6 @@
     flex-wrap: wrap;
   }
   
-  /* Each box styling */
   .ProductApplications-box {
     flex: 1;
     max-width: 35%;

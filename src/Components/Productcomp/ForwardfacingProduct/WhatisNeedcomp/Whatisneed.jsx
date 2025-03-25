@@ -12,7 +12,7 @@ const Whatisneed = () => {
       <div className="mainContainer">
         <div className="whatis-containerparagraph">
           <p className="whatis-standparagraphtext">
-          Our forward-facing cameras capture crisp, clear images and videos essential for long-distance monitoring and precise traffic signs and signal recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying lighting conditions, while LED Flicker Mitigation (LFM) ensures accurate image capture in environment with flickering artificial lights.       </p>
+          Our forward-facing cameras capture crisp, clear images and videos essential for long-distance monitoring and precise traffic signs and signal recognition. Equipped with High Dynamic Range (HDR) technology, they deliver clear images even in varying lighting conditions, while LED Flicker Mitigation (LFM) ensures accurate image capture in environment with flickering artificial lights.</p>
         </div>
 
         <h1 className="whatis-title">What is needed?</h1>

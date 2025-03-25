@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import DriverTab from "./ProductTabscomp/DriverTab"
-import Blog from "../../HomePagecomp/Blogcomp/Blog";
+import ProductBlog from "./ProductBlogs/ProductBlogs";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import DriverApplications from './ProductApplication/DriverApplications';
 
@@ -31,15 +31,13 @@ const Totalmonitoring = () => {
             <Section>
             <ProductBanner/>
             <Whatisneed/>
-            </Section>
-            <Section>
             <DriverTab/>
             </Section>
             <Section>
             <DriverApplications/>
             </Section>
             <Section>
-            <Blog/>
+            <ProductBlog/>
             </Section>
             <Section>
             <ContactUs/>

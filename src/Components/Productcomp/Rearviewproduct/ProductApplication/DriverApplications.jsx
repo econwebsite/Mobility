@@ -14,22 +14,22 @@ const DriverApplications = () => {
         <div className="DriverApplication-boxes">
           <div className="DriverApplication-box" data-aos="fade-right" data-aos-duration="1800">
             <img src={distraction} alt="Blind spot Monitoring" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Distraction & Drowsiness</h1>
+            <h1 className="DriverApplication-boxTitle">Safe reversing</h1>
           </div>
           
           <div className="DriverApplication-box" data-aos="fade-left" data-aos-duration="1800">
             <img src={dangerous} alt="360 Degree Surround View" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Dangerous Behavior</h1>
+            <h1 className="DriverApplication-boxTitle">Blind spot detection</h1>
           </div>
 
           <div className="DriverApplication-box" data-aos="fade-right" data-aos-duration="1600">
             <img src={object} alt="Rear View Camera" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Object Detection</h1>
+            <h1 className="DriverApplication-boxTitle">Trailer hitching assistance</h1>
           </div>
 
           <div className="DriverApplication-box" data-aos="fade-left" data-aos-duration="1600">
             <img src={bodyposture} alt="Lane Assist" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Body Posture</h1>
+            <h1 className="DriverApplication-boxTitle">Surround View System integration</h1>
           </div>
         </div>
       </div>

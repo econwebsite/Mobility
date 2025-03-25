@@ -5,8 +5,8 @@ import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import Producttab from "./ProductTabscomp/Producttab"
 import ProductApplications from "./ProductApplication/ProductApplications";
-import Blog from "../../HomePagecomp/Blogcomp/Blog";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
+import ProductBlogs from './ProductBlogs/ProductBlogs';
 
 
 
@@ -34,15 +34,13 @@ const TotalSurroundview = () => {
                   <Section>
             <ProductBanner/>
             <Whatisneed/>
-            </Section>
-            <Section>
             <Producttab/>
             </Section>
             <Section>
             <ProductApplications/>
             </Section>
             <Section>
-            <Blog/>
+            <ProductBlogs/>
             </Section>
             <Section>
             <ContactUs/>

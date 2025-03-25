@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
-import Blog from "../../HomePagecomp/Blogcomp/Blog";
+import ProductBlog from "./ProductBlogs/ProductBlogs";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import DriverApplications from './ProductApplication/DriverApplications';
 import Rearviewtab from './ProductTabscomp/Rearviewtab';
@@ -33,15 +33,13 @@ const Totalmonitoring = () => {
              <Section>
             <ProductBanner/>
             <Whatisneed/>
-            </Section>
-            <Section>
             <Rearviewtab/>
             </Section>
             <Section>
             <DriverApplications/>
             </Section>
             <Section>
-            <Blog/>
+            <ProductBlog/>
             </Section>
             <Section>
             <ContactUs/>

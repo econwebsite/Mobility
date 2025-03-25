@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
 import Forwardtab from "./ProductTabscomp/Forwardtab"
-import Blog from "../../HomePagecomp/Blogcomp/Blog";
+import ProductBlog from "./ProductBlogs/ProductBlogs";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import ForwardApplications from './ProductApplication/ForwardApplications';
 
@@ -32,15 +32,13 @@ const Totalforwardfacing = () => {
              <Section>
             <ProductBanner/>
             <Whatisneed/>
-            </Section>
-            <Section>
             <Forwardtab/>
             </Section>
             <Section>
             <ForwardApplications/>
             </Section>
             <Section>
-            <Blog/>
+            <ProductBlog/>
             </Section>
             <Section>
             <ContactUs/>
