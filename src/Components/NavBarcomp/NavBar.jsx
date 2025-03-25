@@ -158,12 +158,13 @@ const NavBar = () => {
                 {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Resources</a>
                 </Dropdown> */}
+                 <Link className="nav-link" to="/Industries" onClick={handleNavLinkClick}>Industries</Link>
+
                 <Link className="nav-link" to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
 
                 
                 <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
                 
-                <Link className="nav-link" to="/Partner" onClick={handleNavLinkClick}>Partners</Link>
               </Nav>
               {/* <Form className="d-flex mt-3">
                 <Form.Control
