@@ -5,7 +5,10 @@
   gap: 20px;
   background-color: white;
 }
-
+.alignment-whatisbox p{
+  color: rgb(63, 63, 190) !important;
+  font-weight: 500;
+}
 .whatis-box {
   width: 20%;
   background-color: #f1f2f2;

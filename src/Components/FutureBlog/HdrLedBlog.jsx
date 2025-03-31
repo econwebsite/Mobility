@@ -3,7 +3,9 @@ import "./Blogcommon.css"
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
-
+import drivermonitoring from "../../assets/hubpage/Blogpage/drivermonitoring-blog.jpg";
+import forwardfacing from "../../assets/hubpage/Blogpage/forwardfacing-blog.jpg";
+import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
 const HdrLedBlog = () => {
     return (
         <div>
@@ -13,12 +15,12 @@ const HdrLedBlog = () => {
                         <div className="Blog-left-column">
                             <div className="blog-breadcrumb">
                                 <Link to="/">Home</Link> {' > '}
-                                <Link to="/BlogHubPage">Blogs</Link>  {' > '}
+                                <Link to="/blog">Blogs</Link>  {' > '}
                                 <Link style={{ color: "grey", cursor: "default" }}>HDR and LED Flicker Mitigation</Link>
 
                             </div>
                             <h2>Why HDR and LED Flicker Mitigation Are Game-Changers for Forward-Facing Cameras in ADAS</h2>
-                            <p>By Balaji S, July 16, 2024</p>
+                            <p>By Suresh Madhu, March 31, 2025</p>
 
                             <div className="blogborder-box">
 
@@ -73,29 +75,29 @@ const HdrLedBlog = () => {
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
                                 <div className="CardBlogs" style={{ cursor: "pointer" }}>
-                                    <Link className="cardImgLink" to="/ForwardBlog" style={{ textDecoration: "none" }}>
-                                        <img src="https://placehold.jp/251x151.png" alt="Camera Model 1" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/ForwardBlog" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/how-forward-facing-camera-works-in-adas" style={{ textDecoration: "none" }}>
+                                        <img src={forwardfacing} alt="Camera Model 1" className="Cardrelated-image" /></Link>
+                                    <Link className="cardTitleLink" to="/how-forward-facing-camera-works-in-adas" style={{ textDecoration: "none" }}>
                                         <h2>How Does a Forward-Facing Camera Work, and What Are Its Use Cases in ADAS</h2></Link>
                                     <p>Forward-facing cameras are used in ADAS to improve object detection, lane tracking, etc. Discover the camera features that contribute to safer, smarter driving.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to='/ForwardBlog' />
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to='/how-forward-facing-camera-works-in-adas' />
                                 </div>
                                 <div className="CardBlogs">
-                                    <Link className="cardImgLink" to="/DrivermonBlog" style={{ textDecoration: "none" }}>
-                                        <img src="https://placehold.jp/251x151.png" alt="Camera Model 2" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/DrivermonBlog" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/how-driver-monitoring-cameras-improve-safety-features" style={{ textDecoration: "none" }}>
+                                        <img src={drivermonitoring} alt="Camera Model 2" className="Cardrelated-image" /></Link>
+                                    <Link className="cardTitleLink" to="/how-driver-monitoring-cameras-improve-safety-features" style={{ textDecoration: "none" }}>
                                         <h2>How driver monitoring cameras improve driving safety and their key features</h2></Link>
                                     <p>Driver monitoring systems improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/DrivermonBlog"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/how-driver-monitoring-cameras-improve-safety-features"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
-                                    <Link className="cardImgLink" to="/SurroundBlog" style={{ textDecoration: "none" }}>
-                                        <img src="https://placehold.jp/251x151.png" alt="Camera Model 3" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/SurroundBlog" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/how-surround-view-cameras-improve-driving-parking-safety" style={{ textDecoration: "none" }}>
+                                        <img src={surroundview} alt="Camera Model 3" className="Cardrelated-image" /></Link>
+                                    <Link className="cardTitleLink" to="/how-surround-view-cameras-improve-driving-parking-safety" style={{ textDecoration: "none" }}>
                                         <h2>How do Surround View cameras improve driving and parking safety</h2>
                                     </Link>
                                     <p>Surround-view systems provide 360-degree visibility to eliminate blind spots and improve safety. Get to know how cameras help them reduce the risk of collisions.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/SurroundBlog"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/how-surround-view-cameras-improve-driving-parking-safety"></AnimatedButton>
                                 </div>
                             </div>
                         </div>

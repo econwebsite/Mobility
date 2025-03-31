@@ -1,8 +1,8 @@
-/* Title styles */
 .VedioSection-title {
   text-align: center;
   font-size: 2.5rem;
   padding: 0.1em;
+  color: #344ea1;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -57,7 +57,7 @@
 .VedioSection-card:hover
  {
     background-color: #cff5ff; 
-    transform: scale(1.1) rotate(0); 
+    transform: scale(1.07) rotate(0); 
     transition: all 0.3s ease-in-out; 
 }
 .VedioSection-cardImage {
@@ -68,10 +68,12 @@
 }
 
 .VedioSection-cardTitle {
-  font-size: 1.2em;
+  font-size: 0.9em;
   margin: 0;
+  text-align: center;
   padding: 10px;
   margin-bottom: 8px;
+  color: #344ea1;
 }
 
 .ant-carousel .slick-dots {
@@ -94,7 +96,7 @@
 .ant-carousel .slick-dots li button:hover {
   background-color: #344ea1;
 }
-/* Mobile specific styles */
+
 @media (max-width: 768px) {
   .VedioSection-desktopView {
     display: none;
@@ -127,9 +129,8 @@
   }
 
   .VedioSection-cardTitle {
-    font-size: 1.25rem;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
   }
 
   .ant-carousel .slick-prev, .ant-carousel .slick-next {
@@ -137,7 +138,7 @@
     color: #003873 !important;
     font-weight: bolder !important;
     z-index: 1;
-    display: block !important; /* Override global style */
+    display: block !important; 
     position: absolute;
     opacity: 1 !important; 
     background-color: transparent !important; 

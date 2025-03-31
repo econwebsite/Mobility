@@ -158,7 +158,7 @@
 @media (max-width: 768px) {
   .DriverTab-Container {
     flex-direction: column;
-    padding: 1em;
+    padding: 0.5em;
   }
 
   .DriverTab-LeftSide,

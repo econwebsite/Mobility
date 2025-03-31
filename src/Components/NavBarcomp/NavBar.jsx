@@ -1,184 +1,322 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+import { 
+  AppBar,
+  Toolbar,
+  Container,
+  Typography,
+  IconButton,
+  useMediaQuery,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Divider,
+  Popover,
+  MenuItem,
+  Box,
+  styled
+} from '@mui/material';
+
+import MenuIcon from '@mui/icons-material/Menu';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
-import { Dropdown, Menu } from 'antd';
-import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
-import './Navbar.css';
 import dentallogo from "../../assets/homepage/footerlogo-1.svg";
-import AnimationButton from '../ButtonComp/AnimationButton';
+
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  backgroundColor: '#f1f2f2',
+  boxShadow: '0 4px 30px rgba(121, 116, 116, 0.1)',
+  position: 'sticky',
+  top: 0,
+  zIndex: 1000,
+}));
+
+const NavLink = styled(Link)(({ theme }) => ({
+  textDecoration: 'none',
+  color: '#003873',
+  fontFamily: '"Poppins", sans-serif',
+  fontWeight: 400,
+  fontSize: '1.1em',
+  margin: theme.spacing(0, 2),
+  whiteSpace: 'nowrap',
+  '&:hover': {
+    color: '#00aeef',
+  },
+}));
+
+const StyledDrawer = styled(Drawer)(({ theme }) => ({
+  '& .MuiDrawer-paper': {
+    backgroundColor: 'rgba(2, 2, 2, 0.2)',
+    backdropFilter: 'blur(5px)',
+    WebkitBackdropFilter: 'blur(5px)',
+    border: '1px solid rgba(255, 255, 255, 0.3)',
+    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+    borderRadius: '16px 0 0 16px',
+    width: '95%',
+    color: 'white',
+  },
+}));
 
 const NavBar = () => {
-  const offcanvasRef = useRef(null);
-
-  const handleNavLinkClick = () => {
-    if (offcanvasRef.current) {
-      offcanvasRef.current.hide(); 
-    }
-  };
-  const resourceMenu = (
-    <Menu  style={{border:"1px solid #00aeef"}}>
-      <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/CasestudyHubPage" onClick={handleNavLinkClick}>Case Studies</Link>
-      </Menu.Item>
-    </Menu>
-  );
   
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
+  const isDesktop = useMediaQuery('(min-width:1024px)');
+
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
+  const handlePopoverOpen = (event) => setAnchorEl(event.currentTarget);
+  const handlePopoverClose = () => setAnchorEl(null);
+  const open = Boolean(anchorEl);
+
   const SolutionMenu = (
-    <Menu style={{ width: "300px", border: "1px solid #00aeef" }}>
-      <Menu.Item key="1">
-        <Link to="/surroundview" onClick={handleNavLinkClick}>
-          Surround View Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link to="/forwardfacing" onClick={handleNavLinkClick}>
-          Forward Facing Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <Link to="/rearview" onClick={handleNavLinkClick}>
-          Rear View Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="4">
-        <Link to="/drivermonitoring" onClick={handleNavLinkClick}>
-          In-Cabin Monitoring System
-        </Link>
-      </Menu.Item>
-    </Menu>
-  );
-  
-  const MobileMenu = (
-    <Menu style={{ width: "300px", border: "1px solid #00aeef" }}>
-      <Menu.Item key="1">
-        <Link to="/surroundview" onClick={handleNavLinkClick}>
-          Surround View Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link to="/forwardfacing" onClick={handleNavLinkClick}>
-          Forward Facing Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <Link to="/rearview" onClick={handleNavLinkClick}>
-          Rear View Cameras
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="4">
-        <Link to="/drivermonitoring" onClick={handleNavLinkClick}>
-          In-Cabin Monitoring System
-        </Link>
-      </Menu.Item>
-    </Menu>
+    <Box sx={{ 
+      p: 1, 
+      width: 300,
+      '& .MuiMenuItem-root': {
+        color: '#344ea1',
+        fontSize: '1.1em',
+        '&:hover': {
+          backgroundColor: '#00aeef',
+          color: 'white',
+        }
+      }
+    }}>
+      <MenuItem 
+        component={Link} 
+        to="/surround-view-camera" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        Surround View Cameras
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/forward-facing-camera" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        Forward Facing Cameras
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/rear-view-camera" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        Rear View Cameras
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/driver-monitoring-camera" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        In-Cabin Monitoring System
+      </MenuItem>
+    </Box>
   );
 
+  const drawerContent = (
+    <>
+      <Box sx={{ 
+        p: 2, 
+        borderBottom: '1px solid white',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: 'white'  
+      }}>
+       <Typography variant="h6" sx={{ color: 'white' }}>Menu</Typography>
+       <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 18L18 6M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</IconButton>
+
+
+      </Box>
+      <List sx={{ p: 1 }}>
+        <ListItem disablePadding>
+          <ListItemButton 
+            component={Link} 
+            to="/" 
+            onClick={handleDrawerToggle}
+            sx={{ '&:hover': { color: '#00aeef' } }}
+          >
+            <ListItemText 
+              primary="Home" 
+              primaryTypographyProps={{ style: { color: 'white' } }} 
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton 
+            onClick={(e) => setMobileMenuAnchor(e.currentTarget)}
+            sx={{ '&:hover': { color: '#00aeef' } }}
+          >
+            <ListItemText 
+              primary="Products" 
+              primaryTypographyProps={{ style: { color: 'white' } }} 
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton 
+            component={Link} 
+            to="/industries" 
+            onClick={handleDrawerToggle}
+            sx={{ '&:hover': { color: '#00aeef' } }}
+          >
+            <ListItemText 
+              primary="Industries" 
+              primaryTypographyProps={{ style: { color: 'white' } }} 
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton 
+            component={Link} 
+            to="/blog" 
+            onClick={handleDrawerToggle}
+            sx={{ '&:hover': { color: '#00aeef' } }}
+          >
+            <ListItemText 
+              primary="Blog" 
+              primaryTypographyProps={{ style: { color: 'white' } }} 
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton 
+            component={Link} 
+            to="/contact-us" 
+            onClick={handleDrawerToggle}
+            sx={{ '&:hover': { color: '#00aeef' } }}
+          >
+            <ListItemText 
+              primary="Contact Us" 
+              primaryTypographyProps={{ style: { color: 'white' } }} 
+            />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </>
+  );
+  
   return (
     <>
-      {/* Desktop View */}
-      <nav className="navbarpage-navbar desktop-view">
-        <div className='mainContainer'>
-          <div className="navbarpage-header">
-            <div className="navbarpage-logoContainer">
-              <Link to="/">
-                <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{ cursor: "pointer" }} />
-              </Link>
-            </div>
-            <div className="navbarpage-navItems">
-            <Link to="/" className="navbarpage-navLink">Home</Link>
-            <div className="navbarpage-divider"></div>
-              <Dropdown overlay={SolutionMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">Products</Link>
-              </Dropdown>
-              <div className="navbarpage-divider"></div>
-              {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">Products</Link>
-              </Dropdown> */}
-            {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">Resources</Link>
-              </Dropdown> */}
-            <Link to="/Industries" className="navbarpage-navLink">Industries</Link>
-            <div className="navbarpage-divider"></div>
+      <StyledAppBar position="sticky">
+        <Container maxWidth="xl">
+        <Toolbar disableGutters>
+  <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
+    
+    <Link to="/">
+      <img 
+        src={dentallogo} 
+        alt="Dental Logo" 
+        style={{ 
+          height: isDesktop ? '80px' : '50px', 
+          width: isDesktop ? '300px' : 'auto', 
+          objectFit: 'contain',
+          cursor: 'pointer'
+        }} 
+      />
+    </Link>
+    {isDesktop && (
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+        <NavLink to="/">Home</NavLink>
+        <Divider orientation="vertical" flexItem />
+        <NavLink
+          aria-owns={open ? 'products-menu' : undefined}
+          aria-haspopup="true"
+          onClick={handlePopoverOpen}
+        >
+          Products
+        </NavLink>
+        <Divider orientation="vertical" flexItem />
+        <NavLink to="/industries">Industries</NavLink>
+        <Divider orientation="vertical" flexItem />
+        <NavLink to="/blog">Blog</NavLink>
+        <Divider orientation="vertical" flexItem />
+        <NavLink to="/contact-us">Contact Us</NavLink>
+      </Box>
+    )}
 
-              <Link to="/BlogHubPage" className="navbarpage-navLink">Blog</Link>
-              <div className="navbarpage-divider"></div>
-              
-              <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
-            </div>
-            <div className="navbarpage-rightColumn">
-              {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
-              <div className="navbarpage-contact">
-                <i className="ri-phone-fill navbarpage-phoneIcon"></i>
-                <div className="navbarpage-contactDetails">
-                  <a style={{ textDecoration: "none", color: "#003873" }} href="tel:+14087667503">
+    {/* Call Us Section (Desktop Only) */}
+    {isDesktop ? (
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <PhoneIcon sx={{ color: '#003873', fontSize: '24px' }} />
+        <Box>
+          <Typography variant="body2" sx={{ color: '#00aeef', fontSize: '1em' }}>
+            Call us
+          </Typography>
+          <Typography variant="body2" sx={{ color: '#003873', fontSize: '14px', whiteSpace: 'nowrap' }}>
+            +1 408 766 7503
+          </Typography>
+        </Box>
+      </Box>
+    ) : (
+      /* Mobile Menu Icon */
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="end"
+        onClick={handleDrawerToggle}
+        sx={{ color: '#003873' }}
+      >
+        <MenuIcon />
+      </IconButton>
+    )}
+    
+  </Box>
+</Toolbar>
 
-                    <p className="navbarpage-tellUs">Call us</p>
-                    <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
-                  </a>
-                </div>
-                <div style={{marginRight:"30px"}}></div>
-                {/* <AnimationButton text="Get a Quote" backgroundColor="#00aeef" className='Navbargetquote' hoverColor="#00aeef" animationColor="#69ba2f" /> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile View */}
-      <Navbar expand="lg" className="mobile-view">
-        <Container fluid>
-          <Navbar.Brand href="#">
-            <Link to="/">
-              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo-mobile" />
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" />
-          <Navbar.Offcanvas className='Toggle-background'
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            placement="end"
-            ref={offcanvasRef}
-          >
-            <Offcanvas.Header closeButton style={{ color: "white", borderBottom: "1px solid white" }}>
-              <Offcanvas.Title id="offcanvasNavbarLabel" style={{ color: "white" }}>
-                Menu
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="flex-column navbarpage-offcanvas-nav">
-                <Link className="nav-link" to="/" onClick={handleNavLinkClick}>Home</Link>
-                {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
-                  <a className="nav-link">Products</a>
-                </Dropdown> */}
-                <Dropdown overlay={MobileMenu} placement="bottomLeft" className="nav-link">
-                  <a className="nav-link">Products</a>
-                </Dropdown>
-                {/* <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
-                  <a className="nav-link">Resources</a>
-                </Dropdown> */}
-                 <Link className="nav-link" to="/Industries" onClick={handleNavLinkClick}>Industries</Link>
-
-                <Link className="nav-link" to="/BlogHubPage" onClick={handleNavLinkClick}>Blog</Link>
-
-                
-                <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
-                
-              </Nav>
-              {/* <Form className="d-flex mt-3">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success" style={{ color: "white", borderColor: "#69ba2f", backgroundColor: "#69ba2f" }}>Search</Button>
-              </Form> */}
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
         </Container>
-      </Navbar>
+
+        <Popover
+          id="products-menu"
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handlePopoverClose}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          PaperProps={{ sx: { border: '1px solid #00aeef' } }}
+          disableRestoreFocus
+          onMouseLeave={handlePopoverClose}
+        >
+          {SolutionMenu}
+        </Popover>
+      </StyledAppBar>
+
+      <StyledDrawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+      >
+        {drawerContent}
+        <Popover
+          open={Boolean(mobileMenuAnchor)}
+          anchorEl={mobileMenuAnchor}
+          onClose={() => setMobileMenuAnchor(null)}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+        >
+          {SolutionMenu}
+        </Popover>
+      </StyledDrawer>
     </>
   );
 };

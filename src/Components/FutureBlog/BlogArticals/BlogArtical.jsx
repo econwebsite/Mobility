@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './BlogArtical.css'; // Import the CSS file
+import './BlogArtical.css'; 
 import AnimatedButton from "../../ButtonComp/AnimationButton"
 import { message } from 'antd';
 import axios from 'axios';
+import sureshmathu from "../../../assets/hubpage/Blogpage/suresh-madhu.jpg"
+
 const BlogArtical = () => {
   const [email, setEmail] = useState(null);
   const [isValid, setIsValid] = useState(true);
@@ -74,13 +76,13 @@ const BlogArtical = () => {
         </p>      </div>
       <div className="Artical-person">
         <div className="Articalleft-side">
-          <img src="https://placehold.jp/228x222.png" alt="Person" className="Articalperson-photo" />
-          <p>Balaji S</p>
+          <img src={sureshmathu} alt="sureshmathu" className="Articalperson-photo" />
+          <p>Suresh Madhu</p>
           <p>Product Manager</p>
         </div>
         <div className="Articalright-side">
           <p>
-            Balaji is a camera expert with 18+ years of experience in embedded product design, camera solutions, and product development. In e-con Systems, he has built numerous camera solutions in the field of ophthalmology, laboratory equipment, dentistry, assistive technology, dermatology, and more. He has played an integral part in helping many customers build their products by integrating the right vision technology into them.
+          Suresh Madhu is the product marketing manager with 16+ years of experience in embedded product design, technical architecture, SOM product design, camera solutions, and product development. He has played an integral part in helping many customers build their products by integrating the right vision technology into them.
           </p>
         </div>
       </div>

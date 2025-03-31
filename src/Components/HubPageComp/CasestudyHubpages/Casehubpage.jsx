@@ -13,10 +13,10 @@ const Casehubpage = () => {
         {/* Left big card */}
         <div className="casehubpage-hubblog-column left">
           <div className="casehubpage-hubblog-border-box">
-            <Link to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
+            <Link to="/blog/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
               <img src="https://placehold.jp/500x450.png" alt="Image Description" />
             </Link>
-            <Link to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
+            <Link to="/blog/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
               <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
             </Link>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Nulla facilisi. Duis sit amet ipsum at elit auctor hendrerit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Nulla facilisi. Duis sit amet ipsum at elit auctor hendrerit.</p>

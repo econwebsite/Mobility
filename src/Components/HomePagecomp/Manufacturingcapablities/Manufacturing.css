@@ -65,7 +65,6 @@
   background-color: #e6ecf8;
 }
 
-/* Updated Cards Layout */
 .manufacturing-tab-content {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +75,7 @@
 }
 
 .manufacturing-card {
-  width: calc(33.33% - 20px); /* Ensures 3 cards per row */
+  width: calc(33.33% - 20px); 
   max-width: 300px;
   padding: 15px;
   height: 240px;
@@ -100,10 +99,9 @@
   color: #003873;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .manufacturing-card {
-    width: calc(50% - 20px); /* 2 cards per row on tablets */
+    width: calc(50% - 20px); 
   }
 }
 
@@ -112,12 +110,26 @@
     flex-direction: column;
     align-items: center;
   }
+  .manufacturing-heading {
+    font-size: 1.5em;
+    padding: 0.5em;
 
+  }
+  .manufacturing-paragraph {
+    font-size: 1em;
+    text-align: justify;
+    color: #003873;
+    max-width: 1100px;
+    margin-bottom: 30px;
+  }
+  .manufacturing-container {
+    padding: 10px 30px;
+  }
   .manufacturing-tabs {
-    width: 80%;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
-    gap: 2px;
+    gap: 10px;
   }
 
   .manufacturing-tab-button {

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Market.css";
 
 import Agricultural from "../../../assets/homepage/agriculturalvehical.jpg";
@@ -30,7 +31,7 @@ const marketData = {
     cameras: [
       {id: "agriculture-1",img: studycam88, title: "STRUDeCAM34" },
       {id: "agriculture-2",img: nilecam27, title: "NileCAM_CU27" },
-      {id: "agriculture-3",img: studycam29, title: "NileCAM_CU29" },
+      {id: "agriculture-3",img: studycam29, title: "NileCAM_CU34" },
       {id: "agriculture-4",img: routecam25, title: "RouteCAM_CU25" },
       {id: "agriculture-5",img: studycam34, title: "STRUDeCAM34" },
       {id: "agriculture-6",img: studycam84, title: "NileCAM_CU27" },
@@ -125,13 +126,37 @@ const marketData = {
 };
 
 const MarketWe = () => {
+  const { marketName } = useParams();
+  const navigate = useNavigate();
+  const [selectedMarket, setSelectedMarket] = useState(Object.keys(marketData)[0]);
 
-    const [selectedMarket, setSelectedMarket] = useState(Object.keys(marketData)[0]);
-    const [refresh, setRefresh] = useState(false);
-    const handleMarketChange = (market) => {
-      setSelectedMarket(market);
-      setRefresh((prev) => !prev); 
-    };
+  const urlToMarketKey = (urlName) => {
+    if (!urlName) return '';
+    return urlName
+      .toLowerCase() 
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase()); 
+  };
+
+  const marketKeyToUrl = (key) => {
+    return key
+      .toLowerCase() 
+      .replace(/ /g, '-'); 
+  };
+
+  useEffect(() => {
+    if (marketName) {
+      const marketKey = urlToMarketKey(marketName);
+      if (marketData[marketKey]) {
+        setSelectedMarket(marketKey);
+      }
+    }
+  }, [marketName]);
+
+  const handleMarketChange = (market) => {
+    const urlchanging = marketKeyToUrl(market);
+    navigate(`/industries/${urlchanging}`);
+  };
 
   return (
     <div className="marketwe-container">
@@ -139,13 +164,13 @@ const MarketWe = () => {
       <div className="marketwe-layout">
         <div className="marketwe-tabs">
           {Object.keys(marketData).map((market) => (
-            <button
-              key={market}
-              className={`marketwe-tab ${selectedMarket === market ? "active" : ""}`}
-              onClick={() => setSelectedMarket(market)}
-            >
-              {market}
-            </button>
+          <button
+          key={market}
+          className={`marketwe-tab ${selectedMarket === market ? "active" : ""}`}
+          onClick={() => handleMarketChange(market)}
+        >
+          {market}
+        </button>
           ))}
         </div>
 
@@ -165,7 +190,7 @@ const MarketWe = () => {
 
     <p className="marketwe-description">{marketData[selectedMarket].afterImage}</p>
 <br></br>
-    <Releatedcam key={selectedMarket + refresh} cameras={marketData[selectedMarket]?.cameras || []} />
+    <Releatedcam key={selectedMarket} cameras={marketData[selectedMarket]?.cameras || []} />
 
   </div>
 

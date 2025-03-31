@@ -10,6 +10,7 @@
     text-align: center;
     font-size: 2.5rem;
     padding: 0.2em;
+    color: #344ea1;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -23,7 +24,7 @@
   
   .ProductBlogs-card {
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     text-align: left;
     width: 23%; 
     margin: 10px 0;
@@ -37,12 +38,12 @@
   .ProductBlogs-card-image {
     max-width: 100%;
     height: 200px; 
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 4px;
     margin-bottom: 20px;
   }
 .ProductBlogs-card:hover .ProductBlogs-card-image{
-  transform: scale(1.1);
+  transform: scale(1.08);
   
 }
   

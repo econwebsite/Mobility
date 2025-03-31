@@ -9,10 +9,8 @@ import TotalSurroundview from "./Components/Productcomp/SurroundviewProduct/Tota
 import Totalforwardfacing from "./Components/Productcomp/ForwardfacingProduct/Totalforwardfacing";
 import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/Totalmonitoring";
 import Totalrearview from "./Components/Productcomp/Rearviewproduct/Totalrearview"
-import HubManufacturing from './Components/HubPageComp/ManufacturingHub/HubManufacturing';
 import ScrollToTop from "./Components/ScrollToTop"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
-// import Casehubpage from "./Components/HubPageComp/CasestudyHubpages/Casehubpage"
 import ContactUs from './Components/HomePagecomp/Homecontactus/ContactUs';
 import HdrLedBlog from "./Components/FutureBlog/HdrLedBlog"
 import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
@@ -20,7 +18,6 @@ import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
 import NotFoundPage from "./Components/Notfoundpage";
 import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
-import Testing from "./Testing"
 import TotalIndustries from './Components/Industriescomp/TotalIndustries';
 
 const App = () => {
@@ -33,23 +30,21 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path="/" element={<TotalHomePage />} />
-        <Route path="/surroundview" element={<TotalSurroundview/>} />
-        <Route path="/forwardfacing" element={<Totalforwardfacing/>} />
-        <Route path="/drivermonitoring" element={<Totalmonitoring/>} />
-        <Route path="/rearview" element={<Totalrearview/>} />
-        <Route path="/ContactUs" element={<ContactUs/>} />
-        <Route path="/BlogHubpage" element={<BlogHubpage/>} />
+        <Route path="/surround-view-camera" element={<TotalSurroundview/>} />
+        <Route path="/forward-facing-camera" element={<Totalforwardfacing/>} />
+        <Route path="/driver-monitoring-camera" element={<Totalmonitoring/>} />
+        <Route path="/rear-view-camera" element={<Totalrearview/>} />
+        <Route path="/contact-us" element={<ContactUs/>} />
+        <Route path="/blog" element={<BlogHubpage/>} />
         {/* <Route path="/CasestudyHubpage" element={<Casehubpage/>} /> */}
-        <Route path="/HubManufacturing" element={<HubManufacturing/>} />
-        <Route path="/HdrLedBlog" element={<HdrLedBlog/>} />
-        <Route path="/DrivermonBlog" element={<DrivermonBlog/>} />
-        <Route path="/ForwardBlog" element={<ForwardBlog/>} />
-        <Route path="/SurroundBlog" element={<SurroundBlog/>} />
-        <Route path="/ProductPage" element={<ProductPage/>} />
-        <Route path="/testing" element={<Testing/>} />
-        <Route path="/Industries" element={<TotalIndustries/>} />
+        <Route path="/why-hdr-lfm-matter-forward-facing-cameras-adas" element={<HdrLedBlog/>} />
+        <Route path="/how-driver-monitoring-cameras-improve-safety-features" element={<DrivermonBlog/>} />
+        <Route path="/how-forward-facing-camera-works-in-adas" element={<ForwardBlog/>} />
+        <Route path="/how-surround-view-cameras-improve-driving-parking-safety" element={<SurroundBlog/>} />
 
-        
+        <Route path="/ProductPage" element={<ProductPage/>} />
+        <Route path="/industries" element={<TotalIndustries/>} />
+        <Route path="/industries/:marketName?" element={<TotalIndustries />} />        
         <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footerpage/>

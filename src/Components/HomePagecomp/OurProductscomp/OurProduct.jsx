@@ -8,10 +8,10 @@ import drivermonitoring from "../../../assets/homepage/drivermonitoring.jpg"
 
 const OurProduct = () => {
   const cardsData = [
-    { id: 1,img:surroundview, title: "Surround View Cameras", text: "360-degree perception for enhanced safety and parking assistance.",link:"/surroundview" },
-    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance.",link:"/forwardfacing" },
+    { id: 1,img:surroundview, title: "Surround View Cameras", text: "360-degree perception for enhanced safety and parking assistance.",link:"/surround-view-camera" },
+    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance.",link:"/forward-facing-camera" },
     { id: 3,img:rearview, title: "Rear View Cameras", text: "Real-time driver assistance eliminates blind spots, ensuring safer reversing and parking.",link:"rearview" },
-    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",link:"/drivermonitoring" },
+    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",link:"/driver-monitoring-camera" },
   ];
 
   return (
