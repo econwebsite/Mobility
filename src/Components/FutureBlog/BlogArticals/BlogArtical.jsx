@@ -52,7 +52,7 @@ const BlogArtical = () => {
     const valid = isValid? await validateEmail():false;
     if (valid) {
       try {
-        const result = await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
+        const result = await axios.post('https://localhost:3111/api/emailSubscription', { email });
         if (result.status === 200)
           message.success('Thanks for subscription!');
         setEmail('');
@@ -78,7 +78,7 @@ const BlogArtical = () => {
         <div className="Articalleft-side">
           <img src={sureshmathu} alt="sureshmathu" className="Articalperson-photo" />
           <p>Suresh Madhu</p>
-          <p>Product Manager</p>
+          <p style={{fontSize:"13px"}}>BU Head-Industrial cameras</p>
         </div>
         <div className="Articalright-side">
           <p>

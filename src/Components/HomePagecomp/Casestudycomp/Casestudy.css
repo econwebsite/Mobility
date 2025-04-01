@@ -1,13 +1,13 @@
 .casestudy-container {
     padding: 1.5em;
-    background: #f8f9fa;
+    background: #5b79b4;
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 200;
-    color: #003873;
+    color: white;
     margin-bottom: 1em;
     text-transform: uppercase;
 }
@@ -63,7 +63,7 @@
 }
 
 .case-content p {
-    color: #6c757d;
+    color: #344ea1;
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1rem;

@@ -1,8 +1,11 @@
 import React from 'react';
 import "./Whatisneed.css";
 import hdr from "../../../../assets/Productpage/surroundview/hdr.png";
-import highsensitivity from "../../../../assets/Productpage/surroundview/nir-sensitivity.png"
-import synchronization from "../../../../assets/Productpage/surroundview/synchronization.png"
+import highsensitivity from "../../../../assets/Productpage/surroundview/high-sensitivity.png"
+import longrange from "../../../../assets/Productpage/surroundview/long-range-interface.png"
+import Compatibility from "../../../../assets/Productpage/surroundview/compatablity-platform.png"
+import camerasync from "../../../../assets/Productpage/surroundview/camera-synchronization.png"
+import highperformance from "../../../../assets/Productpage/surroundview/high-performance-isp.png"
 
 const Whatisneed = () => {
   return (
@@ -32,25 +35,25 @@ const Whatisneed = () => {
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hdr} alt="Global Shutter" className="whatis-image" />
+              <img src={longrange} alt="Global Shutter" className="whatis-image" />
               <p>Long range interface</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={synchronization} alt="Global Shutter" className="whatis-image" />
+              <img src={Compatibility} alt="Global Shutter" className="whatis-image" />
               <p>Compatibility platforms</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={synchronization} alt="Global Shutter" className="whatis-image" />
+              <img src={camerasync} alt="Global Shutter" className="whatis-image" />
               <p>Camera synchronization</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hdr} alt="Global Shutter" className="whatis-image" />
+              <img src={highperformance} alt="Global Shutter" className="whatis-image" />
               <p>High performance ISP</p>
             </div>
           </div>

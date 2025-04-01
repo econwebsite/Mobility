@@ -49,7 +49,7 @@
   transition: all 0.3s ease;
   /* border: 2px solid transparent; */
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* .ProductTabs-LeftHeading:not(.camera):hover {
@@ -65,8 +65,25 @@
   border-color: #003873 !important;
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
 }
 
+.ProductTabs-LeftHeading.active::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 60px solid #344ea1; 
+  border-right: 0;
+  /* z-index: 1; */
+}
 .ProductTabs-LeftHeading.camera {
   cursor: default; 
   background-color: #f1f2f2; 

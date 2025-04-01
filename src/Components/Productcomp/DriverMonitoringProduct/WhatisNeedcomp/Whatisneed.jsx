@@ -1,8 +1,9 @@
 import React from 'react';
 import "./Whatisneed.css";
-import hightframe from "../../../../assets/Productpage/drivermonitoring/hight-framerate.png";
-import globalshutt from "../../../../assets/Productpage/drivermonitoring/globalshutter.png";
-import nir from "../../../../assets/Productpage/drivermonitoring/nir-sensitivity.png";
+import Resolution from "../../../../assets/Productpage/drivermonitoring/resolution.png";
+import globalshutter from "../../../../assets/Productpage/drivermonitoring/globalshutter.png";
+import hightframe from "../../../../assets/Productpage/drivermonitoring/highframe-rate.png";
+import nir from "../../../../assets/Productpage/drivermonitoring/nir-sensivity.png";
 
 const Whatisneed = () => {
   return (
@@ -20,7 +21,7 @@ const Whatisneed = () => {
         <div className="whatis-grid">
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hightframe} alt="Resolution" className="whatis-image" />
+              <img src={Resolution} alt="Resolution" className="whatis-image" />
               <p>Resolution</p>
             </div>
           </div>
@@ -32,7 +33,7 @@ const Whatisneed = () => {
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={globalshutt} alt="Global Shutter" className="whatis-image" />
+              <img src={globalshutter} alt="Global Shutter" className="whatis-image" />
               <p>Global Shutter</p>
             </div>
           </div>

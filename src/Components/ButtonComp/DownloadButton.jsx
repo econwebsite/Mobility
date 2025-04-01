@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 const DownloadButton = (value) => {
 const handleDownload = async () => {
-    const response = await fetch(`https://api.dental.e-consystems.com/download`, {
+    const response = await fetch(`https://localhost:3111/download`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',

@@ -10,13 +10,13 @@ const Casestudy = () => {
       image: miningvehical, 
       title: "How e-con Systems helped equip large mining vehicles with custom multi-camera solutions to monitor blind spots", 
       description: "e-con Systems helped a leading industrial automation provider in the mining sector to implement a custom multi-camera solution for large vehicles operating in high-risk environments.",
-      to: "" 
+      docname:"miningvehicles-custom-camera-solution"
     },
     { 
       image: deliveryrobort, 
       title: "Customized Autonomous Delivery Robot Solution for a Leading Automotive and Mobility Supplier", 
       description: "e-con Systems worked closely with a leading automotive and mobility supplier to develop a rugged, real-time vision solution for their autonomous delivery robots.",
-      to: ""
+      docname:"customized-autonomous-delivery-robort"
     },
   ];
 

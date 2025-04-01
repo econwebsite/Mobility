@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
-import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.jpg";
+import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.png";
 import studycam29 from "../../../../assets/Productpage/drivermonitoring/studycam29.png";
 import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';

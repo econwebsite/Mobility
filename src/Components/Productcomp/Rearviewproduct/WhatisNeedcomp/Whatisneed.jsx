@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Whatisneed.css";
-import hightframe from "../../../../assets/Productpage/drivermonitoring/hight-framerate.png";
-import globalshutt from "../../../../assets/Productpage/drivermonitoring/globalshutter.png";
-import nir from "../../../../assets/Productpage/drivermonitoring/nir-sensitivity.png";
+import hdr from "../../../../assets/Productpage/rearview/hdr.png";
+import diverselens from "../../../../assets/Productpage/rearview/diverse-lens.png";
+import ip69k from "../../../../assets/Productpage/rearview/ip69k.png";
 
 const Whatisneed = () => {
   return (
@@ -19,19 +19,19 @@ const Whatisneed = () => {
         <div className="whatis-grid">
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hightframe} alt="Resolution" className="whatis-image" />
+              <img src={hdr} alt="hdr" className="whatis-image" />
               <p>HDR</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hightframe} alt="High Frame Rate" className="whatis-image" />
+              <img src={diverselens} alt="lens" className="whatis-image" />
               <p>Diverse lens options </p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={globalshutt} alt="Global Shutter" className="whatis-image" />
+              <img src={ip69k} alt="Ip69k" className="whatis-image" />
               <p>IP69K-rated Enclosure</p>
             </div>
           </div>

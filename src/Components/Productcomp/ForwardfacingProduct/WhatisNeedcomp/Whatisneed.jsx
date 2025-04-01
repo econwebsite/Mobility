@@ -2,9 +2,9 @@ import React from 'react';
 import "./Whatisneed.css";
 
 import hdr from "../../../../assets/Productpage/forwardfacing/hdr.png"
-import Lfm from "../../../../assets/Productpage/forwardfacing/hdr.png"
-import highreso from "../../../../assets/Productpage/forwardfacing/high-resolution.png"
-import customarrow from "../../../../assets/Productpage/forwardfacing/high-resolution.png"
+import Lfm from "../../../../assets/Productpage/forwardfacing/lfm.png"
+import highresolution from "../../../../assets/Productpage/forwardfacing/high-resolution.png"
+import customlence from "../../../../assets/Productpage/forwardfacing/customizable-lens.png"
 
 const Whatisneed = () => {
   return (
@@ -21,7 +21,7 @@ const Whatisneed = () => {
         <div className="whatis-grid">
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={hdr} alt="Resolution" className="whatis-image" />
+              <img src={hdr} alt="hdr" className="whatis-image" />
               <p>HDR</p>
             </div>
           </div>
@@ -33,13 +33,13 @@ const Whatisneed = () => {
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={highreso} alt="Global Shutter" className="whatis-image" />
+              <img src={highresolution} alt="highresolution" className="whatis-image" />
               <p>High resolution</p>
             </div>
           </div>
           <div className="whatis-box">
             <div className="alignment-whatisbox">
-              <img src={customarrow} alt="NIR Sensitivity" className="whatis-image" />
+              <img src={customlence} alt="custom lens" className="whatis-image" />
               <p>customizable lens</p>
             </div>
           </div>

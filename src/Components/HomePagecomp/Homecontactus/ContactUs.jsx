@@ -109,7 +109,7 @@ const ContactUs = () => {
     }, []);
   const onFinish = (values) => {
     form.resetFields();
-    axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+    axios.post(`https://localhost:3111/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
         //onClose();
@@ -126,38 +126,38 @@ const ContactUs = () => {
     }
   };
 
-  const handleEmailValidate = async (e) => {
-    const email = e.target.value;
-    if (email) {
-      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
-        .then(result => {
-          if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
-            if (!result.data.free_email) {
-              return true
-            }
-            else {
-              form.setFields([
-                {
-                  name: 'email',
-                  errors: ["Please enter valid email ID"],
-                },
-              ]);
-            }
-          }
-          else {
-            form.setFields([
-              {
-                name: 'email',
-                errors: ["Please enter valid email ID"],
-              },
-            ]);
-          }
+  // const handleEmailValidate = async (e) => {
+  //   const email = e.target.value;
+  //   if (email) {
+  //     axios.post(`https://localhost:3111/api/validateEmail`, { email })
+  //       .then(result => {
+  //         if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+  //           if (!result.data.free_email) {
+  //             return true
+  //           }
+  //           else {
+  //             form.setFields([
+  //               {
+  //                 name: 'email',
+  //                 errors: ["Please enter valid email ID"],
+  //               },
+  //             ]);
+  //           }
+  //         }
+  //         else {
+  //           form.setFields([
+  //             {
+  //               name: 'email',
+  //               errors: ["Please enter valid email ID"],
+  //             },
+  //           ]);
+  //         }
 
-        })
-        .catch(err => console.log(err));
+  //       })
+  //       .catch(err => console.log(err));
 
-    }
-  };
+  //   }
+  // };
   useEffect(() => {
     let url = window.location.pathname.replace('/', '');
     if (url === "company/contact-us") {
@@ -217,7 +217,9 @@ const ContactUs = () => {
                   <Input placeholder="Email*" autoComplete='off' onPaste={(e) => {
                     e.preventDefault()
                     return false;
-                  }} onBlur={handleEmailValidate} />
+                  }} 
+                  // onBlur={handleEmailValidate}
+                   />
                 </Form.Item>
               </Col>
               <Col span={12}>

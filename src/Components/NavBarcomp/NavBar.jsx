@@ -242,7 +242,7 @@ const NavBar = () => {
         <NavLink
           aria-owns={open ? 'products-menu' : undefined}
           aria-haspopup="true"
-          onClick={handlePopoverOpen}
+          onMouseOver={handlePopoverOpen}
         >
           Products
         </NavLink>
@@ -255,7 +255,6 @@ const NavBar = () => {
       </Box>
     )}
 
-    {/* Call Us Section (Desktop Only) */}
     {isDesktop ? (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <PhoneIcon sx={{ color: '#003873', fontSize: '24px' }} />

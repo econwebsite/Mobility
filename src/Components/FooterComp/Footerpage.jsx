@@ -1,119 +1,128 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Footerpage.css';
-import { message } from 'antd';
-import econlogo from "../../assets/homepage/footerlogo-1.svg"
+import { message, Dropdown, Menu } from 'antd';
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import econlogo from "../../assets/homepage/footerlogo-1.svg";
+import './Footerpage.css';
 
-import AnimatedButton from "../ButtonComp/AnimationButton";
 const Footerpage = () => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
+
   const validateEmail = async () => {
-    if (isValid && email.length > 0) {
-      try {
-        const result = await axios.post('https://api.dental.e-consystems.com/api/validateEmail', { email });
-        if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
-          if (!result.data.free_email) {
-            console.log(result);
-            setIsValid(true);
-            return true;
-          } else {
-            console.log(result);
-            setIsValid(false);
-            return false;
-          }
-        } else {
-          console.log(result);
-          setIsValid(false);
-          return false;
-        }
-      } catch (err) {
-        console.log(err);
-        return false;
-      }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return false;
+    try {
+      const response = await axios.post('https://localhost:3111/api/validateEmail', { email });
+      return ['valid', 'catch-all', 'role-basic'].includes(response.data.status) && !response.data.free_email;
+    } catch (error) {
+      console.error('Email validation error:', error);
+      return false;
     }
-    return false; 
   };
-  const validateEmailId = (email) => {
-    const regex = /^\S+@\S+\.\S+$/;
-    return regex.test(email);
-  };
-  const handleChange = (e) => {
-    const newEmail = e.target.value;
-    console.log(newEmail);
-    setEmail(newEmail);
-    setIsValid(validateEmailId(newEmail));
-  };
-  const handelSubscribtion = async () => {
-    if(email === null){
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) {
       setIsValid(false);
       return;
     }
-    const valid = isValid? await validateEmail():false;
-    console.log(valid, "emailvalid");
-    if (valid) {
-      try {
-        const result = await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
-        if (result.status === 200)
-          message.success('Thanks for subscription!');
-        setEmail('');
-        setIsValid(true);
-      } catch (err) {
-        console.log(err);
-      }
+    const isValidEmail = await validateEmail();
+    if (!isValidEmail) {
+      setIsValid(false);
+      return;
     }
-  }
+    try {
+      await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
+      message.success('Thank you for subscribing!');
+      setEmail('');
+      setIsValid(true);
+    } catch (error) {
+      console.error('Subscription error:', error);
+      message.error('Subscription failed. Please try again.');
+    }
+  };
+
+  const menu = (
+    <Menu > 
+      <Menu.Item key="1">
+        <Link to="/surround-view-camera" className='Footer-menuLinks'>Surround View Cameras</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link to="/forward-facing-camera" className='Footer-menuLinks'>Forward Facing Cameras</Link>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <Link to="/rear-view-camera" className='Footer-menuLinks'>Rear View Cameras</Link>
+      </Menu.Item>
+      <Menu.Item key="4">
+        <Link to="/driver-monitoring-camera" className='Footer-menuLinks'>In-Cabin Monitoring Cameras</Link>
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
-    <footer className="footer-container">
-      <div className="mainContainer">
-        <div className="footer-inner">
-          <div className="footer-column footer-column-logo">
-            <div className="footer-logo">
-              {/* <img src={dentallogo} alt="Company Logo" /> */}
-            </div>
-            <div className="footer-links">
-              <Link to="/">Home</Link>
-              <Link to="/industries">Industries </Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/company/contact-us">Contact Us</Link>
+    <footer className="Footer-container">
+      <div className="Footer-content">
+        <div className="Footer-grid">
+          <div className="Footer-section">
+            <h3 className="Footer-heading">Quick Links</h3>
+            <nav className="Footer-nav">
+              <Link to="/" className="Footer-link">Home</Link>
+              <Dropdown overlay={menu} placement="bottomLeft">
+                <button className="Footer-dropdownToggle">Products</button>
+              </Dropdown>
+              <Link to="/industries" className="Footer-link">Industries</Link>
+              <Link to="/blog" className="Footer-link">Blog</Link>
+              <Link to="/company/contact-us" className="Footer-link">Contact</Link>
+            </nav>
+          </div>
+
+          <div className="Footer-section">
+            <h3 className="Footer-heading">Contact Us</h3>
+            <div className="Footer-contactInfo">
+              <div className="Footer-contactItem">
+                <RiPhoneFill className="Footer-contactIcon" />
+                <a href="tel:+14087667503" className="Footer-contactLink">+1 408 766 7503</a>
+              </div>
+              <div className="Footer-contactItem">
+                <RiMailFill className="Footer-contactIcon" />
+                <a href="mailto:camerasolutions@e-consystems.com" className="Footer-contactLink">camerasolutions@e-consystems.com</a>
+              </div>
             </div>
           </div>
-          <div className="footer-divider" />
-          <div className="footer-column footer-column-contact">
-            <div className="footer-contact-item">
-              <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#003873" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
-            </div>
-            <div className="footer-contact-item">
-              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#003873" }} href="mailto:camerasolutions@e-consystems.com">
-                camerasolutions@e-consystems.com
-              </a></p>
+
+          <div className="Footer-section">
+            <h3 className="Footer-heading">Stay Updated</h3>
+            <form onSubmit={handleSubscribe} className="Footer-newsletterForm">
+              <div className="Footer-inputGroup">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className={`Footer-emailInput ${!isValid ? 'Footer-inputError' : ''}`}
+                  required
+                />
+                <button type="submit" className="Footer-subscribeBtn">Subscribe</button>
+              </div>
+              {!isValid && <p className="Footer-errorMessage">Please enter a valid email address</p>}
+            </form>
+            <div className="Footer-brandLogo">
+              <img src={econlogo} alt="e-con Systems" className="Footer-logoImage" />
             </div>
           </div>
-          <div className="footer-divider" />
-          <div className="footer-column footer-column-subscribe">
-            <h4 className="footer-subscribe-title">Subscribe for latest updates</h4>
-            <div className="footer-subscribe-input">
-              <input type="email" autoComplete='off' onPaste={(e) => {
-                e.preventDefault()
-                return false;
-              }} placeholder="Email id" value={email} onChange={handleChange} />
-              <button className="footerproceed-btn" onClick={handelSubscribtion}>Proceed</button>
-              {!isValid && <p style={{ color: 'red', margin: '0px',textAlign:"center",width:"100%" }}>Invalid email address</p>}
-            </div>
-            <div className="footer-social-icons">
-              <a href='https://www.e-consystems.com/'>
-                <img src={econlogo} alt="e-con Logo" style={{ width: "300px" }} /></a>
-            </div>
-            <div className="footer-bottom-text">
-              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2025, all rights reserved.</p>
-            </div>
+        </div>
+        <br />
+        <div className='Footer-divider'></div>
+        <div className="Footer-bottom">
+          <div className="Footer-copyrightText">
+            e-con Systems  © {new Date().getFullYear()}. All rights reserved.
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footerpage;
