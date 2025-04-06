@@ -240,13 +240,14 @@ const NavBar = () => {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
         <NavLink to="/">Home</NavLink>
         <Divider orientation="vertical" flexItem />
-        <NavLink
-          aria-owns={open ? 'products-menu' : undefined}
-          aria-haspopup="true"
-          onMouseOver={handlePopoverOpen}
-        >
-          Products
-        </NavLink>
+      <NavLink
+  {...(open && { 'aria-owns': 'products-menu' })}
+  aria-haspopup="true"
+  onMouseOver={handlePopoverOpen}
+>
+  Products
+</NavLink>
+
         <Divider orientation="vertical" flexItem />
         <NavLink to="/industries">Industries</NavLink>
         <Divider orientation="vertical" flexItem />
