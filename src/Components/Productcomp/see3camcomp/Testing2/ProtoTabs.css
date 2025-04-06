@@ -1,0 +1,112 @@
+.ProtoTabs-container {
+  height: auto;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  border: 1px solid rgb(228, 221, 221);
+  padding: 2em;
+}
+
+.ant-tabs-tab {
+  font-size: 1em; 
+  font-weight: 600; 
+  color:#1d2630 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+  font-size: 1em;
+}
+
+.ProtoTabs-section-title {
+  color: #003873 !important;
+  margin-bottom: 10px;
+  font-size: 1.2em !important;
+}
+
+
+.ProtoTabs-underline {
+  width: 60%;
+  height: 2px;
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(36, 6, 6, 0.2);
+}
+
+.ProtoTabs-related-video-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.ProtoTabs-related-video-text {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ProtoTabs-target-applications {
+  color: #444;
+}
+
+.ProtoTabs-target-applications span {
+  color: #344ea1;
+}
+
+.ProtoTabs-check-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #00aeef;
+}
+
+.ProtoTabs-desktop-view {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ProtoTabs-tabs-section {
+  width: 20%;
+}
+
+.ProtoTabs-content-section {
+  width: 80%;
+  border-right: 1px solid rgb(230, 229, 229);
+  padding: 10px;
+}
+.ProtoTabs-desktop-view {
+  display: flex; 
+  width: 100%;
+  overflow: hidden; 
+}
+
+
+.ProtoTabs-right-section {
+  width: 25%;
+  padding: 12px;
+}
+
+.ProtoTabs-mobile-right-content {
+  padding: 16px;
+}
+.ant-collapse-content.ant-collapse-content-active {
+  background-color: #f1f2f2 !important; 
+}
+.Faq-but{
+  padding: 9px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, #33cc99, #00aaff);
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .ProtoTabs-desktop-view {
+    display: none;
+  }
+  .ProtoTabs-container {
+    padding: 0.5em ;
+  }
+}

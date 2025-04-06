@@ -1,0 +1,173 @@
+.BlogHubPage-Total {
+  width: 100%;
+  background-color: #003873;
+  padding: 2rem;
+}
+
+.BlogHubPage-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  padding: 0.5em;
+  font-weight: 200;
+}
+
+.BlogHubPage-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.BlogHubPage-card {
+  background: #c6c7ca;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.BlogHubdiv1 { grid-column: 1 / span 3; grid-row: 1 / span 6; }
+.BlogHubdiv3 { grid-column: 4 / span 2; grid-row: 1 / span 6; }
+.BlogHubdiv9 { grid-column: 1 / span 2; grid-row: 7 / span 6; }
+.BlogHubdiv10 { grid-column: 3 / span 3; grid-row: 7 / span 6; }
+
+.BlogHubPage-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.BlogHubPage-card-image-container {
+  height: 230px; 
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0; 
+}
+
+.BlogHubPage-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.3s ease;
+}
+
+.BlogHubPage-card:hover .BlogHubPage-card-image {
+  transform: scale(1.05);
+}
+
+.BlogHubPage-card-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.BlogHubPage-card-title {
+  font-size: 1.25rem;
+  color: #003873;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  min-height: 3.5em;
+}
+
+.BlogHubPage-card-text {
+  font-size: 0.95rem;
+  color: #1e2357;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.BlogHubPage-card-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #003873 !important;
+  margin-top: auto; 
+  padding-top: 1rem;
+}
+.BlogHubPage-card-date span{
+  font-weight: 500 !important;
+}
+.BlogHubPage-calendar-icon {
+  font-size: 1.2em;
+  color: blue !important;
+}
+
+.BlogHubPage-card-button {
+  align-self: flex-start;
+  margin-top: 5px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: small;
+}
+
+@media (max-width: 1024px) {
+  .BlogHubPage-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+
+  .BlogHubdiv1,
+  .BlogHubdiv3,
+  .BlogHubdiv9,
+  .BlogHubdiv10 {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+  }
+
+  .BlogHubPage-card-title {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .BlogHubPage-cards {
+    grid-template-columns: 1fr;
+  }
+.BlogHubPage-Total{
+  padding: 1em;
+}
+  .BlogHubPage-title {
+    font-size: 2rem;
+  }
+
+  .BlogHubPage-card-image-container {
+    height: 200px;
+  }
+
+  .BlogHubPage-card {
+    padding: 1.25rem;
+  }
+  .BlogHubPage-card-button {
+    align-self: center !important; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .BlogHubPage-card-image-container {
+    height: 180px;
+  }
+  
+  .BlogHubPage-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .BlogHubPage-card-text {
+    font-size: 0.9rem;
+  }
+}

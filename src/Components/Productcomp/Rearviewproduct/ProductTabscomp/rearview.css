@@ -1,0 +1,253 @@
+.rearview-Total {
+  width: 100%;
+  background-color: #f1f2f2;
+  overflow-x: hidden;
+} 
+
+.rearview-Container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 2em 2em 3em;
+}
+
+.MobileRearview-Total {
+  display: none;
+}
+
+.rearview-LeftSide {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  gap: 25px;
+}
+
+.rearview-RightSide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+}
+
+.rearview-RightTabBox {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  position: relative;
+}
+
+.rearview-LeftHeading {
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.rearview-LeftHeading.active {
+  background-color: #344ea1 !important;
+  color: white !important;
+  border-color: #003873 !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+.rearview-LeftHeading.active::after {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 19px solid #344ea1; 
+  border-right: 0;
+  
+}
+.rearview-LeftHeading.camera {
+  cursor: default; 
+  background-color: #f1f2f2; 
+  color: #344ea1;
+}
+
+.rearview-RightTab {
+  padding: 12px 30px;
+  cursor: pointer;
+  text-align: center;
+  background: #f1f1f1;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  margin-right: 10px;
+  font-weight: 500;
+  color: #666;
+}
+
+.rearview-RightTab.active {
+  background: white;
+  color: #003873;
+  border-color: #344ea1;
+  border-bottom: 1px solid white;
+  z-index: 2;
+  transform: translateY(1px);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.rearview-ContentBox {
+  border-radius: 0 8px 8px 8px;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  background: white;
+  margin-top: -1px;
+}
+
+.rearview-insidetab-container {
+  background-color: white;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rearview-insidetab-image-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  border: 1px solid #344ea1;
+}
+
+.rearview-insidetab-image-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rearview-insidetab-image-wrapper {
+  background-color: #f1f2f2;
+}
+
+.rearview-insidetab-image-wrapper img {
+  width: 100%;
+  height: 90px;
+}
+
+.rearview-insidetab-divider {
+  width: 1px;
+  background-color: #344ea1;
+  height: 100px;
+  margin: 0 0px;
+}
+
+.rearview-insidetab-action-button {
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .rearview-Container {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .rearview-LeftSide,
+  .rearview-RightSide {
+    width: 100%;
+  }
+  .rearview-LeftHeading.active::after {
+display: none;
+  }
+  
+  .rearview-LeftSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .rearview-LeftHeading {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .rearview-RightTabBox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: max-content;
+    margin-top: 2px;
+  }
+
+  .rearview-RightTab {
+    flex: 1;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .rearview-ContentBox {
+    width: 100%;
+    margin-top: 1px;
+  }
+
+  .rearview-insidetab-container {
+    padding: 1px;
+  }
+
+  .rearview-insidetab-image-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .rearview-insidetab-image-wrapper {
+    background-color: white;
+  }
+
+  .rearview-insidetab-image-box {
+    padding: 10px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rearview-insidetab-divider {
+    display: none;
+  }
+
+  .rearview-insidetab-action-button {
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .rearview-ContentBox p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .rearview-ContentBox p:before {
+    content: "- ";
+  }
+}
+
+.rearview-ContentBox p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

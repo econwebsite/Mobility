@@ -1,0 +1,71 @@
+.ProductApplications-container {
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  .ProductApplications-title {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 1.1em;
+    color: #344ea1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ProductApplications-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .ProductApplications-box {
+    flex: 1;
+    max-width: 35%;
+    background-color: #cff5ff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+    .ProductApplications-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  .ProductApplications-box img{
+margin-top: 0px;
+  }
+  
+  .ProductApplications-boxTitle {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 1.2em; 
+    color: #344ea1;
+  }
+  
+  @media (max-width: 768px) {
+    .ProductApplications-boxes {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .ProductApplications-box {
+      max-width: 100%;
+    }
+    .ProductApplications-title {
+      font-size: 1.5em;
+    }
+    
+    .ProductApplications-boxTitle {
+      font-size: 1.2em;
+      padding: 0.5em;
+    }
+    .ProductApplications-title {
+        font-size: 1.5em;
+      }
+  }
+  

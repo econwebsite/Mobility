@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Slick';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.woff') format('woff');
+    font-display: swap;
+}

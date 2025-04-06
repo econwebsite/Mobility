@@ -1,0 +1,268 @@
+.DriverTab-Total {
+  width: 100%;
+  background-color: #f1f2f2;
+  overflow-x: hidden;
+}
+
+.DriverTab-Container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 2em 2em 3em;
+}
+
+.MobileDriverTab-Total {
+  display: none;
+}
+
+.DriverTab-LeftSide {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  gap: 25px;
+}
+
+.DriverTab-RightSide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+}
+
+.DriverTab-RightTabBox {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  position: relative;
+  /* z-index: 1; */
+  /* margin-bottom: -1px; */
+}
+
+.DriverTab-LeftHeading {
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* border: 2px solid transparent; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* .DriverTab-LeftHeading:not(.camera):hover {
+  background-color:#b8f2ff !important; 
+  color: #344ea1 !important; 
+} */
+
+.DriverTab-LeftHeading.active {
+  background-color: #344ea1 !important;
+  color: white !important;
+  border-color: #003873 !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+.DriverTab-LeftHeading.active::after {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 19px solid #344ea1; 
+  border-right: 0;
+  
+}
+.DriverTab-LeftHeading.camera {
+  cursor: default; 
+  background-color: #f1f2f2; 
+  color: #344ea1;
+}
+
+.DriverTab-RightTab {
+  padding: 12px 30px;
+  cursor: pointer;
+  text-align: center;
+  /* border: 1px solid #344ea1; */
+  border-bottom: none;
+  background: #f1f1f1;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  margin-right: 10px;
+  font-weight: 500;
+  color: #666;
+}
+
+.DriverTab-RightTab.active {
+  background: white;
+  color: #003873;
+  border-color: #344ea1;
+  border-bottom: 1px solid white;
+  z-index: 2;
+  transform: translateY(1px);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.DriverTab-ContentBox {
+  /* border: 1px solid #344ea1; */
+  border-radius: 0 8px 8px 8px;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  background: white;
+  margin-top: -1px;
+}
+
+.DriverTab-insidetab-container {
+  background-color: white;
+  /* padding: 20px; */
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.DriverTab-insidetab-image-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  border: 1px solid #344ea1;
+}
+
+.DriverTab-insidetab-image-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DriverTab-insidetab-image-wrapper {
+  background-color: #f1f2f2;
+}
+
+.DriverTab-insidetab-image-wrapper img {
+  width: 100%;
+  height: 90px;
+}
+
+.DriverTab-insidetab-divider {
+  width: 1px;
+  background-color: #344ea1;
+  height: 100px;
+  margin: 0 0px;
+}
+
+.DriverTab-insidetab-action-button {
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  .DriverTab-Container {
+    flex-direction: column;
+    padding: 0.5em;
+  }
+
+  .DriverTab-LeftSide,
+  .DriverTab-RightSide {
+    width: 100%;
+  }
+
+  .DriverTab-LeftSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+.DriverTab-LeftHeading.active::after {
+display: none;
+}
+  .DriverTab-LeftHeading {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .DriverTab-RightTabBox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: max-content;
+    margin-top: 2px;
+  }
+
+  .DriverTab-RightTab {
+    flex: 1;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .DriverTab-ContentBox {
+    width: 100%;
+    margin-top: 1px;
+    padding: 11px;
+  }
+
+  .DriverTab-insidetab-container {
+    padding: 1px;
+  }
+
+  .DriverTab-insidetab-image-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .DriverTab-insidetab-image-wrapper {
+    background-color: white;
+  }
+
+  .DriverTab-insidetab-image-box {
+    padding: 10px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .DriverTab-insidetab-divider {
+    display: none;
+  }
+
+  .DriverTab-insidetab-action-button {
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .DriverTab-ContentBox p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .DriverTab-ContentBox p:before {
+    content: "- ";
+  }
+}
+
+.DriverTab-ContentBox p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+

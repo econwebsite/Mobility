@@ -1,0 +1,123 @@
+.ProductBlogs-Total {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .ProductBlogs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0.2em;
+    color: #344ea1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ProductBlogs-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .ProductBlogs-card {
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    width: 23%; 
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #003873;
+  }
+  
+  .ProductBlogs-card-image {
+    max-width: 100%;
+    height: 200px; 
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+.ProductBlogs-card:hover .ProductBlogs-card-image{
+  transform: scale(1.08);
+  
+}
+  
+  .ProductBlogs-card-title {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    color: #344ea1;
+    margin: 5px 0; 
+    text-align: left;
+  }
+  
+  .ProductBlogs-card-text {
+    margin: 15px 0; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    color: #344ea1;
+    text-align: justify;
+    flex-grow: 1;
+
+  }
+  
+  .Blog-readmore-btn{
+    margin-top: 10px; 
+    font-size: 0.9em;
+    border-radius: 7px;
+    padding: 2px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .ProductBlogs-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ProductBlogs-card {
+      width: 100%;
+      text-align: center;
+      padding: 15px; 
+    }
+  
+    .ProductBlogs-title {
+      font-size: 2em; 
+      padding: 0.3em;
+    }
+  
+    .ProductBlogs-card-image {
+      height: auto; 
+      margin-bottom: 8px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  
+    .ProductBlogs-card-title {
+      line-height: 1.5em;
+      font-size: 1.2em;
+      margin: 7px 0; 
+    }
+  
+    .ProductBlogs-card-text {
+      line-height: 1.5em;
+      font-size: 1em;
+      margin: 7px 0; 
+    }
+  
+    .ProductBlogs-card-button {
+      font-size: medium;
+      padding: 10px 15px;
+      margin-top: 8px; 
+    }
+    .Blog-readmore-btn{
+      margin-top: 15px; 
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.Hubcasecard-Total {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f1f2f2;
+}
+
+.Hubcasecard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Hubcasecard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  border-radius: 10px;
+  padding: 20px;
+  width: 25%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  text-align: left; 
+}
+
+.Hubcasecard-cards a {
+  width: 100%;
+}
+
+.Hubcasecard-image {
+  width: 100%; 
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.Hubcasecard-titleh2 {
+  color: #003873;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  width: 100%; 
+}
+
+.Hubcasecard-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1em;
+  color: #344ea1;
+  margin-bottom: 20px;
+  width: 100%; 
+  text-align: justify;
+}
+
+.Hubcasecard-button1 {
+  padding: 3px;
+  border-radius: 7px;
+  align-self: flex-start; 
+}
+
+@media (max-width: 768px) {
+  .Hubcasecard-Total {
+    padding: 15px; 
+  }
+
+  .Hubcasecard-cards {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .Hubcasecard-card {
+    width: 100%; 
+    margin: 15px 0; 
+    padding: 15px; 
+    gap: 0px;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .Hubcasecard-image {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .Hubcasecard-titleh2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Hubcasecard-text {
+    font-size: 1em; 
+    margin-bottom: 15px;
+  }
+
+  .Hubcasecard-button1 {
+    align-self: center; 
+    margin: 0 auto ;
+  }
+}

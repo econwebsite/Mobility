@@ -1,0 +1,117 @@
+.total-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f2f2;
+    padding: 3em; 
+    font-family: Arial, sans-serif;
+}
+
+.Contact-us {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #344ea1;
+}
+
+.Spam-questions {
+    font-size: 1em; /* Adjusted font size */
+    color: #344ea1;
+    margin-bottom:40px; /* Reduced bottom margin */
+    text-align: center; /* Center aligned */
+    display: block;
+    width: 100%;
+}
+
+.Contact-ted {
+    width: 100%;
+    max-width: 700px; 
+    background-color: #ffffff;
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto;
+    margin-top: 5px; 
+}
+
+.Contacts-btn {
+    padding: 3px;
+    border-radius: 7px; 
+}
+
+.ant-form-item-label > label {
+    display: none; 
+}
+
+.ant-form-item-control-input {
+    background-color: #ffffff;
+}
+
+.ant-btn-primary {
+    background-color: #003873;
+    border-color: #003873;
+}
+
+.ant-btn-primary:hover {
+    background-color: #002751;
+    border-color: #002751;
+}
+/* Placeholder color for all inputs and text areas */
+input::placeholder,
+textarea::placeholder {
+    color: #344ea1;
+    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+}
+
+/* Placeholder color for Ant Design inputs */
+.ant-input::placeholder,
+.ant-input-textarea::placeholder {
+    color: #003873 !important;
+    opacity: 1; 
+}
+/* Targeting the placeholder text of Ant Design Select */
+.ant-select .ant-select-selector .ant-select-selection-placeholder {
+    color: #344ea1; /* Placeholder color */
+}
+
+/* For dropdown items, if needed */
+.ant-select-item-option-content {
+    color: #344ea1; /* Item text color */
+}
+
+/* Additional styling if necessary */
+.ant-select-selector .ant-select-selection-item {
+    color: #344ea1; /* Text color for selected item (which might also affect the placeholder) */
+}
+
+@media (max-width: 768px) {
+    .total-contact {
+        padding: 10px; /* Reduced padding on smaller screens */
+    }
+
+    .Contact-us {
+        font-size: 2rem; /* Adjusted font size */
+    }
+
+    .Contact-ted {
+        padding: 15px; /* Reduced padding */
+        max-width: none; /* Full width on small screens */
+    }
+
+    .Contacts-btn {
+        padding: 2px; /* Adjusted button padding */
+        font-size: 1em; /* Adjusted button font size */
+    }
+}
+
+
+
+@media (min-width: 1600px) {
+    .Contact-ted {
+        width: 100%;
+        max-width: 1000px; 
+    }  
+}
