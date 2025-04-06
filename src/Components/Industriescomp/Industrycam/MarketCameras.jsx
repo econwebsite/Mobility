@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Marketcameras.css';
+import './marketcameras.css';
 
 const Marketcameras = ({ cameras }) => {
   const navigate = useNavigate();
