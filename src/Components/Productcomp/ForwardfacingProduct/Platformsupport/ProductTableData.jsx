@@ -3,18 +3,16 @@ import Table from 'react-bootstrap/Table';
 import "./ProductTableData.css"; 
 import Modelbutton from "../../../ButtonComp/Modelbutton"
 
-function ProductTableData({ tableData, imageSrc,productName ,title }) {
-
+function ProductTableData({ tableData, imageSrc,productName,title,documentname,doctitle }) {
   return (
     <div className="ProductTableData-TotalContBox">
-            <div className='mainContainer'>
-            <h4 className='ProductTable-title'>{title}</h4>
-
+  <div className='mainContainer'>
+  <h4 className='ProductTable-title'>{title}</h4>
   <div className="ProductTableData-ContainerBox">
     <div className="ProductTableData-ImageColumn">
     <div className="ProductTableData-ImageWrapper">
       {imageSrc && <img src={imageSrc} alt="tab" />}
-      <Modelbutton className="ProducTable-button" text="Download Tech Document" productName={productName} backgroundColor="#00aeef" animationColor="#344ea1" type="download" hoverColor="#344ea1"/>
+      <Modelbutton className="ProducTable-button" text="Download Tech Document" backgroundColor="#00aeef" productName="ProductDocument" type="download" title={doctitle}   docName={documentname} animationColor="#344ea1" hoverColor="#344ea1" />
 </div>
     </div>
     <div className="ProductTableData-LeftColumn">

@@ -17,11 +17,11 @@ const DownloadButton = ({ documentName }) => {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${documentName}.pdf`;
+        a.download = `${documentName}`;
         document.body.appendChild(a);
         a.click();
         a.remove();
-        window.URL.revokeObjectURL(url); // Clean up
+        window.URL.revokeObjectURL(url); 
       } else {
         alert(`Download failed: ${response.statusText}`);
      }

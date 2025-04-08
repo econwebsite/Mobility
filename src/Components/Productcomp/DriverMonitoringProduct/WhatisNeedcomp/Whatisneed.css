@@ -1,42 +1,137 @@
-.whatis-grid {
+.whatneed-container {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.whatneed-containerparagraph {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.whatneed-standparagraphtext {
+  color: #003873;
+  text-align: center;
+  padding: 1.2em;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.whatneed-title,
+.whatneed-econ {
+  text-align: center;
+  color: #344ea1;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: Poppins, sans-serif
+}
+
+.whatneed-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  background-color: white;
+  align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+  padding: 1em;
 }
-.alignment-whatisbox p{
-  color: rgb(63, 63, 190) !important;
-  font-weight: 500;
-}
-.whatis-box {
-  width: 20%;
-  background-color: #f1f2f2;
+
+.whatneed-box {
+  width: 195px;
+  height: 190px;
+  background: linear-gradient(145deg, #f5f4f4, #e4e4e4);
+  border-radius: 10px 40px 10px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeZoomIn 0.6s ease forwards;
+  text-align: center;
 }
 
-.whatis-box:hover {
+.whatneed-box:hover {
   transform: scale(1.05);
 }
 
+.alignment-whatneedbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alignment-whatneedbox p{
+color: rgb(40, 9, 174) !important;
+}
+.whatneed-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.alignment-whatneedbox p {
+  font-size: 0.90rem;
+  font-weight: 500;
+  color: #003873;
+  margin: 0;
+}
+
 @media (max-width: 1024px) {
-  .whatis-box {
-    width: 30%;
+  .whatneed-box {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (max-width: 768px) {
-  .whatis-box {
-    width: 45%;
+  .whatneed-container {
+    padding: 1.5rem;
+    background-color: #fff;
   }
+  .whatneed-box {
+    width: 45%;
+    height: auto;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+  .whatneed-standparagraphtext {
+    color: #003873;
+    text-align: justify;
+    padding: 0em;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 2em;
+  }
+  .whatneed-title,
+.whatneed-econ {
+text-align: center;
+  font-size: 1.7em;
+  font-weight: 200;
+}
+.whatneed-grid {
+gap: 20px;
+margin-top: 15px;
+  padding: 0em;
+}
 }
 
 @media (max-width: 600px) {
-  .whatis-box {
+  .whatneed-box {
     width: 90%;
+  }
+}
+
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

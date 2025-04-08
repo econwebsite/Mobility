@@ -7,21 +7,24 @@ import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.
 import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
 import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
 import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
+import nvidia from "../../../../assets/Productpage/drivermonitoring/nividia.jpg"
 
 const DriverTab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM27');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 
   const images = [
-    { id: 1, src: [ambrella], alt: 'platform support' },
-    { id: 2, src: [renasas], alt: 'nvidia' },
+    { id: 1, src: [ambrella], alt: 'ambrella' },
+    { id: 2, src: [renasas], alt: 'renasas' },
     { id: 3, src: [qualcum], alt: "qualcum" },
-    { id: 4, src: [npx], alt: 'ambrella' }
+    { id: 4, src: [npx], alt: 'nxp' },
+    { id: 5, src: [nvidia], alt: 'nvidia' }
+
   ];
  
   const rightTabs = {
     'Supported Cameras': {
-      tabs: ['STURDeCAM27', 'NileCAM29', 'RouteCAM_CU25'],
+      tabs: ['STURDeCAM27', 'NileCAM29'],
       bgColor: 'transparent',
       color: '#344ea1',
       images: [],
@@ -35,11 +38,12 @@ const DriverTab = () => {
             ['In-Built ISP', 'Chroma: RGB-IR'],
             ['NIR Sensitivity: 940 nm / 850 nm ', 'Global Shutter'],
             ['GMSL2 Interface', 'Output Format: UYVY'],
-            ['Form factor: 30mm x 30mm', 'FOV: 75°(H), 62°(V), 88°(D)'],
+            ['Form factor: 42mm x 42mm', 'FOV: 75°(H), 62°(V), 88°(D)'],
             ['IP Rating (Optional)', 'Compliance & Standards :<br>ISO 11452'],
           ],
           title:"STURDeCAM27 - 2MP OV2312 Global Shutter Camera with 15m cable support",
-
+            documentname:"eSTURDeCAM27-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM27"
         },
       },
       bgColor: 'white',
@@ -55,11 +59,12 @@ const DriverTab = () => {
             ['Without ISP', 'Monochrome'],
             ['NIR Sensitivity: 940 nm / 850 nm ', 'Global Shutter'],
             ['GMSL2 Interface', 'Output Format: Y8'],
-            ['Form factor:30mm x 30mm', 'FOV: 57°(H), 44°(V), 70°(D)'],
+            ['Form factor:42mm x 42mm', 'FOV: 57°(H), 44°(V), 70°(D)'],
             ['IP Rating (Optional)', 'Compliance & Standards :<br>ISO 16750'],
           ],
-          title:"STURDeCAM29 - 2MP OV2312 Global Shutter Camera with 15m cable support",
-
+          title:"STURDeCAM29 - 2MP OV2311 Global Shutter Camera with 15m cable support",
+            documentname:"e-con-STURDeCAM29-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM29"
         },
       },
       bgColor: 'white',
@@ -129,7 +134,7 @@ const DriverTab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="DriverTab-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title}/>
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
 
                   <div className="DriverTab-insidetab-container">
                     <div className="DriverTab-insidetab-image-row">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { 
   AppBar,
   Toolbar,
@@ -17,7 +17,7 @@ import {
   Box,
   styled
 } from '@mui/material';
-
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
@@ -63,10 +63,28 @@ const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
   const isDesktop = useMediaQuery('(min-width:1024px)');
+  const closeTimeoutRef = useRef(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
-  const handlePopoverOpen = (event) => setAnchorEl(event.currentTarget);
-  const handlePopoverClose = () => setAnchorEl(null);
+  const handlePopoverOpen = (event) => {
+    clearTimeout(closeTimeoutRef.current);
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setAnchorEl(null);
+    }, 300); // Delay closure by 300ms
+  };
+
+  const handlePopoverEnter = () => {
+    clearTimeout(closeTimeoutRef.current);
+  };
+
+  const handlePopoverLeave = () => {
+    setAnchorEl(null);
+  };
   const open = Boolean(anchorEl);
 
   const SolutionMenu = (
@@ -131,7 +149,7 @@ const NavBar = () => {
 
   const drawerContent = (
     <>
-      <Box sx={{ 
+     <Box sx={{ 
         p: 2, 
         borderBottom: '1px solid white',
         display: 'flex',
@@ -139,14 +157,12 @@ const NavBar = () => {
         alignItems: 'center',
         color: 'white'  
       }}>
-       <Typography variant="h6" sx={{ color: 'white' }}>Menu</Typography>
-       <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 18L18 6M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-</IconButton>
-
-
+        <Typography variant="h6" sx={{ color: 'white' }}>Menu</Typography>
+        <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </IconButton>
       </Box>
       <List sx={{ p: 1 }}>
         <ListItem disablePadding>
@@ -161,18 +177,52 @@ const NavBar = () => {
               primaryTypographyProps={{ style: { color: 'white' } }} 
             />
           </ListItemButton>
+
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton 
-            onClick={(e) => setMobileMenuAnchor(e.currentTarget)}
+            onClick={(e) => setMobileMenuOpen(!mobileMenuOpen)}
             sx={{ '&:hover': { color: '#00aeef' } }}
           >
             <ListItemText 
               primary="Products" 
               primaryTypographyProps={{ style: { color: 'white' } }} 
             />
+            {mobileMenuOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
           </ListItemButton>
         </ListItem>
+        {mobileMenuOpen && (
+         <List sx={{ pl: 2 }}>
+         {[
+           { label: 'Surround View Cameras', path: '/surround-view-camera' },
+           { label: 'Forward Facing Cameras', path: '/forward-facing-camera' },
+           { label: 'Rear View Cameras', path: '/rear-view-camera' },
+           { label: 'In-Cabin Monitoring System', path: '/driver-monitoring-camera' },
+         ].map((item, index) => (
+           <ListItem key={index} disablePadding>
+             <ListItemButton
+               component={Link}
+               to={item.path}
+               onClick={handleDrawerToggle}
+               sx={{
+                 '&:hover .MuiListItemText-primary': { color: '#00aeef' },
+                 pl: 2,
+               }}
+             >
+               <ListItemText
+                 primary={item.label}
+                 primaryTypographyProps={{
+                   sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
+                 }}
+               />
+             </ListItemButton>
+           </ListItem>
+         ))}
+       </List>
+       
+          
+        )}
+
         <ListItem disablePadding>
           <ListItemButton 
             component={Link} 
@@ -294,9 +344,13 @@ const NavBar = () => {
           onClose={handlePopoverClose}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-          PaperProps={{ sx: { border: '1px solid #00aeef' } }}
+          PaperProps={{ 
+            sx: { border: '1px solid #00aeef' },
+            onMouseEnter: handlePopoverEnter,
+            onMouseLeave: handlePopoverLeave
+          }}
           disableRestoreFocus
-          onMouseLeave={handlePopoverClose}
+
         >
           {SolutionMenu}
         </Popover>

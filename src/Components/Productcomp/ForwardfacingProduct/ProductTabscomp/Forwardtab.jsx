@@ -12,7 +12,7 @@ import qualcum from "../../../../assets/Productpage/forwardfacing/qualcom.jpg";
 import ambrella from "../../../../assets/Productpage/forwardfacing/ambarella.jpg";
 
 const Forwardtab = () => {
-  const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
+  const [selectedLeftTab, setSelectedLeftTab] = useState('4MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 
   const images = [
@@ -28,6 +28,41 @@ const Forwardtab = () => {
       bgColor: '#f1f2f2',
       color: '#344ea1',
     },
+    '4MP GMSL2': {
+      tabs: ['STURDeCAM88', 'STURDeCAM84'],
+      content: {
+        'STURDeCAM88': {
+          tableData: [
+            ['OMNIVISION&trade; OX08B40', '8MP @ 30 fps'],
+            ['In-Built ISP', '140dB HDR'],
+            ['GMSL2 Interface', 'Output format:UYVY'],
+            ['Form factor:42 x 42 mm', 'FOV: 55.99° (D), 49.87° (H), 28.97° (V)'],
+            ['IP67', 'Operating Temperature: -40°C to 85°C'],
+            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 13766'],
+          ],
+          title:"STURDeCAM88 - 4K 140dB HDR GMSL2 camera Module",
+           documentname:"e-con-STURDeCAM88-technical-documents.zip",
+         doctitle:"technical documents for STURDeCAM88"
+        },
+        'STURDeCAM84': {
+          tableData: [
+            [' onsemi&reg AR0823AT', '8MP @ 30 fps'],
+            ['Without ISP', '150dB HDR'],
+            ['GMSL2 Interface', 'RAW-12 Output format'],
+            ['Form factor: 20.8 x 20.8 mm ', 'FOV: 140.1° (D) x 121.2°(H) x 67.2° (V)'],
+            ['IP69K', 'Operating Temperature :-40°C to 85°C'],
+            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 16750'],
+          ],
+          title:"STURDeCAM84 - World's Tiniest 8MP Automotive Camera",
+          documentname:"e-con-STURDeCAM84-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM84"
+        },
+      },
+      bgColor: 'white',
+      color: '#344ea1',
+      images: [STURDeCAM84, STURDeCAM88],
+    },
+    
     '3MP GMSL2': {
       tabs: ['STURDeCAM31', 'STRUDeCAM34'],
       content: {
@@ -36,61 +71,31 @@ const Forwardtab = () => {
             ['Sony&reg ISX031', '3MP @ 60 fps'],
             ['In-Built ISP', '120dB HDR'],
             ['GMSL2 Interface', 'Output format: UYVY'],
-            ['Form factor: 25 x 25 mm ', 'Lens (HFOV): 54°/128°'],
+            ['Form factor: 25 x 25 mm ', '54.04°(H), 42.86°(V), 70.17°(D)'],
             ['IP69K', 'Operating Temperature : -40°C to 85°C'],
             ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 11452'],
           ],
           title:"STURDeCAM31 - 3MP Sony® ISX031 120dB HDR Camera for Autonomous Mobility",
-
+         documentname:"e-con-STURDeCAM31-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM31"
         },
         'STRUDeCAM34': {
           tableData: [
             [' onsemi&reg AR0341AT', '3MP @ 30 fps'],
             ['In-Built ISP', '150dB HDR'],
             ['GMSL2 Interface', 'Output format :UYVY'],
-            ['Form factor:25 x 25 mm', 'Lens (HFOV): 60°/120°'],
+            ['Form factor:25 x 25 mm', 'FOV: 64.62° (H), 51.28° (V), 83.5° (D)'],
             ['IP69K', 'Operating Temperature: -40°C to 85°C'],
             ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards :<br>ISO 11450'],
           ],
           title:"STURDeCAM34 - 3MP AR0341AT 140dB HDR Camera Module",
-
+          documentname:"e-con-STURDeCAM34-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM34"
         }
       },
       bgColor: 'white',
       color: '#344ea1',
       images: [STURDeCAM31, STURDeCAM34],
-    },
-    '8MP GMSL2': {
-      tabs: ['STURDeCAM84', 'STURDeCAM88'],
-      content: {
-        'STURDeCAM84': {
-          tableData: [
-            [' onsemi&reg AR0823AT', '8MP @ 30 fps'],
-            ['Without ISP', '150dB HDR'],
-            ['GMSL2 Interface', 'RAW-12 Output format'],
-            ['Form factor: 20.8 x 20.8 mm ', 'Lens (HFOV): 60°/120°'],
-            ['IP69K', 'Operating Temperature :-40°C to 85°C'],
-            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 16750'],
-          ],
-          title:"STURDeCAM84 - World's Tiniest 8MP Automotive Camera",
-
-        },
-        'STURDeCAM88': {
-          tableData: [
-            ['OMNIVISION&trade; OX08B40', '8MP @ 30 fps'],
-            ['In-Built ISP', '140dB HDR'],
-            ['GMSL2 Interface', 'Output format:UYVY'],
-            ['Form factor:42 x 42 mm', 'Lens (HFOV): 60°/120°'],
-            ['IP67', 'Operating Temperature: -40°C to 85°C'],
-            ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 13766'],
-          ],
-          title:"STURDeCAM88 - 4K 140dB HDR GMSL2 camera Module",
-
-        }
-      },
-      bgColor: 'white',
-      color: '#344ea1',
-      images: [STURDeCAM84, STURDeCAM88],
     },
     
 
@@ -157,7 +162,7 @@ const Forwardtab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="ForwardTabs-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} />
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
                   <div className="Forwardinsidetab-container">
                     <div className="Forwardinsidetab-image-row">
                       {images.map((image, index) => (

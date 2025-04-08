@@ -17,8 +17,8 @@ const VedioSection = () => {
       { image: GMSLcamera, title: "Surround View Camera for Industrial & Commercial Trucks", videoUrl: "https://www.youtube.com/embed/2C-kLV1yb8o?autoplay=1" }
     ],
     [
-      { image: GMSLcamera, title: "Cameras for Bird Eye View", videoUrl: "https://www.youtube.com/embed/amoin1rADKY&t?autoplay=1" },
-      { image: deliveryrobot, title: "Cameras for ADAS", videoUrl: "https://www.youtube.com/embed/JDiIqmI9GRU?autoplay=1" },
+      { image: GMSLcamera, title: "USB global shutter camera for DMS", videoUrl: "https://www.youtube.com/embed/bR4bHUT1Kck?autoplay=1" },
+      { image: deliveryrobot, title: "IP69K Camera Water & Dust proof demo ", videoUrl: "https://www.youtube.com/embed/xJtsouqanT0?autoplay=1" },
     ],
     
   ];

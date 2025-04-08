@@ -1,228 +1,137 @@
-.whatis-container {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  overflow-x: hidden;
+.whatneed-container {
+  padding: 2rem;
+  background-color: #fff;
 }
 
-.whatis-containerparagraph {
-  width: 100%;
-  margin: 0 auto;
-  padding: 1em;
-}
-.slick-dots {
-  display: none !important; /* Hide all dots */
+.whatneed-containerparagraph {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.whatis-containerparagraph {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+.whatneed-standparagraphtext {
   color: #003873;
-  font-size: 1em;
+  text-align: center;
+  padding: 1.2em;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.1em;
+  line-height: 2em;
 }
 
-.whatis-title {
+.whatneed-title,
+.whatneed-econ {
   text-align: center;
-  font-size: 2.5em;
-  padding: 0em;
   color: #344ea1;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-.whatis-econ{
-  text-align: center;
   font-size: 2.5rem;
-  padding: 0.5em;
-  color: #344ea1;
-  font-family: "Poppins", sans-serif;
   font-weight: 200;
-  font-style: normal;
-}
-.whatis-standparagraphtext {
-  color: #003873;
- text-align: center;
-    padding: 1.5em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.1em;
-    line-height: 2em;
+  font-family: Poppins, sans-serif
 }
 
-.whatis-grid {
+.whatneed-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0px; 
-  background-color: #f1f2f2;
+  align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+  padding: 1em;
 }
 
-.alignment-whatisbox {
+.whatneed-box {
+  width: 195px;
+  height: 190px;
+  background: linear-gradient(145deg, #f5f4f4, #e4e4e4);
+  border-radius: 10px 40px 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeZoomIn 0.6s ease forwards;
+  text-align: center;
+}
+
+.whatneed-box:hover {
+  transform: scale(1.05);
+}
+
+.alignment-whatneedbox {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  padding: 13px;
-}
-
-.whatis-box {
-  
-  padding: 1em;
-  width: 14%;
-  background-color: #f1f2f2;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease-in-out; 
-}
-.whatis-box1 {
-  padding: 1em;
-  width: 14%;
-  background-color: #f1f2f2;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  transition: transform 0.2s ease-in-out; 
 }
-/* .whatis-box:hover {
-  transform: scale(1.05); 
-} */
-
-.whatis-image {
+.alignment-whatneedbox p{
+color: rgb(40, 9, 174) !important;
+}
+.whatneed-image {
   width: 50px;
   height: 50px;
-  margin-bottom: 20px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
+.alignment-whatneedbox p {
+  font-size: 0.90rem;
+  font-weight: 500;
+  color: #003873;
+  margin: 0;
+}
 
 @media (max-width: 1024px) {
-  .whatis-box {
-      width: 22%; 
+  .whatneed-box {
+    width: 150px;
+    height: 150px;
   }
-  .whatis-box1 {
-    width: 22%; 
-}
-  .whatis-grid {
-    gap: 10px; 
-}
-.whatis-box {
-  width: 30%; 
-  border-right: none;
-}
-.whatis-box1 {
-  width: 30%; 
-  border-right: none;
-}
 }
 
 @media (max-width: 768px) {
-  .whatis-title {
-      font-size: 2rem;
+  .whatneed-container {
+    padding: 1.5rem;
+    background-color: #fff;
   }
-  .whatis-standparagraphtext {
-    padding: 1em;
-    text-align: justify !important;
-  hyphens:auto;
+  .whatneed-box {
+    width: 45%;
+    height: auto;
+    border-radius: 20px;
+    padding: 1rem;
   }
-  .whatis-box {
-      width: 30%; 
-      border-right: none;
-
+  .whatneed-standparagraphtext {
+    color: #003873;
+    text-align: justify;
+    padding: 0em;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 2em;
   }
-  .whatis-box1 {
-    width: 30%; 
-    border-right: none;
-
+  .whatneed-title,
+.whatneed-econ {
+text-align: center;
+  font-size: 1.7em;
+  font-weight: 200;
 }
-  .whatis-grid {
-    gap: 10px; 
-    background-color: white;
+.whatneed-grid {
+gap: 20px;
+margin-top: 15px;
+  padding: 0em;
 }
-  .whatis-image {
-      width: 40px;
-      height: 40px;
-  }
-  
 }
 
-/* Mobile responsiveness */
 @media (max-width: 600px) {
-  .whatis-title {
-      font-size: 1.5rem;
-  }
-
-  .whatis-containerparagraph {
-      font-size: 1em;
-      padding: 1em;
-      text-align: justify;
-  }
-
-  .whatis-standparagraphtext {
-      padding: 1em;
-  }
-
-  .whatis-box {
-      width: 45%; 
-      padding: 1em;
-  }
-  .whatis-box1 {
-    width: 45%; 
-    padding: 1em;
-}
-  .whatis-image {
-      width: 35px;
-      height: 35px;
-  }
-
-  .whatis-grid {
-      gap: 10px; 
-  }
-  .whatis-econ{
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  .custom-arrow-right, .custom-arrow-left {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    background-color: #f1f2f2;
-    padding: 1px;
-    color: black;
-    font-size: medium !important; /* Size of the arrow */
-    cursor: pointer;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease;
-  }
-  .custom-arrow-right {
-    right: 0px !important; /* Adjust this value based on your layout */
-  }
-  
-  .custom-arrow-left {
-    left: 0px !important; /* Adjust this value based on your layout */
+  .whatneed-box {
+    width: 90%;
   }
 }
 
-.custom-arrow-right, .custom-arrow-left {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  background-color: #f0f2ff;
-  padding: 10px;
-  color: #003873;
-  font-size: 24px; /* Size of the arrow */
-  cursor: pointer;
-  transform: translateY(-50%);
-  transition: background-color 0.3s ease;
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
   }
-  
-  .custom-arrow-right {
-  right: 5px; /* Adjust this value based on your layout */
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .custom-arrow-left {
-  left: 5px; /* Adjust this value based on your layout */
-  }
-  
-  
+}

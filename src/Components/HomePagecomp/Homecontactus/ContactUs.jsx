@@ -109,7 +109,7 @@ const ContactUs = () => {
     }, []);
   const onFinish = (values) => {
     form.resetFields();
-    axios.post(`https://localhost:3111/api/contactusform`, { values })
+    axios.post(`http://localhost:3111/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
         //onClose();
@@ -126,38 +126,38 @@ const ContactUs = () => {
     }
   };
 
-  // const handleEmailValidate = async (e) => {
-  //   const email = e.target.value;
-  //   if (email) {
-  //     axios.post(`https://localhost:3111/api/validateEmail`, { email })
-  //       .then(result => {
-  //         if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
-  //           if (!result.data.free_email) {
-  //             return true
-  //           }
-  //           else {
-  //             form.setFields([
-  //               {
-  //                 name: 'email',
-  //                 errors: ["Please enter valid email ID"],
-  //               },
-  //             ]);
-  //           }
-  //         }
-  //         else {
-  //           form.setFields([
-  //             {
-  //               name: 'email',
-  //               errors: ["Please enter valid email ID"],
-  //             },
-  //           ]);
-  //         }
+  const handleEmailValidate = async (e) => {
+    const email = e.target.value;
+    if (email) {
+      axios.post(`http://localhost:3111/api/validateEmail`, { email })
+        .then(result => {
+          if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+            if (!result.data.free_email) {
+              return true
+            }
+            else {
+              form.setFields([
+                {
+                  name: 'email',
+                  errors: ["Please enter valid email ID"],
+                },
+              ]);
+            }
+          }
+          else {
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
+            ]);
+          }
 
-  //       })
-  //       .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
 
-  //   }
-  // };
+    }
+  };
   useEffect(() => {
     let url = window.location.pathname.replace('/', '');
     if (url === "company/contact-us") {
@@ -287,16 +287,13 @@ const ContactUs = () => {
             <Row justify="center">
               <Col>
                 <Form.Item>
-                  <AnimatedButton
-                    type="primary"
-                    htmlType="submit"
-                    className="Contacts-btn"
-                    text="Submit"
-                    backgroundColor="#344ea1"
-                    animationColor="#69ba2f"
-                    hoverColor="yellow"
-                  />
-                </Form.Item>
+                           <button 
+                 type="submit"
+                 className="submitContacts-btn"
+               >
+                 Submit
+               </button>
+                           </Form.Item>
               </Col>
             </Row>
           </Form>

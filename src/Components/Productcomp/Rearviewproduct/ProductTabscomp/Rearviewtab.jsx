@@ -34,23 +34,26 @@ const Rearview = () => {
                 ['Sony&reg ISX031', '3MP @ 60 fps'],
                 ['In-Built ISP', '120dB HDR'],
                 ['GMSL2 Interface', 'Output format: UYVY'],
-                ['Form factor: 25 x 25 mm ', 'Lens (HFOV): 54°/128°'],
+                ['Form factor: 25 x 25 mm ', '54.04°(H), 42.86°(V), 70.17°(D)'],
                 ['IP69K', 'Operating Temperature : -40°C to 85°C'],
                 ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 11452'],
               ],
               title:"STURDeCAM31 - 3MP Sony® ISX031 120dB HDR Camera for Autonomous Mobility",
-
+               documentname:"e-con-STURDeCAM31-technical-documents.zip",
+          doctitle:"technical documents for STURDeCAM31"
             },
             'STRUDeCAM34': {
               tableData: [
                 [' onsemi&reg AR0341AT', '3MP @ 30 fps'],
                 ['In-Built ISP', '150dB HDR'],
                 ['GMSL2 Interface', 'Output format :UYVY'],
-                ['Form factor:25 x 25 mm', 'Lens (HFOV): 60°/120°'],
+                ['Form factor:25 x 25 mm', 'FOV: 64.62° (H), 51.28° (V), 83.5° (D)'],
                 ['IP69K', 'Operating Temperature: -40°C to 85°C'],
                 ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards :<br>ISO 11450'],
               ],
               title:"STURDeCAM34 - 3MP AR0341AT 140dB HDR Camera Module",
+               documentname:"e-con-STURDeCAM34-technical-documents.zip",
+               doctitle:"technical documents for STURDeCAM34"
 
             }
           },
@@ -66,12 +69,13 @@ const Rearview = () => {
                 [' Sony® STARVIS™  2 IMX662', 'Full HD @ 60 fps'],
                 ['In-Built ISP', '88dB HDR'],
                 ['GigE Interface', ' MJPEG, H.265 &  H.264 <br> Output format'],
-                ['Form factor:46 x 46 mm', 'Lens (HFOV): 120°'],
+                ['Form factor:46 x 46 mm', 'FOV: 151.74°(D), 130°(H), 70.75°(V)'],
                 ['IP67', 'Operating Temperature: -30°C to 70°C'],
                 ['Compliance & Standards: ISO 13766'],
               ],
               title:"RouteCAM_CU22_IP67 - Outdoor Lowlight GigE HDR Camera",
-
+ documentname:"e-con-RouteCAM_CU22_IP67-technical-documents.zip",
+          doctitle:"technical documents for RouteCAM_CU22_IP67"
             },
           },
           bgColor: 'white',
@@ -140,8 +144,8 @@ const Rearview = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="rearview-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} />
-                </div>
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
+                  </div>
               )}
             </div>
           </div>

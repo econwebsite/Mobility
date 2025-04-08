@@ -10,11 +10,16 @@ import Dump from "../../../assets/homepage/dumptruck.jpg";
 import Autonomous from "../../../assets/homepage/autonomousvehical.jpg";
 import Deliverytruck from "../../../assets/homepage/deliverytruck.jpg";
 import Marketescamera from "../Industrycam/MarketCameras"
+// 
+// import agrisurround from "../../../assets/homepage/Industries/agriculture-surroundview.jpg"
+// import agriforward from "../../../assets/homepage/Industries/agriculture-forwardfacing.jpg"
+// import agrirear from "../../../assets/homepage/Industries/agriculture-rearview.jpg"
 
-import forwardfacing from '../../../assets/Productpage/surroundview/360surroundview.jpg';
-import rearview from '../../../assets/Productpage/surroundview/blindspot.jpg';
-import surroundview from '../../../assets/Productpage/forwardfacing/lane-depture.jpg';
+// import forwardfacing from '../../../assets/Productpage/surroundview/360surroundview.jpg';
+// import rearview from '../../../assets/Productpage/surroundview/blindspot.jpg';
+// import surroundview from '../../../assets/Productpage/forwardfacing/lane-depture.jpg';
 
+import agrifull from "../../../assets/homepage/Industries/agrifullimg.png"
 
 const marketData = {
  "Agricultural Vehicles": {
@@ -22,77 +27,78 @@ const marketData = {
     beforeImage: "Agricultural vehicles, including tractors, harvesters, and more, are increasingly looking towards automation to enhance productivity and accuracy in large-scale farms. So, they need vision systems to navigate fields, detect obstacles, and monitor crop health, even in harsh outdoor conditions with high dust exposure or strong sunlight. Equipped with the right imaging solution, it becomes easy to improve critical processes like planting, spraying, and harvesting.",
     image: Agricultural,
     afterImage: "e-con Systems offers high-performance cameras that drive agricultural automation. Our HDR-enabled cameras provide excellent visibility in changing light conditions, as their IP69K-rated designs help withstand dust, moisture, and high-pressure wash-downs. Moreover, multi-camera synchronization supports 360-degree monitoring and creates full environmental awareness for automated farming equipment. Our ISP tuning and lens calibration expertise also plays a key role in supporting data-driven agricultural decision-making.",
-    cameras: [
-      {id: "agriculture-1",img: forwardfacing, title: "forward facing",link:"/forward-facing-camera#forwardTab"  },
-      {id: "agriculture-2",img: surroundview, title: "surround view",link:"/surround-view-camera#surroundTab"  },
-      {id: "agriculture-3",img: rearview, title: "rear view",link:"/rear-view-camera#rearviewTab"  },
-  ]
+    singleimg: agrifull,
+    buttons: [
+      { label: "Surround View", link: "/surround-view-camera#surroundTab" },
+      { label: "Forward Facing", link: "/forward-facing-camera#forwardTab" },
+      { label: "Rear View", link: "/rear-view-camera#rearviewTab" },
+    ]
   },
   "Mining Vehicles": {
     title: "Mining Vehicles",
     beforeImage: "Mining trucks and excavators operate in some of the harshest environments, where visibility may be compromised due to dust, darkness, and extreme temperatures. That’s why reliable vision systems are required for hazard detection, collision avoidance, and operational safety in mines. It is crucial for cameras to endure vibrations, heavy shocks, and unpredictable lighting conditions while delivering high-resolution images.",
     image: Mining,
     afterImage: "e-con Systems develops rugged ADAS cameras perfect for mining applications. They are equipped with features like HDR and LFM to handle extreme lighting variations. Our cameras meet IP69K standards, ensuring protection against dust, water ingress, etc. With high-performance ISP processing, image clarity can be enhanced in low-light conditions, while multi-camera synchronization enables complete situational awareness. We also offer precise lens alignment and robust sealing as part of our manufacturing process to help perform in the toughest mining environments."
-    ,cameras: [
-      {id: "mining-1",img: rearview, title: "rear view" ,link:"/rear-view-camera#rearviewTab" },
-      {id: "mining-2",img: forwardfacing, title: "forward facing",link:""  },
-      {id: "mining-3",img: surroundview, title: "surround view",link:""  },
-  ]
+  //   ,cameras: [
+  //     {id: "mining-1",img: rearview, title: "rear view" ,link:"/rear-view-camera#rearviewTab" },
+  //     {id: "mining-2",img: forwardfacing, title: "forward facing",link:"/driver-monitoring-camera#driverTab"  },
+  //     {id: "mining-3",img: surroundview, title: "surround view",link:""  },
+  // ]
   },
   "Delivery Robots": {
     title: "Delivery Robots",
     beforeImage: "Autonomous delivery robots require vision systems to navigate crowded urban areas, avoid obstacles, and recognize pathways. Since they operate on sidewalks, in warehouses, or across last-mile delivery routes, the robots depend on cameras for object detection, depth perception, and situational awareness. They must function reliably in varying conditions, from bright daylight to dimly lit indoor spaces.",
     image: Delivery,
     afterImage:"e-con Systems provides high-performance imaging solutions for delivery robotics, integrating HDR and low-light optimization for consistent visibility. Our rugged cameras withstand dust, moisture, and temperature fluctuations, making them ideal for indoor and outdoor deployments. With seamless multi-camera synchronization and finely tuned ISP processing, our solutions support smooth autonomous navigation. Our commitment to quality manufacturing also ensures precise lens alignment and durable construction.",
-    cameras: [
-      {id: "Robots-1",img: forwardfacing, title: "forward faing",link:""  },
-      {id: "Robots-2",img: surroundview, title: "surround view",link:""  },
-      {id: "Robots-3",img: rearview, title: "rear view" ,link:"/rear-view-camera#rearviewTab" },
-  ]
+  //   cameras: [
+  //     {id: "Robots-1",img: forwardfacing, title: "forward faing",link:""  },
+  //     {id: "Robots-2",img: surroundview, title: "surround view",link:""  },
+  //     {id: "Robots-3",img: rearview, title: "rear view" ,link:"/rear-view-camera#rearviewTab" },
+  // ]
   },
   "Construction Vehicles": {
     title: "Construction Vehicles",
     beforeImage: "Construction equipment like excavators or bulldozers operate in dynamic, high-risk environments where visibility is hindered by dust, debris, and extreme weather. These vehicles are integrated with imaging solutions to assist operators in maneuvering through confined spaces, detecting obstacles, and ensuring worksite safety. The reality is that clear vision is a critical need for reducing accidents, improving efficiency, and enabling semi-autonomous or remote-controlled operations.",
     image: Construction,
     afterImage:"e-con Systems delivers rugged ADAS cameras that withstand the harsh conditions of construction sites. Our imaging solutions feature HDR and LFM capabilities for superior image clarity in bright sunlight or low-light conditions. With IP69K-rated durability, our cameras resist dust, water, and mechanical vibrations, ensuring uninterrupted performance. Our expertise in multi-camera synchronization and precise lens alignment also supports full situational awareness, making construction vehicles safer.",
-    cameras: [
-      {id: "Construction-1",img: rearview, title: "rearview" ,link:"/rear-view-camera#rearviewTab" },
-      {id: "Construction-2",img: forwardfacing, title: "forward facing",link:""  },
-      {id: "Construction-3",img: surroundview, title: "surround view",link:""  },
-  ]
+  //   cameras: [
+  //     {id: "Construction-1",img: rearview, title: "rearview" ,link:"/rear-view-camera#rearviewTab" },
+  //     {id: "Construction-2",img: forwardfacing, title: "forward facing",link:""  },
+  //     {id: "Construction-3",img: surroundview, title: "surround view",link:""  },
+  // ]
   },
   "Dump Truck": {
     title: "Dump Truck",
     beforeImage: "Dump trucks operate in rugged off-road conditions, hauling heavy loads across construction sites, mines, and industrial zones. They leverage cutting-edge vision systems to help reverse, detect obstacles, and navigate uneven terrain safely. Limited visibility due to dust, debris, and poor lighting increases the risk of collisions and operational delays. So, reliable camera systems are the backbone for the safety and performance of these trucks.",
     image: Dump,
     afterImage:"e-con Systems offers durable imaging solutions for dump trucks, featuring HDR for improved visibility and LFM to mitigate flickering under artificial lights. Our IP69K-rated cameras withstand vibrations, moisture, and temperature fluctuations. With easy multi-camera synchronization, it becomes easy for operators to get 360-degree coverage for managing blind spots. With ISP tuning and precise lens alignment, our cameras deliver the clarity needed for safe dump truck operations.",
-    cameras: [
-      {id: "Dump-1",img: surroundview, title: "surround view",link:""  },
-      {id: "Dump-2",img: forwardfacing, title: "forward facing" ,link:"" },
-      {id: "Dump-3",img: rearview, title: "rearview",link:"/rear-view-camera#rearviewTab"  },
-  ]
+  //   cameras: [
+  //     {id: "Dump-1",img: surroundview, title: "surround view",link:""  },
+  //     {id: "Dump-2",img: forwardfacing, title: "forward facing" ,link:"" },
+  //     {id: "Dump-3",img: rearview, title: "rearview",link:"/rear-view-camera#rearviewTab"  },
+  // ]
   },
    "Autonomous Vehicles": {
     title: "Autonomous Vehicles",
     beforeImage: "Autonomous vehicles depend on continuous, real-time data from vision systems to make safe and smart driving decisions. These vehicles must detect pedestrians, recognize traffic signs, and adapt to varying lighting conditions in urban environments, highways, etc. Hence, they need to deal with environmental factors such as glare and extreme weather while ensuring precise perception and obstacle detection.",
     image: Autonomous,
     afterImage:"e-con Systems provides ADAS cameras that cater to the rigorous demands of autonomous navigation. Our solutions feature HDR, LFM capabilities, and seamless multi-camera synchronization, ensuring seamless imaging in all conditions. With rugged designs that meet IP69K standards, our cameras deliver exceptional performance despite exposure to dust, water, and temperature extremes. Our manufacturing processes, including precise lens alignment and ISP tuning, help optimize image quality in real-world autonomous driving scenarios."
-    ,cameras: [
-      {id: "Autonomous-1",img: surroundview, title: "surround view",link:""  },
-      {id: "Autonomous-2",img: rearview, title: "rearview",link:""  },
-      {id: "Autonomous-3",img: forwardfacing, title: "forward facing",link:""  },
-  ]
+  //   ,cameras: [
+  //     {id: "Autonomous-1",img: surroundview, title: "surround view",link:""  },
+  //     {id: "Autonomous-2",img: rearview, title: "rearview",link:""  },
+  //     {id: "Autonomous-3",img: forwardfacing, title: "forward facing",link:""  },
+  // ]
   },
    "Delivery Truck": {
     title: "Delivery Truck",
     beforeImage: "Precision imaging solutions for smart farming and automated agricultural vehicles. Monitor crops, track soil conditions, and automate farming equipment.",
     image: Deliverytruck,
     afterImage:"",
-    cameras: [
-      {id: "Delivery-1",img: rearview, title: "rear view",link:"" },
-      {id: "Delivery-2",img: forwardfacing, title: "forward facing",link:""  },
-      {id: "Delivery-3",img: surroundview, title: "surround view" ,link:"" },
-  ]
+  //   cameras: [
+  //     {id: "Delivery-1",img: rearview, title: "rear view",link:"" },
+  //     {id: "Delivery-2",img: forwardfacing, title: "forward facing",link:""  },
+  //     {id: "Delivery-3",img: surroundview, title: "surround view" ,link:"" },
+  // ]
   }, 
   
 };
@@ -160,7 +166,10 @@ const MarketWe = () => {
       />
     </div> */}
     <br></br>
-    <Marketescamera cameras={marketData[selectedMarket]?.cameras || []} />
+    <Marketescamera
+  singleimg={marketData[selectedMarket]?.singleimg}
+  buttons={marketData[selectedMarket]?.buttons || []}
+/>
 
     <br></br>
 
