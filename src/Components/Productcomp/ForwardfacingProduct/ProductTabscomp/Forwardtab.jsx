@@ -6,20 +6,24 @@ import STURDeCAM84 from "../../../../assets/Productpage/forwardfacing/studycam84
 import Modelbutton from "../../../ButtonComp/Modelbutton";
 import STURDeCAM31 from "../../../../assets/Productpage/forwardfacing/studycam31.jpg"
 import STURDeCAM34 from "../../../../assets/Productpage/forwardfacing/studycam34.jpg"
-import platform from "../../../../assets/Productpage/forwardfacing/Platformsupport.jpg";
-import nvidia from "../../../../assets/Productpage/forwardfacing/nividia.jpg";
-import qualcum from "../../../../assets/Productpage/forwardfacing/qualcom.jpg";
-import ambrella from "../../../../assets/Productpage/forwardfacing/ambarella.jpg";
+
+import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
+import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
+import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
+import renesas from "../../../../assets/Productpage/platformsupport/renesas.jpg"
+import texas from "../../../../assets/Productpage/platformsupport/texas.jpg"
 
 const Forwardtab = () => {
-  const [selectedLeftTab, setSelectedLeftTab] = useState('4MP GMSL2');
+  const [selectedLeftTab, setSelectedLeftTab] = useState('4K GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
     { id: 2, src: [nvidia], alt: 'nvidia' },
-    { id: 3, src: [ambrella], alt: "qualcum" },
-    { id: 4, src: [qualcum], alt: 'ambrella' }
+    { id: 3, src: [npx], alt: "npx" },
+    { id: 4, src: [renesas], alt: 'renasas' },
+    { id: 5, src: [texas], alt: 'texas' }
+
   ];
   const rightTabs = {   
  'Supported Cameras': {
@@ -28,7 +32,7 @@ const Forwardtab = () => {
       bgColor: '#f1f2f2',
       color: '#344ea1',
     },
-    '4MP GMSL2': {
+    '4K GMSL2': {
       tabs: ['STURDeCAM88', 'STURDeCAM84'],
       content: {
         'STURDeCAM88': {
@@ -60,7 +64,7 @@ const Forwardtab = () => {
       },
       bgColor: 'white',
       color: '#344ea1',
-      images: [STURDeCAM84, STURDeCAM88],
+      images: [STURDeCAM88, STURDeCAM84],
     },
     
     '3MP GMSL2': {

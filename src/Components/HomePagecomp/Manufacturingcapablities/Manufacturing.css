@@ -62,9 +62,11 @@
 .manufacturing-tab-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; 
   gap: 30px;
-  justify-content: center;
   width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.6s ease-in-out forwards;
@@ -82,7 +84,7 @@
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  width: calc(33.33% - 20px);
+  width: calc(25% - 30px); 
   max-width: 250px;
   min-height: 250px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);

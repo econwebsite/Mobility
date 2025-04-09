@@ -17,7 +17,6 @@ import DrivermonBlog from "./Components/FutureBlog/DrivermonBlog"
 import ForwardBlog from "./Components/FutureBlog/ForwardBlog"
 import SurroundBlog from "./Components/FutureBlog/SurroundBlog"
 import NotFoundPage from "./Components/Notfoundpage";
-import ProductPage from "./Components/Productcomp/see3camcomp/Testing1/ProductPage"
 import TotalIndustries from './Components/Industriescomp/TotalIndustries';
 
 const App = () => {
@@ -37,12 +36,11 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/blog" element={<BlogHubpage/>} />
         {/* <Route path="/CasestudyHubpage" element={<Casehubpage/>} /> */}
-        <Route path="/why-hdr-lfm-matter-forward-facing-cameras-adas" element={<HdrLedBlog/>} />
-        <Route path="/how-driver-monitoring-cameras-improve-safety-features" element={<DrivermonBlog/>} />
-        <Route path="/how-forward-facing-camera-works-in-adas" element={<ForwardBlog/>} />
-        <Route path="/how-surround-view-cameras-improve-driving-parking-safety" element={<SurroundBlog/>} />
+        <Route path="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas" element={<HdrLedBlog/>} />
+        <Route path="/blog/how-driver-monitoring-cameras-improve-safety-features" element={<DrivermonBlog/>} />
+        <Route path="/blog/how-forward-facing-camera-works-in-adas" element={<ForwardBlog/>} />
+        <Route path="/blog/how-surround-view-cameras-improve-driving-parking-safety" element={<SurroundBlog/>} />
 
-        <Route path="/ProductPage" element={<ProductPage/>} />
         <Route path="/industries" element={<TotalIndustries/>} />
         <Route path="/industries/:marketName?" element={<TotalIndustries />} />        
         <Route path="*" element={<NotFoundPage />} />

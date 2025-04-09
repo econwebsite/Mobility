@@ -4,20 +4,24 @@ import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM34 from "../../../../assets/Productpage/rearview/studycam34.jpg";
 import STURDeCAM31 from "../../../../assets/Productpage/rearview/studycam31.jpg";
 import routecam22 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
-import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
-import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
-import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
-import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
+
+import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
+import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
+import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
+import renesas from "../../../../assets/Productpage/platformsupport/renesas.jpg"
+import texas from "../../../../assets/Productpage/platformsupport/texas.jpg"
 
 const Rearview = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 
   const images = [
-    { id: 1, src: [ambrella], alt: 'platform support' },
-    { id: 2, src: [renasas], alt: 'nvidia' },
-    { id: 3, src: [qualcum], alt: "qualcum" },
-    { id: 4, src: [npx], alt: 'ambrella' }
+    { id: 1, src: [platform], alt: 'platform support' },
+    { id: 2, src: [nvidia], alt: 'nvidia' },
+    { id: 3, src: [npx], alt: "npx" },
+    { id: 4, src: [renesas], alt: 'renasas' },
+    { id: 5, src: [texas], alt: 'texas' }
+    
   ];
  
   const rightTabs = {
@@ -145,6 +149,22 @@ const Rearview = () => {
               {selectedRightTab && currentContent && (
                 <div className="rearview-ContentBox">
                   <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
+ <div className="Productinsidetab-container">
+                    <div className="Productinsidetab-image-row">
+                      {images.map((image, index) => (
+                        <React.Fragment key={image.id}>
+                          <div className="Productinsidetab-image-box">
+                            <div className="Productinsidetab-image-wrapper">
+                              <img src={image.src} alt={image.alt} />
+                            </div>
+                          </div>
+                          {index < images.length - 1 && <div className="Productinsidetab-divider"></div>}
+                        </React.Fragment>
+                      ))}
+                      {/* Divider and Button at the end of the row */}
+                      <div className="Productinsidetab-divider"></div>
+                    </div>
+                  </div>
                   </div>
               )}
             </div>

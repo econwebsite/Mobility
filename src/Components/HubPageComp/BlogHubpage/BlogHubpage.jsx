@@ -18,13 +18,13 @@ const BlogHubpage = () => {
         <div className="BlogHubPage-card BlogHubdiv1">
           <div className="BlogHubPage-card-content">
             <div className="BlogHubPage-card-image-container">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/how-forward-facing-camera-works-in-adas">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/blog/how-forward-facing-camera-works-in-adas">
                 <img src={forwardfacing} alt="Forward-facing camera" className="BlogHubPage-card-image" />
               </Link>
               
             </div>
             <div className="BlogHubPage-card-text-content">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/how-forward-facing-camera-works-in-adas">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/blog/how-forward-facing-camera-works-in-adas">
                 <h2 className="BlogHubPage-card-title">How Does a Forward-Facing Camera Work, and What Are Its Use Cases in ADAS</h2>
               </Link>
               
@@ -39,7 +39,7 @@ const BlogHubpage = () => {
            
 
               
-              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/how-forward-facing-camera-works-in-adas" />
+              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-forward-facing-camera-works-in-adas" />
             </div>
           </div>
         </div>
@@ -48,12 +48,12 @@ const BlogHubpage = () => {
         <div className="BlogHubPage-card BlogHubdiv3">
           <div className="BlogHubPage-card-content">
             <div className="BlogHubPage-card-image-container">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/why-hdr-lfm-matter-forward-facing-cameras-adas">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas">
                 <img src={hdrblog} alt="HDR camera" className="BlogHubPage-card-image" />
               </Link>
             </div>
             <div className="BlogHubPage-card-text-content">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/why-hdr-lfm-matter-forward-facing-cameras-adas">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas">
                 <h2 className="BlogHubPage-card-title">Why HDR and LED Flicker Mitigation Are Game-Changers for Forward-Facing Cameras in ADAS</h2>
               </Link>
               <p className="BlogHubPage-card-text">
@@ -63,7 +63,7 @@ const BlogHubpage = () => {
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
   <span>March 31, 2025</span>
 </div></p>
-              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/why-hdr-lfm-matter-forward-facing-cameras-adas" />
+              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas" />
             </div>
           </div>
         </div>
@@ -72,12 +72,12 @@ const BlogHubpage = () => {
         <div className="BlogHubPage-card BlogHubdiv9">
           <div className="BlogHubPage-card-content">
             <div className="BlogHubPage-card-image-container">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/how-driver-monitoring-cameras-improve-safety-features">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features">
                 <img src={drivermonitoring} alt="Driver monitoring" className="BlogHubPage-card-image" />
               </Link>
             </div>
             <div className="BlogHubPage-card-text-content">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/how-driver-monitoring-cameras-improve-safety-features">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features">
                 <h2 className="BlogHubPage-card-title">How driver monitoring cameras improve driving safety and their key features</h2>
               </Link>
               <p className="BlogHubPage-card-text">
@@ -87,7 +87,7 @@ const BlogHubpage = () => {
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
   <span>April 06, 2025</span>
 </div> </p>
-              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/how-driver-monitoring-cameras-improve-safety-features" />
+              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features" />
             </div>
           </div>
         </div>
@@ -96,12 +96,12 @@ const BlogHubpage = () => {
         <div className="BlogHubPage-card BlogHubdiv10">
           <div className="BlogHubPage-card-content">
             <div className="BlogHubPage-card-image-container">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/how-surround-view-cameras-improve-driving-parking-safety">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-IMGLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety">
                 <img src={surroundview} alt="Surround view camera" className="BlogHubPage-card-image" />
               </Link>
             </div>
             <div className="BlogHubPage-card-text-content">
-              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/how-surround-view-cameras-improve-driving-parking-safety">
+              <Link style={{textDecoration:"none"}} className="BlogHubPage-cardTitleLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety">
                 <h2 className="BlogHubPage-card-title">How do Surround View cameras improve driving and parking safety</h2>
               </Link>
               <p className="BlogHubPage-card-text">
@@ -111,7 +111,7 @@ const BlogHubpage = () => {
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
   <span>April 11, 2025</span>
 </div> </p>
-              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/how-surround-view-cameras-improve-driving-parking-safety" />
+              <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-surround-view-cameras-improve-driving-parking-safety" />
             </div>
           </div>
         </div>

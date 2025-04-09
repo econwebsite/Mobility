@@ -8,10 +8,10 @@ import STURDeCAM84 from "../../../../assets/Productpage/surroundview/studycam84.
 import STURDeCAM88 from "../../../../assets/Productpage/surroundview/studycam88.png"
 import routecam22 from "../../../../assets/Productpage/surroundview/routeecamcu22.jpg"
 
-import platform from "../../../../assets/Productpage/surroundview/Platformsupport.jpg";
-import nvidia from "../../../../assets/Productpage/surroundview/nividia.jpg";
-import npx from "../../../../assets/Productpage/surroundview/npx.jpg";
-import renesas from "../../../../assets/Productpage/surroundview/renesas.jpg"
+import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
+import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
+import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
+import renesas from "../../../../assets/Productpage/platformsupport/renesas.jpg"
 
 const Producttab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');

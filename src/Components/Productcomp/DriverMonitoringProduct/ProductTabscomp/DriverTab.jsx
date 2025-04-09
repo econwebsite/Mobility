@@ -3,11 +3,12 @@ import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.png";
 import studycam29 from "../../../../assets/Productpage/drivermonitoring/studycam29.png";
-import ambrella from "../../../../assets/Productpage/drivermonitoring/ambarella.jpg";
-import renasas from '../../../../assets/Productpage/drivermonitoring/renesas.jpg';
-import qualcum from "../../../../assets/Productpage/drivermonitoring/qualcom.jpg";
-import npx from "../../../../assets/Productpage/drivermonitoring/npx.jpg";
-import nvidia from "../../../../assets/Productpage/drivermonitoring/nividia.jpg"
+
+import ambrella from "../../../../assets/Productpage/platformsupport/ambarella.jpg";
+import renasas from '../../../../assets/Productpage/platformsupport/renesas.jpg';
+import qualcum from "../../../../assets/Productpage/platformsupport/qualcom.jpg";
+import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
+import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg"
 
 const DriverTab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM27');

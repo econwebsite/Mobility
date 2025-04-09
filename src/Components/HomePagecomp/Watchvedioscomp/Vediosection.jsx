@@ -4,6 +4,9 @@ import './vediosec.css';
 import surroundview from "../../../assets/homepage/surroundview-thump.jpg";
 import deliveryrobot from "../../../assets/homepage/delivery-robot-thump.jpg";
 import GMSLcamera from "../../../assets/homepage/forward-facing-thump.jpg";
+import usb from "../../../assets/homepage/usb-global-thump.jpg"
+import ip67 from "../../../assets/homepage/ip67-thump.jpg"
+
 import FsLightbox from 'fslightbox-react';
 
 const VedioSection = () => {
@@ -17,8 +20,8 @@ const VedioSection = () => {
       { image: GMSLcamera, title: "Surround View Camera for Industrial & Commercial Trucks", videoUrl: "https://www.youtube.com/embed/2C-kLV1yb8o?autoplay=1" }
     ],
     [
-      { image: GMSLcamera, title: "USB global shutter camera for DMS", videoUrl: "https://www.youtube.com/embed/bR4bHUT1Kck?autoplay=1" },
-      { image: deliveryrobot, title: "IP69K Camera Water & Dust proof demo ", videoUrl: "https://www.youtube.com/embed/xJtsouqanT0?autoplay=1" },
+      { image: usb, title: "USB global shutter camera for DMS", videoUrl: "https://www.youtube.com/embed/bR4bHUT1Kck?autoplay=1" },
+      { image: ip67, title: "IP69K Camera Water & Dust proof demo ", videoUrl: "https://www.youtube.com/embed/xJtsouqanT0?autoplay=1" },
     ],
     
   ];
