@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import { 
   AppBar,
   Toolbar,
@@ -75,12 +75,18 @@ const NavBar = () => {
   const handlePopoverClose = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setAnchorEl(null);
-    }, 300); // Delay closure by 300ms
+    }, 300); 
   };
 
   const handlePopoverEnter = () => {
     clearTimeout(closeTimeoutRef.current);
+    if (!open) setAnchorEl(anchorEl);
   };
+  useEffect(() => {
+    if (!mobileOpen) {
+      setMobileMenuOpen(false);
+    }
+  }, [mobileOpen]);
 
   const handlePopoverLeave = () => {
     setAnchorEl(null);
