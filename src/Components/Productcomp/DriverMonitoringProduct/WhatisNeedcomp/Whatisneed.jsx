@@ -80,7 +80,7 @@ const Whatisneed = () => {
 </div>
 
         <br />
-        <h1 className="whatneed-econ">e-con Cameras for In-cabin monitoring system</h1>
+        <h1 className="whatneed-econ">e-con's Cameras for In-cabin monitoring system</h1>
       </div>
     </div>
   );

@@ -21,21 +21,21 @@ const tabData = {
   Design: [
     { src: isptuning, title: "ISP Tuning" },
     { src: robustdesign, title: "Mechanical Design" },
-    { src: randomvibration, title: "Random vibration Test" },
-    { src: thermalshock, title: "Thermal shock Test" },
-    { src: transittest, title: "Transit test (Inhouse lab) " },
-    { src: endurancetest, title: "Endurance test" },
+    { src: randomvibration, title: "Random Vibration Test" },
+    { src: thermalshock, title: "Thermal Shock Test" },
+    { src: transittest, title: "Transit Test (Inhouse Lab) " },
+    { src: endurancetest, title: "Endurance Test" },
   ],
  
   Manufacturing: [
     { src: activealignemt, title: "Active Alignment Machines" },
-    { src: ezeefocus, title: "Ezee focus" },
-    { src: glueing, title: "Gluing machine" },
+    { src: ezeefocus, title: "Ezee Focus" },
+    { src: glueing, title: "Gluing Machine" },
     { src: deepfrezer, title: "Deep Freezer" },
     { src: ip67, title: "IP67 Leak Tester" },
     { src: cleanroom, title: "Clean Room" },
     { src: pcb, title: "PCB Assembly" },
-    { src: assemly, title: "Assembly line" },
+    { src: assemly, title: "Assembly Line" },
    
   ],
 };

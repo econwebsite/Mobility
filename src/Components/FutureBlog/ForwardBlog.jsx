@@ -3,12 +3,17 @@ import "./Blogcommon.css"
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import drivermonitoring from "../../assets/hubpage/Blogpage/drivermonitoring-blog.jpg";
 import hdrblog from "../../assets/hubpage/Blogpage/hdr-led-blog.jpg";
 import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
 const ForwardBlog = () => {
     return (
         <div>
+              <Helmet>
+      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
+      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      </Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
@@ -81,30 +86,30 @@ const ForwardBlog = () => {
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
                                 <div className="CardBlogs">
-                                    <Link className="cardImgLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" style={{ textDecoration: "none" }}>
                                         <img src={drivermonitoring} alt="Camera Model 2" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features" style={{ textDecoration: "none" }}>
+                                    <Link className="cardTitleLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" style={{ textDecoration: "none" }}>
                                         <h2>How driver monitoring cameras improve driving safety and their key features</h2></Link>
                                     <p>Driver monitoring systems improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features/"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs" style={{ cursor: "pointer" }}>
-                                    <Link className="cardImgLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" style={{ textDecoration: "none" }}>
                                         <img src={hdrblog} alt="Camera Model 1" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas" style={{ textDecoration: "none" }}>
+                                    <Link className="cardTitleLink" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" style={{ textDecoration: "none" }}>
                                         <h2>Why HDR and LED Flicker Mitigation Are Game-Changers for Forward-Facing Cameras in ADAS</h2></Link>
                                     <p>Advanced driver-assistance systems depend on HDR and LED flicker mitigation features. Learn about the crucial role of forward facing cameras in enhancing ADAS safety.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to='/blog/why-hdr-lfm-matter-forward-facing-cameras-adas' />
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to='/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/' />
                                 </div>
                             
                                 <div className="CardBlogs">
-                                    <Link className="cardImgLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety" style={{ textDecoration: "none" }}>
+                                    <Link className="cardImgLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety/" style={{ textDecoration: "none" }}>
                                         <img src={surroundview} alt="Camera Model 3" className="Cardrelated-image" /></Link>
-                                    <Link className="cardTitleLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety" style={{ textDecoration: "none" }}>
+                                    <Link className="cardTitleLink" to="/blog/how-surround-view-cameras-improve-driving-parking-safety/" style={{ textDecoration: "none" }}>
                                         <h2>How do Surround View cameras improve driving and parking safety</h2>
                                     </Link>
                                     <p>Surround-view systems provide 360-degree visibility to eliminate blind spots and improve safety. Get to know how cameras help them reduce the risk of collisions.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-surround-view-cameras-improve-driving-parking-safety"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-surround-view-cameras-improve-driving-parking-safety/"></AnimatedButton>
                                 </div>
                             </div>
                         </div>

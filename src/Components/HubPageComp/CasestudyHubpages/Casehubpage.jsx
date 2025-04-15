@@ -1,12 +1,18 @@
 import React from 'react';
-import './Casehubpage.css'; // Assuming the CSS file is named `Casehubpage.css`
+import './Casehubpage.css'; 
 import AnimatedButton from "../../ButtonComp/AnimationButton";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 import Hubcasecard from './Hubcasecard';
 
 const Casehubpage = () => {
   return (
     <div className='casehubpage-hubtot-blog'>
+        <Helmet>
+      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
+      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      </Helmet>
       <h1>CASE STUDIES</h1>
       <div className='mainContainer'>
       <div className="casehubpage-hubpageblog">

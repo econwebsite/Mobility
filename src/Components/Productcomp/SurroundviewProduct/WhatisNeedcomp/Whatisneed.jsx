@@ -85,7 +85,7 @@ const Whatisneed = () => {
 
 
         <br />
-        <h1 className="whatneed-econ">e-con Cameras for Surround View</h1>
+        <h1 className="whatneed-econ">e-con's Cameras for Surround View</h1>
       </div>
     </div>
   );

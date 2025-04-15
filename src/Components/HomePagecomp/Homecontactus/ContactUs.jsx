@@ -1,8 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Form, Input, Select, Row, Col, message } from 'antd'; // Make sure Select is imported
+import { Form, Input, Select, Row, Col, message } from 'antd'; 
 import axios from 'axios';
-import './Contactus.css'; // Import custom CSS for styling
-import AnimatedButton from "../../ButtonComp/AnimationButton"
+import './Contactus.css';
 import countryList from 'react-select-country-list';
 import { Helmet } from 'react-helmet-async';
 
@@ -160,7 +159,7 @@ const ContactUs = () => {
   };
   useEffect(() => {
     let url = window.location.pathname.replace('/', '');
-    if (url === "company/contact-us") {
+    if (url === "contact-us") {
       setIsContactPage(true);
     }
   }, []);

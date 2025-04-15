@@ -44,7 +44,7 @@ const Forwardtab = () => {
             ['IP67', 'Operating Temperature: -40°C to 85°C'],
             ['Multi-Camera Sync (Upto 8 cameras)', 'Compliance & Standards:<br>ISO 13766'],
           ],
-          title:"STURDeCAM88 - 4K 140dB HDR GMSL2 camera Module",
+          title:"STURDeCAM88 - 4K 140dB HDR GMSL2 Camera Module",
            documentname:"e-con-STURDeCAM88-technical-documents.zip",
          doctitle:"technical documents for STURDeCAM88"
         },

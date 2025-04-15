@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import NavBar from "./Components/NavBarcomp/NavBar";
 import TotalHomePage from "./Components/HomePagecomp/TotalHomePage";
 import Footerpage from "./Components/FooterComp/Footerpage";
@@ -23,6 +24,8 @@ const App = () => {
   return (
 
           <BrowserRouter>
+                    <HelmetProvider>
+          
               <ScrollToTop /> 
 
     <div className='fixed-container'>
@@ -35,11 +38,10 @@ const App = () => {
         <Route path="/rear-view-camera" element={<Totalrearview/>} />
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/blog" element={<BlogHubpage/>} />
-        {/* <Route path="/CasestudyHubpage" element={<Casehubpage/>} /> */}
-        <Route path="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas" element={<HdrLedBlog/>} />
-        <Route path="/blog/how-driver-monitoring-cameras-improve-safety-features" element={<DrivermonBlog/>} />
-        <Route path="/blog/how-forward-facing-camera-works-in-adas" element={<ForwardBlog/>} />
-        <Route path="/blog/how-surround-view-cameras-improve-driving-parking-safety" element={<SurroundBlog/>} />
+        <Route path="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" element={<HdrLedBlog/>} />
+        <Route path="/blog/how-driver-monitoring-cameras-improve-safety-features/" element={<DrivermonBlog/>} />
+        <Route path="/blog/how-forward-facing-camera-works-in-adas/" element={<ForwardBlog/>} />
+        <Route path="/blog/how-surround-view-cameras-improve-driving-parking-safety/" element={<SurroundBlog/>} />
 
         <Route path="/industries" element={<TotalIndustries/>} />
         <Route path="/industries/:marketName?" element={<TotalIndustries />} />        
@@ -48,6 +50,7 @@ const App = () => {
         <Footerpage/>
 
         </div>
+        </HelmetProvider>
         </BrowserRouter>
 
 

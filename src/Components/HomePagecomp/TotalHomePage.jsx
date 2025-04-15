@@ -10,6 +10,7 @@ import ContactUs from "./Homecontactus/ContactUs";
 import Paragraph from "./Paragraphcomp/Paragraph";
 import IndustriesComp from "./Industriescomp/Industriescomp";
 import OurProducts from "./OurProductscomp/OurProduct";
+import { Helmet } from 'react-helmet-async';
 
 const isMobile = window.innerWidth <= 769;
 
@@ -51,6 +52,10 @@ const Section = ({ children, index }) => {
 const TotalHomePage = () => {
   return (
     <div style={{ padding: "0px", margin: "0px" }}>
+          <Helmet>
+      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
+      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      </Helmet>
       <Section index={0}>
         <Homebanner />
       </Section>

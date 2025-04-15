@@ -16,8 +16,13 @@
   width: auto;
   height:350px;
   border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
+.SingleImage-img:hover {
+  transform: scale(1.10);
+}
 .ButtonRow {
   display: flex;
   justify-content: center;

@@ -16,10 +16,10 @@ const items = [
   { id: 2, title: "Mining Vehicles", img: mining, link:"/industries/mining-vehicles" },
   { id: 3, title: "Delivery Robots", img: deliveryrobot ,link:"/industries/delivery-robots"},
   { id: 4, title: "Construction Vehicles", img: constructiovehical,link:"/industries/construction-vehicles" },
-  { id: 5, title: "Dump Truck", img: dumptruck, link:"/industries/dump-truck" },
+  { id: 5, title: "Dump Trucks", img: dumptruck, link:"/industries/dump-trucks" },
   { id: 6, title: "Autonomous Vehicles", img: autonomousvehical,link:"/industries/autonomous-vehicles" },
-  { id: 7, title: "Delivery Truck", img: deliverytruck,link:"/industries/delivery-truck" },
-  { id: 8, title: "Passenger Vehicles", img: pasanger,link:"" },
+  { id: 7, title: "Delivery Trucks", img: deliverytruck,link:"/industries/delivery-trucks" },
+  { id: 8, title: "Passenger Vehicles", img: pasanger,link:"/industries" },
 ];
 
 function IndustriesComp() {

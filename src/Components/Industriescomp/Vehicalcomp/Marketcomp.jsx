@@ -70,8 +70,8 @@ const marketData = {
       { label: "Rear View", link: "/rear-view-camera#rearviewTab" },
     ]
   },
-  "Dump Truck": {
-    title: "Dump Truck",
+  "Dump Trucks": {
+    title: "Dump Trucks",
     beforeImage: "Dump trucks operate in rugged off-road conditions, hauling heavy loads across construction sites, mines, and industrial zones. They leverage cutting-edge vision systems to help reverse, detect obstacles, and navigate uneven terrain safely. Limited visibility due to dust, debris, and poor lighting increases the risk of collisions and operational delays. So, reliable camera systems are the backbone for the safety and performance of these trucks.",
     image: Dump,
     afterImage:"e-con Systems offers durable imaging solutions for dump trucks, featuring HDR for improved visibility and LFM to mitigate flickering under artificial lights. Our IP69K-rated cameras withstand vibrations, moisture, and temperature fluctuations. With easy multi-camera synchronization, it becomes easy for operators to get 360-degree coverage for managing blind spots. With ISP tuning and precise lens alignment, our cameras deliver the clarity needed for safe dump truck operations.",
@@ -94,11 +94,11 @@ const marketData = {
       { label: "Rear View", link: "/rear-view-camera#rearviewTab" },
     ]
   },
-   "Delivery Truck": {
-    title: "Delivery Truck",
-    beforeImage: "Precision imaging solutions for smart farming and automated agricultural vehicles. Monitor crops, track soil conditions, and automate farming equipment.",
+   "Delivery Trucks": {
+    title: "Delivery Trucks",
+    beforeImage: "Delivery trucks are transforming last-mile logistics by operating with minimal human intervention across highways and urban routes. These vehicles require consistent imaging input to navigate complex environments that include pedestrians, traffic signals, parked vehicles, and variable lighting conditions. Mounted externally or integrated within, these cameras support continuous monitoring for lane-keeping, sign recognition, and obstacle detection.",
     image: Deliverytruck,
-    afterImage:"",
+    afterImage:"e-con Systems’ camera solutions bring HDR, global shutter, and multi-camera synchronization capabilities to support wide-area perception. HDR enables visibility in scenes with strong sunlight and deep shadows. The global shutter feature eliminates motion blur during fast travel, preserving clarity in frame captures even at higher speeds. Our cameras can be flexibly deployed to cover front, side, and rear views, thereby enhancing situational awareness.",
     singleimg: deliverytruckcover,
     buttons: [
       { label: "Surround View", link: "/surround-view-camera#surroundTab" },
