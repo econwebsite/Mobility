@@ -41,9 +41,11 @@
     object-fit: contain;
     border-radius: 4px;
     margin-bottom: 20px;
+    transition: transform 2s ease-in-out;
+    transform: scale(1);
   }
 .ProductBlogs-card:hover .ProductBlogs-card-image{
-  transform: scale(1.08);
+  transform: scale(1.07);
   
 }
   
@@ -97,6 +99,8 @@
       margin-bottom: 8px;
       object-fit: cover;
       margin: 0 auto;
+      transition:none;
+    transform: none;
     }
   
     .ProductBlogs-card-title {
