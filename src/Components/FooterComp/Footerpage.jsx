@@ -14,7 +14,7 @@ const Footerpage = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) return false;
     try {
-      const response = await axios.post('https://localhost:3111/api/validateEmail', { email });
+      const response = await axios.post('http://localhost:3111/api/validateEmail', { email });
       return ['valid', 'catch-all', 'role-basic'].includes(response.data.status) && !response.data.free_email;
     } catch (error) {
       console.error('Email validation error:', error);
@@ -34,7 +34,7 @@ const Footerpage = () => {
       return;
     }
     try {
-      await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
+      await axios.post('http://localhost:3111/api/emailSubscription', { email });
       message.success('Thank you for subscribing!');
       setEmail('');
       setIsValid(true);

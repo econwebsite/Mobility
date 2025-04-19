@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet-async';
 import drivermonitoring from "../../assets/hubpage/Blogpage/drivermonitoring-blog.jpg";
 import hdrblog from "../../assets/hubpage/Blogpage/hdr-led-blog.jpg";
 import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
+import forwardbanner from "../../assets/blogpage/forwardfacing-banner.jpg"
+
 const ForwardBlog = () => {
     return (
         <div>
@@ -28,6 +30,10 @@ const ForwardBlog = () => {
                             <p>By Suresh Madhu, March 22, 2025</p>
 
                             <div className="blogborder-box">
+                            <div class="Blog-coverimg">
+                                    <img src={forwardbanner} alt="Blog Cover Image" />
+                                </div>
+                                <br></br>
                                 <p>Forward-facing cameras are the proverbial eyes of Advanced Driver Assistance Systems (ADAS). They collect real-time visual data from the vehicle's surroundings and monitor the road, contributing to the system's overall situational awareness. </p>
                                 <p>They capture key elements like lanes, vehicles, pedestrians, traffic signs, and obstacles, which the ADAS processes to assist in making real-time decisions. These decisions support various functions, such as lane-keeping, object detection, and collision avoidance. It contributes to the broader goal of autonomous mobility and empowers vehicles to operate with minimal human intervention.</p>
                                 <p>In this blog, you'll learn how forward-facing cameras work in ADAS and their top use cases.</p>

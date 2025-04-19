@@ -12,9 +12,9 @@
   background-color: white;
 }
 .ProductTable-title{
-  color: #3f0b8d;
-  font-weight: 300;
-  font-size: 1.2em;
+  color: #003873;
+  font-weight: 500;
+  font-size: 1.1em;
   padding: 1em 0.5em 1em 0.5em;
 }
 
@@ -73,6 +73,7 @@ table {
 }
 
 
+
 table td{
 border: 1px solid #344ea1;
 }
@@ -105,4 +106,5 @@ border: 1px solid #344ea1;
   .ProductTableData-ContainerBox {
     background-color: white;
   }
+
 }

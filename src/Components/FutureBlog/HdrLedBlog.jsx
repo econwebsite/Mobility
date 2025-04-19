@@ -7,13 +7,15 @@ import { Helmet } from 'react-helmet-async';
 import drivermonitoring from "../../assets/hubpage/Blogpage/drivermonitoring-blog.jpg";
 import forwardfacing from "../../assets/hubpage/Blogpage/forwardfacing-blog.jpg";
 import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
+import hdrbanner from "../../assets/blogpage/hdr-led-banner.jpg"
+
 const HdrLedBlog = () => {
     return (
         <div>
-              <Helmet>
-      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
-      </Helmet>
+            <Helmet>
+                <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
+                <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+            </Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
@@ -29,7 +31,10 @@ const HdrLedBlog = () => {
 
                             <div className="blogborder-box">
 
-
+                                <div class="Blog-coverimg">
+                                    <img src={hdrbanner} alt="Blog Cover Image" />
+                                </div>
+                                <br></br>
                                 <p>In ADAS, forward-facing cameras capture traffic signs, signals, and pedestrians at farther distances using a narrow field of view (FOV). This narrower angle enables the camera to focus on distant objects with greater accuracy, making it ideal for applications that involve monitoring long stretches of road or detecting objects from far away.</p>
                                 <p>The camera's placement inside the windshield supports long-distance visibility, ensuring it captures information even at greater distances. Such a setup is critical for tasks such as reading traffic signs or identifying pedestrians further down the road. That's why High Dynamic Range (HDR) and LED Flicker Mitigation (LFM) are crucial camera features.</p>
                                 <p>In this blog, you'll gain insights into how these two features work in ADAS cameras and why they are becoming increasingly important.</p>

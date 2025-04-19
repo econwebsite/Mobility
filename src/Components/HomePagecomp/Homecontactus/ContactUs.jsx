@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Form, Input, Select, Row, Col, message } from 'antd'; 
+import { Form, Input, Select, Row, Col, message,Spin } from 'antd'; 
 import axios from 'axios';
 import './Contactus.css';
 import countryList from 'react-select-country-list';
@@ -98,6 +98,21 @@ const ContactUs = () => {
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [showStates, setShowStates] = useState(true);
   const [isContactPage, setIsContactPage] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); 
+
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+    borderRadius: 8
+  };
 
 
   const countries = useMemo(() => {
@@ -107,13 +122,19 @@ const ContactUs = () => {
     }));
     }, []);
   const onFinish = (values) => {
-    form.resetFields();
+    setIsLoading(true);
+
     axios.post(`http://localhost:3111/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
-        //onClose();
+    form.resetFields();
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.error(err);
+        message.error('Failed to send message. Please try again.');
+      })
+      .finally(() => setIsLoading(false)); 
+
   };
 
   const handleCountryChange = (value) => {
@@ -174,7 +195,12 @@ const ContactUs = () => {
       <span className='Spam-questions'>Do You Have Any Questions?</span>
 
       <div className="Contact-ted">
-        <div className="mainContainer">
+        <div className="mainContainer" style={{ position: 'relative' }}>
+        {isLoading && (
+    <div style={overlayStyle}>
+      <Spin size="large" />
+    </div>
+  )}
           <Form
             form={form}
             name="contactForm"
@@ -217,7 +243,7 @@ const ContactUs = () => {
                     e.preventDefault()
                     return false;
                   }} 
-                  // onBlur={handleEmailValidate}
+                  onBlur={handleEmailValidate}
                    />
                 </Form.Item>
               </Col>

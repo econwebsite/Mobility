@@ -3,7 +3,7 @@ import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.png";
 import studycam29 from "../../../../assets/Productpage/drivermonitoring/studycam29.png";
-
+import Modelbutton from "../../../ButtonComp/Modelbutton"
 import ambrella from "../../../../assets/Productpage/platformsupport/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/platformsupport/renesas.jpg';
 import qualcum from "../../../../assets/Productpage/platformsupport/qualcom.jpg";
@@ -44,7 +44,7 @@ const DriverTab = () => {
           ],
           title:"STURDeCAM27 - 2MP OV2312 Global Shutter Camera with 15m cable support",
             documentname:"eSTURDeCAM27-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM27"
+          doctitle:"Technical documents for STURDeCAM27"
         },
       },
       bgColor: 'white',
@@ -65,7 +65,7 @@ const DriverTab = () => {
           ],
           title:"STURDeCAM29 - 2MP OV2311 Global Shutter Camera with 15m cable support",
             documentname:"e-con-STURDeCAM29-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM29"
+          doctitle:"Technical documents for STURDeCAM29"
         },
       },
       bgColor: 'white',
@@ -150,12 +150,14 @@ const DriverTab = () => {
                         </React.Fragment>
                       ))}
                       <div className="DriverTab-insidetab-divider"></div>
-                      {/* <div style={{ padding: '10px' }}>
-                    <Modelbutton className="DriverTab-insidetab-action-button" text="Contact Us" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1"/>
-
-                      </div> */}
+                    
                     </div>
                   </div>    
+                  <div className="ProductTabs-total-Button">
+                  <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
+                  <Modelbutton className="ProductTabs-Button" text="Download Tech Document" backgroundColor="#00aeef" productName={currentContent.productName} type="download" title={currentContent.doctitle}   docName={currentContent.docName} animationColor="#344ea1" hoverColor="#344ea1" />
+
+        </div>
                 </div>
               )}
             </div>

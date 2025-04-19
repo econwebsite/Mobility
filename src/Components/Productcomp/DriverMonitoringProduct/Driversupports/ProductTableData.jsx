@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import "./ProductTableData.css"; 
-import Modelbutton from "../../../ButtonComp/Modelbutton"
+// import Modelbutton from "../../../ButtonComp/Modelbutton"
 
 function ProductTableData({ tableData, imageSrc,productName,title,documentname,doctitle }) {
   return (
@@ -12,7 +12,7 @@ function ProductTableData({ tableData, imageSrc,productName,title,documentname,d
     <div className="ProductTableData-ImageColumn">
     <div className="ProductTableData-ImageWrapper">
       {imageSrc && <img src={imageSrc} alt="tab" />}
-      <Modelbutton className="ProducTable-button" text="Download Tech Document" backgroundColor="#00aeef" productName="ProductDocument" type="download" title={doctitle}   docName={documentname} animationColor="#344ea1" hoverColor="#344ea1" />
+      {/* <Modelbutton className="ProducTable-button" text="Download Tech Document" backgroundColor="#00aeef" productName="ProductDocument" type="download" title={doctitle}   docName={documentname} animationColor="#344ea1" hoverColor="#344ea1" /> */}
 </div>
     </div>
     <div className="ProductTableData-LeftColumn">

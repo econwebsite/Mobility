@@ -39,6 +39,7 @@ const NavLink = styled(Link)(({ theme }) => ({
   fontSize: '1.1em',
   margin: theme.spacing(0, 2),
   whiteSpace: 'nowrap',
+  transition: 'color 0.3s ease-in-out',
   '&:hover': {
     color: '#00aeef',
   },
@@ -62,9 +63,11 @@ const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
+  const [anchorElIndustries, setAnchorElIndustries] = useState(null);
   const isDesktop = useMediaQuery('(min-width:1024px)');
   const closeTimeoutRef = useRef(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
   const handlePopoverOpen = (event) => {
@@ -75,9 +78,18 @@ const NavBar = () => {
   const handlePopoverClose = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setAnchorEl(null);
-    }, 300); 
+    }, 100); 
+  };
+  const handleIndustriesPopoverOpen = (event) => {
+    clearTimeout(closeTimeoutRef.current);
+    setAnchorElIndustries(event.currentTarget);
   };
 
+  const handleIndustriesPopoverClose = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setAnchorElIndustries(null);
+    }, 100);
+  };
   const handlePopoverEnter = () => {
     clearTimeout(closeTimeoutRef.current);
     if (!open) setAnchorEl(anchorEl);
@@ -90,8 +102,10 @@ const NavBar = () => {
 
   const handlePopoverLeave = () => {
     setAnchorEl(null);
+    setAnchorElIndustries(null);
   };
   const open = Boolean(anchorEl);
+  const openIndustries = Boolean(anchorElIndustries);
 
   const SolutionMenu = (
     <Box sx={{ 
@@ -100,6 +114,7 @@ const NavBar = () => {
       '& .MuiMenuItem-root': {
         color: '#344ea1',
         fontSize: '1.1em',
+        transition: 'all 0.2s ease-in-out',
         '&:hover': {
           backgroundColor: '#00aeef',
           color: 'white',
@@ -150,6 +165,103 @@ const NavBar = () => {
       >
         In-Cabin Monitoring System
       </MenuItem>
+    </Box>
+  );
+  const IndustriesMenu = (
+    <Box sx={{ 
+      p: 1, 
+      width: 300,
+      '& .MuiMenuItem-root': {
+        color: '#344ea1',
+        fontSize: '1.1em',
+        transition: 'all 0.2s ease-in-out',
+        '&:hover': {
+          backgroundColor: '#00aeef',
+          color: 'white',
+        }
+      }
+    }}>
+      <MenuItem 
+        component={Link} 
+        to="/industries/agricultural-vehicles" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Agricultural Vehicles
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/industries/mining-vehicles" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Mining Vehicles
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/industries/delivery-robots" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Delivery Robots
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/industries/construction-vehicles" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Construction Vehicles
+      </MenuItem> 
+      <MenuItem 
+        component={Link} 
+        to="/industries/dump-trucks" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Dump Trucks
+      </MenuItem> 
+    
+      <MenuItem 
+        component={Link} 
+        to="/industries/autonomous-vehicles" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Autonomous Vehicles
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/industries/delivery-trucks" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Delivery Trucks
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/industries/lawn-mowers" 
+        onClick={() => {
+          handleIndustriesPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Lawn Mowers
+      </MenuItem> 
     </Box>
   );
 
@@ -229,19 +341,53 @@ const NavBar = () => {
           
         )}
 
-        <ListItem disablePadding>
+       <ListItem disablePadding>
           <ListItemButton 
-            component={Link} 
-            to="/industries" 
-            onClick={handleDrawerToggle}
+            onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
             sx={{ '&:hover': { color: '#00aeef' } }}
           >
             <ListItemText 
               primary="Industries" 
               primaryTypographyProps={{ style: { color: 'white' } }} 
             />
+            {mobileIndustriesOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
           </ListItemButton>
         </ListItem>
+        {mobileIndustriesOpen && (
+          <List sx={{ pl: 2 }}>
+            {[
+              { label: 'Agricultural Vehicles', path: '/industries/agricultural-vehicles' },
+              { label: 'Mining Vehicles', path: '/industries/mining-vehicles' },
+              { label: 'Delivery Robots', path: '/industries/delivery-robots' },
+              { label: 'Construction Vehicles', path: '/industries/construction-vehicles' },
+              { label: 'Dump Trucks', path: '/industries/dump-trucks' },
+              { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicles' },
+              { label: 'Delivery Trucks', path: '/industries/delivery-trucks' },
+              { label: 'Lawn Mowers', path: '/industries/industries/lawn-mowers' },
+
+   
+            ].map((item, index) => (
+              <ListItem key={index} disablePadding>
+                <ListItemButton
+                  component={Link}
+                  to={item.path}
+                  onClick={handleDrawerToggle}
+                  sx={{
+                    '&:hover .MuiListItemText-primary': { color: '#00aeef' },
+                    pl: 2,
+                  }}
+                >
+                  <ListItemText
+                    primary={item.label}
+                    primaryTypographyProps={{
+                      sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        )}
         <ListItem disablePadding>
           <ListItemButton 
             component={Link} 
@@ -304,14 +450,27 @@ const NavBar = () => {
   Products
 </NavLink>
 
-        <Divider orientation="vertical" flexItem />
-        <NavLink to="/industries">Industries</NavLink>
-        <Divider orientation="vertical" flexItem />
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
+              {isDesktop && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+                  {/* ... existing nav items ... */}
+                  <Divider orientation="vertical" flexItem />
+                  <NavLink
+                    aria-haspopup="true"
+                    onMouseOver={handleIndustriesPopoverOpen}
+                  >
+                    Industries
+                  </NavLink>
+                  <Divider orientation="vertical" flexItem />
+                </Box>
+              )}
+            </Box>
         <NavLink to="/blog">Blog</NavLink>
         <Divider orientation="vertical" flexItem />
         <NavLink to="/contact-us">Contact Us</NavLink>
       </Box>
     )}
+      
 
     {isDesktop ? (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -360,8 +519,32 @@ const NavBar = () => {
         >
           {SolutionMenu}
         </Popover>
-      </StyledAppBar>
 
+
+        <Popover
+          id="industries-menu"
+          open={openIndustries}
+          anchorEl={anchorElIndustries}
+          onClose={handleIndustriesPopoverClose}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          PaperProps={{ 
+            sx: { border: '1px solid #00aeef' },
+            onMouseEnter: handlePopoverEnter,
+            onMouseLeave: handlePopoverLeave
+          }}
+          disableRestoreFocus
+        >
+          {IndustriesMenu}
+        </Popover>
+      </StyledAppBar>
+      <StyledDrawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+      >
+        {drawerContent}
+      </StyledDrawer>
       <StyledDrawer
         anchor="right"
         open={mobileOpen}

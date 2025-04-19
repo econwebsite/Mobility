@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './ProductTab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
-// 
+import Modelbutton from "../../../ButtonComp/Modelbutton";
+
 import STURDeCAM31 from "../../../../assets/Productpage/surroundview/studycam31.jpg"
 import STURDeCAM34 from "../../../../assets/Productpage/surroundview/studycam34.jpg"
 import STURDeCAM84 from "../../../../assets/Productpage/surroundview/studycam84.jpg"
@@ -43,7 +44,7 @@ const Producttab = () => {
           ],
           title:"STURDeCAM31 - 3MP Sony® ISX031 120dB HDR Camera for Autonomous Mobility",
           documentname:"e-con-STURDeCAM31-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM31"
+          doctitle:"Technical documents for STURDeCAM31"
         },
         'STRUDeCAM34': {
           tableData: [
@@ -56,7 +57,7 @@ const Producttab = () => {
           ],
           title:"STURDeCAM34 - 3MP AR0341AT 140dB HDR Camera Module",
          documentname:"e-con-STURDeCAM34-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM34"
+          doctitle:"Technical documents for STURDeCAM34"
         }
       },
       bgColor: 'white',
@@ -78,7 +79,7 @@ const Producttab = () => {
           ],
           title:"STURDeCAM88 - 4K 140dB HDR GMSL2 Camera Module",
  documentname:"e-con-STURDeCAM88-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM88"
+          doctitle:"Technical documents for STURDeCAM88"
         },
         'STURDeCAM84': {
           tableData: [
@@ -91,14 +92,14 @@ const Producttab = () => {
           ],
           title:"STURDeCAM84 - World's Tiniest 8MP Automotive Camera",
  documentname:"e-con-STURDeCAM84-technical-documents.zip",
-          doctitle:"technical documents for STURDeCAM84"
+          doctitle:"Technical documents for STURDeCAM84"
         },
       },
       bgColor: 'white',
       color: '#344ea1',
       images: [ STURDeCAM88,STURDeCAM84],
     },
-    'POE': {
+    'POE/GigE': {
       tabs: ['RouteCAM_CU22',],
       content: {
         'RouteCAM_CU22': {
@@ -112,7 +113,7 @@ const Producttab = () => {
           ],
           title:"RouteCAM_CU22_IP67 - Outdoor Lowlight GigE HDR Camera",
  documentname:"e-con-RouteCAM_CU22-technical-documents.zip",
-          doctitle:"technical documents for RouteCAM_CU22"
+          doctitle:"Technical documents for RouteCAM_CU22"
         },
       },
       bgColor: 'white',
@@ -183,7 +184,6 @@ const Producttab = () => {
               {selectedRightTab && currentContent && (
                 <div className="ProductTabs-ContentBox">
                   <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
-                  {/*            //////////////// */}
 
                   <div className="Productinsidetab-container">
                     <div className="Productinsidetab-image-row">
@@ -197,13 +197,17 @@ const Producttab = () => {
                           {index < images.length - 1 && <div className="Productinsidetab-divider"></div>}
                         </React.Fragment>
                       ))}
-                      {/* Divider and Button at the end of the row */}
                       <div className="Productinsidetab-divider"></div>
                     </div>
                   </div>
+                  <div className="ProductTabs-total-Button">
+                  <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
+                  <Modelbutton className="ProductTabs-Button" text="Download Tech Document" backgroundColor="#00aeef" productName={currentContent.productName} type="download" title={currentContent.doctitle}   docName={currentContent.docName} animationColor="#344ea1" hoverColor="#344ea1" />
 
+        </div>
                 </div>
               )}
+
             </div>
           </div>
         </div>

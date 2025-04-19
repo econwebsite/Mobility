@@ -4,7 +4,7 @@ import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM34 from "../../../../assets/Productpage/rearview/studycam34.jpg";
 import STURDeCAM31 from "../../../../assets/Productpage/rearview/studycam31.jpg";
 import routecam22 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
-
+import Modelbutton from "../../../ButtonComp/Modelbutton"
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
 import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
@@ -65,7 +65,7 @@ const Rearview = () => {
           color: '#344ea1',
           images: [STURDeCAM31, STURDeCAM34],
         },
-        'POE': {
+        'POE/GigE': {
           tabs: ['RouteCAM_CU22',],
           content: {
             'RouteCAM_CU22': {
@@ -165,6 +165,11 @@ const Rearview = () => {
                       <div className="Productinsidetab-divider"></div>
                     </div>
                   </div>
+                  <div className="ProductTabs-total-Button">
+                  <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
+                  <Modelbutton className="ProductTabs-Button" text="Download Tech Document" backgroundColor="#00aeef" productName={currentContent.productName} type="download" title={currentContent.doctitle}   docName={currentContent.docName} animationColor="#344ea1" hoverColor="#344ea1" />
+
+        </div>
                   </div>
               )}
             </div>

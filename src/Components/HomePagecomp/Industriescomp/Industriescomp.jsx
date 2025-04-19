@@ -7,7 +7,7 @@ import deliveryrobot from "../../../assets/homepage/deleviryrobots.jpg";
 import constructiovehical from "../../../assets/homepage/constructionvehical.jpg";
 import dumptruck from "../../../assets/homepage/dumptruck.jpg";
 import deliverytruck from "../../../assets/homepage/deliverytruck.jpg";
-import pasanger from "../../../assets/homepage/passengervehicals.jpg";
+import lawn from "../../../assets/homepage/lawn-mower-vehicles.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -19,7 +19,7 @@ const items = [
   { id: 5, title: "Dump Trucks", img: dumptruck, link:"/industries/dump-trucks" },
   { id: 6, title: "Autonomous Vehicles", img: autonomousvehical,link:"/industries/autonomous-vehicles" },
   { id: 7, title: "Delivery Trucks", img: deliverytruck,link:"/industries/delivery-trucks" },
-  { id: 8, title: "Passenger Vehicles", img: pasanger,link:"/industries" },
+  { id: 8, title: "Lawn Mowers", img: lawn,link:"/industries/lawn-mower" },
 ];
 
 function IndustriesComp() {

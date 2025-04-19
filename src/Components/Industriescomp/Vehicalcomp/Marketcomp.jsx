@@ -10,8 +10,6 @@ import Dump from "../../../assets/homepage/dumptruck.jpg";
 import Autonomous from "../../../assets/homepage/autonomousvehical.jpg";
 import Deliverytruck from "../../../assets/homepage/deliverytruck.jpg";
 import Marketescamera from "../Industrycam/MarketCameras"
-//cover img 
-
 import agricover from "../../../assets/homepage/Industries/agriculture-cover-img.png"
 import miningcover from "../../../assets/homepage/Industries/mining-cover-img.png"
 import deliveryrobocover from "../../../assets/homepage/Industries/delivery-robo-cover-img.png"
@@ -97,6 +95,19 @@ const marketData = {
    "Delivery Trucks": {
     title: "Delivery Trucks",
     beforeImage: "Delivery trucks are transforming last-mile logistics by operating with minimal human intervention across highways and urban routes. These vehicles require consistent imaging input to navigate complex environments that include pedestrians, traffic signals, parked vehicles, and variable lighting conditions. Mounted externally or integrated within, these cameras support continuous monitoring for lane-keeping, sign recognition, and obstacle detection.",
+    image: Deliverytruck,
+    afterImage:"e-con Systems’ camera solutions bring HDR, global shutter, and multi-camera synchronization capabilities to support wide-area perception. HDR enables visibility in scenes with strong sunlight and deep shadows. The global shutter feature eliminates motion blur during fast travel, preserving clarity in frame captures even at higher speeds. Our cameras can be flexibly deployed to cover front, side, and rear views, thereby enhancing situational awareness.",
+    singleimg: deliverytruckcover,
+    buttons: [
+      { label: "Surround View", link: "/surround-view-camera#surroundTab" },
+      { label: "Forward Facing", link: "/forward-facing-camera#forwardTab" },
+      { label: "Rear View", link: "/rear-view-camera#rearviewTab" },
+    ]
+
+  }, 
+  "Lawn Mower": {
+    title: "Lawn Mower",
+    beforeImage: " urban routes. These vehicles require consistent imaging input to navigate complex environments that include pedestrians, traffic signals, parked vehicles, and variable lighting conditions. Mounted externally or integrated within, these cameras support continuous monitoring for lane-keeping, sign recognition, and obstacle detection.",
     image: Deliverytruck,
     afterImage:"e-con Systems’ camera solutions bring HDR, global shutter, and multi-camera synchronization capabilities to support wide-area perception. HDR enables visibility in scenes with strong sunlight and deep shadows. The global shutter feature eliminates motion blur during fast travel, preserving clarity in frame captures even at higher speeds. Our cameras can be flexibly deployed to cover front, side, and rear views, thereby enhancing situational awareness.",
     singleimg: deliverytruckcover,

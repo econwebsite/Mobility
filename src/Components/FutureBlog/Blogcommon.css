@@ -66,6 +66,16 @@ ul {
   font-size: 1em !important;
   text-align: center;
 }
+.Blog-coverimg{
+  display: flex;
+align-items: center;
+width: 100%;
+}
+.Blog-coverimg img{
+  height: 320px;
+  object-fit: cover;
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   .threeparameter-content {
@@ -248,7 +258,7 @@ font-weight: 400;
   color: #003873;
   text-align: left;
   line-height: 1.5em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-top: 1em;
 }
 
@@ -388,6 +398,10 @@ font-weight: 400;
   .Cardrelated-image {
     width: 100%;
     object-fit: contain;
+  }
+  .Blog-coverimg img{
+    height: auto;
+    width: 100%;
   }
   
 }

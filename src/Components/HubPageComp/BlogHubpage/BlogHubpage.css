@@ -1,13 +1,13 @@
 .BlogHubPage-Total {
   width: 100%;
-  background-color: white;
+  background-color: #5b79b4;
   padding: 2rem;
 }
 
 .BlogHubPage-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #344ea1;
+  color: white;
   padding: 0.5em;
   font-weight: 200;
 }
@@ -22,10 +22,11 @@
 }
 
 .BlogHubPage-card {
-  background: linear-gradient(145deg, #86d6f5, #e2e4e5);
+
+    background-color: #f1f2f2;
   border-radius: 12px;
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -100,13 +101,13 @@
 }
 .BlogHubPage-calendar-icon {
   font-size: 1.2em;
-  color: blue !important;
+  color: #00aeef !important;
 }
 
 .BlogHubPage-card-button {
   align-self: flex-start;
   margin-top: 5px;
-  padding: 3px 10px;
+  padding: 3px 5px;
   border-radius: 6px;
   font-weight: small;
 }

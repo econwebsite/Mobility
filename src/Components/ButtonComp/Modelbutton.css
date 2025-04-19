@@ -10,7 +10,7 @@
   transition: 0.5s linear;
   position: relative;
   overflow: hidden;
-  padding: 12px 5px;
+  padding: 12px 10px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -82,7 +82,10 @@
   background-color: #00aeef;
   color: white;
 }
-
+.ant-message {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
 .custom-modal .ant-modal-title {
   color: #003873; 
   text-align: center;

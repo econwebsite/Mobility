@@ -54,7 +54,7 @@
   }
   .SingleImage-img {
     width: 100%;
-    height:200px;
+    height:auto;
     border-radius: 16px;
     transition: none; 
     transform: none;
@@ -63,4 +63,5 @@
     width: 80%;
     font-size: 14px;
   }
+  
 }

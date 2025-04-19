@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Form, Input, Select, Button, Row, Col, message, Modal, Result } from 'antd';
+import { Form, Input, Select, Button, Row, Col, message, Modal, Result,Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
 import countryList from 'react-select-country-list';
@@ -98,6 +98,24 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
+  const [isLoading, setIsLoading] = useState(false); 
+
+
+  
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+    borderRadius: 8
+  };
+
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
       value: country.value,
@@ -105,7 +123,18 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     }));
   }, []);
   const onFinish = (values) => {
-    form.resetFields();
+    setIsLoading(true);
+    const trackingData = {
+      email: values.email,
+      companyname: values.companyName,
+      phonenumber: values.contactNumber,
+      country: values.country,
+      state: values.state || '',
+      queries: values.queries || '',
+    };
+  
+    window.gtag && window.gtag('event', 'contact_form_submit', trackingData);
+
     if (type === 'download') {
       values.productName = productName;
       values.documentName = docName;
@@ -115,8 +144,12 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               setIsSuccess(true);
               setDownloadUrl(result.data.documentUrl);
           }
+          form.resetFields();
+
       })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => setIsLoading(false));
+
     }
     else {
       values.productName = productName;
@@ -126,7 +159,9 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
           message.success('Message sent successfully!');
           onClose();
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => setIsLoading(false));
+
     }
 
   };
@@ -180,7 +215,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       width={450}
       className="custom-modal"
     >
-      {isSuccess ? <Result
+      {isSuccess ? (<Result
         status="success"
         title="Ready to Download"
         subTitle="Please click below button to downlaod"
@@ -192,7 +227,9 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         />
     
         ]}
-      /> : <Form
+      /> ):(
+        <div style={{ position: 'relative' }}>
+        <Form
         form={form}
         name="contactForm"
         onFinish={onFinish}
@@ -310,7 +347,13 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
           </Col>
         </Row>
       </Form>
-      }
+    {isLoading && (
+      <div style={overlayStyle}>
+        <Spin size="large" />
+      </div>
+    )}
+  </div>
+)}
     </Modal>
   );
 }
