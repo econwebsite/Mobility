@@ -223,13 +223,13 @@ const NavBar = () => {
       </MenuItem> 
       <MenuItem 
         component={Link} 
-        to="/industries/dump-trucks" 
+        to="/industries/garbage-trucks" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Dump Trucks
+        Garbage Trucks
       </MenuItem> 
     
       <MenuItem 
@@ -254,7 +254,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/lawn-mowers" 
+        to="/industries/lawn-mower" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -360,10 +360,10 @@ const NavBar = () => {
               { label: 'Mining Vehicles', path: '/industries/mining-vehicles' },
               { label: 'Delivery Robots', path: '/industries/delivery-robots' },
               { label: 'Construction Vehicles', path: '/industries/construction-vehicles' },
-              { label: 'Dump Trucks', path: '/industries/dump-trucks' },
+              { label: 'Garbage Trucks', path: '/industries/garbage-trucks' },
               { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicles' },
               { label: 'Delivery Trucks', path: '/industries/delivery-trucks' },
-              { label: 'Lawn Mowers', path: '/industries/industries/lawn-mowers' },
+              { label: 'Lawn Mowers', path: '/industries/lawn-mower' },
 
    
             ].map((item, index) => (

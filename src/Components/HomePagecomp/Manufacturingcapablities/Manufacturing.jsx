@@ -19,12 +19,12 @@ import assemly from "../../../assets/homepage/assembly-line.jpg"
 
 const tabData = {
   Design: [
-    { src: isptuning, title: "ISP Tuning" },
-    { src: robustdesign, title: "Mechanical Design" },
-    { src: randomvibration, title: "Random Vibration Test" },
-    { src: thermalshock, title: "Thermal Shock Test" },
-    { src: transittest, title: "Transit Test (Inhouse Lab) " },
-    { src: endurancetest, title: "Endurance Test" },
+    { src: isptuning, title: "ISP Tuning Lab" },
+    { src: robustdesign, title: "Mechanical Design Lab" },
+    { src: randomvibration, title: "Vibration Shaker" },
+    { src: thermalshock, title: "Combined Vibration" },
+    { src: transittest, title: "Transit Test Lab" },
+    { src: endurancetest, title: "Endurance Lab" },
   ],
  
   Manufacturing: [

@@ -5,7 +5,7 @@ import autonomousvehical from "../../../assets/homepage/autonomousvehical.jpg";
 import mining from "../../../assets/homepage/miningvehical.jpg";
 import deliveryrobot from "../../../assets/homepage/deleviryrobots.jpg";
 import constructiovehical from "../../../assets/homepage/constructionvehical.jpg";
-import dumptruck from "../../../assets/homepage/dumptruck.jpg";
+import garbagetruck from "../../../assets/homepage/garbagetruck.jpg";
 import deliverytruck from "../../../assets/homepage/deliverytruck.jpg";
 import lawn from "../../../assets/homepage/lawn-mower-vehicles.jpg";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const items = [
   { id: 2, title: "Mining Vehicles", img: mining, link:"/industries/mining-vehicles" },
   { id: 3, title: "Delivery Robots", img: deliveryrobot ,link:"/industries/delivery-robots"},
   { id: 4, title: "Construction Vehicles", img: constructiovehical,link:"/industries/construction-vehicles" },
-  { id: 5, title: "Dump Trucks", img: dumptruck, link:"/industries/dump-trucks" },
+  { id: 5, title: "Garbage Trucks", img: garbagetruck, link:"/industries/garbage-trucks" },
   { id: 6, title: "Autonomous Vehicles", img: autonomousvehical,link:"/industries/autonomous-vehicles" },
   { id: 7, title: "Delivery Trucks", img: deliverytruck,link:"/industries/delivery-trucks" },
   { id: 8, title: "Lawn Mowers", img: lawn,link:"/industries/lawn-mower" },
