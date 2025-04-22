@@ -124,7 +124,7 @@ const ContactUs = () => {
   const onFinish = (values) => {
     setIsLoading(true);
 
-    axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+    axios.post(`http://localhost:4002/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
     form.resetFields();
@@ -149,7 +149,7 @@ const ContactUs = () => {
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
-      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
+      axios.post(`http://localhost:4002/api/validateEmail`, { email })
         .then(result => {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {

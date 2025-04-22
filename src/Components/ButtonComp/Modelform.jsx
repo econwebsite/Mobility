@@ -126,19 +126,28 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     setIsLoading(true);
     const trackingData = {
       email: values.email,
-      companyname: values.companyName,
-      phonenumber: values.contactNumber,
+      company_name: values.companyName,
+      phone_number: values.contactNumber,
       country: values.country,
       state: values.state || '',
-      queries: values.queries || '',
+      queries: values.queries || ''
     };
   
-    window.gtag && window.gtag('event', 'contact_form_submit', trackingData);
+  
+    if (window.gtag) {
+      window.gtag('event', 'contact_form_submit', {
+        event_category: 'form',
+        event_label: 'Contact Page',
+        value: 1,
+        ...trackingData,
+      });
+    }
+
 
     if (type === 'download') {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
+      axios.post(`http://localhost:4002/api/downloadform`, { values })
       .then(result => {
           if (result.status === 200) {
               setIsSuccess(true);
@@ -154,7 +163,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     else {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+      axios.post(`http://localhost:4002/api/contactusform`, { values })
         .then(result => {
           message.success('Message sent successfully!');
           onClose();
@@ -178,7 +187,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
-      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
+      axios.post(`http://localhost:4002/api/validateEmail`, { email })
         .then(result => {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {

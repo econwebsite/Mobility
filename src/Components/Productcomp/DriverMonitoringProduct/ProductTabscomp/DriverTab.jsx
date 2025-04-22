@@ -155,7 +155,7 @@ const DriverTab = () => {
                   </div>    
                   <div className="ProductTabs-total-Button">
                   <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
-                  <Modelbutton className="ProductTabs-Button" text="Download Tech Document" backgroundColor="#00aeef" productName={currentContent.productName} type="download" title={currentContent.doctitle}   docName={currentContent.docName} animationColor="#344ea1" hoverColor="#344ea1" />
+                  <Modelbutton text="Download Tech document" backgroundColor="#00aeef" textColor="#131b2d"  hoverTextColor="#344ea1" className="ProductTabs-Button" to="" productName="ProductDocument" docName={currentContent.documentname} title={currentContent.doctitle}/>
 
         </div>
                 </div>

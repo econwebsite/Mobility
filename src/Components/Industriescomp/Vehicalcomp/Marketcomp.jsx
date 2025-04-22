@@ -10,7 +10,7 @@ import construcover from "../../../assets/homepage/Industries/construction-cover
 import garbage from "../../../assets/homepage/Industries/garbage-cover-img.png"
 import autonomouscover from "../../../assets/homepage/Industries/autonomous-cover-img.png"
 import deliverytruckcover from "../../../assets/homepage/Industries/delivery-truck-cover-img.png"
-
+import lawncover from "../../../assets/homepage/Industries/lawn-mower-cover.png"
 
 const marketData = {
  "Agricultural Vehicles": {
@@ -103,7 +103,7 @@ const marketData = {
     title: "Lawn Mower",
     beforeImage: "Autonomous and remote-operated lawn mowers have seen widespread adoption in commercial landscaping, sports fields, etc. These machines require the right vision input to detect boundaries, avoid obstacles, and assess terrain features such as slopes, wet patches, or surface debris. Since they tend to operate outdoors for long durations, the camera systems must also adapt to changing daylight and unpredictable weather.",
     afterImage:"e-con Systems has developed world-class camera solutions for intelligent mowing applications. We also help implement multi-camera setups to give a wider field of view for enhanced coverage. With HDR support, high frame rate, and optimized ISP tuning, our cameras handle rapid shifts in lighting, from bright sun to shadowed corners under trees. They can be seamlessly integrated with edge AI platforms for object detection, path planning, and zone-based mowing.",
-    singleimg: deliverytruckcover,
+    singleimg: lawncover,
     buttons: [
       { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
       { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },

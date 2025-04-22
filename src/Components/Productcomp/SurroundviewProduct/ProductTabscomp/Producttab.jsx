@@ -112,7 +112,7 @@ const Producttab = () => {
             ['Compliance & Standards: ISO 13766'],
           ],
           title:"RouteCAM_CU22_IP67 - Outdoor Lowlight GigE HDR Camera",
- documentname:"e-con-RouteCAM_CU22-technical-documents.zip",
+          documentname:"e-con-RouteCAM_CU22-technical-documents.zip",
           doctitle:"Technical documents for RouteCAM_CU22"
         },
       },
@@ -183,7 +183,7 @@ const Producttab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="ProductTabs-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} documentname={currentContent.documentname} doctitle={currentContent.doctitle}/>
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} />
 
                   <div className="Productinsidetab-container">
                     <div className="Productinsidetab-image-row">
@@ -202,7 +202,8 @@ const Producttab = () => {
                   </div>
                   <div className="ProductTabs-total-Button">
                   <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
-                  <Modelbutton className="ProductTabs-Button" text="Download Tech Document" backgroundColor="#00aeef" productName={currentContent.productName} type="download" title={currentContent.doctitle}   docName={currentContent.docName} animationColor="#344ea1" hoverColor="#344ea1" />
+                  <Modelbutton text="Download Tech document" backgroundColor="#00aeef" textColor="#131b2d"  hoverTextColor="#344ea1" className="ProductTabs-Button" to="" productName="ProductDocument" docName={currentContent.documentname} title={currentContent.doctitle}/>
+
 
         </div>
                 </div>

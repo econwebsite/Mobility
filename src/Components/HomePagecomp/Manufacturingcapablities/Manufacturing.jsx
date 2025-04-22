@@ -3,28 +3,35 @@ import "./Manufacturing.css";
 
 
 import isptuning from "../../../assets/homepage/ispturning.jpg"
-import robustdesign from "../../../assets/homepage/robostimg.jpg"
+import mechnical from "../../../assets/homepage/mechnical-design.jpg"
 import activealignemt from "../../../assets/homepage/activealignment.jpg"
 import pcb from "../../../assets/homepage/pcb-assembly.jpg"
 import randomvibration from "../../../assets/homepage/manufacturing-random-vibration.jpg"
-import thermalshock from "../../../assets/homepage/manufacturing-thermal-shock.jpg"
-import transittest from "../../../assets/homepage/manufacturing-transit-test.jpg"
-import endurancetest from "../../../assets/homepage/manufacturing-endurance-test.jpg"
+
 import ezeefocus from "../../../assets/homepage/manufacturing-ezee-focus.jpg"
 import glueing from "../../../assets/homepage/manufacturing_gluing_machine.jpg"
 import deepfrezer from "../../../assets/homepage/manufacturing-deep-freezer.jpg"
 import ip67 from "../../../assets/homepage/ip67-leak-tester.jpg"
 import cleanroom from "../../../assets/homepage/clean-room.jpg"
 import assemly from "../../../assets/homepage/assembly-line.jpg"
-
+import industrialoven from "../../../assets/homepage/industrial-oven.jpg"
+import combinedvibration from "../../../assets/homepage/combined-vibration.jpg"
+import environmetchamber from "../../../assets/homepage/environmental-chamber.jpg"
+import esdlab from "../../../assets/homepage/esd-lab.jpg"
+import relablitylab from "../../../assets/homepage/realiablity-lab.jpg"
 const tabData = {
   Design: [
     { src: isptuning, title: "ISP Tuning Lab" },
-    { src: robustdesign, title: "Mechanical Design Lab" },
+    { src: mechnical, title: "Mechanical Design Lab" },
     { src: randomvibration, title: "Vibration Shaker" },
-    { src: thermalshock, title: "Combined Vibration" },
-    { src: transittest, title: "Transit Test Lab" },
-    { src: endurancetest, title: "Endurance Lab" },
+    { src: environmetchamber, title: "Environmental Chamber" },
+    { src: combinedvibration, title: "Combined Vibration & Environmental Chamber" },
+    { src: industrialoven, title: "Industrial Oven" },
+    { src: esdlab, title: "ESD Lab" },
+    { src: relablitylab, title: "Reliability Lab" },
+
+
+
   ],
  
   Manufacturing: [

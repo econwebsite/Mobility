@@ -4,7 +4,7 @@ import { Button } from 'antd';
 const DownloadButton = ({ documentName }) => {
   const handleDownload = useCallback(async () => {
     try {
-      const response = await fetch(`https://api.dental.e-consystems.com/download`, {
+      const response = await fetch(`http://localhost:4002/download`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
