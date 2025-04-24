@@ -27,7 +27,7 @@ const BlogProductPage = () => {
 
                 <h2>How driver monitoring cameras improve driving safety and their key features</h2>
           </Link>
-                <p>Driver monitoring systems improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
+                <p>Driver monitoring cameras improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
                 <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" className="blogproduct-btn" />
               </div>
             </div>

@@ -4,7 +4,7 @@ import Homebanner from "./Homebanner/Homebanner";
 import Certification from "./Certification/Certification";
 import Manufacturing from "./Manufacturingcapablities/Manufacturing";
 import Watchvedios from "./Watchvedioscomp/Vediosection";
-import Casestudy from "./Casestudycomp/Casestudy";
+// import Casestudy from "./Casestudycomp/Casestudy";
 import Blog from "./Blogcomp/Blog";
 import ContactUs from "./Homecontactus/ContactUs";
 import Paragraph from "./Paragraphcomp/Paragraph";
@@ -53,8 +53,8 @@ const TotalHomePage = () => {
   return (
     <div style={{ padding: "0px", margin: "0px" }}>
           <Helmet>
-      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      <title>Rugged IP69K ADAS Cameras for Autonomous & Off-Road Mobility</title>
+      <meta name='description' content='IP69K ADAS cameras with HDR, LFM & ISO/IATF-certified build. Engineered for autonomous, off-road vehicles & delivery robots in extreme environments.' />
       </Helmet>
       <Section index={0}>
         <Homebanner />
@@ -77,13 +77,13 @@ const TotalHomePage = () => {
       <Section index={6}>
         <Watchvedios />
       </Section>
-      <Section index={7}>
+      {/* <Section index={7}>
         <Casestudy />
-      </Section>
-      <Section index={8}>
+      </Section> */}
+      <Section index={7}>
         <Blog />
       </Section>
-      <Section index={9}>
+      <Section index={8}>
         <ContactUs />
       </Section>
     </div>

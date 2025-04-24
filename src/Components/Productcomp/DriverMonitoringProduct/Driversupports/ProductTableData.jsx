@@ -4,6 +4,7 @@ import "./ProductTableData.css";
 // import Modelbutton from "../../../ButtonComp/Modelbutton"
 
 function ProductTableData({ tableData, imageSrc,productName,title,documentname,doctitle }) {
+  
   return (
     <div className="ProductTableData-TotalContBox">
   <div className='mainContainer'>

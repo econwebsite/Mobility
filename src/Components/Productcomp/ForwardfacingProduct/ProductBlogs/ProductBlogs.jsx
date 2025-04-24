@@ -68,7 +68,7 @@ const BlogProductPage = () => {
                   </div>
                   <div className="blogproduct-card-right">
                     <h6>How do Surround View cameras improve driving and parking safety</h6>
-                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/surround-view-camera" className="blogproduct-btn" />
+                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/surround-view-cameras" className="blogproduct-btn" />
                   </div>
                 </div>
               </div>

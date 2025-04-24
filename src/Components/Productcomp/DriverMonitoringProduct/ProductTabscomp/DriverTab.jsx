@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './DriverTab.css';
 import ProductTableData from "../Driversupports/ProductTableData";
-import STURDeCAM27 from "../../../../assets/Productpage/drivermonitoring/nilecam27.png";
-import studycam29 from "../../../../assets/Productpage/drivermonitoring/studycam29.png";
+import STURDeCAM27 from "../../../../assets/allcameras/STURDeCAM29.jpg";
+import studycam29 from "../../../../assets/allcameras/STURDeCAM29.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton"
 import ambrella from "../../../../assets/Productpage/platformsupport/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/platformsupport/renesas.jpg';
@@ -155,7 +155,7 @@ const DriverTab = () => {
                   </div>    
                   <div className="ProductTabs-total-Button">
                   <Modelbutton className="ProductTabs-Button"  backgroundColor="#00aeef"  type="Contact Us"  animationColor="#344ea1" hoverColor="#344ea1" />
-                  <Modelbutton text="Download Tech document" backgroundColor="#00aeef" textColor="#131b2d"  hoverTextColor="#344ea1" className="ProductTabs-Button" to="" productName="ProductDocument" docName={currentContent.documentname} title={currentContent.doctitle}/>
+                  {/* <Modelbutton text="Download Tech document" backgroundColor="#00aeef" textColor="#131b2d"  hoverTextColor="#344ea1" className="ProductTabs-Button" to="" productName="ProductDocument" docName={currentContent.documentname} title={currentContent.doctitle}/> */}
 
         </div>
                 </div>

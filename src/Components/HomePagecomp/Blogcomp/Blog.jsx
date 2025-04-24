@@ -6,10 +6,16 @@ import hdrled from "../../../assets/homepage/hdr-led-blog.jpg";
 import drivermonitoring from "../../../assets/homepage/drivermonitoring-blog.jpg";
 import surroundview from "../../../assets/homepage/surroundview-blog.jpg";
 import AnimationButton from "../../ButtonComp/AnimationButton"
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
   return (
+
     <div className="ProductBlogs-Total">
+      <Helmet>
+            <title>Driving the Future | e-con Mobility Blogs & Updates</title>
+            <meta name='description' content='Explore the latest in rugged camera technology, ADAS innovations, and mobility insights from e-con Mobility. Stay ahead with our expert blogs and updates.' />
+          </Helmet>
       <h1 className="ProductBlogs-title">BLOGS</h1>
       <div className='mainContainer'>
         <div className="ProductBlogs-cards">
@@ -41,7 +47,7 @@ const Blog = () => {
             <Link className="cardTitleLink" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" style={{ textDecoration: "none" }}>
               <h2 className="ProductBlogs-card-title">How driver monitoring cameras improve driving safety and their key features</h2>
             </Link>
-            <p className="ProductBlogs-card-text">Driver monitoring systems improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
+            <p className="ProductBlogs-card-text">Driver monitoring cameras improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.</p>
             <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" className="Blog-readmore-btn" />
           </div>
           <div className="ProductBlogs-card">

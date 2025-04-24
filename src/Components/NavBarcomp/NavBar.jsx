@@ -123,7 +123,7 @@ const NavBar = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/surround-view-camera" 
+        to="/surround-view-cameras" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -134,7 +134,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/forward-facing-camera" 
+        to="/forward-facing-cameras" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -145,7 +145,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/rear-view-camera" 
+        to="/rear-view-cameras" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -156,14 +156,14 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/driver-monitoring-camera" 
+        to="/driver-monitoring-cameras" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        In-Cabin Monitoring System
+        In-Cabin Monitoring Cameras
       </MenuItem>
     </Box>
   );
@@ -254,7 +254,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/lawn-mower" 
+        to="/industries/lawn-mowers" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -312,10 +312,10 @@ const NavBar = () => {
         {mobileMenuOpen && (
          <List sx={{ pl: 2 }}>
          {[
-           { label: 'Surround View Cameras', path: '/surround-view-camera' },
-           { label: 'Forward Facing Cameras', path: '/forward-facing-camera' },
-           { label: 'Rear View Cameras', path: '/rear-view-camera' },
-           { label: 'In-Cabin Monitoring System', path: '/driver-monitoring-camera' },
+           { label: 'Surround View Cameras', path: '/surround-view-cameras' },
+           { label: 'Forward Facing Cameras', path: '/forward-facing-cameras' },
+           { label: 'Rear View Cameras', path: '/rear-view-cameras' },
+           { label: 'In-Cabin Monitoring Cameras', path: '/driver-monitoring-cameras' },
          ].map((item, index) => (
            <ListItem key={index} disablePadding>
              <ListItemButton
@@ -363,7 +363,7 @@ const NavBar = () => {
               { label: 'Garbage Trucks', path: '/industries/garbage-trucks' },
               { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicles' },
               { label: 'Delivery Trucks', path: '/industries/delivery-trucks' },
-              { label: 'Lawn Mowers', path: '/industries/lawn-mower' },
+              { label: 'Lawn Mowers', path: '/industries/lawn-mowers' },
 
    
             ].map((item, index) => (
@@ -425,7 +425,7 @@ const NavBar = () => {
         <Toolbar disableGutters>
   <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
     
-    <Link to="/">
+    <a href="https://www.e-consystems.com/">
       <img 
         src={dentallogo} 
         alt="Dental Logo" 
@@ -437,7 +437,7 @@ const NavBar = () => {
           cursor: 'pointer'
         }} 
       />
-    </Link>
+    </a>
     {isDesktop && (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
         <NavLink to="/">Home</NavLink>

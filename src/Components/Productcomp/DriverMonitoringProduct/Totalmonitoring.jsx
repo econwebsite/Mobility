@@ -63,8 +63,8 @@ const Totalmonitoring = () => {
     return (
         <div>
             <Helmet>
-                <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-                <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+                <title>Driver Monitoring Cameras with RGB-IR & NIR | In-Cabin Safety</title>
+                <meta name='description' content='Enhance road safety with driver monitoring cameras featuring RGB-IR, global shutter, and NIR. Detect drowsiness or distraction for 24/7 in-cabin ADAS performance.' />
                 </Helmet>
             <Section id="top">
             <ProductBanner/>

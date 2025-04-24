@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import './Forwardtab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
-import STURDeCAM88 from "../../../../assets/Productpage/forwardfacing/studycam88.png";
-import STURDeCAM84 from "../../../../assets/Productpage/forwardfacing/studycam84.jpg";
+import STURDeCAM88 from "../../../../assets/allcameras/studycam88.png";
+import STURDeCAM84 from "../../../../assets/allcameras/studycam84.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton";
-import STURDeCAM31 from "../../../../assets/Productpage/forwardfacing/studycam31.jpg"
-import STURDeCAM34 from "../../../../assets/Productpage/forwardfacing/studycam34.jpg"
+import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg"
+import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg"
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
 import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";

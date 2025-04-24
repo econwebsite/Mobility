@@ -32,10 +32,10 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path="/" element={<TotalHomePage />} />
-        <Route path="/surround-view-camera" element={<TotalSurroundview/>} />
-        <Route path="/forward-facing-camera" element={<Totalforwardfacing/>} />
-        <Route path="/driver-monitoring-camera" element={<Totalmonitoring/>} />
-        <Route path="/rear-view-camera" element={<Totalrearview/>} />
+        <Route path="/surround-view-cameras" element={<TotalSurroundview/>} />
+        <Route path="/forward-facing-cameras" element={<Totalforwardfacing/>} />
+        <Route path="/driver-monitoring-cameras" element={<Totalmonitoring/>} />
+        <Route path="/rear-view-cameras" element={<Totalrearview/>} />
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/blog" element={<BlogHubpage/>} />
         <Route path="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" element={<HdrLedBlog/>} />

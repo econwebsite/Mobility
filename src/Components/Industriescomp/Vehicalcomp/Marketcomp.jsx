@@ -19,10 +19,10 @@ const marketData = {
     afterImage: "e-con Systems offers high-performance cameras that drive agricultural automation. Our HDR-enabled cameras provide excellent visibility in changing light conditions, as their IP69K-rated designs help withstand dust, moisture, and high-pressure wash-downs. Moreover, multi-camera synchronization supports 360-degree monitoring and creates full environmental awareness for automated farming equipment. Our ISP tuning and lens calibration expertise also plays a key role in supporting data-driven agricultural decision-making.",
     singleimg: agricover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
+      { label: "4. Driver Monitoring", link: "/driver-monitoring-cameras#driverTab" },
 
     ]
   },
@@ -32,10 +32,10 @@ const marketData = {
     afterImage: "e-con Systems develops rugged ADAS cameras perfect for mining applications. They are equipped with features like HDR and LFM to handle extreme lighting variations. Our cameras meet IP69K standards, ensuring protection against dust, water ingress, etc. With high-performance ISP processing, image clarity can be enhanced in low-light conditions, while multi-camera synchronization enables complete situational awareness. We also offer precise lens alignment and robust sealing as part of our manufacturing process to help perform in the toughest mining environments.",
     singleimg: miningcover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
+      { label: "4. Driver Monitoring", link: "/driver-monitoring-cameras#driverTab" },
     ]
   },
   "Delivery Robots": {
@@ -44,10 +44,9 @@ const marketData = {
     afterImage:"e-con Systems provides high-performance imaging solutions for delivery robotics, integrating HDR and low-light optimization for consistent visibility. Our rugged cameras withstand dust, moisture, and temperature fluctuations, making them ideal for indoor and outdoor deployments. With seamless multi-camera synchronization and finely tuned ISP processing, our solutions support smooth autonomous navigation. Our commitment to quality manufacturing also ensures precise lens alignment and durable construction.",
     singleimg: deliveryrobocover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
     ]
   },
   "Construction Vehicles": {
@@ -56,10 +55,10 @@ const marketData = {
     afterImage:"e-con Systems delivers rugged ADAS cameras that withstand the harsh conditions of construction sites. Our imaging solutions feature HDR and LFM capabilities for superior image clarity in bright sunlight or low-light conditions. With IP69K-rated durability, our cameras resist dust, water, and mechanical vibrations, ensuring uninterrupted performance. Our expertise in multi-camera synchronization and precise lens alignment also supports full situational awareness, making construction vehicles safer.",
     singleimg: construcover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
+      { label: "4. Driver Monitoring", link: "/driver-monitoring-cameras#driverTab" },
     ]
   },
   "Garbage Trucks": {
@@ -68,10 +67,10 @@ const marketData = {
     afterImage:"e-con Systems offers high-performance camera solutions that support automated or semi-automated waste collection tasks. They can perform under continuous vibration, dust exposure, and weather fluctuations. Our cameras come with features like HDR for low-light visibility and LFM to eliminate flickering from street lighting or vehicle headlamps. Their IP69K-rated enclosures also safeguard the imaging units during regular wash-downs and debris exposure.",
     singleimg: garbage,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
+      { label: "4. Driver Monitoring", link: "/driver-monitoring-cameras#driverTab" },
     ]
   },
    "Autonomous Vehicles": {
@@ -80,10 +79,9 @@ const marketData = {
     afterImage:"e-con Systems provides ADAS cameras that cater to the rigorous demands of autonomous navigation. Our solutions feature HDR, LFM capabilities, and seamless multi-camera synchronization, ensuring seamless imaging in all conditions. With rugged designs that meet IP69K standards, our cameras deliver exceptional performance despite exposure to dust, water, and temperature extremes. Our manufacturing processes, including precise lens alignment and ISP tuning, help optimize image quality in real-world autonomous driving scenarios.",
     singleimg: autonomouscover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
     ]
   },
    "Delivery Trucks": {
@@ -92,23 +90,22 @@ const marketData = {
     afterImage:"e-con Systems’ camera solutions bring HDR, global shutter, and multi-camera synchronization capabilities to support wide-area perception. HDR enables visibility in scenes with strong sunlight and deep shadows. The global shutter feature eliminates motion blur during fast travel, preserving clarity in frame captures even at higher speeds. Our cameras can be flexibly deployed to cover front, side, and rear views, thereby enhancing situational awareness.",
     singleimg: deliverytruckcover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
+      { label: "4. Driver Monitoring", link: "/driver-monitoring-cameras#driverTab" },
     ]
 
   }, 
-  "Lawn Mower": {
-    title: "Lawn Mower",
+  "Lawn Mowers": {
+    title: "Lawn Mowers",
     beforeImage: "Autonomous and remote-operated lawn mowers have seen widespread adoption in commercial landscaping, sports fields, etc. These machines require the right vision input to detect boundaries, avoid obstacles, and assess terrain features such as slopes, wet patches, or surface debris. Since they tend to operate outdoors for long durations, the camera systems must also adapt to changing daylight and unpredictable weather.",
     afterImage:"e-con Systems has developed world-class camera solutions for intelligent mowing applications. We also help implement multi-camera setups to give a wider field of view for enhanced coverage. With HDR support, high frame rate, and optimized ISP tuning, our cameras handle rapid shifts in lighting, from bright sun to shadowed corners under trees. They can be seamlessly integrated with edge AI platforms for object detection, path planning, and zone-based mowing.",
     singleimg: lawncover,
     buttons: [
-      { label: "1. Surround View", link: "/surround-view-camera#surroundTab" },
-      { label: "2. Forward Facing", link: "/forward-facing-camera#forwardTab" },
-      { label: "3. Rear View", link: "/rear-view-camera#rearviewTab" },
-      { label: "4. Driver Monitoring", link: "/driver-monitoring-camera#driverTab" },
+      { label: "1. Surround View", link: "/surround-view-cameras#surroundTab" },
+      { label: "2. Forward Facing", link: "/forward-facing-cameras#forwardTab" },
+      { label: "3. Rear View", link: "/rear-view-cameras#rearviewTab" },
     ]
 
   }, 

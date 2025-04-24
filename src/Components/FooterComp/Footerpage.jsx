@@ -14,7 +14,7 @@ const Footerpage = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) return false;
     try {
-      const response = await axios.post('http://localhost:4002/api/validateEmail', { email });
+      const response = await axios.post('https://api.dental.e-consystems.com/api/validateEmail', { email });
       return ['valid', 'catch-all', 'role-basic'].includes(response.data.status) && !response.data.free_email;
     } catch (error) {
       console.error('Email validation error:', error);
@@ -34,7 +34,7 @@ const Footerpage = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:4002/api/emailSubscription', { email });
+      await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
       message.success('Thank you for subscribing!');
       setEmail('');
       setIsValid(true);
@@ -47,16 +47,16 @@ const Footerpage = () => {
   const menu = (
     <Menu > 
       <Menu.Item key="1">
-        <Link to="/surround-view-camera" className='Footer-menuLinks'>Surround View Cameras</Link>
+        <Link to="/surround-view-cameras" className='Footer-menuLinks'>Surround View Cameras</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link to="/forward-facing-camera" className='Footer-menuLinks'>Forward Facing Cameras</Link>
+        <Link to="/forward-facing-cameras" className='Footer-menuLinks'>Forward Facing Cameras</Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link to="/rear-view-camera" className='Footer-menuLinks'>Rear View Cameras</Link>
+        <Link to="/rear-view-cameras" className='Footer-menuLinks'>Rear View Cameras</Link>
       </Menu.Item>
       <Menu.Item key="4">
-        <Link to="/driver-monitoring-camera" className='Footer-menuLinks'>In-Cabin Monitoring Cameras</Link>
+        <Link to="/driver-monitoring-cameras" className='Footer-menuLinks'>In-Cabin Monitoring Cameras</Link>
       </Menu.Item>
     </Menu>
   );
@@ -109,7 +109,9 @@ const Footerpage = () => {
               {!isValid && <p className="Footer-errorMessage">Please enter a valid email address</p>}
             </form>
             <div className="Footer-brandLogo">
+              <a href='https://www.e-consystems.com/'>
               <img src={econlogo} alt="e-con Systems" className="Footer-logoImage" />
+              </a>
             </div>
           </div>
         </div>

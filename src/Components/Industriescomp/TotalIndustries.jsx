@@ -6,8 +6,8 @@ const TotalIndustries = () => {
     return (
         <div>
               <Helmet>
-      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      <title>Industries We Serve: Rugged Cameras for Autonomous Vehicles & Automation</title>
+      <meta name='description' content='Discover industrial-grade camera solutions built for autonomous vehicles, delivery robots, agriculture, mining, and construction—engineered to perform in tough environments.' />
       </Helmet>
             <Marketcomp/>
         </div>

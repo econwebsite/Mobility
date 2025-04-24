@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './rearview.css';
 import ProductTableData from "../Driversupports/ProductTableData";
-import STURDeCAM34 from "../../../../assets/Productpage/rearview/studycam34.jpg";
-import STURDeCAM31 from "../../../../assets/Productpage/rearview/studycam31.jpg";
-import routecam22 from "../../../../assets/Productpage/drivermonitoring/routecam25.jpg";
+import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg";
+import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg";
+import routecam22 from "../../../../assets/allcameras/routeecamcu22.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton"
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";

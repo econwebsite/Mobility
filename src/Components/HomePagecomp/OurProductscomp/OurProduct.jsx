@@ -13,10 +13,10 @@ import example4 from "../../../assets/Productpage/ourproduct4.png"
 
 const OurProduct = () => {
   const cardsData = [
-    { id: 1,img:surroundview, title: "Surround View Cameras", text: "360-degree perception for enhanced safety and parking assistance.",link:"/surround-view-camera",overlayimg:example1 },
-    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance.",link:"/forward-facing-camera",overlayimg:example2 },
-    { id: 3,img:rearview, title: "Rear View Cameras", text: "Real-time driver assistance eliminates blind spots, ensuring safer reversing and parking.",link:"/rear-view-camera",overlayimg:example3 },
-    { id: 4,img:drivermonitoring, title: "In-cabin monitoring system", text: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",link:"/driver-monitoring-camera" ,overlayimg:example4},
+    { id: 1,img:surroundview, title: "Surround View Cameras", text: "360-degree perception for enhanced safety and parking assistance.",link:"/surround-view-cameras",overlayimg:example1 },
+    { id: 2,img:forwardfacing, title: "Forward-Facing Cameras", text: "Long-range object detection and narrow-angle visibility for enhanced lane detection and collision avoidance.",link:"/forward-facing-cameras",overlayimg:example2 },
+    { id: 3,img:rearview, title: "Rear View Cameras", text: "Real-time driver assistance eliminates blind spots, ensuring safer reversing and parking.",link:"/rear-view-cameras",overlayimg:example3 },
+    { id: 4,img:drivermonitoring, title: "In-Cabin Monitoring Cameras", text: "Real-time driver behavior analysis to detect fatigue or distraction for improved safety.",link:"/driver-monitoring-cameras" ,overlayimg:example4},
   ];
 
   return (

@@ -21,7 +21,7 @@ const Certification = () => {
               </div>
               <div className="certification-image-container">
                 <img src={iatf} alt="IATF Certification" />
-                <p className="certification-image-title">IATF 16949:2016</p>
+                <p className="certification-image-title">IATF 16949:2016*</p>
               </div>
             </div>
           </div>

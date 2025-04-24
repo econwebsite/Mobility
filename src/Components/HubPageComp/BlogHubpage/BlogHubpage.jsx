@@ -38,7 +38,7 @@ const BlogHubpage = () => {
               <></>
               <div className="BlogHubPage-card-date">
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
-  <span>March 22, 2025</span>
+  <span>April 17, 2025</span>
 </div>
               </p>
            
@@ -66,7 +66,7 @@ const BlogHubpage = () => {
                 <></>
               <div className="BlogHubPage-card-date">
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
-  <span>March 31, 2025</span>
+  <span>April 19, 2025</span>
 </div></p>
               <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" />
             </div>
@@ -86,11 +86,11 @@ const BlogHubpage = () => {
                 <h2 className="BlogHubPage-card-title">How driver monitoring cameras improve driving safety and their key features</h2>
               </Link>
               <p className="BlogHubPage-card-text">
-                Driver monitoring systems improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.
+                Driver monitoring cameras improve road safety by helping detect fatigue and distractions. Explore the camera features that make them deliver safe driving practices.
                 <></>
               <div className="BlogHubPage-card-date">
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
-  <span>April 06, 2025</span>
+  <span>April 21, 2025</span>
 </div> </p>
               <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" />
             </div>
@@ -114,7 +114,7 @@ const BlogHubpage = () => {
                 <></>
               <div className="BlogHubPage-card-date">
   <ReadOutlined  className="BlogHubPage-calendar-icon" />
-  <span>April 11, 2025</span>
+  <span>April 24, 2025</span>
 </div> </p>
               <AnimatedButton className="BlogHubPage-card-button" text="Read more" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blog/how-surround-view-cameras-improve-driving-parking-safety/" />
             </div>

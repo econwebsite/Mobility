@@ -11,7 +11,7 @@ const BlogArtical = () => {
   const validateEmail = async () => {
     if (isValid && email.length > 0) {
       try {
-        const result = await axios.post('http://localhost:4002/api/validateEmail', { email });
+        const result = await axios.post('https://api.dental.e-consystems.com/api/validateEmail', { email });
         if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
           if (!result.data.free_email) {
             console.log(result);
@@ -52,7 +52,7 @@ const BlogArtical = () => {
     const valid = isValid? await validateEmail():false;
     if (valid) {
       try {
-        const result = await axios.post('http://localhost:4002/api/emailSubscription', { email });
+        const result = await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
         if (result.status === 200)
           message.success('Thanks for subscription!');
         setEmail('');

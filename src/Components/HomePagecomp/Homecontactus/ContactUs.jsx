@@ -124,7 +124,7 @@ const ContactUs = () => {
   const onFinish = (values) => {
     setIsLoading(true);
 
-    axios.post(`http://localhost:4002/api/contactusform`, { values })
+    axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
     form.resetFields();
@@ -149,7 +149,7 @@ const ContactUs = () => {
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
-      axios.post(`http://localhost:4002/api/validateEmail`, { email })
+      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {
@@ -187,8 +187,8 @@ const ContactUs = () => {
   return (
     <div className='total-contact'>
       {isContactPage && <Helmet>
-        <title>Contact Us</title>
-        <meta name='description' content='Have questions or need support? Reach out to e-con Systems for inquiries, assistance, or more information about our products and services.' />
+        <title>Contact Us | Connect with e-con Mobility Experts</title>
+        <meta name='description' content='Reach out to e-con Mobility for inquiries on automotive-grade camera solutions. Our team is here to assist with product info, support, and partnerships.' />
       </Helmet>}
       <h1 className='Contact-us'>CONTACT US</h1>
 

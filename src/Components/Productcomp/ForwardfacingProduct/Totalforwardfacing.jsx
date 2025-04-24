@@ -64,8 +64,8 @@ const Section = ({ children, id }) => (
   return (
     <div>
         <Helmet>
-      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      <title>Forward Facing Camera for ADAS & Mobility</title>
+      <meta name='description' content='Explore forward facing cameras with HDR, LFM & high resolution. Designed for ADAS in mobility systems—ideal for lane assist, collision alerts & sign detection.' />
       </Helmet>
       <Section id="top">
         <ProductBanner />

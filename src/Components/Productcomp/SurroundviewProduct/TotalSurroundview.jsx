@@ -63,8 +63,8 @@ const Section = ({ children, id }) => (
     return (
         <div>
             <Helmet>
-      <title>e-con Systems: ODM Solutions for Mobility Cameras</title>
-      <meta name='description' content='e-con Systems Mobility offers ODM solutions for' />
+      <title>360&deg; Surround View Cameras for ADAS & Mobility</title>
+      <meta name='description' content='Get real-time 360° surround view camera with HDR, high sensitivity, long-range sync & ISP. Perfect for blind spot monitoring, parking assist & ADAS in mobility systems.' />
       </Helmet>
              <Section id="top">
             <ProductBanner/>

@@ -3,11 +3,11 @@ import './ProductTab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
 import Modelbutton from "../../../ButtonComp/Modelbutton";
 
-import STURDeCAM31 from "../../../../assets/Productpage/surroundview/studycam31.jpg"
-import STURDeCAM34 from "../../../../assets/Productpage/surroundview/studycam34.jpg"
-import STURDeCAM84 from "../../../../assets/Productpage/surroundview/studycam84.jpg"
-import STURDeCAM88 from "../../../../assets/Productpage/surroundview/studycam88.png"
-import routecam22 from "../../../../assets/Productpage/surroundview/routeecamcu22.jpg"
+import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg"
+import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg"
+import STURDeCAM84 from "../../../../assets/allcameras/studycam84.jpg"
+import STURDeCAM88 from "../../../../assets/allcameras/studycam88.png"
+import routecam22 from "../../../../assets/allcameras/routeecamcu22.jpg"
 
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg";
@@ -183,7 +183,7 @@ const Producttab = () => {
 
               {selectedRightTab && currentContent && (
                 <div className="ProductTabs-ContentBox">
-                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} />
+                  <ProductTableData tableData={currentContent.tableData} imageSrc={currentImage} productName={selectedRightTab} title={currentContent.title} />
 
                   <div className="Productinsidetab-container">
                     <div className="Productinsidetab-image-row">

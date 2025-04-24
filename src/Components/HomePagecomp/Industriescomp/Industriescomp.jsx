@@ -19,7 +19,7 @@ const items = [
   { id: 5, title: "Garbage Trucks", img: garbagetruck, link:"/industries/garbage-trucks" },
   { id: 6, title: "Autonomous Vehicles", img: autonomousvehical,link:"/industries/autonomous-vehicles" },
   { id: 7, title: "Delivery Trucks", img: deliverytruck,link:"/industries/delivery-trucks" },
-  { id: 8, title: "Lawn Mowers", img: lawn,link:"/industries/lawn-mower" },
+  { id: 8, title: "Lawn Mowers", img: lawn,link:"/industries/lawn-mowers" },
 ];
 
 function IndustriesComp() {
