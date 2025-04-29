@@ -8,7 +8,7 @@ import TotalHomePage from "./Components/HomePagecomp/TotalHomePage";
 import Footerpage from "./Components/FooterComp/Footerpage";
 import TotalSurroundview from "./Components/Productcomp/SurroundviewProduct/TotalSurroundview";
 import Totalforwardfacing from "./Components/Productcomp/ForwardfacingProduct/Totalforwardfacing";
-import Totalmonitoring from "./Components/Productcomp/DriverMonitoringProduct/Totalmonitoring";
+import Totalincabin from "./Components/Productcomp/IncabinProduct/Totalmonitoring";
 import Totalrearview from "./Components/Productcomp/Rearviewproduct/Totalrearview"
 import ScrollToTop from "./Components/ScrollToTop"
 import BlogHubpage from './Components/HubPageComp/BlogHubpage/BlogHubpage';
@@ -29,7 +29,7 @@ const App = () => {
 
   return (
 
-          <BrowserRouter>
+          <BrowserRouter basename="/mobility">
                     <HelmetProvider>
           
               <ScrollToTop /> 
@@ -46,7 +46,7 @@ const App = () => {
         <Route path="/" element={<TotalHomePage />} />
         <Route path="/surround-view-cameras" element={<TotalSurroundview/>} />
         <Route path="/forward-facing-cameras" element={<Totalforwardfacing/>} />
-        <Route path="/driver-monitoring-cameras" element={<Totalmonitoring/>} />
+        <Route path="/driver-monitoring-cameras" element={<Totalincabin/>} />
         <Route path="/rear-view-cameras" element={<Totalrearview/>} />
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/blog" element={<BlogHubpage/>} />
