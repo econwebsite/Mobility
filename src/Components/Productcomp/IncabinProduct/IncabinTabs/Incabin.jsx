@@ -3,7 +3,7 @@ import './Incabin.css';
 import { useLocation } from 'react-router-dom';
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM27 from "../../../../assets/allcameras/sturdecam29.jpg";
-import studycam29 from "../../../../assets/allcameras/sturdecam29.jpg";
+import STURDeCAM29 from "../../../../assets/allcameras/sturdecam29.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton"
 import ambrella from "../../../../assets/Productpage/platformsupport/ambarella.jpg";
 import renasas from '../../../../assets/Productpage/platformsupport/renesas.jpg';
@@ -66,7 +66,7 @@ const [initialLeftTab, setInitialLeftTab] = useState(null);
       },
       bgColor: 'white',
       color: '#344ea1',
-      images: [STURDeCAM27, studycam29],
+      images: [STURDeCAM27, STURDeCAM29],
     }
   };
   

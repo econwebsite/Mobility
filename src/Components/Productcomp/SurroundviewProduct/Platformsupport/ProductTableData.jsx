@@ -1,14 +1,20 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import "./ProductTableData.css"; 
-import Modelbutton from "../../../ButtonComp/Modelbutton"
+import NewReleasesIcon from "../../../../assets/new-icon.png";
+
 
 function ProductTableData({ tableData, imageSrc,productName,title,documentname,doctitle }) {
   return (
     <div className="ProductTableData-TotalContBox">
   <div className='mainContainer'>
-  <h4 className='ProductTable-title'>{title}</h4>
-  <div className="ProductTableData-ContainerBox">
+ <h4 className='ProductTable-title'>
+  {title === "STURDeCAM88 - 4K 140dB HDR GMSL2 Camera Module" && (
+   <img src={NewReleasesIcon}    className="ProductTable-icon" />
+
+  )}
+  {title}
+</h4>  <div className="ProductTableData-ContainerBox">
     <div className="ProductTableData-ImageColumn">
     <div className="ProductTableData-ImageWrapper">
       {imageSrc && <img src={imageSrc} alt="tab" />}

@@ -30,8 +30,7 @@ const App = () => {
   return (
 
           <BrowserRouter 
-          // basename="/mobility"
-          >
+        >
                     <HelmetProvider>
           
               <ScrollToTop /> 

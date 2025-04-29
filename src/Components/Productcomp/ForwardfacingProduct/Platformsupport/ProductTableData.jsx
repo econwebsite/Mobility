@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import "./ProductTableData.css"; 
-import NewReleasesIcon from "../../../../assets/newicon copy.jpg";
+import NewReleasesIcon from "../../../../assets/new-icon.png";
 
 function ProductTableData({ tableData, imageSrc,productName,title,documentname,doctitle }) {
   return (
