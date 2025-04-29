@@ -8,7 +8,7 @@ import ProductBlog from "./ProductBlogs/ProductBlogs";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import DriverApplications from './ProductApplication/DriverApplications';
 import { Helmet } from 'react-helmet-async';
-// ss
+
 
 const Totalmonitoring = () => {
   const location = useLocation();
