@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './ProductTab.css';
 import ProductTableData from "../Platformsupport/ProductTableData";
 import Modelbutton from "../../../ButtonComp/Modelbutton";
+import { useLocation } from 'react-router-dom';
 
 import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg"
 import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg"
@@ -16,7 +17,11 @@ import renesas from "../../../../assets/Productpage/platformsupport/renesas.jpg"
 
 const Producttab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
-  const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
+  const [selectedRightTab, setSelectedRightTab] = useState('STURDeCAM31');
+  const [initialLeftTab, setInitialLeftTab] = useState(null);
+  const [initialRightTab, setInitialRightTab] = useState(null);
+  const location = useLocation();
+
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
     { id: 2, src: [nvidia], alt: 'nvidia' },
@@ -31,7 +36,7 @@ const Producttab = () => {
       color: '#344ea1',
     },
     '3MP GMSL2': {
-      tabs: ['STURDeCAM31', 'STRUDeCAM34'],
+      tabs: ['STURDeCAM31', 'STURDeCAM34'],
       content: {
         'STURDeCAM31': {
           tableData: [
@@ -46,7 +51,7 @@ const Producttab = () => {
           documentname:"e-con-STURDeCAM31-technical-documents.zip",
           doctitle:"Technical documents for STURDeCAM31"
         },
-        'STRUDeCAM34': {
+        'STURDeCAM34': {
           tableData: [
             [' onsemi&reg AR0341AT', '3MP @ 30 fps'],
             ['In-Built ISP', '150dB HDR'],
@@ -112,7 +117,7 @@ const Producttab = () => {
             ['Compliance & Standards: ISO 13766'],
           ],
           title:"RouteCAM_CU22_IP67 - Outdoor Lowlight GigE HDR Camera",
-          documentname:"e-con-RouteCAM_CU22-technical-documents.zip",
+          documentname:"e-con-RouteCAM_CU22_IP67-technical-documents.zip",
           doctitle:"Technical documents for RouteCAM_CU22"
         },
       },
@@ -132,12 +137,30 @@ const Producttab = () => {
   const handleRightTabClick = (tab) => {
     setSelectedRightTab(tab);
   };
+  useEffect(() => {
+    if (location.state?.leftTab) {
+      setInitialLeftTab(location.state.leftTab);
+    }
+    if (location.state?.rightTab) {
+      setInitialRightTab(location.state.rightTab);
+    }
+  }, [location.state]);
 
   useEffect(() => {
-    if (rightTabs[selectedLeftTab].tabs) {
+    if (initialLeftTab) {
+      setSelectedLeftTab(initialLeftTab);
+    }
+  }, [initialLeftTab]);
+
+  useEffect(() => {
+    if (initialRightTab && rightTabs[selectedLeftTab]?.tabs.includes(initialRightTab)) {
+      setSelectedRightTab(initialRightTab);
+    } else if (rightTabs[selectedLeftTab]) {
       setSelectedRightTab(rightTabs[selectedLeftTab].tabs[0]);
     }
-  }, [selectedLeftTab]);
+  }, [selectedLeftTab, initialRightTab]);
+
+
 
   const currentContent = rightTabs[selectedLeftTab]?.content[selectedRightTab];
   const currentImage = rightTabs[selectedLeftTab]?.images?.[rightTabs[selectedLeftTab].tabs.indexOf(selectedRightTab)];

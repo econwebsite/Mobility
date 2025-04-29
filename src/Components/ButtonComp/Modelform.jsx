@@ -10,36 +10,6 @@ const { TextArea } = Input;
 const { Option } = Select;
 
 
-const countries1 = [
-  { code: '+1', name: 'United States' },
-  { code: '+1', name: 'Canada' },
-  { code: '+52', name: 'Mexico' },
-  { code: '+44', name: 'United Kingdom' },
-  { code: '+61', name: 'Australia' },
-  { code: '+91', name: 'India' },
-  { code: '+49', name: 'Germany' },
-  { code: '+33', name: 'France' },
-  { code: '+39', name: 'Italy' },
-  { code: '+34', name: 'Spain' },
-  { code: '+55', name: 'Brazil' },
-  { code: '+81', name: 'Japan' },
-  { code: '+86', name: 'China' },
-  { code: '+82', name: 'South Korea' },
-  { code: '+27', name: 'South Africa' },
-  { code: '+7', name: 'Russia' },
-  { code: '+90', name: 'Turkey' },
-  { code: '+966', name: 'Saudi Arabia' },
-  { code: '+54', name: 'Argentina' },
-  { code: '+56', name: 'Chile' },
-  { code: '+57', name: 'Colombia' },
-  { code: '+51', name: 'Peru' },
-  { code: '+66', name: 'Thailand' },
-  { code: '+84', name: 'Vietnam' },
-  { code: '+65', name: 'Singapore' },
-];
-
-
-
 const usaStates = [
   { code: 'AL', name: 'Alabama' },
   { code: 'AK', name: 'Alaska' },
@@ -94,12 +64,25 @@ const usaStates = [
 ];
 function Modelform({ visible, onClose, type, docName, productName, title }) {
   const [form] = Form.useForm();
-  const [selectedCountry, setSelectedCountry] = useState('United States');
+  const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false); 
-
+  const [isError, setIsError] = useState(true); 
+  const blockedProviders  = [
+    'gmail.com',
+    'yahoo.com',
+    'outlook.com',
+    'hotmail.com',
+    'protonmail.com',
+    'zoho.com',
+    'aol.com',
+    'gmx.com',
+    'mail.com',
+    'icloud.com',
+    'yandex.com'
+  ];
 
   
   const overlayStyle = {
@@ -122,7 +105,8 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       label: country.label
     }));
   }, []);
-  const onFinish = (values) => {
+ const onFinish = (values) => {
+  if(isError){
     setIsLoading(true);
     const trackingData = {
       email: values.email,
@@ -142,7 +126,6 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         ...trackingData,
       });
     }
-  
 
 
     if (type === 'download') {
@@ -164,7 +147,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     else {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+            axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
         .then(result => {
           message.success('Message sent successfully!');
           onClose();
@@ -173,7 +156,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         .finally(() => setIsLoading(false));
 
     }
-
+  }
   };
 
   const handleCountryChange = (value) => {
@@ -185,16 +168,59 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     }
   };
   
+  const emailValidator = (_, value) => {
+    if (value) {
+      const domain = value.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        return Promise.reject('Please enter your company email');
+      }
+      else{
+        setIsError(true);
+      }
+    }
+    return Promise.resolve();
+  };
+
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
+      const domain = email.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        form.setFields([
+          {
+            name: 'email',
+            errors: ["Please enter your company email"],
+          },
+        ]);
+        return;
+      }
+
+      // Proceed with API validation only if domain is not blocked
       axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
+          if(result.data.isValid === true){
+            setIsError(true);
+            return true;
+          }
+          else if(result.data.isValid === false){
+            setIsError(false);
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
+            ]);
+          }
+          else if (result.data.isValid === null || result.data.isValid === undefined) {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {
+              setIsError(true);
               return true
             }
             else {
+              setIsError(false);
               form.setFields([
                 {
                   name: 'email',
@@ -204,6 +230,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
             }
           }
           else {
+            setIsError(false);
             form.setFields([
               {
                 name: 'email',
@@ -211,11 +238,12 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               },
             ]);
           }
-
+        }
         })
         .catch(err => console.log(err));
     }
   };
+
   return (
     <Modal
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
@@ -245,7 +273,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         onFinish={onFinish}
         layout="vertical"
         initialValues={{
-          country: 'United States',
+          country: 'US',
           state: 'AL',
         }}
       >
@@ -275,9 +303,10 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               rules={[
                 { required: true, message: 'Please enter your email' },
                 { type: 'email', message: 'Please enter a valid email' },
+                { validator: emailValidator }
               ]}
             >
-              <Input placeholder="Email*" onPaste={(e) => {
+              <Input placeholder="name@yourcompany.com*" onPaste={(e) => {
                 e.preventDefault()
                 return false;
               }} autoComplete='off' onBlur={handleEmailValidate} />

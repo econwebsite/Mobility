@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './DriverTab.css';
+import { useLocation } from 'react-router-dom';
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM27 from "../../../../assets/allcameras/STURDeCAM29.jpg";
 import studycam29 from "../../../../assets/allcameras/STURDeCAM29.jpg";
@@ -11,8 +12,11 @@ import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg"
 
 const DriverTab = () => {
-  const [selectedLeftTab, setSelectedLeftTab] = useState('STURDeCAM27');
+  const [selectedLeftTab, setSelectedLeftTab] = useState('eDAC');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
+const [initialLeftTab, setInitialLeftTab] = useState(null);
+  const [initialRightTab, setInitialRightTab] = useState(null);
+  const location = useLocation();
 
   const images = [
     { id: 1, src: [ambrella], alt: 'ambrella' },
@@ -23,17 +27,17 @@ const DriverTab = () => {
 
   ];
  
-  const rightTabs = {
+  const rightTabs = {   
     'Supported Cameras': {
-      tabs: ['STURDeCAM27', 'NileCAM29'],
-      bgColor: 'transparent',
-      color: '#344ea1',
+      tabs: ['CAMERA_MODEL_1', 'CAMERA_MODEL_2'],
       images: [],
+      bgColor: '#f1f2f2',
+      color: '#344ea1',
     },
-    'STURDeCAM27': {
-      tabs: ['STURDeCAM27'],
+    'eDAC': {
+      tabs: ['eDAC27', 'eDAC29'],
       content: {
-        'STURDeCAM27': {
+        'eDAC27': {
           tableData: [
             ['OMNIVISION™ OV2312', '2MP @ 60 fps'],
             ['In-Built ISP', 'Chroma: RGB-IR'],
@@ -42,19 +46,11 @@ const DriverTab = () => {
             ['Form factor: 42mm x 42mm', 'FOV: 75°(H), 62°(V), 88°(D)'],
             ['IP Rating (Optional)', 'Compliance & Standards :<br>ISO 11452'],
           ],
-          title:"STURDeCAM27 - 2MP OV2312 Global Shutter Camera with 15m cable support",
-            documentname:"eSTURDeCAM27-technical-documents.zip",
-          doctitle:"Technical documents for STURDeCAM27"
+          title: "eDAC27 - 2MP OV2312 Global Shutter Camera with 15m cable support",
+          documentname: "eSTURDeCAM27-technical-documents.zip",
+          doctitle: "Technical documents for STURDeCAM27"
         },
-      },
-      bgColor: 'white',
-      color: '#344ea1',
-      images: [STURDeCAM27],
-    },
-    'STURDeCAM29': {
-      tabs: ['STURDeCAM29'],
-      content: {
-        'STURDeCAM29': {
+        'eDAC29': {
           tableData: [
             ['OMNIVISION™ OV2311', '2MP @ 60 fps'],
             ['Without ISP', 'Monochrome'],
@@ -63,19 +59,18 @@ const DriverTab = () => {
             ['Form factor:42mm x 42mm', 'FOV: 57°(H), 44°(V), 70°(D)'],
             ['IP Rating (Optional)', 'Compliance & Standards :<br>ISO 16750'],
           ],
-          title:"STURDeCAM29 - 2MP OV2311 Global Shutter Camera with 15m cable support",
-            documentname:"e-con-STURDeCAM29-technical-documents.zip",
-          doctitle:"Technical documents for STURDeCAM29"
+          title: "eDAC29 - 2MP OV2311 Global Shutter Camera with 15m cable support",
+          documentname: "e-con-STURDeCAM29-technical-documents.zip",
+          doctitle: "Technical documents for STURDeCAM29"
         },
       },
       bgColor: 'white',
       color: '#344ea1',
-      images: [studycam29],
-    },
-    
+      images: [STURDeCAM27, studycam29],
+    }
   };
-
-  const handleLeftTabClick = (tab) => {
+  
+const handleLeftTabClick = (tab) => {
     if (tab !== 'Supported Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
@@ -85,12 +80,30 @@ const DriverTab = () => {
   const handleRightTabClick = (tab) => {
     setSelectedRightTab(tab);
   };
+  useEffect(() => {
+    if (location.state?.leftTab) {
+      setInitialLeftTab(location.state.leftTab);
+    }
+    if (location.state?.rightTab) {
+      setInitialRightTab(location.state.rightTab);
+    }
+  }, [location.state]);
 
   useEffect(() => {
-    if (rightTabs[selectedLeftTab].tabs) {
+    if (initialLeftTab) {
+      setSelectedLeftTab(initialLeftTab);
+    }
+  }, [initialLeftTab]);
+
+  useEffect(() => {
+    if (initialRightTab && rightTabs[selectedLeftTab]?.tabs.includes(initialRightTab)) {
+      setSelectedRightTab(initialRightTab);
+    } else if (rightTabs[selectedLeftTab]) {
       setSelectedRightTab(rightTabs[selectedLeftTab].tabs[0]);
     }
-  }, [selectedLeftTab]);
+  }, [selectedLeftTab, initialRightTab]);
+
+
 
   const currentContent = rightTabs[selectedLeftTab]?.content[selectedRightTab];
   const currentImage = rightTabs[selectedLeftTab]?.images?.[rightTabs[selectedLeftTab].tabs.indexOf(selectedRightTab)];

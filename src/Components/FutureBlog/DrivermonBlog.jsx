@@ -1,5 +1,6 @@
 import React from "react";
-import "./Blogcommon.css"
+import "./Blogcommon.css";
+import { useNavigate } from 'react-router-dom';
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
@@ -10,6 +11,18 @@ import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
 import driverbanner from '../../assets/blogpage/drivermonitoring-banner.jpg';
 
 const DrivermonBlog = () => {
+      const navigate = useNavigate();
+        
+        const handleLiClick = (leftTab, rightTab) => {
+            navigate('/driver-monitoring-cameras', {
+                state: {
+                    hash: '#driverTab',
+                    leftTab,
+                    rightTab
+                }
+            });
+        };
+
     return (
         <div>
               <Helmet>
@@ -69,10 +82,10 @@ const DrivermonBlog = () => {
                             <h3>Driver Monitoring Cameras Offered by e-con Systems </h3>
                                 <p>Since 2003, e-con Systems has been designing, developing, and manufacturing high-performance OEM cameras. We offer a wide selection of cameras for easy integration into driver monitoring systems. These small form-factor cameras are equipped with relevant features such as high resolution, high frame rate, NIR sensitivity, global shutter mode, as well as industry-leading protection ratings like IP67/IP69K. They also support various interfaces, including GMSL and GigE. </p>
                                 <p>Some of e-con Systems’ cameras for driver monitoring systems are:</p>
-                                <ul>
-                                    <li>NileCAM27</li>
-                                    <li>NileCAM29</li>
-                                    <li>RouteCAM_CU25</li>
+                                <ul className="Blog-camlink">
+                                    <li onClick={() => handleLiClick('eDAC', 'eDAC27')}><p>eDAC27</p></li>
+                                    <li onClick={() => handleLiClick('eDAC', 'eDAC29')}><p>eDAC29</p></li>
+                                    <li><p style={{cursor:"default"}}>RouteCAM_CU25</p></li>
                                 </ul>
                                 <p>Our expertise in vision systems for autonomous mobility encompasses ISP tuning, optical integration, AI/ML development, mechanical design support, and compliance with ISO functional safety standards. e-con Systems also brings rich experience working with leading platforms such as NVIDIA, NXP, TI, Qualcomm, and FPGA.</p>
                                 <p>Go to our <a href="https://www.e-consystems.com/camera-selector.asp"> Camera Selector Page</a> to see our complete portfolio.</p>

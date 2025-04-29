@@ -3,6 +3,7 @@ import "./Blogcommon.css"
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import drivermonitoring from "../../assets/hubpage/Blogpage/drivermonitoring-blog.jpg";
 import forwardfacing from "../../assets/hubpage/Blogpage/forwardfacing-blog.jpg";
@@ -10,6 +11,18 @@ import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
 import hdrbanner from "../../assets/blogpage/hdr-led-banner.jpg"
 
 const HdrLedBlog = () => {
+            const navigate = useNavigate();
+    
+    const handleLiClick = (leftTab, rightTab) => {
+        navigate('/forward-facing-cameras', {
+            state: {
+                hash: '#forwardTab',
+                leftTab,
+                rightTab
+            }
+        });
+    };
+
     return (
         <div>
             <Helmet>
@@ -64,15 +77,15 @@ const HdrLedBlog = () => {
                             <h3>World-Class Cameras by e-con Systems for Autonomous Mobility</h3>
                             <p>Since 2003, e-con Systems has been designing, developing, and manufacturing high-performance OEM cameras. We provide a range of cameras designed for seamless integration into ADAS and autonomous mobility systems. These cameras come equipped with key features such as HDR, night vision, synchronized multi-camera setups, IP67/IP69K protection, and various interfaces like GMSL.</p>
                                 <h3>Our cameras for autonomous mobility:</h3>
-                                <ul>
-                                    <li>RouteCAM_CU25 </li>
-                                    <li>STURDeCAM31  </li>
-                                    <li>STURDeCAM34</li>
-                                    <li>STURDeCAM84</li>
-                                    <li>STURDeCAM88</li>
-                                    <li>RouteCAM_CU22</li>
-                                    <li>ArniCAM80</li>
-                                    <li>ArniCAM31</li>
+                                <ul className="Blog-camlink">
+                                    <li><p style={{cursor:"default"}}>RouteCAM_CU25</p></li>
+                                    <li onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM31')}><p>STURDeCAM31</p></li>
+                                    <li onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM34')}><p>STURDeCAM34</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM84')}><p>STURDeCAM84</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM88')}><p>STURDeCAM88</p></li>
+                                    <li><p style={{cursor:"default"}}>RouteCAM_CU22</p></li>
+                                    <li><p style={{cursor:"default"}}>ArniCAM80</p></li>
+                                    <li><p style={{cursor:"default"}}>ArniCAM31</p></li>
                                 </ul>
                                 <p>e-con Systems’ expertise in autonomous mobility vision extends to ISP tuning, optics integration, AI/ML development, mechanical design assistance, and ensuring compliance with ISO functional safety standards. Additionally, we have extensive experience working with platforms such as NVIDIA, NXP, TI, Qualcomm, and FPGA.</p>
                                 <p>Use our <a href="https://www.e-consystems.com/camera-selector.asp">Camera Selector</a> to explore our full portfolio.</p>

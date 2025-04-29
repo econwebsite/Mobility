@@ -76,6 +76,15 @@ width: 100%;
   object-fit: cover;
   width: 100%;
 }
+.Blog-camlink p{
+color: #344ea1;
+cursor: pointer;
+line-height: 1em;
+
+}
+.Blog-camlink p:hover{
+  color: #00aeef ;
+}
 
 @media (max-width: 768px) {
   .threeparameter-content {
@@ -175,7 +184,7 @@ font-weight: 400;
   width: 100%;
   color: #00aeef;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   margin-top: 10px;
   margin-bottom: 10px;

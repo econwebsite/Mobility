@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Forwardtab.css';
+import { useLocation } from 'react-router-dom';
+
 import ProductTableData from "../Platformsupport/ProductTableData";
 import STURDeCAM88 from "../../../../assets/allcameras/studycam88.png";
 import STURDeCAM84 from "../../../../assets/allcameras/studycam84.jpg";
@@ -15,6 +17,9 @@ import texas from "../../../../assets/Productpage/platformsupport/texas.jpg"
 const Forwardtab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('4K GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
+const [initialLeftTab, setInitialLeftTab] = useState(null);
+  const [initialRightTab, setInitialRightTab] = useState(null);
+  const location = useLocation();
 
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
@@ -67,7 +72,7 @@ const Forwardtab = () => {
     },
     
     '3MP GMSL2': {
-      tabs: ['STURDeCAM31', 'STRUDeCAM34'],
+      tabs: ['STURDeCAM31', 'STURDeCAM34'],
       content: {
         'STURDeCAM31': {
           tableData: [
@@ -82,7 +87,7 @@ const Forwardtab = () => {
          documentname:"e-con-STURDeCAM31-technical-documents.zip",
           doctitle:"Technical documents for STURDeCAM31"
         },
-        'STRUDeCAM34': {
+        'STURDeCAM34': {
           tableData: [
             [' onsemi&reg AR0341AT', '3MP @ 30 fps'],
             ['In-Built ISP', '150dB HDR'],
@@ -106,24 +111,44 @@ const Forwardtab = () => {
   };
 
   const handleLeftTabClick = (tab) => {
-    if (tab !== 'Supported Cameras') {
-      setSelectedLeftTab(tab);
-      setSelectedRightTab(rightTabs[tab].tabs[0]);
-    }
-  };
+      if (tab !== 'Supported Cameras') {
+        setSelectedLeftTab(tab);
+        setSelectedRightTab(rightTabs[tab].tabs[0]);
+      }
+    };
+  
+    const handleRightTabClick = (tab) => {
+      setSelectedRightTab(tab);
+    };
+    useEffect(() => {
+      if (location.state?.leftTab) {
+        setInitialLeftTab(location.state.leftTab);
+      }
+      if (location.state?.rightTab) {
+        setInitialRightTab(location.state.rightTab);
+      }
+    }, [location.state]);
+  
+    useEffect(() => {
+      if (initialLeftTab) {
+        setSelectedLeftTab(initialLeftTab);
+      }
+    }, [initialLeftTab]);
+  
+    useEffect(() => {
+      if (initialRightTab && rightTabs[selectedLeftTab]?.tabs.includes(initialRightTab)) {
+        setSelectedRightTab(initialRightTab);
+      } else if (rightTabs[selectedLeftTab]) {
+        setSelectedRightTab(rightTabs[selectedLeftTab].tabs[0]);
+      }
+    }, [selectedLeftTab, initialRightTab]);
+  
+  
+  
+    const currentContent = rightTabs[selectedLeftTab]?.content[selectedRightTab];
+    const currentImage = rightTabs[selectedLeftTab]?.images?.[rightTabs[selectedLeftTab].tabs.indexOf(selectedRightTab)];
+  
 
-  const handleRightTabClick = (tab) => {
-    setSelectedRightTab(tab);
-  };
-
-  useEffect(() => {
-    if (rightTabs[selectedLeftTab].tabs) {
-      setSelectedRightTab(rightTabs[selectedLeftTab].tabs[0]);
-    }
-  }, [selectedLeftTab]);
-
-  const currentContent = rightTabs[selectedLeftTab]?.content[selectedRightTab];
-  const currentImage = rightTabs[selectedLeftTab]?.images?.[rightTabs[selectedLeftTab].tabs.indexOf(selectedRightTab)];
 
   return (
     <div className="ForwardTabs-Total">

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blogcommon.css"
+import { useNavigate } from 'react-router-dom';
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
@@ -10,6 +11,17 @@ import surroundview from "../../assets/hubpage/Blogpage/surroundview-blog.jpg";
 import forwardbanner from "../../assets/blogpage/forwardfacing-banner.jpg"
 
 const ForwardBlog = () => {
+        const navigate = useNavigate();
+    
+    const handleLiClick = (leftTab, rightTab) => {
+        navigate('/forward-facing-cameras', {
+            state: {
+                hash: '#forwardTab',
+                leftTab,
+                rightTab
+            }
+        });
+    };
     return (
         <div>
               <Helmet>
@@ -59,12 +71,13 @@ const ForwardBlog = () => {
                                 <h3>e-con Systems’ Cameras for Autonomous Mobility</h3>
                                 <p>Since 2003, e-con Systems has been designing, developing, and manufacturing high-performance OEM cameras. We offer several cameras that can be integrated into ADAS and other autonomous mobility applications. They come with ideal features such as HDR, night vision, multi-camera synchronization capabilities, IP67/IP69K rating, and multiple interfaces, including GMSL.</p>
                                 <h3>Our camera solutions for mobility:</h3>
-                                <ul>
-                                    <li>STURDeCAM31 </li>
-                                    <li>STURDeCAM34</li>
-                                    <li>STURDeCAM84</li>
-                                    <li>STURDeCAM88</li>
-                                    <li>RouteCAM_CU22</li>
+                                <ul className="Blog-camlink">
+                                    <li onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM31')}><p>STURDeCAM31</p></li>
+                                    <li onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM34')}><p>STURDeCAM34</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM84')}><p>STURDeCAM84</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM88')}><p>STURDeCAM88</p></li>
+                                    <li ><p style={{cursor:"default"}}>RouteCAM_CU22</p></li>
+
                                 </ul>
                                 <p>Our autonomous mobility vision expertise includes ISP tuning, optics integration, AI/ML development, mechanical design support, functional safety compliance with ISO standards, and more. We also have deep experience in NVIDIA, NXP, TI, Qualcomm, and FPGA platforms.</p>
                                 <p>Browse our <a href="https://www.e-consystems.com/camera-selector.asp"> Camera Selector Page</a>  to view e-con Systems’ portfolio.</p>

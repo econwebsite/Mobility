@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blogcommon.css"
+import { useNavigate } from 'react-router-dom';
 import AnimatedButton from "../ButtonComp/AnimationButton"
 import BlogArtical from "./BlogArticals/BlogArtical"
 import { Link } from 'react-router-dom';
@@ -12,12 +13,24 @@ import surroundviewbanner from "../../assets/blogpage/surroundview-banner.jpg";
 
 
 const SurroundBlog = () => {
+    const navigate = useNavigate();
+
+    const handleLiClick = (leftTab, rightTab) => {
+        navigate('/surround-view-cameras', {
+            state: {
+                hash: '#surroundTab',
+                leftTab,
+                rightTab
+            }
+        });
+    };
+
     return (
         <div>
-              <Helmet>
-      <title>How Surround View Cameras Improve Driving and Parking Safety</title>
-      <meta name='description' content='Learn how surround view cameras enhance safety by enabling real-time lane monitoring, object detection, and blind-spot coverage in ADAS.' />
-      </Helmet>
+            <Helmet>
+                <title>How Surround View Cameras Improve Driving and Parking Safety</title>
+                <meta name='description' content='Learn how surround view cameras enhance safety by enabling real-time lane monitoring, object detection, and blind-spot coverage in ADAS.' />
+            </Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
@@ -32,7 +45,7 @@ const SurroundBlog = () => {
                             <p>By Suresh Madhu, April 11, 2025</p>
 
                             <div className="blogborder-box">
-                            <div class="Blog-coverimg">
+                                <div class="Blog-coverimg">
                                     <img src={surroundviewbanner} alt="Blog Cover Image" />
                                 </div>
                                 <br></br>
@@ -43,7 +56,7 @@ const SurroundBlog = () => {
                                 <p>Modern driving scenarios demand more than a rear-view mirror or backup camera can provide. The ability to assess surroundings from all angles has become critical, considering the rising traffic density, narrow parking spots, and increasing vehicle sizes. As vehicles increasingly rely on automation, the margin for error shrinks. </p>
                                 <p>Surround-view cameras bridge the gap between limited human perception and complex real-world conditions. They eliminate reliance on multiple visual references by centralizing the driver's view, which reduces hesitation, missed judgments, and blind turning points. So, these cameras can go a long way to strengthen the imaging baseline for these systems to function reliably even in unpredictable environments.</p>
                                 <p>
-                                Key reasons for integrating surround-view cameras:</p>
+                                    Key reasons for integrating surround-view cameras:</p>
                                 <ul>
                                     <li>Eliminate low-ground and side-obstacle blind zones that mirrors can’t capture</li>
                                     <li>Improve confidence in navigating through tight or obstructed spaces</li>
@@ -67,20 +80,20 @@ const SurroundBlog = () => {
                                 <h3>IP rating</h3>
                                 <p>Surround-view cameras must be capable of withstanding harsh environmental conditions. With high IP ratings, such as IP67 or IP69K, these cameras can resist water, dust, and other elements that may compromise their functionality. They also offer long-term durability, no matter the vehicle's operating environment (heavy rain, snow, etc.).</p>
                                 <h3>Platform support</h3>
-                                <p>Surround-view cameras have to be compatible with a wide range of automotive platforms. Only then would manufacturers be able to integrate the system into various vehicle models (from compact cars to large trucks) without needing major changes to the vehicle's architecture. 
+                                <p>Surround-view cameras have to be compatible with a wide range of automotive platforms. Only then would manufacturers be able to integrate the system into various vehicle models (from compact cars to large trucks) without needing major changes to the vehicle's architecture.
                                 </p>
                                 <h3>Compliance adherence</h3>
                                 <p>To be trusted, surround-view cameras must comply with stringent automotive safety and operational standards. These standards include ISO 11452, ISO 16750, ISO 13766, and ISO 14982, which govern various aspects, such as electromagnetic compatibility, environmental resilience, and operational safety.</p>
                                 <h3>e-con Systems’ High-Performance Surround-View Cameras</h3>
                                 <p>Since 2003, e-con Systems has been designing, developing, and manufacturing high-performance OEM cameras. Our surround-view cameras come with features like high resolution, high frame rates, global shutter, IP67/IP69K rating, GMSL and GigE interfaces, and more. e-con Systems also has proven expertise in collaborating with platforms like NVIDIA, Qualcomm, and Ambarella. </p>
                                 <p>Our latest surround-view cameras include:</p>
-                                <ul>
-                                    <li>STURDeCAM31</li>
-                                    <li>STURDeCAM34</li>
-                                    <li>STURDeCAM84</li>
-                                    <li>STURDeCAM88</li>
-                                    <li>RouteCAM_CU22</li>
-                                </ul>  
+                                <ul className="Blog-camlink">
+                                    <li  onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM31')}><p>STURDeCAM31</p></li>
+                                    <li onClick={() => handleLiClick('3MP GMSL2', 'STURDeCAM34')}><p>STURDeCAM34</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM84')}><p>STURDeCAM84</p></li>
+                                    <li onClick={() => handleLiClick('4K GMSL2', 'STURDeCAM88')}><p>STURDeCAM88</p></li>
+                                    <li onClick={() => handleLiClick('POE/GigE', 'RouteCAM_CU22')}><p>RouteCAM_CU22</p></li>
+                                </ul>
                                 <p>Our expertise extends to advanced vision solutions, covering ISP tuning, optical integration, AI/ML development, and mechanical design. We also ensure adherence to ISO functional safety standards. </p>
                                 <p>Check out our <a href="https://www.e-consystems.com/camera-selector.asp"> Camera Selector Page </a> to see e-con Systems’ end-to-end portfolio.</p>
 

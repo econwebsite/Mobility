@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './rearview.css';
+import { useLocation } from 'react-router-dom';
+
 import ProductTableData from "../Driversupports/ProductTableData";
 import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg";
 import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg";
@@ -14,6 +16,9 @@ import texas from "../../../../assets/Productpage/platformsupport/texas.jpg"
 const Rearview = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('3MP GMSL2');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
+const [initialLeftTab, setInitialLeftTab] = useState(null);
+  const [initialRightTab, setInitialRightTab] = useState(null);
+  const location = useLocation();
 
   const images = [
     { id: 1, src: [platform], alt: 'platform support' },
@@ -88,7 +93,7 @@ const Rearview = () => {
         }
       };
 
-  const handleLeftTabClick = (tab) => {
+const handleLeftTabClick = (tab) => {
     if (tab !== 'Supported Cameras') {
       setSelectedLeftTab(tab);
       setSelectedRightTab(rightTabs[tab].tabs[0]);
@@ -98,17 +103,38 @@ const Rearview = () => {
   const handleRightTabClick = (tab) => {
     setSelectedRightTab(tab);
   };
-
   useEffect(() => {
-    if (rightTabs[selectedLeftTab].tabs) {
+    if (location.state?.leftTab) {
+      setInitialLeftTab(location.state.leftTab);
+    }
+    if (location.state?.rightTab) {
+      setInitialRightTab(location.state.rightTab);
+    }
+  }, [location.state]);
+
+  // 2. Update Left Tab first
+  useEffect(() => {
+    if (initialLeftTab) {
+      setSelectedLeftTab(initialLeftTab);
+    }
+  }, [initialLeftTab]);
+
+  // 3. Then update Right Tab when Left Tab is changed
+  useEffect(() => {
+    if (initialRightTab && rightTabs[selectedLeftTab]?.tabs.includes(initialRightTab)) {
+      setSelectedRightTab(initialRightTab);
+    } else if (rightTabs[selectedLeftTab]) {
       setSelectedRightTab(rightTabs[selectedLeftTab].tabs[0]);
     }
-  }, [selectedLeftTab]);
+  }, [selectedLeftTab, initialRightTab]);
+
+
 
   const currentContent = rightTabs[selectedLeftTab]?.content[selectedRightTab];
   const currentImage = rightTabs[selectedLeftTab]?.images?.[rightTabs[selectedLeftTab].tabs.indexOf(selectedRightTab)];
 
-  return (
+
+      return (
     <div className="rearview-Total">
       <div className='mainContainer'>
         <div className="rearview-newcontainpro">
