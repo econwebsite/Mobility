@@ -23,7 +23,7 @@ import TotalIndustries from './Components/Industriescomp/TotalIndustries';
 const App = () => {
   return (
 
-          <BrowserRouter basename="/mobility">
+          <BrowserRouter>
                     <HelmetProvider>
           
               <ScrollToTop /> 
