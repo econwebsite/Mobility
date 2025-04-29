@@ -11,7 +11,7 @@ import qualcum from "../../../../assets/Productpage/platformsupport/qualcom.jpg"
 import npx from "../../../../assets/Productpage/platformsupport/npx.jpg";
 import nvidia from "../../../../assets/Productpage/platformsupport/nividia.jpg"
 
-const DriverTab = () => {
+const IncabinTab = () => {
   const [selectedLeftTab, setSelectedLeftTab] = useState('eDAC');
   const [selectedRightTab, setSelectedRightTab] = useState('LOWLIGHT');
 const [initialLeftTab, setInitialLeftTab] = useState(null);
@@ -181,4 +181,4 @@ const handleLeftTabClick = (tab) => {
   );
 };
 
-export default DriverTab;
+export default IncabinTab;
