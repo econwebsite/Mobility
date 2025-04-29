@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLocation } from 'react-router-dom';
 import ProductBanner from './ProductBanner/ProductBanner';
 import Whatisneed from "./WhatisNeedcomp/Whatisneed";
-import DriverTab from "./ProductTabscomp/DriverTab"
+import DriverTab from "../../Productcomp/IncabinProduct/ProductTabscomp/DriverTab"
 import ProductBlog from "./ProductBlogs/ProductBlogs";
 import ContactUs from "../../HomePagecomp/Homecontactus/ContactUs";
 import DriverApplications from './ProductApplication/DriverApplications';
