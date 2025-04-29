@@ -4,10 +4,10 @@ import ProductTableData from "../Platformsupport/ProductTableData";
 import Modelbutton from "../../../ButtonComp/Modelbutton";
 import { useLocation } from 'react-router-dom';
 
-import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg"
-import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg"
-import STURDeCAM84 from "../../../../assets/allcameras/studycam84.jpg"
-import STURDeCAM88 from "../../../../assets/allcameras/studycam88.png"
+import STURDeCAM31 from "../../../../assets/allcameras/sturdecam31.jpg"
+import STURDeCAM34 from "../../../../assets/allcameras/sturdecam34.jpg"
+import STURDeCAM84 from "../../../../assets/allcameras/sturdecam84.jpg"
+import STURDeCAM88 from "../../../../assets/allcameras/sturdecam88_cuoagx.png"
 import routecam22 from "../../../../assets/allcameras/routeecamcu22.jpg"
 
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";

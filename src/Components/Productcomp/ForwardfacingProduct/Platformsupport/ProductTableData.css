@@ -11,6 +11,13 @@
   width: 100%;
   background-color: white;
 }
+.ProductTable-icon {
+  margin-right: 2px;
+  color: #69ba2f;
+width: 80px;
+height: 70px;
+}
+
 
 .ProductTableData-ImageColumn {
   flex-basis: 30%;

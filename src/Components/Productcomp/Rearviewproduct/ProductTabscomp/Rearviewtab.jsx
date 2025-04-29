@@ -3,8 +3,8 @@ import './rearview.css';
 import { useLocation } from 'react-router-dom';
 
 import ProductTableData from "../Driversupports/ProductTableData";
-import STURDeCAM34 from "../../../../assets/allcameras/studycam34.jpg";
-import STURDeCAM31 from "../../../../assets/allcameras/studycam31.jpg";
+import STURDeCAM34 from "../../../../assets/allcameras/sturdecam34.jpg";
+import STURDeCAM31 from "../../../../assets/allcameras/sturdecam31.jpg";
 import routecam22 from "../../../../assets/allcameras/routeecamcu22.jpg";
 import Modelbutton from "../../../ButtonComp/Modelbutton"
 import platform from "../../../../assets/Productpage/platformsupport/Platformsupport.jpg";
