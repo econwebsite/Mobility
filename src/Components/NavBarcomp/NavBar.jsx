@@ -14,14 +14,22 @@ import {
   Divider,
   Popover,
   MenuItem,
+  Select,
   Box,
   styled
 } from '@mui/material';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
-import { Link } from 'react-router-dom';
-import dentallogo from "../../assets/homepage/footerlogo-1.svg";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import econlogo from "../../assets/homepage/footerlogo-1.svg";
+import usFlag from '../../assets/homepage/flags/us-flag.svg';
+import krFlag from '../../assets/homepage/flags/kr-flag.svg';
+
+const languageOptions = [
+  { value: 'en', label: 'EN', flag: usFlag, alt: 'English' },
+  { value: 'ko', label: 'KR', flag: krFlag, alt: 'Korean' },
+];
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: '#f1f2f2',
@@ -58,16 +66,30 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
-const NavBar = () => {
+const NavBar = ({ language = 'en', onLanguageChange }) => {
   
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
   const [anchorElIndustries, setAnchorElIndustries] = useState(null);
   const isDesktop = useMediaQuery('(min-width:1024px)');
+  const navigate = useNavigate();
+  const location = useLocation();
   const closeTimeoutRef = useRef(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [anchorElResources, setAnchorElResources] = useState(null);
+const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+
+  const handleLanguageSelect = (event) => {
+    const nextLanguage = event.target.value;
+    if (onLanguageChange) {
+      onLanguageChange(nextLanguage);
+    }
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+  };
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
   const handlePopoverOpen = (event) => {
@@ -97,15 +119,45 @@ const NavBar = () => {
   useEffect(() => {
     if (!mobileOpen) {
       setMobileMenuOpen(false);
+       setMobileIndustriesOpen(false);
+    setMobileResourcesOpen(false);
     }
   }, [mobileOpen]);
 
   const handlePopoverLeave = () => {
     setAnchorEl(null);
     setAnchorElIndustries(null);
+  setAnchorElResources(null);
   };
+  const handleResourcesPopoverOpen = (event) => {
+  clearTimeout(closeTimeoutRef.current);
+  setAnchorElResources(event.currentTarget);
+};
+
+const handleResourcesPopoverClose = () => {
+  closeTimeoutRef.current = setTimeout(() => {
+    setAnchorElResources(null);
+  }, 100);
+};
   const open = Boolean(anchorEl);
   const openIndustries = Boolean(anchorElIndustries);
+
+  const renderLanguageValue = (selectedValue) => {
+    const selectedOption = languageOptions.find((item) => item.value === selectedValue) || languageOptions[0];
+    return (
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+        <Box
+          component="img"
+          src={selectedOption.flag}
+          alt={selectedOption.alt}
+          sx={{ width: 22, height: 16, borderRadius: '2px', objectFit: 'cover' }}
+        />
+        <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, lineHeight: 1 }}>{selectedOption.label}</Typography>
+      </Box>
+    );
+  };
+
+
 
   const SolutionMenu = (
     <Box sx={{ 
@@ -165,6 +217,17 @@ const NavBar = () => {
       >
         In-Cabin Monitoring Cameras
       </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/autonomous-driving-control-unit" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+       Autonomous Driving Control Unit
+      </MenuItem>
     </Box>
   );
   const IndustriesMenu = (
@@ -183,7 +246,7 @@ const NavBar = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/industries/agricultural-vehicles" 
+        to="/industries/agricultural-vehicle-camera-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -193,7 +256,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/mining-vehicles" 
+        to="/industries/mining-vehicle-camera-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -203,7 +266,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/delivery-robots" 
+        to="/industries/autonomous-delivery-robot-cameras" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -213,7 +276,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/construction-vehicles" 
+        to="/industries/rugged-cameras-for-construction-vehicles" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -223,7 +286,7 @@ const NavBar = () => {
       </MenuItem> 
       <MenuItem 
         component={Link} 
-        to="/industries/garbage-trucks" 
+        to="/industries/garbage-truck-vision-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -234,7 +297,7 @@ const NavBar = () => {
     
       <MenuItem 
         component={Link} 
-        to="/industries/autonomous-vehicles" 
+        to="/industries/autonomous-vehicle-vision-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -244,7 +307,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/delivery-trucks" 
+        to="/industries/delivery-truck-vision-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -254,7 +317,7 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/lawn-mowers" 
+        to="/industries/autonomous-lawn-mower-vision-systems" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
@@ -264,7 +327,36 @@ const NavBar = () => {
       </MenuItem> 
     </Box>
   );
-
+const ResourcesMenu = (
+  <Box sx={{ 
+    p: 1, 
+    width: 250,
+    '& .MuiMenuItem-root': {
+      color: '#344ea1',
+      fontSize: '1.1em',
+      transition: 'all 0.2s ease-in-out',
+      '&:hover': {
+        backgroundColor: '#00aeef',
+        color: 'white',
+      }
+    }
+  }}>
+    <MenuItem 
+      component={Link} 
+      to="/blog" 
+      onClick={handleResourcesPopoverClose}
+    >
+      Blogs
+    </MenuItem>
+    <MenuItem 
+      component={Link} 
+      to="/case-study" 
+      onClick={handleResourcesPopoverClose}
+    >
+      Case Study
+    </MenuItem>
+  </Box>
+);
   const drawerContent = (
     <>
      <Box sx={{ 
@@ -356,14 +448,14 @@ const NavBar = () => {
         {mobileIndustriesOpen && (
           <List sx={{ pl: 2 }}>
             {[
-              { label: 'Agricultural Vehicles', path: '/industries/agricultural-vehicles' },
-              { label: 'Mining Vehicles', path: '/industries/mining-vehicles' },
-              { label: 'Delivery Robots', path: '/industries/delivery-robots' },
-              { label: 'Construction Vehicles', path: '/industries/construction-vehicles' },
-              { label: 'Garbage Trucks', path: '/industries/garbage-trucks' },
-              { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicles' },
-              { label: 'Delivery Trucks', path: '/industries/delivery-trucks' },
-              { label: 'Lawn Mowers', path: '/industries/lawn-mowers' },
+              { label: 'Agricultural Vehicles', path: '/industries/agricultural-vehicle-camera-systems' },
+              { label: 'Mining Vehicles', path: '/industries/mining-vehicle-camera-systems' },
+              { label: 'Delivery Robots', path: '/industries/autonomous-delivery-robot-cameras' },
+              { label: 'Construction Vehicles', path: '/industries/rugged-cameras-for-construction-vehicles' },
+              { label: 'Garbage Trucks', path: '/industries/garbage-truck-vision-systems' },
+              { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicle-vision-systems' },
+              { label: 'Delivery Trucks', path: '/industries/delivery-truck-vision-systems' },
+              { label: 'Lawn Mowers', path: '/industries/autonomous-lawn-mower-vision-systems' },
 
    
             ].map((item, index) => (
@@ -390,17 +482,44 @@ const NavBar = () => {
         )}
         <ListItem disablePadding>
           <ListItemButton 
-            component={Link} 
-            to="/blog" 
-            onClick={handleDrawerToggle}
+            onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
             sx={{ '&:hover': { color: '#00aeef' } }}
           >
             <ListItemText 
-              primary="Blog" 
+              primary="Resources" 
               primaryTypographyProps={{ style: { color: 'white' } }} 
             />
+            {mobileResourcesOpen  ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
           </ListItemButton>
         </ListItem>
+        {mobileResourcesOpen && (
+          <List sx={{ pl: 2 }}>
+            {[
+             
+              { label: 'Blogs', path: '/blog' },
+              { label: 'Case Study', path:"/case-study" },
+            ].map((item, index) => (
+              <ListItem key={index} disablePadding>
+                <ListItemButton
+                  component={Link}
+                  to={item.path}
+                  onClick={handleDrawerToggle}
+                  sx={{
+                    '&:hover .MuiListItemText-primary': { color: '#00aeef' },
+                    pl: 2,
+                  }}
+                >
+                  <ListItemText
+                    primary={item.label}
+                    primaryTypographyProps={{
+                      sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        )}     
         <ListItem disablePadding>
           <ListItemButton 
             component={Link} 
@@ -413,6 +532,40 @@ const NavBar = () => {
               primaryTypographyProps={{ style: { color: 'white' } }} 
             />
           </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <Box sx={{ width: '100%', px: 2, pt: 1 }}>
+            <Typography sx={{ color: 'white', mb: 1, fontSize: '0.9rem' }}>Language</Typography>
+            <Select
+              value={language}
+              onChange={handleLanguageSelect}
+              size="small"
+              fullWidth
+              renderValue={renderLanguageValue}
+              sx={{
+                color: 'white',
+                border: '1px solid rgba(255,255,255,0.5)',
+                '& .MuiOutlinedInput-notchedOutline': { border: 'none' },
+                '& .MuiSvgIcon-root': { color: 'white' },
+                '& .MuiSelect-select': { display: 'flex', alignItems: 'center', py: 0.8 },
+              }}
+              MenuProps={{ PaperProps: { sx: { mt: 0.5 } } }}
+            >
+              {languageOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Box
+                      component="img"
+                      src={option.flag}
+                      alt={option.alt}
+                      sx={{ width: 22, height: 16, borderRadius: '2px', objectFit: 'cover' }}
+                    />
+                    <Typography sx={{ fontSize: '0.9rem', fontWeight: 600 }}>{option.label}</Typography>
+                  </Box>
+                </MenuItem>
+              ))}
+            </Select>
+          </Box>
         </ListItem>
       </List>
     </>
@@ -427,11 +580,11 @@ const NavBar = () => {
     
     <a href="https://www.e-consystems.com/">
       <img 
-        src={dentallogo} 
-        alt="Dental Logo" 
+        src={econlogo} 
+        alt="econ logo" 
         style={{ 
-          height: isDesktop ? '80px' : '56px', 
-          width: isDesktop ? '300px' : 'auto', 
+          height: isDesktop ? '70px' : '50px', 
+          width: isDesktop ? '250px' : 'auto', 
           objectFit: 'contain',
           margin:"5px",
           cursor: 'pointer'
@@ -461,11 +614,22 @@ const NavBar = () => {
                   >
                     Industries
                   </NavLink>
-                  <Divider orientation="vertical" flexItem />
                 </Box>
               )}
             </Box>
-        <NavLink to="/blog">Blog</NavLink>
+              <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
+              {isDesktop && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+                  <Divider orientation="vertical" flexItem />
+                  <NavLink
+                    aria-haspopup="true"
+                    onMouseOver={handleResourcesPopoverOpen}
+                  >
+                    Resources
+                  </NavLink>
+                </Box>
+              )}
+            </Box>
         <Divider orientation="vertical" flexItem />
         <NavLink to="/contact-us">Contact Us</NavLink>
       </Box>
@@ -474,6 +638,37 @@ const NavBar = () => {
 
     {isDesktop ? (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <Select
+          value={language}
+          onChange={handleLanguageSelect}
+          size="small"
+          renderValue={renderLanguageValue}
+          sx={{
+            minWidth: 100,
+            height: 38,
+            backgroundColor: '#fff',
+            color: '#003873',
+            borderRadius: '8px',
+            '& .MuiOutlinedInput-notchedOutline': { borderColor: '#b8ccdf' },
+            '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#00aeef' },
+            '& .MuiSvgIcon-root': { color: '#003873' },
+            '& .MuiSelect-select': { display: 'flex', alignItems: 'center', py: 0.8, pr: 3.5 },
+          }}
+        >
+          {languageOptions.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box
+                  component="img"
+                  src={option.flag}
+                  alt={option.alt}
+                  sx={{ width: 22, height: 16, borderRadius: '2px', objectFit: 'cover' }}
+                />
+                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600 }}>{option.label}</Typography>
+              </Box>
+            </MenuItem>
+          ))}
+        </Select>
         <PhoneIcon sx={{ color: '#003873', fontSize: '24px' }} />
         <Box>
           <Typography variant="body2" sx={{ color: '#00aeef', fontSize: '1em' }}>
@@ -537,6 +732,24 @@ const NavBar = () => {
         >
           {IndustriesMenu}
         </Popover>
+        <Popover
+  open={Boolean(anchorElResources)}
+  anchorEl={anchorElResources}
+  onClose={handleResourcesPopoverClose}
+  anchorOrigin={{
+    vertical: 'bottom',
+    horizontal: 'left',
+  }}
+  transformOrigin={{
+    vertical: 'top',
+    horizontal: 'left',
+  }}
+  disableRestoreFocus
+  PaperProps={{ onMouseEnter: handlePopoverEnter, onMouseLeave: handleResourcesPopoverClose }}
+>
+  {ResourcesMenu}
+</Popover>
+
       </StyledAppBar>
       <StyledDrawer
         anchor="right"
@@ -560,6 +773,24 @@ const NavBar = () => {
         >
           {SolutionMenu}
         </Popover>
+      <Popover
+  open={Boolean(anchorElResources)}
+  anchorEl={anchorElResources}
+  onClose={handleResourcesPopoverClose}
+  anchorOrigin={{
+    vertical: 'bottom',
+    horizontal: 'left',
+  }}
+  transformOrigin={{
+    vertical: 'top',
+    horizontal: 'left',
+  }}
+  disableRestoreFocus
+  PaperProps={{ onMouseEnter: handlePopoverEnter, onMouseLeave: handleResourcesPopoverClose }}
+>
+  {ResourcesMenu}
+</Popover>
+
       </StyledDrawer>
     </>
   );

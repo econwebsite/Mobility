@@ -15,11 +15,16 @@ const Marketcameras = ({ singleimg, buttons }) => {
         <img src={singleimg} alt="Camera Banner" className="SingleImage-img" />
       </div>
       <div className="ButtonRow">
-        {buttons.map((btn, index) => (
-          <button key={index} className="Market-btn" onClick={() => handleNavigation(btn.link)}>
-            {btn.label}
-          </button>
-        ))}
+       {buttons.map((btn, index) => (
+  <button
+    key={btn.label + index}
+    className="Market-btn"
+    onClick={() => handleNavigation(btn.link)}
+  >
+    {btn.label}
+  </button>
+))}
+
       </div>
     </div>
   );

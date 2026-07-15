@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="South Korea flag">
+  <rect width="64" height="48" fill="#ffffff"/>
+  <g transform="translate(32 24)">
+    <path d="M0-9a9 9 0 1 1 0 18a9 9 0 0 1 0-18" fill="#cd2e3a"/>
+    <path d="M0 9a9 9 0 1 1 0-18a4.5 4.5 0 1 0 0 9a4.5 4.5 0 1 1 0 9" fill="#0047a0"/>
+  </g>
+  <g fill="#000000">
+    <rect x="8" y="8" width="12" height="2" transform="rotate(-35 14 9)"/>
+    <rect x="8" y="11" width="12" height="2" transform="rotate(-35 14 12)"/>
+    <rect x="8" y="14" width="12" height="2" transform="rotate(-35 14 15)"/>
+
+    <rect x="44" y="34" width="12" height="2" transform="rotate(-35 50 35)"/>
+    <rect x="44" y="37" width="12" height="2" transform="rotate(-35 50 38)"/>
+    <rect x="44" y="40" width="12" height="2" transform="rotate(-35 50 41)"/>
+
+    <rect x="44" y="8" width="12" height="2" transform="rotate(35 50 9)"/>
+    <rect x="44" y="14" width="12" height="2" transform="rotate(35 50 15)"/>
+
+    <rect x="8" y="34" width="12" height="2" transform="rotate(35 14 35)"/>
+    <rect x="8" y="37" width="12" height="2" transform="rotate(35 14 38)"/>
+  </g>
+</svg>

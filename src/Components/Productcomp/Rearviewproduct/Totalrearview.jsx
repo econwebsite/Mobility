@@ -17,73 +17,75 @@ const Totalmonitoring = () => {
 
   const isMobile = window.innerWidth <= 768;
 
-const sectionVariants = {
+const divVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const Section = ({ children, id }) => (
+const div = ({ children, id }) => (
   isMobile ? (
     <div id={id} style={{ marginBottom: "1px" }}>{children}</div>
   ) : (
     <motion.div
-      id={id}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
-      variants={sectionVariants}
-      style={{ marginBottom: "1px" }}
-    >
+        id={id}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={divVariants}
+        style={{ marginBottom: "1px",overflow:"hidden" }}
+      >
       {children}
     </motion.div>
   )
 );
 
   useEffect(() => {
-    const scrollToSection = () => {
+    const scrollTodiv = () => {
       const hash = location.state?.hash || window.location.hash;
       if (hash) {
         const element = document.querySelector(hash);
         if (element) {
-          const header = document.querySelector('header') || document.querySelector('.mobile-header');
-          const headerHeight = header ? header.offsetHeight : 80;
-          const yOffset = -headerHeight - 130;
-
-          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-          window.scrollTo({ top: y, behavior: isMobile ? 'auto' : 'smooth' });
+          const offset = 100; 
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - offset;
+  
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: isMobile ? 'auto' : 'smooth'
+          });
         }
       }
       if (location.state?.shouldScroll) {
         window.history.replaceState({}, document.title);
       }
     };
-    const timeout = setTimeout(scrollToSection, isMobile ? 500 : 300);
+    
+    const timeout = setTimeout(scrollTodiv, isMobile ? 500 : 300);
     return () => clearTimeout(timeout);
   }, [location]);
 
     return (
         <div>
             <Helmet>
-      <title>Rear View Camera for ADAS & Mobility</title>
+      <title>Rear View Cameras for ADAS & Mobility</title>
       <meta name='description' content='Industrial-grade rear view cameras with wide-angle visibility and high-resolution imaging for safe reversing, blind spot elimination, and surround view integration.' />
       </Helmet>
-             <Section id="top">
+             <div id="top">
             <ProductBanner/>
             <Whatisneed/>
-            <div id="rearviewTab">
+            <div  id="rearviewTab">
             <Rearviewtab />
             </div>
-            </Section>
-            <Section>
+            </div>
+            <div>
             <DriverApplications/>
-            </Section>
-            <Section>
+            </div>
+            <div>
             <ProductBlog/>
-            </Section>
-            <Section>
+            </div>
+            <div>
             <ContactUs/>
-            </Section>
+            </div>
         </div>
     );
 }

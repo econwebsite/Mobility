@@ -7,9 +7,9 @@ const ProductBanner = () => {
         <div className='ProductContainer'>
         {/* <div className="mainContainer"> */}
             <div className='ProductBanner'>
-                <img src={productbanner} alt="Slide 1" className="product-image" />
+                <img src={productbanner} alt="banner" className="product-image" />
                 {/* <div className='ProductBannerbtn'>
-                    <AnimationButton text="Know more" backgroundColor="black" hoverColor="#00aeef" animationColor="#69ba2f"/>
+                    <AnimationButton text="Know more" backgroundColor="black" hoverColor="#00aeef"/>
                 </div> */}
             </div>
         </div>

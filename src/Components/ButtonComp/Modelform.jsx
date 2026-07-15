@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo,useEffect  } from 'react';
 import { Form, Input, Select, Button, Row, Col, message, Modal, Result,Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
@@ -62,14 +62,14 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose, type, docName, productName, title }) {
+function Modelform({ visible, onClose, type, docName, productName, title,buttonText }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false); 
-  const [isError, setIsError] = useState(true); 
+  const [isError, setIsError] = useState(false); 
   const blockedProviders  = [
     'gmail.com',
     'yahoo.com',
@@ -99,38 +99,89 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     borderRadius: 8
   };
 
+useEffect(() => {
+  const url = new URL(window.location);
+  const original = url.toString();
+
+  const downloadStatus = url.searchParams.get('download');
+  const contactStatus = url.searchParams.get('contact');
+
+  if (visible) {
+    if (type === 'download') {
+      if (downloadStatus !== 'success') {
+        url.searchParams.set('download', 'init');
+        url.searchParams.delete('contact'); 
+      }
+    } else if (type === 'contact') {
+      if (contactStatus !== 'success') {
+        url.searchParams.set('contact', 'init');
+        url.searchParams.delete('download');
+      }
+    }
+  } else {
+    if (downloadStatus !== 'success') url.searchParams.delete('download');
+    if (contactStatus !== 'success') url.searchParams.delete('contact');
+  }
+
+  if (url.toString() !== original) {
+    window.history.replaceState({}, '', url);
+  }
+}, [visible, type]);
+
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
       value: country.value,
       label: country.label
     }));
   }, []);
- const onFinish = (values) => {
+
+const trackVisitor = () => {
+    try {
+      if (window.$zoho && $zoho.salesiq) {
+        const { name, email } = form.getFieldsValue();
+ 
+        if (name) $zoho.salesiq.visitor.name(name);
+        if (email) $zoho.salesiq.visitor.email(email);
+ 
+        const uniqueId = $zoho.salesiq.visitor.uniqueid();
+        form.setFieldsValue({ LDTuvid: uniqueId });
+      }
+    } catch (e) {}
+  };
+
+  useEffect(() => {
+  if (visible) {
+    trackVisitor();
+  }
+}, [visible]);
+
+  const onFinish = (values) => {
   if(isError){
     setIsLoading(true);
-    const trackingData = {
+   const trackingData = {
       email: values.email,
       company_name: values.companyName,
       phone_number: values.contactNumber,
       country: values.country,
       state: values.state || '',
-      queries: values.queries || ''
+      queries: values.queries || '',
+      heardAboutUs:values.heardAboutUs
+
     };
   
   
-    if (window.gtag) {
-      window.gtag('event', 'contact_form_submit', {
-        event_category: 'form',
-        event_label: 'Contact Page',
-        value: 1,
-        ...trackingData,
-      });
-    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'contact_form_submit',
+      ...trackingData
+    });
 
 
-    if (type === 'download') {
+if (type === 'download') {
       values.productName = productName;
       values.documentName = docName;
+     values.buttonText=buttonText
+      values.site="Mobility";
       axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
       .then(result => {
           if (result.status === 200) {
@@ -138,7 +189,10 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               setDownloadUrl(result.data.documentUrl);
           }
           form.resetFields();
-
+           setShowStates(true);
+    const url = new URL(window.location);
+    url.searchParams.set('download', 'success');
+    window.history.replaceState({}, '', url);
       })
         .catch(err => console.log(err))
         .finally(() => setIsLoading(false));
@@ -147,10 +201,17 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     else {
       values.productName = productName;
       values.documentName = docName;
+      values.buttonText=buttonText
+      values.site="Mobility";
             axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
         .then(result => {
           message.success('Message sent successfully!');
-          onClose();
+           const url = new URL(window.location);
+    url.searchParams.set('contact', 'success');
+    window.history.replaceState({}, '', url);
+    setShowStates(true);
+          form.resetFields();
+              onClose();
         })
         .catch(err => console.log(err))
         .finally(() => setIsLoading(false));
@@ -175,9 +236,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         setIsError(false);
         return Promise.reject('Please enter your company email');
       }
-      else{
-        setIsError(true);
-      }
+     
     }
     return Promise.resolve();
   };
@@ -249,6 +308,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
       visible={visible}
       onCancel={onClose}
+       style={{ top: "20px" }} 
       footer={null}
       width={450}
       className="custom-modal"
@@ -361,7 +421,16 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
             )}
           </Col>
         </Row>
-
+<Row gutter={8}>
+  <Col span={24}>
+    <Form.Item
+      name="heardAboutUs"
+      rules={[{ message: 'Please let us know how you heard about us' }]}
+    >
+      <Input placeholder="How did you hear about us?" />
+    </Form.Item>
+  </Col>
+</Row>
         <Row gutter={8}>
           <Col span={24}>
             <Form.Item

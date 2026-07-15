@@ -1,91 +1,110 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import "./Whatisneed.css";
+import './Whatisneed.css';
+import hdr from "../../../../assets/Productpage/what-needed/high-dynamic-range.jpg"
+import highsensitivity from "../../../../assets/Productpage/what-needed/high-sensitivity.jpg"
+import longrange from "../../../../assets/Productpage/what-needed/long-range-interface.jpg"
+import synchronization from "../../../../assets/Productpage/what-needed/camera-synchronization.jpg"
+import hightperfisp from "../../../../assets/Productpage/what-needed/high-performance-isp.jpg"
+import ip69k from "../../../../assets/Productpage/what-needed/ip69k.jpg"
 
-import highdynamic from "../../../../assets/Productpage/surroundview/hdr.png";
-import highsensitivity from "../../../../assets/Productpage/surroundview/high-sensitivity.png";
-import largeinterface from "../../../../assets/Productpage/surroundview/long-range-interface.png";
-import compatableplatform from "../../../../assets/Productpage/surroundview/compatablity-platform.png";
-import camerasync from "../../../../assets/Productpage/surroundview/camera-synchronization.png";
-import highisp from "../../../../assets/Productpage/surroundview/high-performance-isp.png";
-
-
-const cardVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: (i) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: i * 0.5,
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  }),
-};
 
 const cardData = [
-  { img: highdynamic, title: "High Dynamic Range" },
-  { img: highsensitivity, title: "High sensitivity" },
-  { img: largeinterface, title: "Long range interface" },
-  { img: compatableplatform, title: "Compatibility platforms" },
-  { img: camerasync, title: "Camera synchronization" },
-  { img: highisp, title: "High performance ISP" },
-
+  {
+    title: 'High dynamic range (HDR)',
+    description:"HDR helps capture balanced images even in scenes with extreme contrast between bright and dark areas. It reduces motion blur and distortion by adjusting exposure across the frame. For mobility systems, our cameras provide clear visuals during quick lighting transitions like entering tunnels or facing oncoming headlights.",
+    image: hdr,
+  },
+  {
+    title: 'High sensitivity',
+    description: 'High sensitivity enables the camera to perform well in daylight and low-light conditions. It captures more light per frame by using larger pixel sizes, which reduces noise and improves image clarity. That way, our cameras ensure the system is equipped for nighttime operations, shadow-heavy environments, or sudden lighting shifts.',
+    image: highsensitivity,
+  },
+  {
+    title: 'Long range interface',
+    description: 'Surround-view cameras may be placed far from the central processor, so long-range data transmission is important. Our cameras come with interfaces like GMSL or FPD-Link III to send high-resolution video, power, and control signals over a single cable. This minimizes signal degradation, keeps latency low, and simplifies the wiring.',
+    image:longrange,
+  },
+   {
+    title: 'Multi-camera synchronization',
+    description: 'Accurate 360-degree views depend on synchronized image capture from multiple cameras. This prevents mismatches in frame timing and improves stitching quality. Our cameras are equipped with synchronization capabilities to help make real-time decisions from stitched images. It reduces post-processing load and delivers faster, more stable outputs in safety-critical missions.',
+    image: synchronization,
+  },
+   {
+    title: 'High performance ISP',
+    description: 'A powerful ISP improves the image quality of mobility systems by handling tasks like noise reduction, color correction, and tone mapping. Our cameras’ inbuilt ISP ensures that raw sensor data is converted into clean, usable images without external processing. It results in consistent performance across all lighting conditions.',
+    image: hightperfisp,
+  },
+  {
+    title: 'Rugged enclosure',
+    description: 'Surround-view cameras tend to be mounted low or exposed. Our IP69K-rated housing withstands pressure washes, rain, mud, and off-road debris, keeping the system reliable in harsh, all-weather conditions',
+    image: ip69k,
+  },
+  {
+  type: 'features',
+  title: 'What is needed?',
+  features: [
+    { image: hdr, label: 'High dynamic range (HDR)' },
+    { image: highsensitivity, label: 'High sensitivity' },
+    { image:longrange, label: 'Long range interface' },
+    { image: synchronization, label: 'Multi-camera synchronization' },
+    { image: hightperfisp, label: 'High performance ISP' },
+    { image: ip69k, label: 'Rugged enclosure' }
+  ]
+}
 ];
-
 const Whatisneed = () => {
   return (
-    <div className="whatneed-container">
-      <div className="mainContainer">
-        <div className="whatneed-containerparagraph">
-          <p className="whatneed-standparagraphtext">
-          Our surround view systems utilize multi-camera setups to provide a comprehensive 360-degree view of the vehicle’s surroundings. By synchronizing multiple cameras, these systems get a stitched, composite image that eliminates blind spots, thereby enhancing driver awareness and safety. This real-time bird's-eye view is crucial for parking assistance, obstacle detection, lane detection, traffic sign recognition, and maneuvering in tight spaces, all of which support the advanced functionalities of ADAS.          </p>
-        </div>
+    <div style={{backgroundColor:"#5F77B1"}}>
+      <div className="whatisneed-container">
+        <header className="whatisneed-header">
+          <div>
+            <h1>What is needed?</h1>
+          </div>
+        </header>
 
-        <h1 className="whatneed-title">What is needed?</h1>
-        <br />
-
-        <div className="whatneed-grid">
-  {cardData.slice(0, 4).map((item, index) => (
-    <motion.div
-      className="whatneed-box"
-      key={index}
-      custom={index}
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <div className="alignment-whatneedbox">
-        <img src={item.img} alt={item.title} className="whatneed-image" />
-        <p>{item.title}</p>
-      </div>
-    </motion.div>
-  ))}
-</div>
-
-<div className="whatneed-grid" style={{ justifyContent: 'center' }}>
-  {cardData.slice(4).map((item, index) => (
-    <motion.div
-      className="whatneed-box"
-      key={index + 4}
-      custom={index + 4}
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <div className="alignment-whatneedbox">
-        <img src={item.img} alt={item.title} className="whatneed-image" />
-        <p>{item.title}</p>
-      </div>
-    </motion.div>
-  ))}
-</div>
-
-
-        <br />
-        <h1 className="whatneed-econ">e-con's Cameras for Surround View</h1>
+        <main>
+          <ul className="whatisneed-cards" style={{ '--numcards': cardData.length }}>
+            {cardData.map((card, index) => (
+              <li
+                className={`whatisneed-card ${index % 2 !== 0 ? 'reverse' : ''} ${card.type === 'features' ? 'features-card' : ''}`}
+                key={index}
+                style={{ '--index': index + 1 }}
+              >
+                {card.type === 'features' ? (
+                  <div className="whatisneed-cardcontent">
+                    <div className="features-content">
+                      <h2>{card.title}</h2>
+                      <div className="feature-items">
+                        {card.features.map((feature, idx) => (
+                          <div className="feature-item" key={idx}>
+                            <div className="icon-wrapper">
+                              <img 
+                                src={feature.image} 
+                                alt={feature.label} 
+                                className="feature-icon"
+                              />
+                            </div>
+                            <span>{feature.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="whatisneed-cardcontent">
+                    <div>
+                      <h2>{card.title}</h2>
+                      <p>{card.description}</p>
+                    </div>
+                    <figure>
+                      <img src={card.image} alt={card.title} />
+                    </figure>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </main>
       </div>
     </div>
   );

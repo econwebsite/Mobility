@@ -8,7 +8,7 @@ import presidian from "../../../../assets/Productpage/forwardfacing/presidian-co
 const ForwardApplications = () => {
   return (
     <div className="ForwardApplication-container">
-      <h1 className="ForwardApplication-title">APPLICATIONS</h1>
+      <h1 className="ForwardApplication-title">Applications</h1>
       <div className="mainContainer">
         <div className="ForwardApplication-boxes">
           <div className="ForwardApplication-box" data-aos="fade-right" data-aos-duration="1800">

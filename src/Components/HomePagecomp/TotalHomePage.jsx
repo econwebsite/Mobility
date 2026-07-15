@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import { motion } from "framer-motion";
 import Homebanner from "./Homebanner/Homebanner";
 import Certification from "./Certification/Certification";
 import Manufacturing from "./Manufacturingcapablities/Manufacturing";
 import Watchvedios from "./Watchvedioscomp/Vediosection";
-// import Casestudy from "./Casestudycomp/Casestudy";
+import Casestudy from "./Casestudycomp/Casestudy";
 import Blog from "./Blogcomp/Blog";
 import ContactUs from "./Homecontactus/ContactUs";
 import Paragraph from "./Paragraphcomp/Paragraph";
@@ -17,7 +17,7 @@ const isMobile = window.innerWidth <= 769;
 const sectionVariants = {
   hidden: (direction) => ({
     opacity: 0,
-    y: direction === "up" ? 40 : -20,
+    y: direction === "up" ? 20 : -10,
   }),
   visible: {
     opacity: 1,
@@ -25,7 +25,7 @@ const sectionVariants = {
     transition: { duration: 0.6, ease: "easeOut", delay: 0.1 },
   },
 };
-
+ 
 const Section = ({ children, index }) => {
   if (isMobile) {
     return <div style={{ marginBottom: "0px" }}>{children}</div>;
@@ -50,12 +50,23 @@ const Section = ({ children, index }) => {
 };
 
 const TotalHomePage = () => {
+    const [isContactPage, setIsContactPage] = useState(false);
+  
+
+useEffect(() => {
+  const path = window.location.pathname;
+  if (path === "/" || path === "/mobility/") {
+    setIsContactPage(true);
+  }
+}, []);
+
+  
   return (
     <div style={{ padding: "0px", margin: "0px" }}>
-          <Helmet>
+       {isContactPage &&    <Helmet>
       <title>Rugged IP69K ADAS Cameras for Autonomous & Off-Road Mobility</title>
       <meta name='description' content='IP69K ADAS cameras with HDR, LFM & ISO/IATF-certified build. Engineered for autonomous, off-road vehicles & delivery robots in extreme environments.' />
-      </Helmet>
+      </Helmet>}
       <Section index={0}>
         <Homebanner />
       </Section>
@@ -77,13 +88,13 @@ const TotalHomePage = () => {
       <Section index={6}>
         <Watchvedios />
       </Section>
-      {/* <Section index={7}>
-        <Casestudy />
-      </Section> */}
       <Section index={7}>
-        <Blog />
+        <Casestudy />
       </Section>
       <Section index={8}>
+        <Blog />
+      </Section>
+      <Section index={9}>
         <ContactUs />
       </Section>
     </div>

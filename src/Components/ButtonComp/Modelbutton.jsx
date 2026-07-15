@@ -9,10 +9,12 @@ const Modelbutton = ({
   hoverColor = '#69ba2f',
   className = '',
   productName = null,
+     type: overrideType = null,
   docName = null,
   title = null,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const modalType = overrideType || (text === 'Contact Us' ? 'contact' : 'download');
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -40,10 +42,11 @@ const Modelbutton = ({
       <Modelform
         visible={isModalVisible}
         onClose={handleCancel}
-        type={text === 'Contact Us' ? `contact` : `download`}
+        type={modalType}
         productName={productName || null}
         docName={docName || null}
         title={title || null}
+       buttonText={text}
       />
     </div>
   );

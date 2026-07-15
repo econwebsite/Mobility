@@ -9,17 +9,17 @@ import bodyposture from '../../../../assets/Productpage/drivermonitoring/body-po
 const DriverApplications = () => {
   return (
     <div className="DriverApplication-container">
-      <h1 className="DriverApplication-title">APPLICATIONS</h1>
+      <h1 className="DriverApplication-title">Applications</h1>
       <div className="mainContainer">
         <div className="DriverApplication-boxes">
           <div className="DriverApplication-box" data-aos="fade-right" data-aos-duration="1800">
             <img src={distraction} alt="Blind spot Monitoring" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Distraction & Drowsiness</h1>
+            <h1 className="DriverApplication-boxTitle">Drowsiness Detection</h1>
           </div>
           
           <div className="DriverApplication-box" data-aos="fade-left" data-aos-duration="1800">
             <img src={dangerous} alt="360 Degree Surround View" className="DriverApplication-image" />
-            <h1 className="DriverApplication-boxTitle">Dangerous Behavior</h1>
+            <h1 className="DriverApplication-boxTitle">Distracted Driving</h1>
           </div>
 
           <div className="DriverApplication-box" data-aos="fade-right" data-aos-duration="1600">

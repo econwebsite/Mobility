@@ -69,7 +69,7 @@ const ContactUs = () => {
   const [showStates, setShowStates] = useState(true);
   const [isContactPage, setIsContactPage] = useState(false);
   const [isLoading, setIsLoading] = useState(false); 
-  const [isError, setIsError] = useState(true); 
+  const [isError, setIsError] = useState(false); 
     const blockedProviders  = [
       'gmail.com',
       'yahoo.com',
@@ -105,14 +105,55 @@ const ContactUs = () => {
     label: country.label
     }));
     }, []);
+    const trackVisitor = () => {
+    try {
+      if (window.$zoho && $zoho.salesiq) {
+        const { name, email } = form.getFieldsValue();
+ 
+        if (name) $zoho.salesiq.visitor.name(name);
+        if (email) $zoho.salesiq.visitor.email(email);
+ 
+        const uniqueId = $zoho.salesiq.visitor.uniqueid();
+        form.setFieldsValue({ LDTuvid: uniqueId });
+      }
+    } catch (e) {}
+  };
+  
     const onFinish = (values) => {
       if(isError){
       setIsLoading(true);
-      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+      const trackingData = {
+        email: values.email,
+        company_name: values.companyName,
+        phone_number: values.contactNumber,
+        country: values.country,
+        state: values.state || '',
+        queries: values.queries || '',
+        heardAboutUs:values.heardAboutUs
+      };
+    
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'contact_form_submit',
+        ...trackingData
+      });
+      trackVisitor();
+ const valuesToSend = {
+      ...values,
+      productName: null,      
+      documentName: null,      
+      buttonText: "Contact us",
+      site: "Mobility"
+    };
+      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values:valuesToSend })
         .then(result => {
           message.success('Message sent successfully!');
           form.resetFields();
-        })
+           setShowStates(true);
+           const url = new URL(window.location);
+    url.searchParams.set('contact', 'success');
+    window.history.replaceState({}, '', url);
+  })
         .catch(err => {
           console.error(err);
           message.error('Failed to send message. Please try again.');
@@ -137,9 +178,7 @@ const ContactUs = () => {
         setIsError(false);
         return Promise.reject('Please enter your company email');
       }
-      else{
-        setIsError(true);
-      }
+    
     }
     return Promise.resolve();
   };
@@ -160,6 +199,20 @@ const ContactUs = () => {
       }
       axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
+          if(result.data.isValid === true){
+            setIsError(true);
+            return true;
+          }
+          else if(result.data.isValid === false){
+            setIsError(false);
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
+            ]);
+          }
+          else if (result.data.isValid === null || result.data.isValid === undefined) {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {
               setIsError(true);
@@ -184,7 +237,7 @@ const ContactUs = () => {
               },
             ]);
           }
-
+        }
         })
         .catch(err => console.log(err));
 
@@ -203,7 +256,7 @@ const ContactUs = () => {
         <title>Contact Us | Connect with e-con Mobility Experts</title>
         <meta name='description' content='Reach out to e-con Mobility for inquiries on automotive-grade camera solutions. Our team is here to assist with product info, support, and partnerships.' />
       </Helmet>}
-      <h1 className='Contact-us'>CONTACT US</h1>
+      <h1 className='Contact-us'>Contact Us</h1>
 
       <span className='Spam-questions'>Do You Have Any Questions?</span>
 
@@ -311,7 +364,16 @@ const ContactUs = () => {
                 )}
               </Col>
             </Row>
-
+<Row gutter={8}>
+  <Col span={24}>
+    <Form.Item
+      name="heardAboutUs"
+      rules={[{ message: 'Please let us know how you heard about us' }]}
+    >
+      <Input placeholder="How did you hear about us?" />
+    </Form.Item>
+  </Col>
+</Row>
             <Row gutter={8}>
               <Col span={24}>
                 <Form.Item

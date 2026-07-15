@@ -1,5 +1,4 @@
 import React from 'react';
-import './Productblog.css'; 
 import forwardfacing from "../../../../assets/Productpage/forwardfacing/forwardfacing-left-blog.jpg";
 import drivermonitoring from "../../../../assets/Productpage/forwardfacing/drivermonitoring-blog.jpg";
 import hdrblog from "../../../../assets/Productpage/forwardfacing/hdr-led-blog.jpg";
@@ -27,7 +26,7 @@ const BlogProductPage = () => {
                 <h2>How Does a Forward-Facing Camera Work, and What Are Its Use Cases in ADAS</h2>
           </Link>
                 <p>Forward-facing cameras are used in ADAS to improve object detection, lane tracking, etc. Discover the camera features that contribute to safer, smarter driving.</p>
-                <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/blog/how-forward-facing-camera-works-in-adas/" className="blogproduct-btn" />
+                <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white"  to="/blog/how-forward-facing-camera-works-in-adas/" className="blogproduct-btn" />
               </div>
             </div>
             <div className="blogproduct-column blogproduct-right">
@@ -41,7 +40,7 @@ const BlogProductPage = () => {
                   </div>
                   <div className="blogproduct-card-right">
                     <h6>How driver monitoring cameras improve driving safety and their key features</h6>
-                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/blog/how-driver-monitoring-cameras-improve-safety-features/" className="blogproduct-btn" />
+                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white"  to="/blog/how-driver-monitoring-cameras-improve-safety-features/" className="blogproduct-btn" />
                   </div>
                 </div>
               </div>
@@ -55,7 +54,7 @@ const BlogProductPage = () => {
                   </div>
                   <div className="blogproduct-card-right">
                     <h6>Why HDR and LED Flicker Mitigation Are Game-Changers for Forward-Facing Cameras in ADAS</h6>
-                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" className="blogproduct-btn" />
+                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white"  to="/blog/why-hdr-lfm-matter-forward-facing-cameras-adas/" className="blogproduct-btn" />
                   </div>
                 </div>
               </div>
@@ -68,7 +67,7 @@ const BlogProductPage = () => {
                   </div>
                   <div className="blogproduct-card-right">
                     <h6>How do Surround View cameras improve driving and parking safety</h6>
-                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white" animationColor="#69ba2f" to="/surround-view-cameras" className="blogproduct-btn" />
+                    <AnimationButton text="Read more" backgroundColor="#344ea1" hoverColor="white"  to="/surround-view-cameras" className="blogproduct-btn" />
                   </div>
                 </div>
               </div>

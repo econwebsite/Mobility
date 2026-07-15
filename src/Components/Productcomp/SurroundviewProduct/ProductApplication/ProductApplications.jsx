@@ -6,7 +6,7 @@ import blindspot from "../../../../assets/Productpage/surroundview/blindspot.jpg
 const ProductApplications = () => {
   return (
     <div className="ProductApplications-container">
-      <h1 className="ProductApplications-title">APPLICATIONS</h1>
+      <h1 className="ProductApplications-title">Applications</h1>
       <div className="mainContainer">
       <div className="ProductApplications-boxes">
         <div className="ProductApplications-box"  data-aos="fade-right" data-aos-duration="1800">

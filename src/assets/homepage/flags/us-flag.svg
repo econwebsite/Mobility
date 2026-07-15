@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="United States flag">
+  <rect width="64" height="48" fill="#b22234"/>
+  <g fill="#ffffff">
+    <rect y="3.692" width="64" height="3.692"/>
+    <rect y="11.076" width="64" height="3.692"/>
+    <rect y="18.46" width="64" height="3.692"/>
+    <rect y="25.844" width="64" height="3.692"/>
+    <rect y="33.228" width="64" height="3.692"/>
+    <rect y="40.612" width="64" height="3.692"/>
+  </g>
+  <rect width="28" height="25.846" fill="#3c3b6e"/>
+</svg>

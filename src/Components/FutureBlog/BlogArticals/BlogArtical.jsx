@@ -52,7 +52,7 @@ const BlogArtical = () => {
     const valid = isValid? await validateEmail():false;
     if (valid) {
       try {
-        const result = await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
+        const result = await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email, site: "Mobility" });
         if (result.status === 200)
           message.success('Thanks for subscription!');
         setEmail('');
@@ -76,7 +76,7 @@ const BlogArtical = () => {
         </p>      </div>
       <div className="Artical-person">
         <div className="Articalleft-side">
-          <img src={sureshmathu} alt="sureshmathu" className="Articalperson-photo" />
+          <img src={sureshmathu} alt="BU Head" className="Articalperson-photo" />
           <p>Suresh Madhu</p>
           <p style={{fontSize:"13px"}}>BU Head-Industrial cameras</p>
         </div>
@@ -95,7 +95,7 @@ const BlogArtical = () => {
             e.preventDefault()
             return false;
           }} placeholder="Your email address" className="Artical-inputemail" value={email} onChange={handleChange} />
-          <AnimatedButton className="Articalknow-button" text="Know more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" onClick={handelSubscribtion}/>
+          <AnimatedButton className="Articalknow-button" text="Know more" backgroundColor="#344ea1"  hoverColor="#69ba2f" onClick={handelSubscribtion}/>
           {!isValid && <p style={{ color: 'red', margin: '0px',textAlign:"center",width:"100%" }}>Invalid email address</p>}
         </div>
       </div>
