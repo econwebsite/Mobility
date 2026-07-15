@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ProductTableData from "../Driversupports/ProductTableData"; 
 
 // --- Camera Images ---
-import STURDeCAM27 from "../../../../assets/allcameras/sturdecam29.jpg"; // Renamed to reflect eDACAM27/29 usage
+//import STURDeCAM27 from "../../../../assets/allcameras/sturdecam29.jpg"; // Renamed to reflect eDACAM27/29 usage
 import STURDeCAM29 from "../../../../assets/allcameras/sturdecam29-product-image.png"; 
 import STURDeCAM57 from "../../../../assets/allcameras/sturdecam57-product-image.png";
 
